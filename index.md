@@ -3,14 +3,14 @@ layout: home
 
 hero:
   name: CSKB
-  text: Corona Studio Knowledge Base.
+  text: 日冕知识库
   tagline: (WIP)
   actions:
     - theme: brand
-      text: Get Started
+      text: 开始
       link: /guide/
     - theme: alt
-      text: View on GitHub
+      text: 查看 Github 仓库
       link: https://github.com/Corona-Studio/docs
 
 features:

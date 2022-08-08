@@ -6,15 +6,15 @@ export default {
     themeConfig: {
         sidebar: [
             {
-                text: "Guide",
+                text: "指南",
                 items: [
-                    {text: "Index", link: "/guide/"}
+                    {text: "开始", link: "/guide/"}
                 ]
             },
             {
-                text: "Introduction",
+                text: "Minecraft",
                 items: [
-                    {text: "Index", link: "/introduction/"}
+                    {text: "皮肤规范", link: "/skin/"}
                 ]
             }
         ],
