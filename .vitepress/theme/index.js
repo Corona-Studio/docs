@@ -1,6 +1,9 @@
 // .vitepress/theme/index.js
 import DefaultTheme from 'vitepress/theme'
 
+export default DefaultTheme
+
+/*
 export default {
     ...DefaultTheme,
 
@@ -10,3 +13,4 @@ export default {
         // a `ref` of current site-level metadata.
     }
 }
+*/
