@@ -21,7 +21,7 @@ export default {
 
         footer: {
             message: 'Released under the MIT License.',
-            copyright: `Copyright © ${new Date().getFullYear()} - Corona Studio`
+            copyright: `Copyright © 2022 - Corona Studio`
         },
     }
 }
