@@ -12,6 +12,13 @@ export default {
                 ]
             },
             {
+                text: "LauncherX 启动器 - 仪表盘",
+                items: [
+                    {text: "仪表盘", link: "/dashboard/"},
+                    {text: "聚合搜索组件", link: "/dashboard/search"}
+                ]
+            },
+            {
                 text: "Minecraft",
                 items: [
                     {text: "皮肤规范", link: "/skin/"}
@@ -21,7 +28,7 @@ export default {
 
         footer: {
             message: 'Released under the MIT License.',
-            copyright: `Copyright © 2022 - Corona Studio`
+            copyright: `Copyright © ${new Date().getFullYear()} - Corona Studio`
         },
     }
 }
