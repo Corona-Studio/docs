@@ -14,13 +14,13 @@ hero:
       link: https://github.com/Corona-Studio/docs
 
 features:
-  - icon: ⚡️
-    title: Vite, The DX that can't be beat
-    details: Lorem ipsum...
-  - icon: 🖖
-    title: Power of Vue meets Markdown
-    details: Lorem ipsum...
-  - icon: 🛠️
-    title: Simple and minimal, always
-    details: Lorem ipsum...
+  - icon: ⁉️
+    title: 疑难解答
+    details: 在这里查看并解决游玩或开发过程中遇到的各种问题
+  - icon: 🐱
+    title: 开发文档
+    details: 正在使用来自 Corona Studio 的开源项目？在这里你可以查看他们的技术文档。
+  - icon: 🧩
+    title: 标准和规范
+    details: 在知识库中，您可以查阅到 MineCraft 游戏的部分技术规范（例如皮肤或材质）。
 ---
