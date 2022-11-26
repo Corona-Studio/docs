@@ -23,6 +23,14 @@ export default {
                 items: [
                     {text: "皮肤规范", link: "/skin/"}
                 ]
+            },
+            {
+                text: "ProjBobcat",
+                items: [
+                    {text: "简介", link: "/projbobcat/"},
+                    {text: "开始", link: "/projbobcat/beforeWeStart"},
+                    {text: "安装与配置", link: "/projbobcat/installationAndConfig"}
+                ]
             }
         ],
 
