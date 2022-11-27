@@ -29,7 +29,13 @@ export default {
                 items: [
                     {text: "简介", link: "/projbobcat/"},
                     {text: "开始", link: "/projbobcat/beforeWeStart"},
-                    {text: "安装与配置", link: "/projbobcat/installationAndConfig"}
+                    {
+                        text: "安装与配置",
+                        link: "/projbobcat/installationAndConfig",
+                        items:[
+                            {text: "配置 Azure 应用", link: "/projbobcat/createNewAzureApp"}
+                        ]
+                    },
                 ]
             }
         ],

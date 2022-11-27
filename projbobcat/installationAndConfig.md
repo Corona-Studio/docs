@@ -18,7 +18,7 @@ NuGet\Install-Package ProjBobcat -Version 1.16.0
 dotnet add package ProjBobcat --version 1.16.0
 ```
 
-## PackageReference
+### PackageReference
 
 PackageReference 是微软为现代 .NET 项目推出的一种新的软件包管理规范，
 详细信息可以在 [MSDN](https://learn.microsoft.com/en-us/nuget/consume-packages/package-references-in-project-files)
@@ -33,3 +33,89 @@ PackageReference 是微软为现代 .NET 项目推出的一种新的软件包管
 其中，**1.16.0** 为 ProjBobcat 的版本号，您可以将其替换为其他的版本号，
 所有的发行版本都可以在 [ProjBobcat - Nuget](https://www.nuget.org/packages/ProjBobcat#versions-body-tab) 中查看。
 :::
+
+## 使用前配置
+
+### 修改默认连接数
+
+在使用 ProjBobcat 之前，您需要在程序的入口点（通常是 **App.xaml.cs** 或 **Program.cs**）
+中添加一些代码来初始化 ProjBobcat 的相关服务。
+
+由于 .NET 运行时默认的最大连接数限制，在使用 ProjBobcat 下载模块时可能会遭遇性能瓶颈。
+因此，您需要在入口处添加下面的代码来修改默认的最大连接数：
+
+```c#{3}
+ using System.Net;
+
+ ServicePointManager.DefaultConnectionLimit = 512;
+```
+
+### 注册并初始化基础服务
+
+接下来，您需要在入口点添加这些代码来完成 ProjBobcat 服务的初始化：
+
+#### 初始化服务容器
+
+```c#
+ServiceHelper.Init();
+```
+
+#### 初始化 CurseForge API 服务（可选）
+
+该服务为可选项目，如果您没有使用任何 CurseForge 相关服务，您可以忽略这个步骤。
+
+::: tip
+在注册 CurseForge 服务前，您需要准备 CurseForge 官方下发的 API KEY。
+如果您还没有，请前往 [申请页面 - CurseForge](https://support.curseforge.com/en/support/solutions/articles/9000208346-about-the-curseforge-api-and-how-to-apply-for-a-key)
+来获得您的 API KEY。
+:::
+
+::: warning
+API KEY 为敏感的个人凭据，请妥善保存 API KEY 并不要将其泄露给其他人。
+:::
+
+```c#
+CurseForgeAPIHelper.SetApiKey("[YOUR API KEY]");
+```
+
+将 **[YOUR API KEY]** 替换为您从 CurseForge 官方获取的 API KEY。
+
+#### 初始化下载服务
+
+在初始化下载服务时您可以选择自定义请求时所使用的 User Agent（默认为 "ProjBobcat"）。
+
+```c#
+HttpClientHelper.Ua = "[YOUR UA]"; // 可选
+HttpClientHelper.Init();
+```
+
+### 配置微软登录验证器
+
+关于 Azure Active Directory 应用具体的注册方法请移步：
+[如何注册 Azure 应用](/projbobcat/createNewAzureApp)
+
+::: tip
+在配置微软验证器前，您需要在 Azure 注册您的应用，并对其进行正确的配置。
+在您完成配置之后，您会获得一串 Client ID。
+
+相关资料：
+
+- [Azure 官网](https://azure.microsoft.com/en-us/)
+- [Device code flow](https://learn.microsoft.com/en-us/azure/active-directory/develop/scenario-desktop-acquire-token-device-code-flow?tabs=dotnet)
+
+:::
+
+::: warning
+CLIENT ID 为敏感的个人凭据，请妥善保存 CLIENT ID 并不要将其泄露给其他人。
+:::
+
+```c#
+MicrosoftAuthenticator.Configure(new MicrosoftAuthenticatorAPISettings
+{
+    ClientId = "[YOUR CLIENT ID]",
+    TenentId = "consumers",
+    Scopes = new[] { "XboxLive.signin", "offline_access", "openid", "profile", "email" }
+});
+```
+
+在取得 Client ID 后，将 **[YOUR CLIENT ID]** 替换为您的 Client ID。
