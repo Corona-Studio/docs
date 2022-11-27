@@ -1,5 +1,7 @@
 # 安装并配置 ProjBobcat
 
+[[toc]]
+
 ## 从发行包安装
 
 ### Nuget

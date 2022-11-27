@@ -1,5 +1,7 @@
 # 配置 Azure 应用
 
+[[toc]]
+
 ## 开始配置
 
 在开始之前，您首先需要一个微软账号。注册 Azure Active Directory 应用无需任何费用。

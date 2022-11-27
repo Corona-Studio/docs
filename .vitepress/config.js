@@ -7,12 +7,21 @@ export default {
         sidebar: [
             {
                 text: "指南",
+                collapsible: true,
                 items: [
                     {text: "开始", link: "/guide/"}
                 ]
             },
             {
+                text: "CMFS",
+                collapsible: true,
+                items: [
+                    {text: "简介", link: "/CMFS/"}
+                ]
+            },
+            {
                 text: "LauncherX 启动器 - 仪表盘",
+                collapsible: true,
                 items: [
                     {text: "仪表盘", link: "/dashboard/"},
                     {text: "聚合搜索组件", link: "/dashboard/search"}
@@ -20,12 +29,14 @@ export default {
             },
             {
                 text: "Minecraft",
+                collapsible: true,
                 items: [
                     {text: "皮肤规范", link: "/skin/"}
                 ]
             },
             {
                 text: "ProjBobcat",
+                collapsible: true,
                 items: [
                     {text: "简介", link: "/projbobcat/"},
                     {text: "开始", link: "/projbobcat/beforeWeStart"},
