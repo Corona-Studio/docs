@@ -4,8 +4,8 @@
 
 ## 样例 1
 
-![image info](../public/img/skin/template.png)
+![image info](/img/skin/template.png)
 
 ## 样例2（包含网格）
 
-![image info](../public/img/skin/template-grid.jpg)
+![image info](/img/skin/template-grid.jpg)
