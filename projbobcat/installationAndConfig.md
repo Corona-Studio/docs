@@ -36,6 +36,43 @@ PackageReference 是微软为现代 .NET 项目推出的一种新的软件包管
 所有的发行版本都可以在 [ProjBobcat - Nuget](https://www.nuget.org/packages/ProjBobcat#versions-body-tab) 中查看。
 :::
 
+## 从源码引用
+
+另外一种使用 ProjBobcat 的方法是直接添加代码仓库到您的项目引用。
+
+::: info
+在执行下面的命令前，您可能需要先安装 [Git CLI](https://git-scm.com/)
+:::
+
+### 克隆 ProjBobcat 仓库
+
+使用命令行切换到项目解决方案的根目录，并在命令行中执行下面的代码来完成仓库的克隆：
+
+```bash
+git clone https://github.com/Corona-Studio/ProjBobcat.git
+```
+
+### 使用 Git Submodule（子模块）的方式拉取 ProjBobcat
+
+::: tip
+Git Submodule 是一个非常实用的功能，在这里我们只展示了其最基本的用例。
+在 [Git 官方文档](https://git-scm.com/book/en/v2/Git-Tools-Submodules) 中您可以查看到更多的使用案例。
+:::
+
+使用命令行切换到项目解决方案的根目录，并在命令行中执行下面的代码来完成仓库的克隆：
+
+```bash
+git submodule add https://github.com/Corona-Studio/ProjBobcat.git
+```
+
+### 添加对 ProjBobcat 的引用
+
+接下来，在 Visual Studio 的 **解决方案资源管理器** 视图中，右键点击位于树状图顶层的解决方案名称。
+并选择 **“添加”-“现有项目”**，并在文件浏览窗口中找到刚刚克隆的 ProjBobcat 项目文件夹中的 **ProjBobcat.csproj**。
+
+接着，在 **解决方案资源管理器** 找到您需要引用 ProjBobcat 的项目，并右键单击，选择 **“添加”-“项目引用”**。
+最后在弹出窗口中勾选 ProjBobcat 即可完成对其的引用。
+
 ## 使用前配置
 
 ### 修改默认连接数
