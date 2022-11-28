@@ -23,7 +23,7 @@
 
 ![Azure Portal](/img/projbobcat/installationAndConfig/configMSAuth/reg_app.png)
 
-点击顶部工具栏的 **新注册**，填写应用的名称。并且在 **受支持的账户类型中选择 **仅 Microsoft 个人账户**。
+点击顶部工具栏的 **新注册**，填写应用的名称。并且在 **受支持的账户类型** 中选择 **仅 Microsoft 个人账户**。
 由于我们不使用基于 URI 回调的认证方式。因此，您不需要填写表单下方的 **重定向 URI**。
 
 ::: warning
