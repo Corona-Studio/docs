@@ -68,7 +68,7 @@ Fabric Meta API 将返回一个 JSON 数组，数组中的每一个元素即是�
 
 ```c#
 
-// 从 Fabric Meta API 请求数据
+// 从 Fabric Meta API 请求数据（示例，非实际代码）
 ...
 var responseJson = await res.Content.ReadAsStringAsync();
 
@@ -83,7 +83,7 @@ var selectedArtifact = artifacts[userSelect]; // [!code focus]
 
 ```
 
-此处，**selectedArtifact** 即是 Fabric 安装器所需要的 FabricLoaderArtifactModel。
+此处，**selectedArtifact** 即是 Fabric 安装器所需要的 `FabricLoaderArtifactModel`。
 
 ## 初始化安装器
 
