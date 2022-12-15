@@ -34,7 +34,7 @@ LiteLoader 作为早期 MineCraft 的模组系统，已经长期缺乏维护和�
 ::: warning
 
 由于 LiteLoader 官方没有提供公开的 API 文档。因此，在本流程中，我们需要使用第三方的镜像源来完成数据的获取。
-在这里，我们使用[BMCLAPI](https://bmclapidoc.bangbang93.com/) 来获取相关的版本信息。
+在这里，我们使用 [BMCLAPI](https://bmclapidoc.bangbang93.com/) 来获取相关的版本信息。
 
 :::
 
@@ -158,9 +158,9 @@ liteLoaderInstaller.Install();
 
 ## 报告安装进度
 
-在某些情况下，Fabric 安装器可能会需要数分钟的时间来完成安装。
+在某些情况下，LiteLoader 安装器可能会需要数分钟的时间来完成安装。
 因此，您可能需要实时向用户汇报安装器目前的进度。
-为此，Fabric 安装器提供了 **StageChangedEventDelegate** 事件来帮助您实现任务汇报。
+为此，LiteLoader 安装器提供了 **StageChangedEventDelegate** 事件来帮助您实现任务汇报。
 您只需要简单地在 **开始安装之前** 注册下面的事件：
 
 ```c#
