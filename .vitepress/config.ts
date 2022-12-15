@@ -18,12 +18,12 @@ export default defineConfig({
         },
 
         nav: [
-            { text: 'ProjBobcat', link: '/projbobcat' },
+            { text: 'ProjBobcat', link: '/projbobcat/' },
             {
                 text: 'MC 相关资源',
                 items: [
-                    { text: 'CMFS', link: '/CMFS' },
-                    { text: '皮肤规范', link: '/skin' }
+                    { text: 'CMFS', link: '/CMFS/' },
+                    { text: '皮肤规范', link: '/skin/' }
                 ]
             }
         ],
@@ -71,10 +71,17 @@ export default defineConfig({
                     {
                         text: "安装与配置",
                         link: "/projbobcat/installationAndConfig",
-                        items:[
+                        items: [
                             {text: "配置 Azure 应用", link: "/projbobcat/createNewAzureApp"}
                         ]
                     },
+                    {
+                        text: "安装器",
+                        link: "/projbobcat/installers/",
+                        items: [
+                            {text: "Forge 安装器", link: "/projbobcat/installers/forge"}
+                        ]
+                    }
                 ]
             }
         ],
