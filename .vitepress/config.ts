@@ -8,7 +8,8 @@ export default defineConfig({
     markdown: {
         // options for @mdit-vue/plugin-toc
         // https://github.com/mdit-vue/mdit-vue/tree/main/packages/plugin-toc#options
-        toc: { level: [1, 2, 3] }
+        toc: { level: [1, 2, 3] },
+        lineNumbers: true
     },
 
     themeConfig: {
@@ -79,7 +80,11 @@ export default defineConfig({
                         text: "安装器",
                         link: "/projbobcat/installers/",
                         items: [
-                            {text: "Forge 安装器", link: "/projbobcat/installers/forge"}
+                            {text: "Forge 安装器", link: "/projbobcat/installers/forge"},
+                            {text: "Fabric 安装器", link: "/projbobcat/installers/fabric"},
+                            {text: "Quilt 安装器", link: "/projbobcat/installers/quilt"},
+                            {text: "LiteLoader 安装器", link: "/projbobcat/installers/liteloader"},
+                            {text: "Optifine 安装器", link: "/projbobcat/installers/optifine"}
                         ]
                     }
                 ]

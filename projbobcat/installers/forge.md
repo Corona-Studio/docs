@@ -15,13 +15,13 @@
 由于 Forge 团队在后续的版本中修改了 Forge 的打包规范以及安装流程。因此，您需要手动判断应该使用哪一种安装器。
 在 ProjBobcat 中，我们已经为您实现了相关的判断逻辑。您只需要简单地调用下面的方法：
 
-```c#{5}
+```c#
 
 var mcVersion = "[MC_VERSION]";
 var forgeJarPath = "[PATH_TO_YOUR_FORGE_INSTALLER]";
 var forgeVersion = ForgeInstallerFactory.GetForgeArtifactVersion(mcVersion, "[FORGE_VERSION]");
 
-var isLegacy = ForgeInstallerFactory.IsLegacyForgeInstaller(forgeJarPath, forgeVersion);
+var isLegacy = ForgeInstallerFactory.IsLegacyForgeInstaller(forgeJarPath, forgeVersion);  // [!code focus]
 
 ```
 
@@ -72,7 +72,7 @@ IForgeInstaller forgeInstaller =
                 ForgeExecutablePath = "[PATH_TO_YOUR_FORGE_INSTALLER]",
                 JavaExecutablePath = "[PATH_TO_YOUR_JAVA_RUNTIME]",
                 RootPath = "[GAME_ROOT_PATH]",
-                VersionLocator = "[VERSION_LOCATOR_INST]",
+                VersionLocator = [VERSION_LOCATOR_INST],
                 DownloadUrlRoot = “[LIBRARIES_URL_ROOT]”,
                 CustomId = "[CUSTOM_INSTALL_GAME_ID]",
                 MineCraftVersion = "[MC_VERSION]",
@@ -114,7 +114,7 @@ IForgeInstaller forgeInstaller = isLegacy
                 ForgeExecutablePath = "[PATH_TO_YOUR_FORGE_INSTALLER]",
                 JavaExecutablePath = "[PATH_TO_YOUR_JAVA_RUNTIME]",
                 RootPath = "[GAME_ROOT_PATH]",
-                VersionLocator = "[VERSION_LOCATOR_INST]",
+                VersionLocator = [VERSION_LOCATOR_INST],
                 DownloadUrlRoot = “[LIBRARIES_URL_ROOT]”,
                 CustomId = "[CUSTOM_INSTALL_GAME_ID]",
                 MineCraftVersion = "[MC_VERSION]",
