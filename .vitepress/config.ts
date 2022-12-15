@@ -80,11 +80,12 @@ export default defineConfig({
                         text: "安装器",
                         link: "/projbobcat/installers/",
                         items: [
-                            {text: "Forge 安装器", link: "/projbobcat/installers/forge"},
+                            {text: "CurseForge 整合包安装器", link: "/projbobcat/installers/curseforge"},
                             {text: "Fabric 安装器", link: "/projbobcat/installers/fabric"},
-                            {text: "Quilt 安装器", link: "/projbobcat/installers/quilt"},
+                            {text: "Forge 安装器", link: "/projbobcat/installers/forge"},
                             {text: "LiteLoader 安装器", link: "/projbobcat/installers/liteloader"},
-                            {text: "Optifine 安装器", link: "/projbobcat/installers/optifine"}
+                            {text: "Optifine 安装器", link: "/projbobcat/installers/optifine"},
+                            {text: "Quilt 安装器", link: "/projbobcat/installers/quilt"}
                         ]
                     }
                 ]
