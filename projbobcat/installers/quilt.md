@@ -61,8 +61,7 @@ Quilt 安装器目前处于试验阶段，相关的 API 以及安装流程可能
 
 :::
 
-首先，您需要向 [https://bmclapi2.bangbang93.com/optifine/[MC_VERSION]](https://bmclapi2.bangbang93.com/optifine/1.19.2) 发送一个 **HTTP GET** 请求。
-将 `[MC_VERSION]` 替换为您想要安装的 MineCraft 版本。在这里，我们将使用 1.19.2。
+首先，您需要向 [https://meta.quiltmc.org/v3/versions/loader](https://meta.quiltmc.org/v3/versions/loader) 发送一个 **HTTP GET** 请求。
 
 您将看到类似下面的返回内容：
 
