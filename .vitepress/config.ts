@@ -36,21 +36,21 @@ export default defineConfig({
         sidebar: [
             {
                 text: "指南",
-                collapsible: true,
+                collapsed: false,
                 items: [
                     {text: "开始", link: "/guide/"}
                 ]
             },
             {
                 text: "CMFS",
-                collapsible: true,
+                collapsed: false,
                 items: [
                     {text: "简介", link: "/CMFS/"}
                 ]
             },
             {
                 text: "LauncherX 启动器 - 仪表盘",
-                collapsible: true,
+                collapsed: false,
                 items: [
                     {text: "仪表盘", link: "/dashboard/"},
                     {text: "聚合搜索组件", link: "/dashboard/search"}
@@ -58,14 +58,14 @@ export default defineConfig({
             },
             {
                 text: "Minecraft",
-                collapsible: true,
+                collapsed: false,
                 items: [
                     {text: "皮肤规范", link: "/skin/"}
                 ]
             },
             {
                 text: "ProjBobcat",
-                collapsible: true,
+                collapsed: false,
                 items: [
                     {text: "简介", link: "/projbobcat/"},
                     {text: "开始", link: "/projbobcat/beforeWeStart"},
@@ -78,6 +78,7 @@ export default defineConfig({
                     },
                     {
                         text: "安装器",
+                        collapsed: false,
                         link: "/projbobcat/installers/",
                         items: [
                             {text: "CurseForge 整合包安装器", link: "/projbobcat/installers/curseforge"},
@@ -94,6 +95,7 @@ export default defineConfig({
                         items: [
                             {
                                 text: "资源解析器",
+                                collapsed: false,
                                 link: "/projbobcat/resourceCompleter/resourceInfoResolver/index",
                                 items: [
                                     {text: "Assets 解析器", link: "/projbobcat/resourceCompleter/resourceInfoResolver/assetInfoResolver"},
