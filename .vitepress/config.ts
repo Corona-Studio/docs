@@ -54,7 +54,7 @@ export default defineConfig({
                 items: [
                     {text: "仪表盘", link: "/dashboard/"},
                     {text: "聚合搜索组件", link: "/dashboard/search"}
-                ]
+                ],
             },
             {
                 text: "Minecraft",
@@ -86,6 +86,23 @@ export default defineConfig({
                             {text: "LiteLoader 安装器", link: "/projbobcat/installers/liteloader"},
                             {text: "Optifine 安装器", link: "/projbobcat/installers/optifine"},
                             {text: "Quilt 安装器", link: "/projbobcat/installers/quilt"}
+                        ]
+                    },
+                    {
+                        text: "资源补全器",
+                        link: "/projbobcat/resourceCompleter/",
+                        items: [
+                            {
+                                text: "资源解析器",
+                                link: "/projbobcat/resourceCompleter/resourceInfoResolver/index",
+                                items: [
+                                    {text: "Assets 解析器", link: "/projbobcat/resourceCompleter/resourceInfoResolver/assetInfoResolver"},
+                                    {text: "log4j 日志格式化组件解析器", link: "/projbobcat/resourceCompleter/resourceInfoResolver/gameLoggingInfoResolver"},
+                                    {text: "Libraries 解析器", link: "/projbobcat/resourceCompleter/resourceInfoResolver/libraryInfoResolver"},
+                                    {text: "版本信息解析器", link: "/projbobcat/resourceCompleter/resourceInfoResolver/versionInfoResolver"}
+                                ]
+                            },
+                            {text: "创建和配置补全器", link: "/projbobcat/resourceCompleter/createAndConfigCompleter"}
                         ]
                     }
                 ]
