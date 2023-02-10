@@ -26,7 +26,8 @@ export default defineConfig({
                     { text: 'CMFS', link: '/CMFS/' },
                     { text: '皮肤规范', link: '/skin/' }
                 ]
-            }
+            },
+            { text: "我们的团队", link: '/team' }
         ],
 
         socialLinks: [
@@ -38,7 +39,8 @@ export default defineConfig({
                 text: "指南",
                 collapsed: false,
                 items: [
-                    {text: "开始", link: "/guide/"}
+                    {text: "开始", link: "/guide/"},
+                    {text: "我们的团队", link: '/team'}
                 ]
             },
             {
