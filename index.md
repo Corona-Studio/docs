@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: 开始
-      link: /guide/
+      link: /zhCN/guide/
     - theme: alt
       text: 查看 Github 仓库
       link: https://github.com/Corona-Studio/docs
