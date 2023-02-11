@@ -1,5 +1,85 @@
-# docs
+# docs [![Deploy](https://github.com/Corona-Studio/CSKB_Hosting/actions/workflows/deploy.yml/badge.svg)](https://github.com/Corona-Studio/CSKB_Hosting/actions/workflows/deploy.yml)
 
-Corona Studio Knowledge Base using Markdown
+日冕知识库文档，使用 Markdown 撰写。
+
+## 简介
+
+这里是日冕知识库官方仓库，里面包含了有关于团队项目的详细介绍以及开发文档。同时也包含部分 MineCraft 游戏内容的相关规范。
+目前已经支持包括 简体中文、繁体中文、俄罗斯语等语言。项目使用 MIT 协议开源，欢迎广大热心网友帮助我们支持更多的语言！
+
+<img width="1031" alt="image" src="https://user-images.githubusercontent.com/25716486/218275312-68e63c3b-97d8-49d7-ae07-bc86f6e68fb0.png">
+
+## 帮助我们添加一个新语言支持？
+
+1. 首先，您需要点击右上方的 `Fork` 来取得可修改的仓库副本
+2. 将项目克隆岛本地，使用您常用的 IDE 打开项目
+3. [确定您即将翻译的语言的 i18n 缩写](https://segmentfault.com/a/1190000019287972)。假如您即将翻译的语言是 **繁体中文（台湾）**，您在之后使用到的名称则是 **zhTW**。
+4. 跳转到项目目录下的 `docs/.vitepress` 文件夹，您将在这个目录下找到如下内容：
+
+  - navBar（用于存放顶部导航条的翻译内容）
+  - searchBar（用于存放搜索条的翻译内容）
+  - sideBar（用于存放侧边导航栏的翻译内容）
+  - `i18n 缩写`.ts（用于整合上述翻译内容）
+  - config.ts（配置文件总成）
+
+5. 您需要分别在 `navBar`、`searchBar`、`sideBar` 下创建新的翻译配置文件，代码定义参照各目录下的 `zhCN.ts`，**部分代码变量名可能包含 i18n 字段**，请将其修改为您将要翻译的语言的 i18n 缩写！
+6. 在完成上一步的文件创建和翻译工作后，您需要在 `docs/.vitepress` 目录下创建 `i18n 缩写`.ts`，代码定义参照与同目录下的 `zhCN.ts` 保持一致，**代码变量名包含 i18n 字段**，请将其修改为您将要翻译的语言的 i18n 缩写！
+7. 在 `docs/.vitepress/sharedConfig.ts` 文件中找到如下内容：
+
+**注意在顶部添加相应的 import**
+
+```typescript
+
+algolia: {
+  appId: '-',
+  apiKey: '-',
+  indexName: 'kb-corona',
+  locales: {
+    root: zhSearchBarLocale,
+    ruRU: ruSearchBarLocale,
+    zhTW: zhTWSearchBarLocale,
+    /* 在此处添加您的搜索条的翻译内容 */
+  }
+}
+
+```
+
+8. 在 `docs/.vitepress/config.ts` 中找到如下内容：
+
+**注意在顶部添加相应的 import**
+
+```typescript
+
+locales: {
+  root: { label: '简体中文', lang: 'zh-CN', ...zhConfig },
+  ruRU: { label: 'Русский', lang: 'ru-RU', ...ruConfig },
+  zhTW: { label: '正體中文', lang: 'zh-TW', ...zhTWConfig },
+  /* 在此处添加您的翻译内容整合 */
+},
+
+```
+
+9. 最后，在 `docs` 目录下创建一个新的文件夹，文件夹名称为您将要翻译的语言的 **i18n 缩写**，并将同目录下 `zhCN` 文件夹中的内容 **复制** 到您刚刚创建的文件夹中。
+10. 同时，将 `docs` 目录下的 index.md 也复制到在上一步创建的文件夹中。
+11. 将文件夹中的所有内容翻译为目标语言。在完成后，您即可向本仓库提交 PR！
+
+## 贡献
+
+感谢每一位翻译作者的无私奉献！
+
+### 多语言贡献者
+
+<a href="https://github.com/Corona-Studio/docs/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Corona-Studio/docs" />
+</a>
+<br><br>
+
++ [法棍面包](https://github.com/fr1g)
+  - 俄罗斯语（ru-RU）
+  - 西班牙语（es-US）
++ [KormiMeiko](https://github.com/KormiMeiko)
+  - 繁体中文（zh-TW）
+
+<br><br>
 
 ![Alt](https://repobeats.axiom.co/api/embed/243ea556dfcaf8738e432d5347cbcf91855f6ddd.svg "Repobeats analytics image")
