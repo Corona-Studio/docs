@@ -55,6 +55,6 @@
 ![Azure Portal](/img/projbobcat/installationAndConfig/configMSAuth/about.png)
 
 在右側您會看到應用的詳細資訊，在 **概要** 中找到 **應用程式(客戶端) ID**，
-該 ID 將是您需要在 [微軟驗證器配置](/projbobcat/installationAndConfig) 階段需要使用到的 Client ID。
+該 ID 將是您需要在 [微軟驗證器配置](/zhTW/projbobcat/installationAndConfig) 階段需要使用到的 Client ID。
 
 ![Azure Portal](/img/projbobcat/installationAndConfig/configMSAuth/about_block.png)

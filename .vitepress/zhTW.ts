@@ -2,7 +2,7 @@ import {DefaultTheme, LocaleSpecificConfig} from "vitepress";
 import nav from "./navBar/zhTW";
 import sidebar from "./sideBar/zhTW";
 
-export const zhtwConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
+export const zhTWConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
     description: 'Corona Studio Knowledge Base',
 
     themeConfig: {

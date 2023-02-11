@@ -131,7 +131,7 @@ HttpClientHelper.Init();
 ### 配置微軟登入驗證器
 
 關於 Azure Active Directory 應用具體的註冊方法請移步：
-[如何註冊 Azure 應用](/projbobcat/createNewAzureApp)
+[如何註冊 Azure 應用](/zhTW/projbobcat/createNewAzureApp)
 
 ::: tip
 在配置微軟驗證器前，您需要在 Azure 註冊您的應用，並對其進行正確的配置。

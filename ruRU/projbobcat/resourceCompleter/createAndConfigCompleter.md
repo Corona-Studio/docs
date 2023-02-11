@@ -24,7 +24,7 @@ var completer = new DefaultResourceCompleter
 
 ::: tip
 
-资源信息解析器的初始化相关教程请参见 [资源信息解析器](/projbobcat/resourceCompleter/resourceInfoResolver/index) 章节
+资源信息解析器的初始化相关教程请参见 [资源信息解析器](/ruRU/projbobcat/resourceCompleter/resourceInfoResolver/index) 章节
 
 :::
 

@@ -131,7 +131,7 @@ HttpClientHelper.Init();
 ### 配置微软登录验证器
 
 关于 Azure Active Directory 应用具体的注册方法请移步：
-[如何注册 Azure 应用](/projbobcat/createNewAzureApp)
+[如何注册 Azure 应用](/ruRU/projbobcat/createNewAzureApp)
 
 ::: tip
 在配置微软验证器前，您需要在 Azure 注册您的应用，并对其进行正确的配置。

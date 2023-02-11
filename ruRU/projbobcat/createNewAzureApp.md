@@ -55,6 +55,6 @@
 ![Azure Portal](/img/projbobcat/installationAndConfig/configMSAuth/about.png)
 
 在右侧您会看到应用的详细信息，在 **概要** 中找到 **应用程序(客户端) ID**，
-该 ID 将是您需要在 [微软验证器配置](/projbobcat/installationAndConfig) 阶段需要使用到的 Client ID。
+该 ID 将是您需要在 [微软验证器配置](/ruRU/projbobcat/installationAndConfig) 阶段需要使用到的 Client ID。
 
 ![Azure Portal](/img/projbobcat/installationAndConfig/configMSAuth/about_block.png)

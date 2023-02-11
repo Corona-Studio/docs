@@ -1,6 +1,6 @@
 import {DocSearchProps} from "vitepress/types/docsearch";
 
-export const zhtwSearchBarLocale: Partial<DocSearchProps> = {
+export const zhTWSearchBarLocale: Partial<DocSearchProps> = {
     placeholder: '搜尋文件',
     translations: {
         button: {
