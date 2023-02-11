@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 import {sharedConfig} from "./sharedConfig";
 import {zhConfig} from "./zhCN";
+import {ruConfig} from "./ruRU";
 
 export default defineConfig({
 
@@ -10,6 +11,6 @@ export default defineConfig({
 
     locales: {
         root: { label: '简体中文', lang: 'zh-CN', ...zhConfig },
-        ruRU: { label: 'Русский', lang: 'ru-RU', ...zhConfig }
+        ruRU: { label: 'Русский', lang: 'ru-RU', ...ruConfig }
     },
 })
