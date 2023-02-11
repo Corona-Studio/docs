@@ -24,7 +24,7 @@ export const ruConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
         lastUpdatedText: 'обновление',
 
         editLink: {
-            pattern: `https://github.com/Corona-Studio/docs/edit/main/docs/ruRU/:path`,
+            pattern: `https://github.com/Corona-Studio/docs/edit/main/:path`,
             text: 'Изменить эту страницу на GitHub',
         },
 

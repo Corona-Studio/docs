@@ -24,7 +24,7 @@ export const zhConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
         lastUpdatedText: '更新于',
 
         editLink: {
-            pattern: `https://github.com/Corona-Studio/docs/edit/main/docs/zhCN/:path`,
+            pattern: `https://github.com/Corona-Studio/docs/edit/main/:path`,
             text: '在 GitHub 上编辑此页',
         },
 
