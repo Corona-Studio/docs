@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: CSKB
-  text: База знаний о коронавирусе
+  text: Корона-Студио Библиотека Знания
   tagline: (WIP)
   actions:
     - theme: brand
