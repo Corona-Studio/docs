@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: CSKB
-  text: Корона-Студио Библиотека Знания
+  text: Корона-Студио Библиотека Знания.
   tagline: (WIP)
   actions:
     - theme: brand
