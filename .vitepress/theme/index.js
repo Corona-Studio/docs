@@ -20,5 +20,13 @@ export default {
                 document.cookie = `nf_lang=${lang.value}; expires=Mon, 1 Jan 2024 00:00:00 UTC; path=/`
             }
         })
+    },
+    desplayHatchContent(){
+        window.onload = () => {
+            if(window.location.href.includes("zhTW")){
+                document.body.innerHTML.replace("/正體/g", "繁體(台)")
+            }else return
+        }
+
     }
 }
