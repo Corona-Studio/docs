@@ -26,7 +26,7 @@
 
 点击弹出窗口中的“Microsoft帐户”按钮, LauncherX将会弹出一个包含验证链接、一次性验证代码和些许按钮的置顶窗口 ( 验证信息窗口 ).
 
-![image-20230222204440416](./../../../public/img/lxguide/使用LauncherX添加游戏账户/image-20230222204440416.png)
+![image-20230222204440416](./../../public/img/lxguide/使用LauncherX添加游戏账户/image-20230222204440416.png)
 
 整个流程大约10秒即可完成 (受网络性能和您的浏览器是否保存了您的微软账户登录信息影响, 这可能会有些许延长) , 考虑到微软的隐私策略, 我们建议您在3分钟内完成这个流程, 以免一次性验证代码失效。若一次性代码失效, 您需要关闭当前的验证信息窗口并重复添加微软账户的操作.
 
@@ -38,7 +38,7 @@
 
 - 弹出此窗口后, 您需要“同意”以继续添加账户的操作.
 
-  <img src="./../../../public/img/lxguide/使用LauncherX添加游戏账户/image-20230222204659302.png" alt="image-20230222204659302" style="zoom:50%;" />
+  <img src="./../../public/img/lxguide/使用LauncherX添加游戏账户/image-20230222204659302.png" alt="image-20230222204659302" style="zoom:50%;" />
 
   在LauncherX验证账户过程中, 您可以继续进行下一步设置。
 
@@ -50,13 +50,13 @@
 
   如图所示:
 
-  <img src="./../../../public/img/lxguide/使用LauncherX添加游戏账户/image-20230222204732083.png" alt="image-20230222204732083" style="zoom:67%;" />
+  <img src="./../../public/img/lxguide/使用LauncherX添加游戏账户/image-20230222204732083.png" alt="image-20230222204732083" style="zoom:67%;" />
 
   ​	对于这种情况, 您需要:
 
   - 点击“取消”
-  - 在网页中点击“其他登录方法”,如图:<img src="./../../../public/img/lxguide/使用LauncherX添加游戏账户/image-20230222204925338.png" alt="image-20230222204925338" style="zoom:50%;" />
-  - 点击“使用我的密码”, 或者选择任意您方便使用的登录方法.<img src="./../../../public/img/lxguide/使用LauncherX添加游戏账户/image-20230222205034775.png" alt="image-20230222205034775" style="zoom:50%;" />
+  - 在网页中点击“其他登录方法”,如图:<img src="./../../public/img/lxguide/使用LauncherX添加游戏账户/image-20230222204925338.png" alt="image-20230222204925338" style="zoom:50%;" />
+  - 点击“使用我的密码”, 或者选择任意您方便使用的登录方法.<img src="./../../public/img/lxguide/使用LauncherX添加游戏账户/image-20230222205034775.png" alt="image-20230222205034775" style="zoom:50%;" />
 
 ### 离线模式
 
@@ -82,7 +82,7 @@
 
 - 弹出如图所示的窗口:
 
-<img src="./../../../public/img/lxguide/使用LauncherX添加游戏账户/image-20230227091559255.png" alt="image-20230227091559255" style="zoom:50%;" />
+<img src="./../../public/img/lxguide/使用LauncherX添加游戏账户/image-20230227091559255.png" alt="image-20230227091559255" style="zoom:50%;" />
 
 - 对应输入先前您应该准备好的信息
 - 保存账户。这些信息将加密后作为凭证, 在您登录支持对应的AuthLib服务的服务器后用于验证。
