@@ -46,6 +46,16 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                 ]
             },
             {
+                text: "验证模型",
+                collapsed: false,
+                link: "/zhCN/projBobcat/authenticators/",
+                items:[
+                    {text: "离线验证模型", link: "/zhCN/projbobcat/authenticators/offline"},
+                    {text: "Yggdrasil 验证模型（旧版）", link: "/zhCN/projbobcat/authenticators/yggdrasil"},
+                    {text: "Microsoft 验证模型（新版）", link: "/zhCN/projbobcat/authenticators/microsoft"}
+                ]
+            },
+            {
                 text: "安装器",
                 collapsed: false,
                 link: "/zhCN/projbobcat/installers/",
@@ -74,6 +84,14 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                         ]
                     },
                     {text: "创建和配置补全器", link: "/zhCN/projbobcat/resourceCompleter/createAndConfigCompleter"}
+                ]
+            },
+            {
+                text: "附加解析器",
+                link: "/zhCN/projbobcat/additionalParsers/",
+                items: [
+                    {text: "游戏档案解析器", link: "/zhCN/projbobcat/additionalParsers/gameProfileParser"},
+                    {text: "账户档案解析器", link: "/zhCN/projbobcat/additionalParsers/accountProfileParser"}
                 ]
             }
         ]
