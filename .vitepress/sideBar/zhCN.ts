@@ -48,7 +48,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
             {
                 text: "验证模型",
                 collapsed: false,
-                link: "/zhCN/projBobcat/authenticators/",
+                link: "/zhCN/projbobcat/authenticators/",
                 items:[
                     {text: "离线验证模型", link: "/zhCN/projbobcat/authenticators/offline"},
                     {text: "Yggdrasil 验证模型（旧版）", link: "/zhCN/projbobcat/authenticators/yggdrasil"},
