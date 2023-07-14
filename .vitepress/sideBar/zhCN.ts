@@ -20,6 +20,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
         text: "LauncherX 启动器指南",
         collapsed: false,
         items: [
+            {text: "初次启动", link: "/zhCN/lxguide/startup"},
             {text: "初次设置: 添加账户", link: "/zhCN/lxguide/add-game-account"},
             {text: "仪表盘", link: "/zhCN/dashboard/"},
             {text: "聚合搜索组件", link: "/zhCN/dashboard/search"}
