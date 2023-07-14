@@ -12,7 +12,7 @@
 
 - Microsoft帐户
 - 离线模式帐户
-- AuthLib帐户
+- AuthLib帐户（原Mojang账户登录）
 
 *由于官方已经停止对Mojang帐户的支持并开始迁移Mojang帐户到Microsoft帐户, 故LauncherX将不再支持Mojang帐户登录。详情: [Mojang Java 版 Minecraft 帐户移动 | Minecraft](https://www.minecraft.net/zh-hans/mojang-account-move)*
 

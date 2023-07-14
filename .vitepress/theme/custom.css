@@ -7,4 +7,14 @@
 
     --vp-button-brand-border: #c7a500;
     --vp-button-brand-hover-border: #c7a500;
+    --vp-button-brand-active-border: #c7a500;
+}
+
+.content-body{
+    background-color: color-mix(in srgb, var(--vp-nav-bg-color), transparent 15%) !important;
+    backdrop-filter: blur(8px);
+}
+
+.curtain::before{
+    background: linear-gradient(color-mix(in srgb, var(--vp-c-bg), transparent 15%), transparent 80%) !important;
 }
