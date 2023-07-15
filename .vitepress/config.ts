@@ -8,7 +8,7 @@ export default defineConfig({
 
     //define FavIcon
     head:[
-        ['link', { rel: 'icon', href: '/favicon-tab.png' }]
+        ['link', { rel: 'icon', href: '/img/favicon/favicon_dark.png' }]
     ],
     //...
     ...sharedConfig,
