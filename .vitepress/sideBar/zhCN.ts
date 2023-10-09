@@ -20,7 +20,16 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
         text: "LauncherX 启动器指南",
         collapsed: false,
         items: [
-            {text: "初次启动", link: "/zhCN/lxguide/startup"},
+            {
+                text: "初次启动",
+                link: "/zhCN/lxguide/startup/",
+                collapsed: false,
+                items: [
+                    {text: "针对 Windows 系统", link: "/zhCN/lxguide/startup/perOsSetup/windows"},
+                    {text: "针对 macOS 系统", link: "/zhCN/lxguide/startup/perOsSetup/macOS"},
+                    {text: "针对 Linux 系统", link: "/zhCN/lxguide/startup/perOsSetup/linux"}
+                ]
+            },
             {text: "初次设置: 添加账户", link: "/zhCN/lxguide/add-game-account"},
             {text: "仪表盘", link: "/zhCN/dashboard/"},
             {text: "聚合搜索组件", link: "/zhCN/dashboard/search"}
