@@ -39,6 +39,7 @@ algolia: {
     root: zhSearchBarLocale,
     ruRU: ruSearchBarLocale,
     zhTW: zhTWSearchBarLocale,
+    enUS: enUSSearchBarLocale,
     /* 在此处添加您的搜索条的翻译内容 */
   }
 }
@@ -55,6 +56,7 @@ locales: {
   root: { label: '简体中文', lang: 'zh-CN', ...zhConfig },
   ruRU: { label: 'Русский', lang: 'ru-RU', ...ruConfig },
   zhTW: { label: '繁體中文(台)', lang: 'zh-TW', ...zhTWConfig },
+  enUS: { label: 'English(US)', lang: 'en-US', ...enUSConfig },
   /* 在此处添加您的翻译内容整合 */
 },
 
@@ -82,6 +84,8 @@ locales: {
   - 西班牙语（es-US）
 + [KormiMeiko](https://github.com/KormiMeiko)
   - 繁体中文（zh-TW）
++ [Japerz](https://github.com/japerz12138)
+  - 英语(美国) (en-US)
 
 <br><br>
 

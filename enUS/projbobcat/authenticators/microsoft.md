@@ -1,23 +1,23 @@
-# Microsoft 验证模型
+# Microsoft Authentication Model
 
 [[toc]]
 
-该验证模型实现了新版基于 Azure 的全新验证流程，适用于目前仍在维护的全部 MineCraft 版本。
+This authentication model implements the new Azure-based verification process and is applicable to all MineCraft versions currently under maintenance.
 
-## 准备工作
+## Preparation
 
-由于新版验证流程使用了基于 Azure 的验证方式。
-因此，在开始之前请确保您已经完成了 [Azure 应用的配置](/zhCN/projbobcat/createNewAzureApp)
+Because the new version of the authentication process uses Azure-based authentication.
+Therefore, before you begin, make sure you have completed [Configuration of Azure Apps](/enUS/projbobcat/createNewAzureApp)
 
-在完成了 Azure 的应用注册后，请确保在程序入口点完成了[微软验证器的初始化](/zhCN/projbobcat/installationAndConfig.html#配置微软登录验证器)。
+After completing the Azure application registration, please make sure to complete [Microsoft Authenticator Initialization](/enUS/projbobcat/installationAndConfig.html#ConfiguringMicrosoftLoginAuthenticator) at the program entry point.
 
-### 配置缓存凭据提供方法
+### Configure cached credential providing method
 
-由于该验证模型的特殊性，开发者需要保存首次验证返回的 **刷新令牌** 和 **失效时间** 来帮助验证器完成验证。
-验证器在验证时会首次调用该方法来查询本地令牌缓存的有效性，如果本地令牌仍然有效，则直接返回验证结果。
-如本地缓存的令牌已失效，则需要开发者手动请求新令牌后并返回刷新后的令牌。
+Due to the particularity of this verification model, developers need to save the **refresh token** and **expiration time** returned by the first verification to help the validator complete the verification.
+The validator will call this method for the first time during verification to query the validity of the local token cache. If the local token is still valid, the verification result will be returned directly.
+If the locally cached token has expired, the developer needs to manually request a new token and return the refreshed token.
 
-下面我们提供了一个该方法的样例实现：
+Here is a sample implementation code of this method:
 
 ```c#
 
@@ -26,11 +26,11 @@ public async Task<(bool, GraphAuthResultModel?)> CacheTokenProviderAsync()
     if (string.IsNullOrEmpty(XBLToken)) return (false, default);
     if (string.IsNullOrEmpty(XBLRefreshToken)) return (false, default);
 
-    // 计算失效时间 // [!code focus]
+    // Calculate expire date // [!code focus]
     var expireDate = LastRefreshedTime.AddSeconds(ExpiresIn); // [!code focus]
 
-    // 如果本地缓存令牌依旧是有效的，则直接返回当前令牌 // [!code focus]
-    // 否则，使用刷新令牌请求新的令牌 // [!code focus]
+    // If the local cache token is still valid, the current token is returned directly. // [!code focus]
+    // Otherwise, request a new token using the refresh token // [!code focus]
     if (expireDate > DateTime.Now)
     {
         var result = new GraphAuthResultModel // [!code focus]
@@ -43,7 +43,7 @@ public async Task<(bool, GraphAuthResultModel?)> CacheTokenProviderAsync()
         return (true, result); // [!code focus]
     }
     
-    // 请求新的登录令牌 // [!code focus]
+    // Request a new login token // [!code focus]
     var refreshReqDic = new List<KeyValuePair<string, string>> // [!code focus]
     { // [!code focus]
         new("client_id", MicrosoftAuthenticator.ApiSettings.ClientId), // [!code focus]
@@ -65,7 +65,7 @@ public async Task<(bool, GraphAuthResultModel?)> CacheTokenProviderAsync()
     {
         if (refreshModel is GraphResponseErrorModel error) // [!code focus]
         { // [!code focus]
-            // 在这里处理失败的刷新操作 // [!code focus]
+            // Handle failed refresh operations here // [!code focus]
         } // [!code focus]
 
         return (false, default);
@@ -76,52 +76,51 @@ public async Task<(bool, GraphAuthResultModel?)> CacheTokenProviderAsync()
 
 ```
 
-###  配置首次登录设备流验证代码展示方法
+### Configure first login device flow verification code display method
 
-由于我们采用了设备流验证的方式来验证玩家的微软账户。
-因此，我们需要一个额外的方法将设备流验证所需要的一次性秘钥和验证地址展现给用户。
+Because we use device flow verification to verify the player's Microsoft account.
+Therefore, we need an additional method to present the one-time key and verification address required for device flow verification to the user.
 
-以下是这个方法的一个实例：
+Here is an example of this method:
 
 ```c#
 
 private void DeviceTokenNotifier(DeviceIdResponseModel deviceIdResponseModel)
 {
-    // 将获取到的回调数据展示到前端
+    // Display the obtained callback data to the front end
     DeviceCodeResponse = deviceIdResponseModel;
 }
 
 ```
 
-**DeviceIdResponseModel** 中包含了用户完成验证所需要的所有信息：
+**DeviceIdResponseModel** contains all the information the user needs to complete verification:
 
-|       名称        |           作用            |
+|       Name        |           Function            |
 |:---------------:|:-----------------------:|
-|    UserCode     |       用户验证所需要的秘钥        |
-| VerificationUri | 验证地址，用户需访问该网址来完成后续的验证步骤 |
-|    ExpiresIn    |      验证代码的失效时间（秒）       |
+|    UserCode     |       The secret key required for user authentication        |
+| VerificationUri | Verification address, users need to visit this URL to complete subsequent verification steps |
+|    ExpiresIn    |      Validation code expiration time (seconds)       |
 
-在下面您可以看到一个示例的展示界面：
+Here you can see an example of the interface:
 
 ![device_token_demo](/img/projbobcat/authenticators/device_token_auth_display_demo.png)
 
-在这个界面中，您至少需要包含以下的内容：
+In this interface, you need to include at least the following content:
 
-- 登录所需要的秘钥
-- 具体的验证地址
-- 一个简短的操作提示来帮助用户完成验证操作
+- The secret key required to log in
+- Specific verification address
+- A short operation prompt to help users complete the verification operation
 
-## 初始化验证器
+## Initialize validator
 
-### 初次验证
+### Initial verification
 
 :::warning
 
-请确保在执行下面的流程前您已经准备好了 **配置首次登录设备流验证代码展示方法** 来确保用户能够获取到正确的初次登录信息！
-
+Please make sure you are ready before performing the following process **Configuring the first login device flow verification code display method** to ensure that users can obtain the correct initial login information!
 :::
 
-初始化验证器：
+Initialize the validator:
 
 ```c#
 
@@ -132,18 +131,18 @@ var microsoftAuthenticator = new MicrosoftAuthenticator
 
 ```
 
-在上述代码块中，请将这些参数按照您的实际情况替换：
+In the above code block, please replace these parameters according to your actual situation:
 
-|          项目           |                             说明                              |
-|:---------------------:|:-----------------------------------------------------------:|
-| launcherAccountParser |                     对于启动器账户解析器的初始化，详见此处                     |
+| Project | Description |
+|:------------------------:|:------------------------------------------:|
+| launcherAccountParser | For initialization of the launcher account parser, see here |
 
-### 非初次验证
+### Not initial verification
 
-非初次验证即使用在首次验证中获取到的 Token 缓存来进行二次验证。
-其主要通过 CacheTokenProviderAsync 来验证本地凭据是否依旧有效，如果本地缓存的 Token 已经失效，则会在该方法中完成刷新。
+Non-initial verification means using the Token cache obtained in the first verification for secondary verification.
+It mainly uses CacheTokenProviderAsync to verify whether the local credentials are still valid. If the locally cached Token has expired, it will be refreshed in this method.
 
-初始化验证器：
+Initialize the validator:
 
 ```c#
 
@@ -156,47 +155,47 @@ var microsoftAuthenticator = new MicrosoftAuthenticator
 
 ```
 
-在上述代码块中，请将这些参数按照您的实际情况替换：
+In the above code block, please replace these parameters according to your actual situation:
 
-|          项目           |                             说明                              |
-|:---------------------:|:-----------------------------------------------------------:|
-| launcherAccountParser |                     对于启动器账户解析器的初始化，详见此处                     |
-|        [EMAIL]        |                          验证账户的邮箱地址                          |
+| Project | Description |
+|:------------------------:|:---------------------------:|
+| launcherAccountParser | For initialization of the launcher account parser, see here |
+| [EMAIL] | Email address to verify account                   |
 
 :::tip
 
-对于 **launcherAccountParser**（游戏档案解析器）的初始化，请参考[游戏档案解析器](/zhCN/projbobcat/additionalParsers/gameProfileParser)页面
+For the initialization of **launcherAccountParser** (game profile parser), please refer to the [Game Profile Parser](/enUS/projbobcat/additionalParsers/gameProfileParser) page
 
 :::
 
-## 获取验证结果（初次验证）
+## Get authentication results (first authentication)
 
-在您完成验证模型的初始化后，您只需要调用 Microsoft 验证器的验证方法来初次账户验证。
+After you complete the initialization of the authentication model, you only need to call the Microsoft Authenticator's authentication method for initial account authentication.
 
-下面是一段样例验证代码：
+Here is a sample authentication code:
 
 ```c#
 
-// 获取验证结果 // [!code focus]
-// DeviceTokenNotifier 即为前文提到的信息展示方法 // [!code focus]
+// Get authentication results // [!code focus]
+// DeviceTokenNotifier: This is the information display method mentioned above. // [!code focus]
 var authResult = await msAuth.GetMSAuthResult(DeviceTokenNotifier); // [!code focus]
 
 if (authResult == null)
 {
-    // 处理失败的验证 // [!code focus]
+    // Handling failed authentication // [!code focus]
 }
 
-// 从 Jwt Token 中解析用户字段 // [!code focus]
+// Parse user fields from Jwt Token // [!code focus]
 var claims = JwtTokenHelper.GetTokenInfo(authResult.IdToken); // [!code focus]
 var email = claims.TryGetValue("email", out var outEmail) ? outEmail : null; // [!code focus]
 
 if (string.IsNullOrEmpty(email))
 {
-    // 无法从 Jwt 凭据中无法解析用户的电子邮件地址，视作验证失败 // [!code focus]
-    // 这很有可能是 Azure 应用或是 Scope 配置失败导致的 // [!code focus]
+    // Unable to resolve user's email address from Jwt credentials, treated as authentication failure // [!code focus]
+    // This is most likely caused by Azure application or Scope configuration failure. // [!code focus]
 }
 
-// 将必要的用户信息保存至本地磁盘以便为下一次验证做准备 // [!code focus]
+// Save necessary user information to local disk in preparation for next authentication // [!code focus]
 var msInfoModel = new MSAccountInfoModel
 {
     XBLToken = authResult.AccessToken, // [!code focus]
@@ -207,11 +206,11 @@ var msInfoModel = new MSAccountInfoModel
 
 ```
 
-## 获取验证结果（非初次验证）
+## Get Authentication results (not initial authentication)
 
-在您完成验证模型的初始化后，您只需要调用 Microsoft 验证器的验证方法来完成账户验证。
+After you complete the initialization of the authentication model, you only need to call the authentication method of Microsoft Authenticator to complete the account authentication.
 
-在异步上下文中，使用 **AuthTaskAsync** 来完成验证：
+In an asynchronous context, use **AuthTaskAsync** to accomplish authentication:
 
 ```c#
 
@@ -219,7 +218,7 @@ var authResult = await microsoftAuthenticator.AuthTaskAsync(false);
 
 ```
 
-在同步上下文中，使用 **Auth** 来完成验证：
+In a sync context, use **Auth** to finish authentication:
 
 ```c#
 
@@ -227,45 +226,45 @@ var authResult = microsoftAuthenticator.Auth();
 
 ```
 
-## 解读验证结果
+## Interpret authentication results
 
-在验证方法完成之后，验证模型会返回验证结果，这是父类型为 [AuthResultBase](https://github.com/Corona-Studio/ProjBobcat/blob/master/ProjBobcat/ProjBobcat/Class/Model/Auth/AuthResultBase.cs) 的对象。
-所有的验证结果都包含一个枚举值 **AuthStatus**，该枚举值直接指示了验证结果的成功或是失败。
-在下面您可以看到对验证结果的解读：
+After the authentication method is completed, the authentication model will return the authentication result, which is of the parent type [AuthResultBase](https://github.com/Corona-Studio/ProjBobcat/blob/master/ProjBobcat/ProjBobcat/Class/Model/Auth/AuthResultBase.cs) object.
+All authentication results contain an enumeration value **AuthStatus**, which directly indicates the success or failure of the authentication result.
+Below you can see an interpretation of the authentication results:
 
-### 失败的验证结果
+### Failed Authentication Result
 
-通过判断 **Error** 是否为空，您可以很轻松的判断验证模型返回的验证结果是否是有效的，
-**Error** 对象会包含以下字段来告诉您一些细节：
+By judging whether **Error** is empty, you can easily judge whether the authentication results returned by the authentication model are valid.
+The **Error** object will contain the following fields to tell you some details:
 
-|              字段               |        说明        |
+|              Field               |        Description        |
 |:-----------------------------:|:----------------:|
-|    authResult.Error.Cause     |    导致问题的具体原因     |
-|    authResult.Error.Error     |       错误名称       |
-| authResult.Error.ErrorMessage | 错误的详细信息，可能包含解决方案 |
+|    authResult.Error.Cause     |    The specific cause of the problem     |
+|    authResult.Error.Error     |       error name       |
+| authResult.Error.ErrorMessage | Details of the error, possibly including a solution |
 
-### 成功的验证结果
+### Successful authentication result
 
-如果验证结果中的 **Error** 字段为空，则表示本次验证是有效的，成功的验证结果会包含下面的信息：
+If the **Error** field in the authentication result is empty, it means that the authentication is valid. A successful authentication result will contain the following information:
 
-|               字段               |                     说明                      |
+|               Field            |            Description                      |
 |:------------------------------:|:-------------------------------------------:|
-|         authResult.Id          |   该用户名的唯一标识符，ProjBobcat 使用特定的生成方式来生成这个标识符   |
-|     authResult.AccessToken     |                  用户账户的授权凭据                  |
-|      authResult.Profiles       |            用户可用的角色列表，可能包含多个可用角色             |
-|   authResult.SelectedProfile   |    用户当前选择的角色，该字段可能为空。如果为空则需要提示用户进行手动选择。     |
-|        authResult.User         |            用户账户信息摘要，包含一些基础的账户信息             |
-|       authResult.LocalId       |             本地 ID，通常为随机生成的 UUID             |
-|      authResult.RemoteId       |         验证服务器返回的远程 ID，通常为该用户的唯一标识符          |
+|         authResult.Id          |   A unique identifier for the username. ProjBobcat uses a specific generation method to generate this identifier.   |
+|     authResult.AccessToken     |                  Authorization credentials for the user account                  |
+|      authResult.Profiles       |            List of roles available to the user, which may contain multiple available roles             |
+|   authResult.SelectedProfile   |    The role currently selected by the user. This field may be empty. If it is empty, the user needs to be prompted for manual selection.     |
+|        authResult.User         |            Summary of user account information, including some basic account information             |
+|       authResult.LocalId       |             Local ID, usually a randomly generated UUID             |
+|      authResult.RemoteId       |        The remote ID returned by the authentication server, usually a unique identifier for the user          |
 |       authResult.XBoxUid       |                XBox Live UID                |
-|        authResult.Email        |                 验证所使用的邮箱地址                  |
-|   authResult.CurrentAuthTime   |   当前的验证时间，**开发者需要保存这个字段来帮助确认本地缓存令牌的有效性**    |
-|      authResult.ExpiresIn      | 令牌失效时间（单位：秒），**开发者需要保存这个字段来帮助确认本地缓存令牌的有效性** |
-|    authResult.RefreshToken     |       刷新令牌，**开发者需要保存这个字段来帮助刷新失效的令牌**        |
-|        authResult.Skin         |                 用户账户的皮肤 URL                 |
+|        authResult.Email        |                 Verify email address used                  |
+|   authResult.CurrentAuthTime   |   The current verification time, **Developers need to save this field to help confirm the validity of the local cache token**    |
+|      authResult.ExpiresIn      | Token expiration time (unit: seconds), **Developers need to save this field to help confirm the validity of the local cache token**|
+|    authResult.RefreshToken     |       Refresh token, **Developers need to save this field to help refresh expired tokens**        |
+|        authResult.Skin         |                 Skin URL for user account                 |
 
 :::warning
 
-请使用相应的限制或是加密等操作来安全的储存用户相关令牌的机密数据，这部分数据的泄露可能会造成损失。
+Please use corresponding restrictions or encryption operations to safely store confidential data related to user tokens. The leakage of this data may cause losses.
 
 :::

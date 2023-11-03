@@ -1,8 +1,8 @@
 import {DefaultTheme, LocaleSpecificConfig} from "vitepress";
-import nav from "./navBar/zhCN";
-import sidebar from "./sideBar/zhCN";
+import nav from "./navBar/enUS";
+import sidebar from "./sideBar/enUS";
 
-export const zhConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
+export const enUSConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
     description: 'Corona Studio Knowledge Base',
 
     themeConfig: {

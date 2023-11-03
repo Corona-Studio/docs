@@ -1,10 +1,10 @@
-# 游戏账号解析器
+# Game account parser
 
-游戏档案解析器负责将用户账户写入到官方启动器的配置文件中。
+The game profile parser is responsible for outputing the user account into the official launcher configuration file.
 
-## 初始化解析器
+## Initialize the parser
 
-初始化解析器的方式非常简单：
+The way to initialize the parser is very simple:
 
 ```c#
 
@@ -13,5 +13,5 @@ var launcherAccountParser
 
 ```
 
-其中，**rootPath** 为核心所在的根目录（即 .minecraft 文件夹所在的目录）。
-**clientToken** 为一个随机生成的 GUID。
+Among them, **rootPath** is the root directory where the core is located (that is, the directory where the .minecraft folder is located).
+**clientToken** is a randomly generated GUID.

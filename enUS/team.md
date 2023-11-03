@@ -11,8 +11,8 @@ import {
 const members = [
   {
     avatar: 'https://www.github.com/laolarou726.png',
-    name: '老腊肉',
-    title: '创建者',
+    name: 'laolarou726',
+    title: 'Founder',
     links: [
       { icon: 'github', link: 'https://github.com/laolarou726' }
     ]
@@ -28,7 +28,7 @@ const members = [
   {
     avatar: 'https://github.com/leon-o.png',
     name: 'Leon',
-    title: 'UI、后端服务、运维',
+    title: 'UI, Back-end, Operator and Maintainer',
     links: [
       { icon: 'github', link: 'https://github.com/leon-o' }
     ]
@@ -36,15 +36,15 @@ const members = [
   {
     avatar: 'https://github.com/komorebi64.png',
     name: 'Croteco',
-    title: '后端服务、运维',
+    title: 'Back-end, Operator and Maintainer',
     links: [
       { icon: 'github', link: 'https://github.com/komorebi64' }
     ]
   },
   {
     avatar: 'https://github.com/fr1g.png',
-    name: '法棍',
-    title: '前端、MC 服务器运维',
+    name: 'Feiron Iguista',
+    title: 'Front-end, Minecraft Server Operator and Maintainer',
     links: [
       { icon: 'github', link: 'https://github.com/fr1g' }
     ]
@@ -56,10 +56,10 @@ const members = [
 <VPTeamPage>
   <VPTeamPageTitle>
     <template #title>
-      我们的团队
+      Our Team
     </template>
     <template #lead>
-        Corona Studio（日冕工作室）是以 Minecraft 游戏第三方服务为业务核心的、由专业人士和爱好者组成的团队，前身是 CMFL 启动器开发组，
+        Corona Studio is a team of professionals and enthusiasts with Minecraft third-party game services as its core business. Was formerly the CMFL development team.
     </template>
   </VPTeamPageTitle>
   <VPTeamMembers

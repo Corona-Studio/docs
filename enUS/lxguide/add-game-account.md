@@ -1,83 +1,83 @@
-# 使用LauncherX添加游戏账户
+# Add a game account to LauncherX
 
 [[toc]]
 
-/*对本地化贡献者的提示: 请将本文中的链接替换为对应的本地化. 这句话只应该在简体中文(中国大陆)中出现。* /
+Edited date: February 27, 2023 | Feiron Iguista | Japerz
 
-编辑日期: 2023年2月27日 | Feiron Iguista
+## Preface
 
-## 前言
+In this guide, we recommend that you prioritize using an official Microsoft account to log in to your Minecraft. Although the official has not made clear its opposition to games without genuine verification such as offline mode, we still recommend that you support and maintain intellectual property rights by purchasing Minecraft. **Using an offline copy of Minecraft may result in infringement, so all consequences will be borne by you and LauncherX is not responsible for it.**
 
-在这篇文章中,我们建议您优先使用来自微软官方的Microsoft帐户登录您的Minecraft。虽然官方并未明确其对离线模式等无正版验证的游戏的反对态度, 但我们仍然建议您通过购买Minecraft来支持和维护知识产权.
+This article will guide you in using LauncherX to add **Local Only** game accounts during initial use and subsequent use, including the following types:
 
-本文将指导您使用LauncherX在初次使用和后续使用中添加 **仅本地可用的** 游戏账户, 包括以下类型:
+- Microsoft Account
+- Offline Mode Account
+- AuthLib Account(Original Mojang account login)
 
-- Microsoft 账户
-- 离线模式账户
-- AuthLib 帐户（原 Mojang 账户登录）
+*Since the official has stopped supporting Mojang accounts and started migrating Mojang accounts to Microsoft accounts, LauncherX will no longer support Mojang account login. For More Details: [Mojang Java Edition Minecraft Account Move | Minecraft](https://help.minecraft.net/hc/en-us/articles/19615552270221)*
 
-*由于官方已经停止对 Mojang 帐户的支持并开始迁移 Mojang 帐户到 Microsoft 帐户, 故 LauncherX 将不再支持 Mojang 帐户登录。详情: [Mojang Java 版 Minecraft 帐户移动 | Minecraft](https://www.minecraft.net/zh-hans/mojang-account-move)*
+## Initial Setup
 
-## 初次设置
+When you use LauncherX for the first time, you will see LauncherX greet you and ask you to perform some initial settings necessary to use LauncherX. When you reach the "Add Account" step, you can choose one of the following operations. Click the "Add" button to get started.
 
-初次使用 LauncherX 时, 您会看到 LauncherX 在向您打招呼之后要求您进行一些使用 LauncherX 必要的初始设置。在到达“添加账户”这一步时, 您可以选择以下一个操作进行。点击“添加”按钮来开始.
+### Microsoft Acount Login
 
-### Microsoft帐户登录
+Click the "Microsoft Account" button in the pop-up window, LauncherX will pop up another window (verification information window) containing a verification link, a one-time verification code and some buttons.
 
-点击弹出窗口中的“Microsoft帐户”按钮, LauncherX将会弹出一个包含验证链接、一次性验证代码和些许按钮的置顶窗口 ( 验证信息窗口 ).
-
+<!-- 这个截图需要在Lx完全更新英文版本后更新 -->
 ![image-20230222204440416](../../public/img/lxguide/addGameAccount/image-20230222204440416.png)
 
-整个流程大约10秒即可完成 (受网络性能和您的浏览器是否保存了您的微软账户登录信息影响, 这可能会有些许延长)。
-考虑到微软的隐私策略, 我们建议您在 3 分钟内完成这个流程, 以免一次性验证代码失效。若一次性代码失效, 您需要关闭当前的验证信息窗口并重复添加微软账户的操作.
+The entire process takes about 10 seconds to complete (this may take a little longer depending on network performance and whether your browser saves your Microsoft account login information).
+Taking into account Microsoft's privacy policy, we recommend that you complete this process within 3 minutes to avoid invalidation of the one-time verification code. If the one-time code fails, you need to close the current verification information window and repeat the operation of adding a Microsoft account.
 
-- 点击“复制代码”, 即可把您本次登录所需要使用的一次性代码复制到剪贴板。*[[Microsoft]Windows10+内置剪贴板提示](https://support.microsoft.com/zh-cn/windows/%E5%89%AA%E8%B4%B4%E6%9D%BFwindows-c436501e-985d-1c8d-97ea-fe46ddf338c6)*
-- 点击“打开验证页面”, 将会通过您的默认浏览器打开微软账户的验证页面.
-- 将您复制的一次性代码按网页提示粘贴到指定的位置。如果微软要求您登录, 请先在网页中登录您的微软账户.
-- 弹出此窗口后, 您需要“同意”以继续添加账户的操作.
+- Click "Copy Code" to copy the one-time code you need to use for this login to the clipboard. *[[Microsoft]Clipboard in Windows](https://support.microsoft.com/en-us/windows/clipboard-in-windows-c436501e-985d-1c8d-97ea-fe46ddf338c6)*
+- Click "Open Verification Page" to open the Microsoft account verification page through your default browser.
+- Paste the one-time code you copied into the specified location as prompted on the web page. If Microsoft requires you to log in, please log in to your Microsoft account on the web page first.
+- After this window pops up, you need to "agree" to continue adding the account.
 
 ![image-20230222204659302](../../public/img/lxguide/addGameAccount/image-20230222204659302.png)
 
-在 LauncherX 验证账户过程中, 您可以继续进行下一步设置。
+While LauncherX is verifying your account, you can continue with the next step of setup.
 
-如果您认为验证过程太慢或失败, 请考虑优化您当前的网络环境 (比如, 使用针对 Xbox 登录的加速器或尝试离您的无线网络源近一些, 如果您在使用的无线网络的话。) 
+If you think the verification process is too slow or failing, consider optimizing your current network environment (for example, using an accelerator for Xbox login or trying to move closer to your wireless network source, if you are using one.)
 
-#### 意外情况: Edge浏览器弹出需要安全验证设备:
+#### Unexpected situation: Edge browser pops up requiring security verification device:
 
 ![image-20230222204732083](../../public/img/lxguide/addGameAccount/image-20230222204732083.png)
 
-对于这种情况, 您需要:
+For this case, you need:
 
-  - 点击“取消”
-  - 在网页中点击“其他登录方法”,如图：![image-20230222204925338](../../public/img/lxguide/addGameAccount/image-20230222204925338.png)
-  - 点击“使用我的密码”, 或者选择任意您方便使用的登录方法 ![image-20230222205034775](../../public/img/lxguide/addGameAccount/image-20230222205034775.png)
+  - Hit "Cancel"
+  - Click "Other login methods" on the web page, as shown in the figure:![image-20230222204925338](../../public/img/lxguide/addGameAccount/image-20230222204925338.png)
+  - Click "Use my password" or choose any login method that's convenient for you: ![image-20230222205034775](../../public/img/lxguide/addGameAccount/image-20230222205034775.png)
 
-### 离线模式
+### Offline Mode
 
-这可以说是最简单的账户添加方法。您可以用 LauncherX 为您的本地游戏开启自定义皮肤, 这个功能只会对您的本地客户端生效。 参见: 游戏账户管理/皮肤预览
+This is arguably the easiest way to add an account. You can use LauncherX to enable custom skins for your local game. This feature will only take effect on your local client. See: Game Account Management/Skin Preview
+**But I still want to remind you that using the offline version may be illegal and result in legal consequences, and you will be responsible for all the consequences.**
 
-- 点击“离线账户”
-- 输入任意您想要的玩家名。注意, 有些版本 ( 尤其是较老的版本 ) 不支持中文 ID。
-- 离线模式只能供您游玩本地游戏和支持离线登入的服务器。
+- Click "Offline Account"
+- Enter any player name you want. Note that some versions (especially older versions) do not support non-English and English character IDs.
+- Offline mode only allows you to play local games and servers that support offline login.
 
 ### AuthLib
 
-借助 [AuthLib-Injector](https://github.com/yushijinhun/authlib-injector), 使用特殊的登录验证服务。在选择这一项登录之前, 您应该确认您有来自某一方的 AuthLib 外置登录服务。
+Use a special login verification service with the help of [AuthLib-Injector](https://github.com/yushijinhun/authlib-injector). Before choosing this option to log in, you should confirm that you have an AuthLib external login service from one party.
 
-为此, 您需要准备:
+To do this, you need to prepare:
 
-- 外置登录验证电子邮箱
-- 对应的密码
-- 对应验证服务的 AuthLib 服务器地址 (这对于外置登录是必须的, 因为 LauncherX 不知道您需要向谁的 Yggdrasil API 进行验证。通常, 这个地址类似 “https://<服务提供商的域名>/api/yggdrasil”)
+- External login verification email
+- Corresponding password
+- The AuthLib server address corresponding to the authentication service (this is necessary for external logins, because LauncherX does not know whose Yggdrasil API you need to authenticate to. Typically, this address is something like "https://<service provider's domain name>/api/yggdrasil”)"
 
-点击“外置登录”以开始。
+Click "External Login" to get started.
 
-- 弹出如图所示的窗口: ![image-20230227091559255](../../public/img/lxguide/addGameAccount/image-20230227091559255.png)
-- 对应输入先前您应该准备好的信息
-- 保存账户。这些信息将加密后作为凭证, 在您登录支持对应的AuthLib服务的服务器后用于验证。
+- A window as shown in the picture will pop up: ![image-20230227091559255](../../public/img/lxguide/addGameAccount/image-20230227091559255.png)
+- Enter the information you should have prepared previously
+- Save account. This information will be encrypted and used as credentials, which will be used for verification after you log in to the server that supports the corresponding AuthLib service.
 
-## 后续添加
+## More setup
 
-在完成初次设置后, 您可以进入 **设置-账户**, 添加更多的游戏账户。
+After completing the initial setup, you can enter **Settings-Account** to add more game accounts.
 
-点击“添加账户”之后, 一切操作与您在初次设置 LauncherX 时候完全一致。我们建议您在添加了微软账户后对应的添加一个相同ID的离线账户, 以避免部分游戏在联网或未联网情况下无法启动的问题。
+After clicking "Add Account", everything is exactly the same as when you first set up LauncherX. We recommend that you add an offline account with the same ID after adding a Microsoft account to avoid the problem that some games cannot be started when online or not.

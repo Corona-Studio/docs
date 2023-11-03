@@ -1,4 +1,4 @@
-# 资源补全器
+# Resource completer
 
-在 ProjBobcat 中，我们为开发者提供了用于补全 MineCraft 核心资源文件的补全器。
-这些资源包括：游戏音频、材质、贴图、语言文件、启动所必须的库文件等。
+In ProjBobcat, we provide developers with a completer for completing Minecraft core resource files.
+These resources include: game audio, materials, textures, language files, library files necessary for startup, etc.

@@ -1,47 +1,47 @@
-# LiteLoader 安装器
+# LiteLoader Installer
 
 [[toc]]
 
 ::: tip
 
-请注意，ProjBobcat 仅实现了 LiteLoader 自动化安装流程，您仍然需要自己实现 LiteLoader 安装包的搜索、下载、保存流程。
+Please note that ProjBobcat only implements the LiteLoader automated installation process. You still need to implement the search, download, and save process of the LiteLoader installation package yourself.
 
 :::
 
 ::: warning
 
-LiteLoader 作为早期 MineCraft 的模组系统，已经长期缺乏维护和后续支持。
-因此，我们可能会在后续的版本中移除对 LiteLoader 安装的支持。
+LiteLoader, as the early Minecraft mod system, has lacked maintenance and follow-up support for a long time.
+Therefore, we may remove support for LiteLoader installation in future release.
 
 :::
 
-## 实用资源
+## Resources
 
 - [LiteLoader Versions API](https://dl.liteloader.com/versions/versions.json)
-- [BMCLAPI 开发文档](https://bmclapidoc.bangbang93.com/)
+- [BMCLAPI Development documentation](https://bmclapidoc.bangbang93.com/)
 
-## 获取 LiteLoader Download Version Model
+## Get LiteLoader Download Version Model
 
-由于 ProjBobcat 的 LiteLoader 安装器要求您在初始化安装器时提供来自 LiteLoader 的下载信息。
-因此，我们将在这里简要描述如何根据指定的 MineCraft 版本来获取该信息。
+Because ProjBobcat's LiteLoader installer requires you to provide download information from the LiteLoader when initializing the installer.
+Therefore, we will briefly describe here how to obtain this information based on a given MineCraft version.
 
 ::: info
 
-在该示例中，我们将使用 MineCraft 1.7.10 来向您展示如何获取。
+In this example, we'll be using Minecraft 1.7.10 to show you how to get it.
 
 :::
 
 ::: warning
 
-由于 LiteLoader 官方没有提供公开的 API 文档。因此，在本流程中，我们需要使用第三方的镜像源来完成数据的获取。
-在这里，我们使用 [BMCLAPI](https://bmclapidoc.bangbang93.com/) 来获取相关的版本信息。
+Since LiteLoader officially does not provide public API documentation. Therefore, in this process, we need to use a third-party mirror source to complete data acquisition.
+Here, we use [BMCLAPI](https://bmclapidoc.bangbang93.com/) to obtain relevant version information.
 
 :::
 
-首先，您需要向 [https://bmclapi2.bangbang93.com/liteloader/list?mcversion=[MC_VERSION]](https://bmclapi2.bangbang93.com/liteloader/list?mcversion=1.7.10) 发送一个 **HTTP GET** 请求。
-将 `[MC_VERSION]` 替换为您想要安装的 MineCraft 版本。在这里，我们将使用 1.7.10。
+First, you need to send an **HTTP GET** request to [https://bmclapi2.bangbang93.com/liteloader/list?mcversion=[MC_VERSION]](https://bmclapi2.bangbang93.com/liteloader/list?mcversion=1.7.10).
+Replace `[MC_VERSION]` with the Minecraft version you want to install. Here we will use 1.7.10 for demostration.
 
-您将看到类似下面的返回内容：
+You will see something similar to the following returned:
 
 ```json
 
@@ -67,52 +67,52 @@ LiteLoader 作为早期 MineCraft 的模组系统，已经长期缺乏维护和�
 
 ```
 
-BMCLAPI 将返回一个 JSON 对象，将该对象反序列化为 ProjBobcat 类型即是我们需要的 `LiteLoaderDownloadVersionModel`。
+BMCLAPI will return a JSON object, and deserializing the object into the ProjBobcat type is the `LiteLoaderDownloadVersionModel` we need.
 
-#### 将 JSON 返回转换为 ProjBobcat 类型
+#### Convert JSON return to ProjBobcat type
 
-如果您在您的项目中使用 [JSON.NET](https://www.newtonsoft.com/json)（Newtonsoft.JSON）。
-您可以使用类似下面的代码来将您获取到的服务器响应转换为对应的 ProjBobcat 类型：
+If you are using [JSON.NET](https://www.newtonsoft.com/json)(Newtonsoft.JSON) in your project.
+You can use code similar to the following to convert the server response you get into the corresponding ProjBobcat type:
 
 ```c#
 
-// 从 BMCLAPI 请求数据（示例，非实际代码）
+// Requesting data from BMCLAPI (example, not actual code)
 ...
 var responseJson = await res.Content.ReadAsStringAsync();
 
-// 将 JSON 响应转换为 ProjBobcat 类型 // [!code focus]
+// Convert JSON response to ProjBobcat type // [!code focus]
 var versionModel = JsonConvert.DeserializeObject<LiteLoaderDownloadVersionModel>(responseJson); // [!code focus]
 
 ```
 
-此处，**versionModel** 即是 Fabric 安装器所需要的 `LiteLoaderDownloadVersionMode`。
+This **versionModel** is the `LiteLoaderDownloadVersionMode` required by the Fabric installer.
 
-## 获取 RawVersionModel
+## Get RawVersionModel
 
-在初始化 LiteLoader 安装器时，安装器需要使用 LiteLoader 对应的 MineCraft 游戏版本的原始 JSON 内容。
-即 `[ROOT_PATH]/versions/[MC_VERSION]/[MC_VERSION].json` 文件的内容。
+When initializing the LiteLoader installer, the installer needs to use the raw JSON content of the MineCraft game version corresponding to the LiteLoader.
+That is, the contents of the `[ROOT_PATH]/versions/[MC_VERSION]/[MC_VERSION].json` file.
 
-如果您已经安装了 LiteLoader 对应的原版游戏，您可以通过下面的代码获取到 `RawVersionModel`：
+If you have installed the original game corresponding to LiteLoader, you can get the `RawVersionModel` through the following code:
 
 ```c#
 
-// 获取版本 JSON 文件所在的路径
+// Get the path to the version JSON file
 var jsonPath = GamePathHelper.GetGameJsonPath(rP, id);
 
-// 读取该文件的内容
+// Read the contents of the file
 var jsonContent = await File.ReadAllTextAsync(jsonPath);
 
-// 将 JSON 内容转换为 RawVersionModel
+// Convert JSON content to RawVersionModel
 var baseVersionModel = JsonConvert.DeserializeObject<RawVersionModel>(jsonContent);
 
 ```
 
-此处，**baseVersionModel** 即是 LiteLoader 安装器所需要的 `RawVersionModel`。
+This **baseVersionModel** is the `RawVersionModel` required by the LiteLoader installer.
 
-## 初始化安装器
+## Initialize the installer
 
-初始化 LiteLoader 安装器的方式非常简单。
-您需要使用到在先前步骤中取得的 `versionModel` 和 `baseVersionModel` 来初始化安装器：
+The way to initialize the LiteLoader installer is very simple.
+You need to initialize the installer using the `versionModel` and `baseVersionModel` obtained in the previous steps:
 
 ```c#
 
@@ -127,20 +127,20 @@ var liteLoaderInstaller = new LiteLoaderInstaller
 
 ```
 
-在上述代码块中，请将这些参数按照您的实际情况替换：
+In the above code block, please replace these parameters according to your actual situation:
 
-|                 项目                  |                      说明                       |
-|:-----------------------------------:|:---------------------------------------------:|
-|          [GAME_ROOT_PATH]           |          游戏根目录，通常为 .minecraft 文件夹的路径          |
-|      [CUSTOM_INSTALL_GAME_ID]       |              可选项，自定义即将要安装的游戏的名称               |
-|       [MC_VERSION_OR_GAME_ID]       | Forge 继承的 MineCraft 原版游戏版本，通常为游戏版本。例如：1.19.2  |
-|       [VERSION_LOCATOR_INST]        |  游戏版本定位器实例，即初始化游戏核心时的 **VersionLocator** 属性   |
+| Project | Description |
+|:----------------------------------:|:------------------------------------------:|
+| [GAME_ROOT_PATH] | The game root directory, usually the path to the **.minecraft** folder |
+| [CUSTOM_INSTALL_GAME_ID] | Optional, customize the name of the game to be installed |
+| [MC_VERSION_OR_GAME_ID] | The Minecraft original game version inherited by Forge, usually the game version. For example: 1.19.2 |
+| [VERSION_LOCATOR_INST] | Game version locator instance, that is, the **VersionLocator** attribute when initializing the game core |
 
-## 开始安装
+## start installation
 
-在您完成安装器的初始化后，您只需要调用 LiteLoader 安装器的安装方法来完成安装。
+After you complete the initialization of the installer, you only need to call the installation method of the LiteLoader installer to complete the installation.
 
-在异步上下文中，使用 **InstallTaskAsync** 来完成安装：
+In an asynchronous context, use **InstallTaskAsync** to complete the installation:
 
 ```c#
 
@@ -148,7 +148,7 @@ await liteLoaderInstaller.InstallTaskAsync();
 
 ```
 
-在同步上下文中，使用 **Install** 来完成安装：
+In a sync context, use **Install** to complete the installation:
 
 ```c#
 
@@ -156,12 +156,12 @@ liteLoaderInstaller.Install();
 
 ```
 
-## 报告安装进度
+## Report installation progress
 
-在某些情况下，LiteLoader 安装器可能会需要数分钟的时间来完成安装。
-因此，您可能需要实时向用户汇报安装器目前的进度。
-为此，LiteLoader 安装器提供了 **StageChangedEventDelegate** 事件来帮助您实现任务汇报。
-您只需要简单地在 **开始安装之前** 注册下面的事件：
+In some cases, the LiteLoader installer may take several minutes to complete the installation.
+Therefore, you may need to report the current progress of the installer to the user in real time.
+To this end, the LiteLoader installer provides the **StageChangedEventDelegate** event to help you implement task reporting.
+You simply need to register for the following event **before starting the installation**:
 
 ```c#
 
@@ -171,4 +171,4 @@ liteLoaderInstaller.StageChangedEventDelegate += (_, args) => {
 
 ```
 
-其中， **args.Progress** 指示了安装器当前的百分比进度。**args.CurrentStage** 则是安装器当前进度的文字描述。
+Among them, **args.Progress** indicates the current percentage progress of the installer. **args.CurrentStage** is a text description of the current progress of the installer.

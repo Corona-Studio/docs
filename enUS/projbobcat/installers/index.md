@@ -1,15 +1,16 @@
-# 安装器
+#Installer
 
-在 ProjBobcat 中，我们已经为开发者实现了您在 MineCraft 开发过程中可能遇到的大部分模组基础设施。
+In ProjBobcat, we've implemented most of the modding infrastructure you're likely to encounter during MineCraft development for developers.
 
-## 支持列表
+## Support list
 
-|      项目名称       |    支持状态     ||
+| Project Name | Support Status ||
 |:---------------:|:-----------:|:---:|
-|   Forge （旧版）    |     受支持     |  ✅   |
-|   Forge （新版）    |     受支持     |  ✅  |
-|   LiteLoader    |     受支持     |  ✅  |
-|     Fabric      |     受支持     |  ✅  |
-|    Optifine     |     受支持     |  ✅  |
-|      Quilt      |  受支持（实验性）   |  ⚠  |
-| CurseForge 整合包  |     受支持     |  ✅  |
+| Forge (old version) | Supported | ✅ |
+| Forge (new version) | Supported | ✅ |
+| NeoForge | Supported (Experimental) | ⚠ |
+| LiteLoader | Supported | ✅ |
+| Fabric | Supported | ✅ |
+| Optifine | Supported | ✅ |
+| Quilt | Supported (Experimental) | ⚠ |
+| CurseForge Integration Pack | Supported | ✅ |

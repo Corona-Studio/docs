@@ -1,11 +1,11 @@
-# Minecraft 皮肤规范（1.18+）
+# Minecraft Skin Specifications (1.18+)
 
-以下是从 Minecraft 1.18 开始的新皮肤规范
+Here are the new skin specs starting with Minecraft 1.18
 
-## 样例 1
+## Sample 1
 
 ![image info](/img/skin/template.png)
 
-## 样例2（包含网格）
+## Sample 2 (including grid)
 
 ![image info](/img/skin/template-grid.jpg)

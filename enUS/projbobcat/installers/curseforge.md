@@ -1,21 +1,21 @@
-# CurseForge 整合包安装器
+# CurseForge integration package installer
 
 [[toc]]
 
 ::: tip
 
-请注意，ProjBobcat 仅实现了 CurseForge 整合包的自动化安装流程，您仍然需要自己实现 CurseForge 整合包的搜索、下载、保存流程。
+Please note that ProjBobcat only implements the automated installation process of the CurseForge integration package. You still need to implement the search, download, and save process of the CurseForge integration package yourself.
 
 :::
 
-## 实用资源
+## Resources
 
-- [CurseForge 官方网站](https://www.curseforge.com/)
+- [CurseForge Website](https://www.curseforge.com/)
 - [CurseForge API](https://docs.curseforge.com/)
 
-## 初始化安装器
+## Initialize the installer
 
-初始化 CurseForge 安装器的方式非常简单：
+The way to initialize the CurseForge installer is very simple:
 
 ```c#
 
@@ -28,19 +28,19 @@ var curseForgeInstaller = new CurseForgeInstaller
 
 ```
 
-在上述代码块中，请将这些参数按照您的实际情况替换：
+In the above code block, please replace these parameters according to your actual situation:
 
-|                  项目                  |             说明              |
-|:------------------------------------:|:---------------------------:|
-|           [GAME_ROOT_PATH]           | 游戏根目录，通常为 .minecraft 文件夹的路径 |
-|       [CUSTOM_INSTALL_GAME_ID]       |     可选项，自定义即将要安装的游戏的名称      |
-|        [PATH_TO_YOUR_MODPACK]        |     CurseForge 整合包所在的路径     |
+| Project | Description |
+|:-----------------------------------------:|:----------------------:|
+| [GAME_ROOT_PATH] | The game root directory, usually the path to the **.minecraft** folder |
+| [CUSTOM_INSTALL_GAME_ID] | Optional, customize the name of the game to be installed |
+| [PATH_TO_YOUR_MODPACK] | The path where the CurseForge integration package is located |
 
-## 开始安装
+## Start installation
 
-在您完成安装器的初始化后，您只需要调用 CurseForge 安装器的安装方法来完成安装。
+After you complete the initialization of the installer, you only need to call the installation method of the CurseForge installer to complete the installation.
 
-在异步上下文中，使用 **InstallTaskAsync** 来完成安装：
+In an asynchronous context, use **InstallTaskAsync** to complete the installation:
 
 ```c#
 
@@ -48,7 +48,7 @@ await curseForgeInstaller.InstallTaskAsync();
 
 ```
 
-在同步上下文中，使用 **Install** 来完成安装：
+In a sync context, use **Install** to complete the installation:
 
 ```c#
 
@@ -56,12 +56,12 @@ curseForgeInstaller.Install();
 
 ```
 
-## 报告安装进度
+## Report installation progress
 
-在某些情况下，CurseForge 安装器可能会需要数分钟的时间来完成安装。
-因此，您可能需要实时向用户汇报安装器目前的进度。
-为此，CurseForge 安装器提供了 **StageChangedEventDelegate** 事件来帮助您实现任务汇报。
-您只需要简单地在 **开始安装之前** 注册下面的事件：
+In some cases, the CurseForge installer may take several minutes to complete the installation.
+Therefore, you may need to report the current progress of the installer to the user in real time.
+For this purpose, the CurseForge installer provides the **StageChangedEventDelegate** event to help you implement task reporting.
+You simply need to register for the following event **before starting the installation**:
 
 ```c#
 
@@ -71,5 +71,5 @@ curseForgeInstaller.StageChangedEventDelegate += (_, args) => {
 
 ```
 
-其中， **args.Progress** 指示了安装器当前的百分比进度。**args.CurrentStage** 则是安装器当前进度的文字描述。
+Among them, **args.Progress** indicates the current percentage progress of the installer. **args.CurrentStage** is a text description of the current progress of the installer.
 

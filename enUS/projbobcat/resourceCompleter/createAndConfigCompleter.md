@@ -1,10 +1,10 @@
-# 创建和配置补全器
+# Create and configure completers
 
 [[toc]]
 
-## 初始化补全器
+## Initialize the completer
 
-创建一个资源补全器的方法非常简单，您只需要使用下面的代码即可完成补全器的初始化：
+The method of creating a resource completer is very simple. You only need to use the following code to complete the initialization of the completer:
 
 ```c#
 
@@ -13,7 +13,7 @@ var completer = new DefaultResourceCompleter
     MaxDegreeOfParallelism = [MAX_DEGREE_OF_PARALLELISM],
     ResourceInfoResolvers = new List<IResourceInfoResolver>
     {
-        ... // 资源信息解析器的初始化
+        ... // Initialization of resource information resolvers
     },
     TotalRetry = [NUMBER_OF_TOTAL_RETRY],
     CheckFile = [CHECK_FILE_AFTER_DOWNLOADED],
@@ -24,30 +24,29 @@ var completer = new DefaultResourceCompleter
 
 ::: tip
 
-资源信息解析器的初始化相关教程请参见 [资源信息解析器](/zhCN/projbobcat/resourceCompleter/resourceInfoResolver/index) 章节
-
+For tutorials on the initialization of the resource information resolver, please refer to the chapter [Resource Information Resolver](/enUS/projbobcat/resourceCompleter/resourceInfoResolver/index)
 :::
 
-在上述代码块中，请将这些参数按照您的实际情况替换：
+In the above code block, please replace these parameters according to your actual situation:
 
-|                    项目                    | 数据类型    |              说明              |
-|:----------------------------------------:|:--------|:----------------------------:|
-|       [MAX_DEGREE_OF_PARALLELISM]        | INT     |    资源检查并行程度（同时检查游戏资源的数量）     |
-|      [CHECK_FILE_AFTER_DOWNLOADED]       | BOOLEAN |  在文件下载完成后检查文件完整性（如果存在资源校检码）  |
-| [TOTAL_DOWNLOAD_SEGMENTS_FOR_LARGE_FILE] | INT     |         大文件下载时的分片数量          |
+| Project | Data Type | Description |
+|:------------------------------------------------:|:--------|:----------------------------:|
+| [MAX_DEGREE_OF_PARALLELISM] | INT | Resource check parallelism (check the number of game resources at the same time) |
+| [CHECK_FILE_AFTER_DOWNLOADED] | BOOLEAN | Check file integrity after file download is complete (if resource checksum exists) |
+| [TOTAL_DOWNLOAD_SEGMENTS_FOR_LARGE_FILE] | INT | Number of fragments when downloading large files |
 
 ::: warning
 
-**[MAX_DEGREE_OF_PARALLELISM]** 和 **[TOTAL_DOWNLOAD_SEGMENTS_FOR_LARGE_FILE]**
-的数值大小请视硬件性能酌情调整，设置过大的数值可能会导致会导致吞吐量的下降。
+**[MAX_DEGREE_OF_PARALLELISM]** and **[TOTAL_DOWNLOAD_SEGMENTS_FOR_LARGE_FILE]**
+Please adjust the value according to the hardware performance as appropriate. Setting a value that is too large may cause a decrease in throughput.
 
 :::
 
-## 补全游戏资源
+## Complete game resources
 
-在完成资源补全器的初始化操作后，您只需要调用补全方法即可开始执行检查和补全操作：
+After initializing the resource completer, you only need to call the completion method to start checking and completing operations:
 
-在异步上下文中，使用 **CheckAndDownloadTaskAsync** 来完成安装：
+In an asynchronous context, use **CheckAndDownloadTaskAsync** to complete the installation:
 
 ```c#
 
@@ -55,16 +54,16 @@ var result = await completer.CheckAndDownloadTaskAsync(); // [!code focus]
 
 if (result.TaskStatus == TaskResultStatus.Error && (result.Value?.IsLibDownloadFailed ?? false))
 {
-    // 在完成补全后，资源检查器会返回执行结果。
-    // 您可以检查 result 中的属性值来确定补全是否完成
+     // After completing the completion, the resource inspector will return the execution results.
+     // You can check the property value in result to determine whether completion is complete
     
-    // IsLibDownloadFailed 会反映启动必须的库文件是否已经成功补全
-    // 通常来说，如果库文件的补全失败，很有可能会导致游戏的启动失败
+     // IsLibDownloadFailed will reflect whether the library files necessary for startup have been successfully completed.
+     // Generally speaking, if the completion of the library file fails, it is likely to cause the game to fail to start.
 }
 
 ```
 
-在同步上下文中，使用 **CheckAndDownload** 来完成安装：
+In a sync context, use **CheckAndDownload** to complete the installation:
 
 ```c#
 
@@ -72,14 +71,14 @@ var result = completer.CheckAndDownload(); // [!code focus]
 
 ```
 
-## 报告进度
+## Report progress
 
-在某些情况下，资源补全器可能会需要数分钟的时间来完成资源的检查和下载。
-因此，您可能需要实时向用户汇报补全器目前的进度。
+In some cases, the resource completer may take several minutes to complete checking and downloading the resource.
+Therefore, you may need to report the completer's current progress to the user in real time.
 
-### 报告资源检查器的进度
+### Report Resource Inspector progress
 
-您可以通过注册事件 **GameResourceInfoResolveStatus** 来获取实时的检查进度：
+You can get real-time check progress by registering the event **GameResourceInfoResolveStatus**:
 
 ```c#
 
@@ -88,46 +87,46 @@ completer.GameResourceInfoResolveStatus += (_, args) =>
 
 ```
 
-其中， **args.Progress** 指示了检查器当前的百分比进度。**args.Status** 则是检查器当前进度的文字描述。
+Among them, **args.Progress** indicates the current percentage progress of the checker. **args.Status** is a text description of the current progress of the checker.
 
-### 报告补全器文件下载进度
+### Report completion file download progress
 
-您可以通过注册事件 **DownloadFileCompletedEvent** 来获取实时的检查进度：
+You can get real-time check progress by registering the event **DownloadFileCompletedEvent**:
 
 ```c#
 
 completer.DownloadFileCompletedEvent += (sender, args) =>
 {
-    // sender 参数为补全器上一个成功下载的文件，类型为 DownloadFile
-    // args 返回了该文件的下载状态（成功 / 失败），以及文件的重试计数，
-    // 类型为 DownloadFileCompletedEventArgs
+     // The sender parameter is the last successfully downloaded file of the completer, the type is DownloadFile
+     // args returns the download status of the file (success/failure), and the retry count of the file,
+     // Type is DownloadFileCompletedEventArgs
 };
 
 ```
 
 ::: tip
 
-+ [DownloadFile 类结构](https://github.com/Corona-Studio/ProjBobcat/blob/master/ProjBobcat/ProjBobcat/Class/Model/DownloadFile.cs)
-+ [DownloadFileCompletedEventArgs 事件结构](https://github.com/Corona-Studio/ProjBobcat/blob/master/ProjBobcat/ProjBobcat/Event/DownloadFileCompletedEventArgs.cs)
++ [DownloadFile Class Structure](https://github.com/Corona-Studio/ProjBobcat/blob/master/ProjBobcat/ProjBobcat/Class/Model/DownloadFile.cs)
++ [DownloadFileCompletedEventArgs Event Structure](https://github.com/Corona-Studio/ProjBobcat/blob/master/ProjBobcat/ProjBobcat/Event/DownloadFileCompletedEventArgs.cs)
 
 :::
 
-### 报告下载中的文件的进度信息
+### Report progress information for files being downloaded
 
-您可以通过注册事件 **DownloadFileChangedEvent** 来获取实时的检查进度：
+You can get real-time check progress by registering the event **DownloadFileChangedEvent**:
 
 ```c#
 
 rC.DownloadFileChangedEvent += (_, args) =>
 {
-    // args 返回了下载中的文件的具体信息（已接收的字节数、总共的字节数、当前速度、百分比进度）
-    // 类型为 DownloadFileChangedEventArgs
+    // args returns the specific information of the file being downloaded (number of bytes received, total number of bytes, current speed, percentage progress)
+     // Type is DownloadFileChangedEventArgs
 };
 
 ```
 
 ::: tip
 
-+ [DownloadFileChangedEventArgs 事件结构](https://github.com/Corona-Studio/ProjBobcat/blob/master/ProjBobcat/ProjBobcat/Event/DownloadFileChangedEventArgs.cs)
++ [DownloadFileChangedEventArgs Event Structure](https://github.com/Corona-Studio/ProjBobcat/blob/master/ProjBobcat/ProjBobcat/Event/DownloadFileChangedEventArgs.cs)
 
 :::

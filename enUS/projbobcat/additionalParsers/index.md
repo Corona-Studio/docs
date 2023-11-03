@@ -1,11 +1,10 @@
-# 附加解析器
+# Attached parser
 
-ProjBobcat 为了和 Mojang 官方的启动器保持同样的行为，
-我们为其实现了一些额外的解析器来帮助我们和官方启动器保持数据和档案的同步。
+In order to maintain the same behavior as Mojang's official launcher, ProjBobcat has implemented some additional parsers to help us keep data and files in sync with the official launcher.
 
-下表是目前已经实现的解析器：
+The following table shows the currently implemented parsers:
 
-|              名称              |          说明           |
+|              Name              |          Description           |
 |:----------------------------:|:---------------------:|
-| DefaultLauncherAccountParser | 用于将验证信息写入到官方启动器的配置文件  |
-| DefaultLauncherProfileParser | 用于将搜索到的本地游戏写入启动器的配置文件 |
+| DefaultLauncherAccountParser | Configuration file used to write verification information to the official launcher  |
+| DefaultLauncherProfileParser | Used to write the searched local games to the launcher's configuration file |

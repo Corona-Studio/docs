@@ -1,33 +1,33 @@
-# 在我们开始之前
+# Before we begin
 
-在我们正式开始使用 ProjBobcat，您需要对您的项目属性做一下必要的检查和调整以满足 ProjBobcat 的运行需要。
+Before we officially start using ProjBobcat, you need to make necessary checks and adjustments to your project properties to meet the running needs of ProjBobcat.
 
 [[toc]]
 
-## 运行时要求
+## Runtime requirements
 
-您需要保证您项目的 dotNET 框架至少运行在 .NET 6.0 及更高的版本当中以满足。
+You need to ensure that your project's dotNET framework is running at least .NET 6.0 and higher.
 
-目前受支持的 .NET 版本：
+Currently supported .NET versions:
 - .NET 6.0
-- .NET 7.0 （推荐）
+- .NET 7.0 (recommended)
 
 ::: warning
 
-我们在先前的版本更新中已经移除了对 **.NET 5.0** 运行时的支持。
+We have removed support for the **.NET 5.0** runtime in a previous version update.
 
 :::
 
-## 项目属性
+## Project properties
 
-由于 Windows 系统机制，您需要在项目属性中关闭 **首选 32 位** 的生成选项。否则您在使用 ProjBobcat 部分组件时会出现预料之外的结果。
+Due to Windows system mechanics, you need to turn off the build option for **Prefer 32-bit** in the project properties. Otherwise, you may experience unexpected results when using some components of ProjBobcat.
 
-您需要在 Visual Studio 中切换到项目的属性页面，并找到 **首选 32 位** 的勾选框，并将其取消勾选。
+You need to switch to the project's properties page in Visual Studio and find the checkbox for **Prefer 32-bit** and uncheck it.
 
-## 32 位系统支持
+## 32-bit system support
 
 ::: warning
 
-ProjBobcat 从项目立项开始就决定放弃对 32 位系统的全部支持，因为它真的很老，很老了（
+ProjBobcat decided to give up all support for 32-bit systems from the beginning of the project because it is wayyyyyyy to old LMAO
 
 :::

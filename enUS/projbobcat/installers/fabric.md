@@ -1,35 +1,35 @@
-# Fabric 安装器
+# Fabric installer
 
 [[toc]]
 
 ::: tip
 
-请注意，ProjBobcat 仅实现了 Fabric 自动化安装流程，您仍然需要自己实现 Fabric 安装包的搜索、下载、保存流程。
+Please note that ProjBobcat only implements the Fabric automated installation process. You still need to implement the search, download, and save process of the Fabric installation package yourself.
 
 :::
 
-## 实用资源
+## Resources
 
-- [Fabric 官方网站](https://fabricmc.net/)
+- [Fabric Website](https://fabricmc.net/)
 - [Fabric Meta API](https://meta.fabricmc.net/)
 
-## 获取 Fabric Loader Artifact
+## Get Fabric Loader Artifact
 
-由于 ProjBobcat 的 Fabric 安装器要求您在初始化安装器时提供来自 Fabric 官方的 Loader Artifact 信息。
-因此，我们将在这里简要描述如何根据指定的 MineCraft 版本来获取该信息。
+Because ProjBobcat's Fabric installer requires you to provide the official Loader Artifact information from Fabric when initializing the installer.
+Therefore, we will briefly describe here how to obtain this information based on a given MineCraft version.
 
 ::: info
 
-在该示例中，我们将使用 MineCraft 1.19.2 来向您展示如何获取。
+In this example, we'll be using Minecraft version 1.19.2 to show you how to get it.
 
 :::
 
-### 向 Fabric Meta API 发送请求
+### Send request to Fabric Meta API
 
-首先，您需要向 [https://meta.fabricmc.net/v2/versions/loader/[MC_VERSION]](https://meta.fabricmc.net/v2/versions/loader/1.19.2) 发送一个 **HTTP GET** 请求。
-将 `[MC_VERSION]` 替换为您想要安装的 MineCraft 版本。在这里，我们将使用 1.19.2。
+First, you need to send an **HTTP GET** request to [https://meta.fabricmc.net/v2/versions/loader/[MC_VERSION]](https://meta.fabricmc.net/v2/versions/loader/1.19.2).
+Replace `[MC_VERSION]` with the Minecraft version you want to install. Here we will use 1.19.2 for exmaple.
 
-您将看到类似下面的返回内容：
+You will see something similar to the following returned:
 
 ```json
 
@@ -59,35 +59,35 @@
 
 ```
 
-Fabric Meta API 将返回一个 JSON 数组，数组中的每一个元素即是我们需要的 Loader Artifact。
+Fabric Meta API will return a JSON array, and each element in the array is the Loader Artifact we need.
 
-#### 将 JSON 返回转换为 ProjBobcat 类型
+#### Convert JSON return to ProjBobcat type
 
-如果您在您的项目中使用 [JSON.NET](https://www.newtonsoft.com/json)（Newtonsoft.JSON）。
-您可以使用类似下面的代码来将您获取到的服务器响应转换为对应的 ProjBobcat 类型：
+If you are using [JSON.NET](https://www.newtonsoft.com/json)(Newtonsoft.JSON) in your project.
+You can use code similar to the following to convert the server response you get into the corresponding ProjBobcat type:
 
 ```c#
 
-// 从 Fabric Meta API 请求数据（示例，非实际代码）
+// Requesting data from the Fabric Meta API (example, not actual code)
 ...
 var responseJson = await res.Content.ReadAsStringAsync();
 
-// 将 JSON 响应转换为 ProjBobcat 类型 // [!code focus]
+// Convert JSON response to ProjBobcat type // [!code focus]
 var artifacts = JsonConvert.DeserializeObject<List<FabricLoaderArtifactModel>>(responseJson); // [!code focus]
 
-// 获取用户想要安装的版本（示例，非实际代码）
+// Get the version the user wants to install (example, not actual code)
 var userSelect = vm.SelectedArtifactIndex;
 
-// 获取单个 Loader Artifact // [!code focus]
+// Get a single Loader Artifact // [!code focus]
 var selectedArtifact = artifacts[userSelect]; // [!code focus]
 
 ```
 
-此处，**selectedArtifact** 即是 Fabric 安装器所需要的 `FabricLoaderArtifactModel`。
+Here, **selectedArtifact** is what the Fabric installer requires `FabricLoaderArtifactModel`。
 
-## 初始化安装器
+## Initialize the installer
 
-初始化 Fabric 安装器的方式非常简单。您需要使用到在先前步骤中取得的 `selectedArtifact` 来初始化安装器：
+The way to initialize the Fabric installer is very simple. You need to use the `selectedArtifact` obtained in the previous step to initialize the installer:
 
 ```c#
 
@@ -102,20 +102,20 @@ var fabricInstaller = new FabricInstaller
 
 ```
 
-在上述代码块中，请将这些参数按照您的实际情况替换：
+In the above code block, please replace these parameters according to your actual situation:
 
-|                 项目                  |                      说明                       |
-|:-----------------------------------:|:---------------------------------------------:|
-|          [GAME_ROOT_PATH]           |          游戏根目录，通常为 .minecraft 文件夹的路径          |
-|      [CUSTOM_INSTALL_GAME_ID]       |              可选项，自定义即将要安装的游戏的名称               |
-|       [MC_VERSION_OR_GAME_ID]       | Forge 继承的 MineCraft 原版游戏版本，通常为游戏版本。例如：1.19.2  |
-|       [VERSION_LOCATOR_INST]        |  游戏版本定位器实例，即初始化游戏核心时的 **VersionLocator** 属性   |
+| Project | Description |
+|:----------------------------------:|:-------------------------------:|
+| [GAME_ROOT_PATH] | The game root directory, usually the path to the .minecraft folder |
+| [CUSTOM_INSTALL_GAME_ID] | Optional, customize the name of the game to be installed |
+| [MC_VERSION_OR_GAME_ID] | The MineCraft original game version inherited by Forge, usually the game version. For example: 1.19.2 |
+| [VERSION_LOCATOR_INST] | Game version locator instance, that is, the **VersionLocator** attribute when initializing the game core |
 
-## 开始安装
+## start installation
 
-在您完成安装器的初始化后，您只需要调用 Fabric 安装器的安装方法来完成安装。
+After you complete the initialization of the installer, you only need to call the installation method of the Fabric installer to complete the installation.
 
-在异步上下文中，使用 **InstallTaskAsync** 来完成安装：
+In an asynchronous context, use **InstallTaskAsync** to complete the installation:
 
 ```c#
 
@@ -123,7 +123,7 @@ await fabricInstaller.InstallTaskAsync();
 
 ```
 
-在同步上下文中，使用 **Install** 来完成安装：
+In a sync context, use **Install** to complete the installation:
 
 ```c#
 
@@ -131,12 +131,12 @@ fabricInstaller.Install();
 
 ```
 
-## 报告安装进度
+## Report installation progress
 
-在某些情况下，Fabric 安装器可能会需要数分钟的时间来完成安装。
-因此，您可能需要实时向用户汇报安装器目前的进度。
-为此，Fabric 安装器提供了 **StageChangedEventDelegate** 事件来帮助您实现任务汇报。
-您只需要简单地在 **开始安装之前** 注册下面的事件：
+In some cases, the Fabric installer may take several minutes to complete the installation.
+Therefore, you may need to report the current progress of the installer to the user in real time.
+To this end, the Fabric installer provides the **StageChangedEventDelegate** event to help you implement task reporting.
+You simply need to register for the following event **before starting the installation**:
 
 ```c#
 
@@ -146,4 +146,4 @@ fabricInstaller.StageChangedEventDelegate += (_, args) => {
 
 ```
 
-其中， **args.Progress** 指示了安装器当前的百分比进度。**args.CurrentStage** 则是安装器当前进度的文字描述。
+Among them, **args.Progress** indicates the current percentage progress of the installer. **args.CurrentStage** is a text description of the current progress of the installer.

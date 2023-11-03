@@ -1,10 +1,10 @@
-# 游戏档案解析器
+# Game file parser
 
-游戏档案解析器负责将搜索到的本地游戏写入到官方启动器的配置文件中。
+The game archive parser is responsible for outputing the searched local games into the configuration file of the official launcher.
 
-## 初始化解析器
+## Initialize the parser
 
-初始化解析器的方式非常简单：
+The way to initialize the parser is very simple:
 
 ```c#
 
@@ -13,5 +13,5 @@ var launcherProfileParser
 
 ```
 
-其中，**rootPath** 为核心所在的根目录（即 .minecraft 文件夹所在的目录）。
-**clientToken** 为一个随机生成的 GUID。
+Among them, **rootPath** is the root directory where the core is located (that is, the directory where the .minecraft folder is located).
+**clientToken** is a randomly generated GUID.

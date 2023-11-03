@@ -1,11 +1,11 @@
-# log4j 日志格式化组件解析器
+# log4j log formatting component resolver
 
 [[toc]]
 
-log4j 日志格式化组件解析器提供了对游戏资产文件的解析和验证功能，这些文件存放在
-`.minecraft/logging` 目录下
+The log4j log formatting component resolver provides parsing and verification functions for game asset files. These files are stored in
+`.minecraft/logging` directory
 
-使用该资源解析器可以使 MineCraft 输出经过 log4j 格式化后的日志内容，类似于如下的内容：
+Using this resource resolver allows MineCraft to output log content formatted by log4j, similar to the following:
 
 ```xml
 
@@ -17,9 +17,9 @@ log4j 日志格式化组件解析器提供了对游戏资产文件的解析和�
 
 ```
 
-## 初始化解析器
+## Initialize Resolver
 
-你可以通过下面的代码来初始化 log4j 日志格式化组件解析器：
+You can initialize the log4j log formatting component resolver with the following code:
 
 ```c#
 
@@ -32,10 +32,10 @@ var resolver = new GameLoggingInfoResolver
 
 ```
 
-在上述代码块中，请将这些参数按照您的实际情况替换：
+In the above code block, please replace these parameters according to your actual situation:
 
-|           项目            |               说明                |
-|:-----------------------:|:-------------------------------:|
-|    [GAME_ROOT_PATH]     |   游戏根目录，通常为 .minecraft 文件夹的路径   |
-| [SEARCHED_VERSION_INFO] | 要检查的版本的 VersionInfo （通过游戏定位器获得） |
-|   [CHECK_LOCAL_FILES]   |    检查本地文件（如果为 false，则跳过所有检查）    |
+| Project | Description |
+|:-----------------------:|:-----------------------------:|
+| [GAME_ROOT_PATH] | The game root directory, usually the path to the **.minecraft** folder |
+| [SEARCHED_VERSION_INFO] | VersionInfo of the version to check (obtained via game locator) |
+| [CHECK_LOCAL_FILES] | Check local files (if false, skip all checks) |

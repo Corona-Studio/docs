@@ -1,19 +1,19 @@
-# Forge 安装器
+# Forge installer
 
-在 ProjBobcat 中，我们支持了几乎所有主流 MineCraft 版本的 Forge 自动化安装。
+In ProjBobcat, we support automated Forge installations for almost all major MineCraft versions.
 
 [[toc]]
 
 ::: tip
 
-请注意，ProjBobcat 仅实现了 Forge 自动化安装流程，您仍然需要自己实现 Forge 安装包的搜索、下载、保存流程。
+Please note that ProjBobcat only implements the Forge automated installation process. You still need to implement the search, download, and save process of the Forge installation package yourself.
 
 :::
 
-## 判断应该使用哪一种 Forge 安装器
+## Determine which Forge installer should be used
 
-由于 Forge 团队在后续的版本中修改了 Forge 的打包规范以及安装流程。因此，您需要手动判断应该使用哪一种安装器。
-在 ProjBobcat 中，我们已经为您实现了相关的判断逻辑。您只需要简单地调用下面的方法：
+Because the Forge team has modified Forge's packaging specifications and installation process in subsequent versions. Therefore, you need to manually determine which installer to use.
+In ProjBobcat, we have implemented the relevant judgment logic for you. You just need to simply call the following method:
 
 ```c#
 
@@ -25,20 +25,20 @@ var isLegacy = ForgeInstallerFactory.IsLegacyForgeInstaller(forgeJarPath, forgeV
 
 ```
 
-在上述代码块中，请将这些参数按照您的实际情况替换：
+In the above code block, please replace these parameters according to your actual situation:
 
-|               项目                |                     说明                     |
-|:-------------------------------:|:------------------------------------------:|
-|          [MC_VERSION]           |    将 Forge 安装到的 MineCraft 版本，例如：1.19.2     |
-| [PATH_TO_YOUR_FORGE_INSTALLER]  |           Forge 安装器 .jar 文件所在的路径           |
-|         [FORGE_VERSION]         |      Forge 的具体版本，通常为 XX.X.X，例如：43.2.0      |
+| Project | Description |
+|:----------------------------------:|:-----------------------------------:|
+| [MC_VERSION] | The Minecraft version to install Forge into, for example: 1.19.2 |
+| [PATH_TO_YOUR_FORGE_INSTALLER] | The path to the Forge installer .jar file |
+| [FORGE_VERSION] | The specific version of Forge, usually XX.X.X, for example: 43.2.0 |
 
-在您完成替换并成功执行上述的代码片段之后，**isLegacy** 会指示当前 Forge 安装器应当使用哪一种 Forge 安装器。
+After you complete the replacement and successfully execute the above code snippet, **isLegacy** will indicate which Forge installer the current Forge installer should use.
 
-## 初始化旧版安装器
+## Initialize legacy installer
 
-如果在上面的流程中，**isLegacy** 的值为 **true**，这意味着您需要使用旧版安装器来完成 Forge 的安装。
-要初始化旧版安装器，只需实例化 **LegacyForgeInstaller** 并提供相应的参数：
+If in the above process, the value of **isLegacy** is **true**, it means that you need to use a legacy installer to complete the Forge installation.
+To initialize the legacy installer, simply instantiate **LegacyForgeInstaller** and provide the appropriate parameters:
 
 ```c#
 
@@ -54,15 +54,15 @@ IForgeInstaller forgeInstaller =
 
 ```
 
-在上述代码块中，请将这些参数按照您的实际情况替换：
+In the above code block, please replace these parameters according to your actual situation:
 
-|                 项目                 |                      说明                      |
-|:----------------------------------:|:--------------------------------------------:|
-|          [GAME_ROOT_PATH]          |         游戏根目录，通常为 .minecraft 文件夹的路径          |
-|      [CUSTOM_INSTALL_GAME_ID]      |              可选项，自定义即将要安装的游戏的名称              |
-|      [MC_VERSION_OR_GAME_ID]       | Forge 继承的 MineCraft 原版游戏版本，通常为游戏版本。例如：1.19.2 |
+| Project | Description |
+|:----------------------------------:|:-------------------------------:|
+| [GAME_ROOT_PATH] | The game root directory, usually the path to the **.minecraft** folder |
+| [CUSTOM_INSTALL_GAME_ID] | Optional, customize the name of the game to be installed |
+| [MC_VERSION_OR_GAME_ID] | The MineCraft original game version inherited by Forge, usually the game version. For example: 1.19.2 |
 
-## 初始化新版安装器
+## Initialize the new version of the installer
 
 ```c#
 
@@ -82,19 +82,19 @@ IForgeInstaller forgeInstaller =
 
 ```
 
-在上述代码块中，请将这些参数按照您的实际情况替换：
+In the above code block, please replace these parameters according to your actual situation:
 
-|                 项目                  |                                      说明                                       |
-|:-----------------------------------:|:-----------------------------------------------------------------------------:|
-|     [PATH_TO_YOUR_JAVA_RUNTIME]     |                           Java （javaw.exe） 运行时所在的路径                           |
-|        [LIBRARIES_URL_ROOT]         |                下载源的根 URL，例如："https://bmclapi2.bangbang93.com/"                |
-|       [VERSION_LOCATOR_INST]        |                  游戏版本定位器实例，即初始化游戏核心时的 **VersionLocator** 属性                   |
-|         [ACTUAL_MC_GAME_ID]         | 实际的 MineCraft 游戏名称，即原版游戏在 **version** 文件夹下的名称。一般情况下，这个值和 **[MC_VERSION]** 一致。 |
+| Project | Description |
+|:----------------------------------:|:------------------------------------:|
+| [PATH_TO_YOUR_JAVA_RUNTIME] | The path where Java (javaw.exe) runtime is located |
+| [LIBRARIES_URL_ROOT] | The root URL of the download source, for example: "https://bmclapi2.bangbang93.com/" |
+| [VERSION_LOCATOR_INST] | Game version locator instance, that is, the **VersionLocator** attribute when initializing the game core |
+| [ACTUAL_MC_GAME_ID] | The actual MineCraft game name, the name of the original game in the **version** folder. Normally, this value is consistent with **[MC_VERSION]**. |
 
-## 根据 **isLegacy** 值进行统一初始化
+## Uniform initialization based on **isLegacy** value
 
-由于 **LegacyForgeInstaller** 和 **HighVersionForgeInstaller** 同时实现了 **IForgeInstaller** 接口。
-因此，您可以很方便的使用一个三元运算符来选择性的初始化对应的安装器：
+Because **LegacyForgeInstaller** and **HighVersionForgeInstaller** both implement the **IForgeInstaller** interface.
+Therefore, you can easily use a ternary operator to selectively initialize the corresponding installer:
 
 ```c#{4-100}
 
@@ -124,11 +124,11 @@ IForgeInstaller forgeInstaller = isLegacy
 
 ```
 
-## 开始安装
+## Start installation
 
-在您完成安装器的初始化后，您只需要调用 Forge 安装器的安装方法来完成安装。
+After you complete the initialization of the installer, you only need to call the installation method of the Forge installer to complete the installation.
 
-在异步上下文中，使用 **InstallForgeTaskAsync** 来完成安装：
+In an asynchronous context, use **InstallForgeTaskAsync** to complete the installation:
 
 ```c#
 
@@ -136,7 +136,7 @@ await forgeInstaller.InstallForgeTaskAsync();
 
 ```
 
-在同步上下文中，使用 **InstallForge** 来完成安装：
+In a sync context, use **InstallForge** to complete the installation:
 
 ```c#
 
@@ -144,12 +144,12 @@ forgeInstaller.InstallForge();
 
 ```
 
-## 报告安装进度
+## Report installation progress
 
-在某些情况下，Forge 安装器可能会需要数分钟的时间来完成安装。
-因此，您可能需要实时向用户汇报安装器目前的进度。
-为此，Forge 安装器提供了 **StageChangedEventDelegate** 事件来帮助您实现任务汇报。
-您只需要简单地在 **开始安装之前** 注册下面的事件：
+In some cases, the Forge installer may take several minutes to complete the installation.
+Therefore, you may need to report the current progress of the installer to the user in real time.
+For this purpose, the Forge installer provides the **StageChangedEventDelegate** event to help you implement task reporting.
+You simply need to register for the following event **before starting the installation**:
 
 ```c#
 
@@ -160,4 +160,4 @@ forgeInstaller.InstallForge();
 
 ```
 
-其中， **args.Progress** 指示了安装器当前的百分比进度。**args.CurrentStage** 则是安装器当前进度的文字描述。
+Among them, **args.Progress** indicates the current percentage progress of the installer. **args.CurrentStage** is a text description of the current progress of the installer.

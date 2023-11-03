@@ -1,16 +1,16 @@
-# Assets 解析器
+# Assets resolver
 
 [[toc]]
 
-Assets 解析器提供了对游戏资产文件的解析和验证功能，这些文件一般存放在
-`.minecraft/assets` 目录下
+The Assets resolver provides parsing and verification functions for game asset files. These files are generally stored in
+`.minecraft/assets` directory
 
-## 获取 Version Manifest Versions 列表
+## Get the Version Manifest Versions list
 
-首先，您需要向 [https://launchermeta.mojang.com/mc/game/version_manifest.json](https://launchermeta.mojang.com/mc/game/version_manifest.json)
-发送一个 **HTTP GET** 请求。
+First, you need to submit a request to [https://launchermeta.mojang.com/mc/game/version_manifest.json](https://launchermeta.mojang.com/mc/game/version_manifest.json)
+Send an **HTTP GET** request.
 
-您将看到类似下面的返回内容：
+You will see something similar to the following returned:
 
 ```json
 
@@ -33,33 +33,33 @@ Assets 解析器提供了对游戏资产文件的解析和验证功能，这些�
 
 ```
 
-Mojang 服务器将会返回一个 JSON 对象，**versions** 字段则是我们所需要的 Versions 数组
+The Mojang server will return a JSON object, and the **versions** field is the Versions array we need.
 
-### 将 JSON 返回转换为 ProjBobcat 类型
+### Convert JSON return to ProjBobcat type
 
-如果您在您的项目中使用 [JSON.NET](https://www.newtonsoft.com/json)（Newtonsoft.JSON）。
-您可以使用类似下面的代码来将您获取到的服务器响应转换为对应的 ProjBobcat 类型：
+If you are using [JSON.NET](https://www.newtonsoft.com/json)(Newtonsoft.JSON) in your project.
+You can use code similar to the following to convert the server response you get into the corresponding ProjBobcat type:
 
 ```c#
 
-// 从 Mojang API 请求数据（示例，非实际代码）
+// Requesting data from the Mojang API (example, not actual code)
 ...
 var responseJson = await res.Content.ReadAsStringAsync();
 
-// 将 JSON 响应转换为 ProjBobcat 类型 // [!code focus]
+// Convert JSON response to ProjBobcat type // [!code focus]
 var manifest = JsonConvert.DeserializeObject<VersionManifest>(responseJson); // [!code focus]
 
-// 获取 Versions 列表 // [!code focus]
+// Get the Versions list // [!code focus]
 var versions = manifest.Versions; // [!code focus]
 
 ```
 
-此处，**versions** 即是 Assets 解析器所需要的 `Versions` 数组。
+Here, **versions** is the `Versions` array required by the Assets resolver.
 
 
-## 初始化解析器
+## Initialize resolver
 
-你可以通过下面的代码来初始化 Assets 解析器：
+You can initialize the Assets resolver with the following code:
 
 ```c#
 
@@ -70,17 +70,17 @@ var resolver = new AssetInfoResolver
     BasePath = "[GAME_ROOT_PATH]",
     VersionInfo = [SEARCHED_VERSION_INFO],
     CheckLocalFiles = [CHECK_LOCAL_FILES],
-    Versions = versions // 在上一步获取到的 Versions 数组
+    Versions = versions // Versions array obtained in the previous step
 };
 
 ```
 
-在上述代码块中，请将这些参数按照您的实际情况替换：
+In the above code block, please replace these parameters according to your actual situation:
 
-|           项目            |               说明                |
+| Project | Description |
 |:-----------------------:|:-------------------------------:|
-|    [GAME_ROOT_PATH]     |   游戏根目录，通常为 .minecraft 文件夹的路径   |
-| [SEARCHED_VERSION_INFO] | 要检查的版本的 VersionInfo （通过游戏定位器获得） |
-|   [CHECK_LOCAL_FILES]   |    检查本地文件（如果为 false，则跳过所有检查）    |
+| [GAME_ROOT_PATH] | The game root directory, usually the path to the .minecraft folder |
+| [SEARCHED_VERSION_INFO] | VersionInfo of the version to check (obtained via game locator) |
+| [CHECK_LOCAL_FILES] | Check local files (if false, skip all checks) |
 
 
