@@ -17,10 +17,10 @@ export default defineConfig({
     title: 'CSKB',
 
     locales: {
-        root: { label: '简体中文', lang: 'zh-CN', ...zhConfig },
-        enUS: { label: 'English(US)', lang: 'en-US', ...enUSConfig },
-        ruRU: { label: 'Русский', lang: 'ru-RU', ...ruConfig },
-		zhTW: { label: '正體中文', lang: 'zh-TW', ...zhTWConfig }  
+        root: { label: '简体中文', lang: 'zh-CN', link: '/zhCN/', ...zhConfig },
+        enUS: { label: 'English(US)', lang: 'en-US', link: '/enUS/', ...enUSConfig },
+        ruRU: { label: 'Русский', lang: 'ru-RU', link: '/ruRU/', ...ruConfig },
+		zhTW: { label: '正體中文', lang: 'zh-TW', link: '/zhTW/', ...zhTWConfig }
     },
 });
 
