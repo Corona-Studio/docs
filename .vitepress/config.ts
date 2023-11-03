@@ -3,6 +3,7 @@ import {sharedConfig} from "./sharedConfig";
 import {zhConfig} from "./zhCN";
 import {ruConfig} from "./ruRU";
 import {zhTWConfig} from "./zhTW";
+import {enUSConfig} from "./enUS";
 
 export default defineConfig({
 
@@ -16,9 +17,10 @@ export default defineConfig({
     title: 'CSKB',
 
     locales: {
-        root: { label: '简体中文', lang: 'zh-CN', ...zhConfig },
-        ruRU: { label: 'Русский', lang: 'ru-RU', ...ruConfig },
-		zhTW: { label: '正體中文', lang: 'zh-TW', ...zhTWConfig }
+        root: { label: '简体中文', lang: 'zh-CN', link: '/zhCN/', ...zhConfig },
+        enUS: { label: 'English(US)', lang: 'en-US', link: '/enUS/', ...enUSConfig },
+        ruRU: { label: 'Русский', lang: 'ru-RU', link: '/ruRU/', ...ruConfig },
+		zhTW: { label: '正體中文', lang: 'zh-TW', link: '/zhTW/', ...zhTWConfig }
     },
 });
 

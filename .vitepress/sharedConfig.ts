@@ -2,6 +2,7 @@ import {defineConfig} from "vitepress";
 import {zhSearchBarLocale} from "./searchBar/zhCN";
 import {ruSearchBarLocale} from "./searchBar/ruRU";
 import {zhTWSearchBarLocale} from "./searchBar/zhTW";
+import {enUSSearchBarLocale} from "./searchBar/enUS";
 
 export const sharedConfig = defineConfig({
 
@@ -32,7 +33,8 @@ export const sharedConfig = defineConfig({
                 locales: {
                     root: zhSearchBarLocale,
                     ruRU: ruSearchBarLocale,
-                    zhTW: zhTWSearchBarLocale
+                    zhTW: zhTWSearchBarLocale,
+                    enUS: enUSSearchBarLocale
                 }
             }
         }
