@@ -20,7 +20,7 @@ export default defineConfig({
         root: { label: '简体中文', lang: 'zh-CN', link: '/zhCN/', ...zhConfig },
         enUS: { label: 'English(US)', lang: 'en-US', link: '/enUS/', ...enUSConfig },
         ruRU: { label: 'Русский', lang: 'ru-RU', link: '/ruRU/', ...ruConfig },
-		zhTW: { label: '正體中文', lang: 'zh-TW', link: '/zhTW/', ...zhTWConfig }
+		zhTW: { label: '繁體中文', lang: 'zh-TW', link: '/zhTW/', ...zhTWConfig }
     },
 });
 

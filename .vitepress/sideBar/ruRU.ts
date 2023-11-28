@@ -3,7 +3,7 @@ import type { DefaultTheme } from 'vitepress'
 export const sidebar: DefaultTheme.SidebarItem[] = [
     {
         text: "指南",
-        collapsed: false,
+        collapsed: true,
         items: [
             {text: "开始", link: "/ruRU/guide/"},
             {text: "我们的团队", link: '/ruRU/team'}
@@ -11,14 +11,14 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
     },
     {
         text: "CMFS",
-        collapsed: false,
+        collapsed: true,
         items: [
             {text: "简介", link: "/ruRU/CMFS/"}
         ]
     },
     {
         text: "LauncherX 启动器 - 仪表盘",
-        collapsed: false,
+        collapsed: true,
         items: [
             {text: "仪表盘", link: "/ruRU/dashboard/"},
             {text: "聚合搜索组件", link: "/ruRU/dashboard/search"}
@@ -26,14 +26,14 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
     },
     {
         text: "Minecraft",
-        collapsed: false,
+        collapsed: true,
         items: [
             {text: "皮肤规范", link: "/ruRU/skin/"}
         ]
     },
     {
         text: "ProjBobcat",
-        collapsed: false,
+        collapsed: true,
         items: [
             {text: "简介", link: "/ruRU/projbobcat/"},
             {text: "开始", link: "/ruRU/projbobcat/beforeWeStart"},
@@ -46,7 +46,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
             },
             {
                 text: "安装器",
-                collapsed: false,
+                collapsed: true,
                 link: "/ruRU/projbobcat/installers/",
                 items: [
                     {text: "CurseForge 整合包安装器", link: "/ruRU/projbobcat/installers/curseforge"},
@@ -63,7 +63,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                 items: [
                     {
                         text: "资源解析器",
-                        collapsed: false,
+                        collapsed: true,
                         link: "/ruRU/projbobcat/resourceCompleter/resourceInfoResolver/index",
                         items: [
                             {text: "Assets 解析器", link: "/ruRU/projbobcat/resourceCompleter/resourceInfoResolver/assetInfoResolver"},
