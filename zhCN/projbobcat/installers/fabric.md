@@ -32,7 +32,6 @@
 您将看到类似下面的返回内容：
 
 ```json
-
 [
   {
     "loader": {
@@ -56,7 +55,6 @@
   {...},
   {...}
 ]
-
 ```
 
 Fabric Meta API 将返回一个 JSON 数组，数组中的每一个元素即是我们需要的 Loader Artifact。
@@ -67,7 +65,6 @@ Fabric Meta API 将返回一个 JSON 数组，数组中的每一个元素即是�
 您可以使用类似下面的代码来将您获取到的服务器响应转换为对应的 ProjBobcat 类型：
 
 ```c#
-
 // 从 Fabric Meta API 请求数据（示例，非实际代码）
 ...
 var responseJson = await res.Content.ReadAsStringAsync();
@@ -80,7 +77,6 @@ var userSelect = vm.SelectedArtifactIndex;
 
 // 获取单个 Loader Artifact // [!code focus]
 var selectedArtifact = artifacts[userSelect]; // [!code focus]
-
 ```
 
 此处，**selectedArtifact** 即是 Fabric 安装器所需要的 `FabricLoaderArtifactModel`。
@@ -90,7 +86,6 @@ var selectedArtifact = artifacts[userSelect]; // [!code focus]
 初始化 Fabric 安装器的方式非常简单。您需要使用到在先前步骤中取得的 `selectedArtifact` 来初始化安装器：
 
 ```c#
-
 var fabricInstaller = new FabricInstaller
 {
     LoaderArtifact = selectedArtifact,
@@ -99,7 +94,6 @@ var fabricInstaller = new FabricInstaller
     CustomId = "[CUSTOM_INSTALL_GAME_ID]",
     InheritsFrom = "[MC_VERSION_OR_GAME_ID]"
 };
-
 ```
 
 在上述代码块中，请将这些参数按照您的实际情况替换：
@@ -118,17 +112,13 @@ var fabricInstaller = new FabricInstaller
 在异步上下文中，使用 **InstallTaskAsync** 来完成安装：
 
 ```c#
-
 await fabricInstaller.InstallTaskAsync();
-
 ```
 
 在同步上下文中，使用 **Install** 来完成安装：
 
 ```c#
-
 fabricInstaller.Install();
-
 ```
 
 ## 报告安装进度
@@ -139,11 +129,9 @@ fabricInstaller.Install();
 您只需要简单地在 **开始安装之前** 注册下面的事件：
 
 ```c#
-
 fabricInstaller.StageChangedEventDelegate += (_, args) => {
     ReportProgress(args.Progress, args.CurrentStage);
 };
-
 ```
 
 其中， **args.Progress** 指示了安装器当前的百分比进度。**args.CurrentStage** 则是安装器当前进度的文字描述。

@@ -7,10 +7,8 @@
 初始化解析器的方式非常简单：
 
 ```c#
-
 var launcherAccountParser
     = new DefaultLauncherAccountParser(rootPath, clientToken)
-
 ```
 
 其中，**rootPath** 为核心所在的根目录（即 .minecraft 文件夹所在的目录）。

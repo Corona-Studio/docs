@@ -15,13 +15,11 @@
 您可以通过下面的代码初始化离线验证器：
 
 ```c#
-
 var offlineAuthenticator = new OfflineAuthenticator
 {
     LauncherAccountParser = launcherAccountParser,
     Username = "[DISPLAY_NAME]"
 };
-
 ```
 
 在上述代码块中，请将这些参数按照您的实际情况替换：
@@ -44,17 +42,13 @@ var offlineAuthenticator = new OfflineAuthenticator
 在异步上下文中，使用 **AuthTaskAsync** 来完成验证：
 
 ```c#
-
 var authResult = await offlineAuthenticator.AuthTaskAsync(false);
-
 ```
 
 在同步上下文中，使用 **Auth** 来完成验证：
 
 ```c#
-
 var authResult = offlineAuthenticator.Auth();
-
 ```
 
 ## 解读验证结果

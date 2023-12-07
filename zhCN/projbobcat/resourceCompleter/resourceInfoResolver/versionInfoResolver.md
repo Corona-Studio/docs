@@ -10,14 +10,12 @@
 你可以通过下面的代码来初始化初始化解析器：
 
 ```c#
-
 var resolver = new VersionInfoResolver
 {
     BasePath = "[GAME_ROOT_PATH]",
     VersionInfo = [SEARCHED_VERSION_INFO],
     CheckLocalFiles = [CHECK_LOCAL_FILES]
 };
-
 ```
 
 在上述代码块中，请将这些参数按照您的实际情况替换：

@@ -8,13 +8,11 @@ log4j 日志格式化组件解析器提供了对游戏资产文件的解析和�
 使用该资源解析器可以使 MineCraft 输出经过 log4j 格式化后的日志内容，类似于如下的内容：
 
 ```xml
-
 <log4j:Event logger="ekb" timestamp="1676012129" level="INFO" thread="Render thread">
     <log4j:Message>
         <![CDATA[Created: 512x512x4 minecraft:textures/atlas/shulker_boxes.png-atlas]]>
     </log4j:Message>
 </log4j:Event>
-
 ```
 
 ## 初始化解析器
@@ -22,14 +20,12 @@ log4j 日志格式化组件解析器提供了对游戏资产文件的解析和�
 你可以通过下面的代码来初始化 log4j 日志格式化组件解析器：
 
 ```c#
-
 var resolver = new GameLoggingInfoResolver
 {
     BasePath = "[GAME_ROOT_PATH]",
     VersionInfo = [SEARCHED_VERSION_INFO],
     CheckLocalFiles = [CHECK_LOCAL_FILES]
 };
-
 ```
 
 在上述代码块中，请将这些参数按照您的实际情况替换：

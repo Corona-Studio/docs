@@ -7,7 +7,6 @@
 创建一个资源补全器的方法非常简单，您只需要使用下面的代码即可完成补全器的初始化：
 
 ```c#
-
 var completer = new DefaultResourceCompleter
 {
     MaxDegreeOfParallelism = [MAX_DEGREE_OF_PARALLELISM],
@@ -19,7 +18,6 @@ var completer = new DefaultResourceCompleter
     CheckFile = [CHECK_FILE_AFTER_DOWNLOADED],
     DownloadParts = [TOTAL_DOWNLOAD_SEGMENTS_FOR_LARGE_FILE]
 };
-
 ```
 
 ::: tip
@@ -50,7 +48,6 @@ var completer = new DefaultResourceCompleter
 在异步上下文中，使用 **CheckAndDownloadTaskAsync** 来完成安装：
 
 ```c#
-
 var result = await completer.CheckAndDownloadTaskAsync(); // [!code focus]
 
 if (result.TaskStatus == TaskResultStatus.Error && (result.Value?.IsLibDownloadFailed ?? false))
@@ -61,15 +58,12 @@ if (result.TaskStatus == TaskResultStatus.Error && (result.Value?.IsLibDownloadF
     // IsLibDownloadFailed 会反映启动必须的库文件是否已经成功补全
     // 通常来说，如果库文件的补全失败，很有可能会导致游戏的启动失败
 }
-
 ```
 
 在同步上下文中，使用 **CheckAndDownload** 来完成安装：
 
 ```c#
-
 var result = completer.CheckAndDownload(); // [!code focus]
-
 ```
 
 ## 报告进度
@@ -82,10 +76,8 @@ var result = completer.CheckAndDownload(); // [!code focus]
 您可以通过注册事件 **GameResourceInfoResolveStatus** 来获取实时的检查进度：
 
 ```c#
-
 completer.GameResourceInfoResolveStatus += (_, args) => 
     { ReportProgress(args.Progress, args.Status); };
-
 ```
 
 其中， **args.Progress** 指示了检查器当前的百分比进度。**args.Status** 则是检查器当前进度的文字描述。
@@ -95,14 +87,12 @@ completer.GameResourceInfoResolveStatus += (_, args) =>
 您可以通过注册事件 **DownloadFileCompletedEvent** 来获取实时的检查进度：
 
 ```c#
-
 completer.DownloadFileCompletedEvent += (sender, args) =>
 {
     // sender 参数为补全器上一个成功下载的文件，类型为 DownloadFile
     // args 返回了该文件的下载状态（成功 / 失败），以及文件的重试计数，
     // 类型为 DownloadFileCompletedEventArgs
 };
-
 ```
 
 ::: tip
@@ -117,13 +107,11 @@ completer.DownloadFileCompletedEvent += (sender, args) =>
 您可以通过注册事件 **DownloadFileChangedEvent** 来获取实时的检查进度：
 
 ```c#
-
 rC.DownloadFileChangedEvent += (_, args) =>
 {
     // args 返回了下载中的文件的具体信息（已接收的字节数、总共的字节数、当前速度、百分比进度）
     // 类型为 DownloadFileChangedEventArgs
 };
-
 ```
 
 ::: tip

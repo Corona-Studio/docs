@@ -10,7 +10,6 @@ Libraries 解析器提供了对游戏资产文件的解析和验证功能，这�
 你可以通过下面的代码来初始化 Libraries 解析器：
 
 ```c#
-
 var resolver = new LibraryInfoResolver
 {
     BasePath = "[GAME_ROOT_PATH]",
@@ -22,7 +21,6 @@ var resolver = new LibraryInfoResolver
     VersionInfo = [SEARCHED_VERSION_INFO],
     CheckLocalFiles = [CHECK_LOCAL_FILES]
 };
-
 ```
 
 在上述代码块中，请将这些参数按照您的实际情况替换：
