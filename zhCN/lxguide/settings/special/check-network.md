@@ -69,7 +69,7 @@ LauncherX 在“**网络–>网络连接测试**”中准备了一套便捷的�
 - `launchermeta.mojang.com`：保存了一些启动器必须的游戏信息，在安装新游戏的时候会需要它。
 - `bmclapi2.bangbang93.com`：由 bangbang93 提供的游戏资源下载服务。如果您在中国大陆境外，则可能无法访问此服务。虽然与我们关系不大，但是您可以考虑为了这个公益性质的下载服务存活并变得更好而[赞助BMCLAPI](https://bmclapidoc.bangbang93.com/#)
 - `download.mcbbs.net`：由MCBBS提供的游戏资源下载服务。他们貌似也默认屏蔽了除了中国大陆以外的所有连接。
-- `addons-ecs.forgesvc.net`：这是 CurseForge API，用于下载和安装 Mod（也用于CF格式的整合包安装）。*相关参考文章*：[安装整合包到游戏目录](/zhCN/lxguide/features/modpack-install)
+- `addons-ecs.forgesvc.net`：这是 CurseForge API，用于下载和安装 Mod（也用于CF格式的整合包安装）。*相关参考文章*：[安装整合包到游戏目录](/zhCN/lxguide/features/modpack-support)
 
 
 

@@ -56,12 +56,13 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                             {text: "#帐户管理", link: "/zhCN/lxguide/settings/special/manage-accounts"},
                             {text: "检测网络", link: "/zhCN/lxguide/settings/special/check-network"},
                             {text: "#个性化", link: "/zhCN/lxguide/settings/special/customize-launcher"},
+                            {text: "版本隔离与独立设置", link: "/zhCN/lxguide/settings/special/independent-config"},
                             // {
                             //     text: "仪表盘", 
                             //     link: "/zhCN/lxguide/settings/special/dashboard/",
                             //     collapsed: true,
                             //     items: [
-                            // 这玩意有必要分成多个吗
+                            // // 这玩意有必要分成多个吗
                             //     ]
                             // },             
                         ]
@@ -71,13 +72,13 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                         link: '/zhCN/lxguide/settings/item/',
                         collapsed: true,
                         items: [
-                            {text: "#“全局游戏设置”", link: "/zhCN/lxguide/settings/item/global"},
+                            {text: "全局游戏设置", link: "/zhCN/lxguide/settings/item/global"},
                             {text: "#“外观”", link: "/zhCN/lxguide/settings/item/customize"},
                             {text: "#“网络”", link: "/zhCN/lxguide/settings/item/network"},
                             {text: "#“多人游戏”", link: "/zhCN/lxguide/settings/item/multi-game"},
                             {text: "#“高级”", link: "/zhCN/lxguide/settings/item/advanced"},
-                            {text: "#“启动器账户”", link: "/zhCN/lxguide/settings/item/lx-account"},
-                            {text: "#“其他”", link: "/zhCN/lxguide/settings/item/others"},
+                            {text: "启动器账户", link: "/zhCN/lxguide/settings/item/lx-account"},
+                            {text: "其他", link: "/zhCN/lxguide/settings/item/others"},
                         ]
                     },
                 ]
@@ -88,16 +89,31 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                 collapsed: true,
                 items: [
                     {text: "#仪表盘", link: "/zhCN/lxguide/features/dashboard"},
-                    {text: "#安装整合包", link: "/zhCN/lxguide/features/modpack-install"},
+                    {text: "#整合包支持", link: "/zhCN/lxguide/features/modpack-support"},
+                    {text: "#实时日志窗口", link: "/zhCN/lxguide/features/log-window"},
+                    {text: "#P2P联机", link: "/zhCN/lxguide/features/p2p"},
+                    {text: "#服务器管理", link: "/zhCN/lxguide/features/manage-server"},
+                    {text: "#游戏资源管理", link: "/zhCN/lxguide/features/game-assets"},
 
                 ]
             },
+            {
+                text: '名词解释和其他导引',
+                link: '/zhCN/lxguide/others/',
+                collapsed: true,
+                items: [
+                    {text: '常见名词一览', link: '/zhCN/lxguide/others/general'},
+                    {text: '优化配置: 下载合适的JRE', link: '/zhCN/lxguide/others/download-jre'},
+                    {text: '优化配置: 启动参数', link: '/zhCN/lxguide/others/args'},
+                    {text: '优化配置: 合理分配内存和选择GC、配置JA', link: '/zhCN/lxguide/others/adjust-ram-gc-ja'},
+                ]
+            }
         ],
     },
     {
         text: "Minecraft",
         collapsed: true,
-        items: [
+        items: [ 
             {text: "皮肤规范", link: "/zhCN/skin/"}
         ]
     },
@@ -164,7 +180,8 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                 ]
             }
         ]
-    }
+    },
+    {text: "通用最终用户许可协议", link: "/zhCN/geula"}
 ];
 
 export default sidebar;

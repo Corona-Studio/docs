@@ -25,3 +25,12 @@ table{
 	display: table !important;
     opacity: 1;
 }
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'ms-segoe-fluent' !important;
+}
+
+@font-face {
+    font-family: ms-segoe-fluent;
+    src: url("/segoe.ttf");
+}
