@@ -10,7 +10,7 @@
 
 …但是您可能会遇到一些意外，如图所示：
 
-![exception](./../../../../public/img/lxguide/perOsSetup/windows-exception.png)
+![exception](/img/lxguide/perOsSetup/windows-exception.png)
 
 类似于这样的弹窗——会要求您先在Microsoft Store下载安装“供任务执行的程序”，或者由 SmartScreen 弹出的“警示安全风险”的提示弹窗：
 
@@ -26,6 +26,6 @@
 
 ::: warning
 
-如果在尝试启动 LauncherX 时候出现了来自其他安全类软件的警告，那么您需要允许 LauncherX 运行以使用 LauncherX 。若您对 LauncherX 持有怀疑，可以前往[VirusTotal](www.virustotal.com)这种权威的线上沙盒并将您下载的 LauncherX 副本上传检测。
+如果在尝试启动 LauncherX 时候出现了来自其他安全类软件的警告，那么您需要允许 LauncherX 运行以使用 LauncherX 。若您对 LauncherX 持有怀疑，可以前往[VirusTotal](https://www.virustotal.com)这种权威的线上沙盒并将您下载的 LauncherX 副本上传检测。
 
 :::
