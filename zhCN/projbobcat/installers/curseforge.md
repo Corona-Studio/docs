@@ -18,14 +18,12 @@
 初始化 CurseForge 安装器的方式非常简单：
 
 ```c#
-
 var curseForgeInstaller = new CurseForgeInstaller
 {
     GameId = "[CUSTOM_INSTALL_GAME_ID]",
     ModPackPath = "[PATH_TO_YOUR_MODPACK]",
     RootPath = "[GAME_ROOT_PATH]"
 };
-
 ```
 
 在上述代码块中，请将这些参数按照您的实际情况替换：
@@ -43,17 +41,13 @@ var curseForgeInstaller = new CurseForgeInstaller
 在异步上下文中，使用 **InstallTaskAsync** 来完成安装：
 
 ```c#
-
 await curseForgeInstaller.InstallTaskAsync();
-
 ```
 
 在同步上下文中，使用 **Install** 来完成安装：
 
 ```c#
-
 curseForgeInstaller.Install();
-
 ```
 
 ## 报告安装进度
@@ -64,11 +58,9 @@ curseForgeInstaller.Install();
 您只需要简单地在 **开始安装之前** 注册下面的事件：
 
 ```c#
-
 curseForgeInstaller.StageChangedEventDelegate += (_, args) => {
     ReportProgress(args.Progress, args.CurrentStage);
 };
-
 ```
 
 其中， **args.Progress** 指示了安装器当前的百分比进度。**args.CurrentStage** 则是安装器当前进度的文字描述。

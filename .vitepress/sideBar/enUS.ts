@@ -3,7 +3,7 @@ import type { DefaultTheme } from 'vitepress'
 export const sidebar: DefaultTheme.SidebarItem[] = [
     {
         text: "Guide",
-        collapsed: false,
+        collapsed: true,
         items: [
             {text: "Start", link: "/enUS/guide/"},
             {text: "Our Team", link: '/enUS/team'}
@@ -11,19 +11,19 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
     },
     {
         text: "CMFS",
-        collapsed: false,
+        collapsed: true,
         items: [
             {text: "Introduction", link: "/enUS/CMFS/"}
         ]
     },
     {
         text: "LauncherX Guide",
-        collapsed: false,
+        collapsed: true,
         items: [
             {
                 text: "Startup",
                 link: "/enUS/lxguide/startup/",
-                collapsed: false,
+                collapsed: true,
                 items: [
                     {text: "For Windows", link: "/enUS/lxguide/startup/perOsSetup/windows"},
                     {text: "For macOS", link: "/enUS/lxguide/startup/perOsSetup/macOS"},
@@ -37,14 +37,14 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
     },
     {
         text: "Minecraft",
-        collapsed: false,
+        collapsed: true,
         items: [
             {text: "Skin Specs", link: "/enUS/skin/"}
         ]
     },
     {
         text: "ProjBobcat",
-        collapsed: false,
+        collapsed: true,
         items: [
             {text: "Introduction", link: "/enUS/projbobcat/"},
             {text: "Start", link: "/enUS/projbobcat/beforeWeStart"},
@@ -57,7 +57,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
             },
             {
                 text: "Authenticators",
-                collapsed: false,
+                collapsed: true,
                 link: "/enUS/projbobcat/authenticators/",
                 items:[
                     {text: "Offline Authenticate", link: "/enUS/projbobcat/authenticators/offline"},
@@ -67,7 +67,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
             },
             {
                 text: "Installers",
-                collapsed: false,
+                collapsed: true,
                 link: "/enUS/projbobcat/installers/",
                 items: [
                     {text: "CurseForge Package Installer", link: "/enUS/projbobcat/installers/curseforge"},
@@ -84,7 +84,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                 items: [
                     {
                         text: "Resource Info Resolver",
-                        collapsed: false,
+                        collapsed: true,
                         link: "/enUS/projbobcat/resourceCompleter/resourceInfoResolver/index",
                         items: [
                             {text: "Assets Resolver", link: "/enUS/projbobcat/resourceCompleter/resourceInfoResolver/assetInfoResolver"},

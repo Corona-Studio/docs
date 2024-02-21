@@ -36,7 +36,6 @@
 您将看到类似下面的返回内容：
 
 ```json
-
 [
   {
     "_id": "6307b8a38a3998ab475d139d",
@@ -50,7 +49,6 @@
   {...},
   {...}
 ]
-
 ```
 
 BMCLAPI 将返回一个 JSON 数组，数组中的每一个元素即是我们需要的 Download Version Model。
@@ -61,7 +59,6 @@ BMCLAPI 将返回一个 JSON 数组，数组中的每一个元素即是我们需
 您可以使用类似下面的代码来将您获取到的服务器响应转换为对应的 ProjBobcat 类型：
 
 ```c#
-
 // 从 BMCLAPI 请求数据（示例，非实际代码）
 ...
 var responseJson = await res.Content.ReadAsStringAsync();
@@ -74,7 +71,6 @@ var userSelect = vm.SelectedIndex;
 
 // 获取单个 Download Version Model // [!code focus]
 var selectedVersion = versions[userSelect]; // [!code focus]
-
 ```
 
 此处，**selectedVersion** 即是 Optifine 安装器所需要的 `OptifineDownloadVersionModel`。
@@ -86,7 +82,6 @@ var selectedVersion = versions[userSelect]; // [!code focus]
 您需要使用到在先前步骤中取得的 `selectedVersion` 来初始化安装器：
 
 ```c#
-
 var optifineInstaller = new OptifineInstaller
 {
     JavaExecutablePath = "[PATH_TO_YOUR_JAVA_RUNTIME]",
@@ -96,7 +91,6 @@ var optifineInstaller = new OptifineInstaller
     CustomId = "[CUSTOM_INSTALL_GAME_ID]",
     InheritsFrom = "[MC_VERSION_OR_GAME_ID]"
 };
-
 ```
 
 在上述代码块中，请将这些参数按照您的实际情况替换：
@@ -117,17 +111,13 @@ var optifineInstaller = new OptifineInstaller
 在异步上下文中，使用 **InstallTaskAsync** 来完成安装：
 
 ```c#
-
 await optifineInstaller.InstallTaskAsync();
-
 ```
 
 在同步上下文中，使用 **Install** 来完成安装：
 
 ```c#
-
 optifineInstaller.Install();
-
 ```
 
 ## 报告安装进度
@@ -138,11 +128,9 @@ optifineInstaller.Install();
 您只需要简单地在 **开始安装之前** 注册下面的事件：
 
 ```c#
-
 optifineInstaller.StageChangedEventDelegate += (_, args) => {
     ReportProgress(args.Progress, args.CurrentStage);
 };
-
 ```
 
 其中， **args.Progress** 指示了安装器当前的百分比进度。**args.CurrentStage** 则是安装器当前进度的文字描述。

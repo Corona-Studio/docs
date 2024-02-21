@@ -44,7 +44,6 @@ LiteLoader 作为早期 MineCraft 的模组系统，已经长期缺乏维护和�
 您将看到类似下面的返回内容：
 
 ```json
-
 {
   "_id": "59685511433f993503c1c879",
   "mcversion": "1.7.10",
@@ -64,7 +63,6 @@ LiteLoader 作为早期 MineCraft 的模组系统，已经长期缺乏维护和�
   "version": "1.7.10_04",
   "__v": 0
 }
-
 ```
 
 BMCLAPI 将返回一个 JSON 对象，将该对象反序列化为 ProjBobcat 类型即是我们需要的 `LiteLoaderDownloadVersionModel`。
@@ -75,14 +73,12 @@ BMCLAPI 将返回一个 JSON 对象，将该对象反序列化为 ProjBobcat 类
 您可以使用类似下面的代码来将您获取到的服务器响应转换为对应的 ProjBobcat 类型：
 
 ```c#
-
 // 从 BMCLAPI 请求数据（示例，非实际代码）
 ...
 var responseJson = await res.Content.ReadAsStringAsync();
 
 // 将 JSON 响应转换为 ProjBobcat 类型 // [!code focus]
 var versionModel = JsonConvert.DeserializeObject<LiteLoaderDownloadVersionModel>(responseJson); // [!code focus]
-
 ```
 
 此处，**versionModel** 即是 Fabric 安装器所需要的 `LiteLoaderDownloadVersionMode`。
@@ -95,7 +91,6 @@ var versionModel = JsonConvert.DeserializeObject<LiteLoaderDownloadVersionModel>
 如果您已经安装了 LiteLoader 对应的原版游戏，您可以通过下面的代码获取到 `RawVersionModel`：
 
 ```c#
-
 // 获取版本 JSON 文件所在的路径
 var jsonPath = GamePathHelper.GetGameJsonPath(rP, id);
 
@@ -104,7 +99,6 @@ var jsonContent = await File.ReadAllTextAsync(jsonPath);
 
 // 将 JSON 内容转换为 RawVersionModel
 var baseVersionModel = JsonConvert.DeserializeObject<RawVersionModel>(jsonContent);
-
 ```
 
 此处，**baseVersionModel** 即是 LiteLoader 安装器所需要的 `RawVersionModel`。
@@ -115,7 +109,6 @@ var baseVersionModel = JsonConvert.DeserializeObject<RawVersionModel>(jsonConten
 您需要使用到在先前步骤中取得的 `versionModel` 和 `baseVersionModel` 来初始化安装器：
 
 ```c#
-
 var liteLoaderInstaller = new LiteLoaderInstaller
 {
     InheritVersion = baseVersionModel,
@@ -124,7 +117,6 @@ var liteLoaderInstaller = new LiteLoaderInstaller
     VersionModel = versionModel,
     CustomId = "[CUSTOM_INSTALL_GAME_ID]"
 };
-
 ```
 
 在上述代码块中，请将这些参数按照您的实际情况替换：
@@ -143,17 +135,13 @@ var liteLoaderInstaller = new LiteLoaderInstaller
 在异步上下文中，使用 **InstallTaskAsync** 来完成安装：
 
 ```c#
-
 await liteLoaderInstaller.InstallTaskAsync();
-
 ```
 
 在同步上下文中，使用 **Install** 来完成安装：
 
 ```c#
-
 liteLoaderInstaller.Install();
-
 ```
 
 ## 报告安装进度
@@ -164,11 +152,9 @@ liteLoaderInstaller.Install();
 您只需要简单地在 **开始安装之前** 注册下面的事件：
 
 ```c#
-
 liteLoaderInstaller.StageChangedEventDelegate += (_, args) => {
     ReportProgress(args.Progress, args.CurrentStage);
 };
-
 ```
 
 其中， **args.Progress** 指示了安装器当前的百分比进度。**args.CurrentStage** 则是安装器当前进度的文字描述。

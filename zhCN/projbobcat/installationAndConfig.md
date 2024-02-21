@@ -84,9 +84,9 @@ git submodule add https://github.com/Corona-Studio/ProjBobcat.git
 因此，您需要在入口处添加下面的代码来修改默认的最大连接数：
 
 ```c#{3}
- using System.Net;
+using System.Net;
 
- ServicePointManager.DefaultConnectionLimit = 512;
+ServicePointManager.DefaultConnectionLimit = 512;
 ```
 
 ### 注册并初始化基础服务

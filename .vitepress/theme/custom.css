@@ -19,3 +19,18 @@
 .curtain::before{
     background: linear-gradient(color-mix(in srgb, var(--vp-c-bg), transparent 15%), transparent 80%) !important;
 }
+
+table{
+	width: 100% !important;
+	display: table !important;
+    opacity: 1;
+}
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'ms-segoe-fluent' !important;
+}
+
+@font-face {
+    font-family: ms-segoe-fluent;
+    src: url("/segoe.ttf");
+}

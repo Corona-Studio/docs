@@ -30,7 +30,6 @@ Quilt 安装器目前处于试验阶段，相关的 API 以及安装流程可能
 您将看到类似下面的返回内容：
 
 ```json
-
 [
   {
     "version": "1.19.3",
@@ -43,7 +42,6 @@ Quilt 安装器目前处于试验阶段，相关的 API 以及安装流程可能
   {...},
   {...}
 ]
-
 ```
 
 在这里，您需要检查您即将要安装的游戏版本是否出现在 Quilt 官方的支持列表当中。
@@ -66,7 +64,6 @@ Quilt 安装器目前处于试验阶段，相关的 API 以及安装流程可能
 您将看到类似下面的返回内容：
 
 ```json
-
 [
   {
     "separator": ".",
@@ -77,7 +74,6 @@ Quilt 安装器目前处于试验阶段，相关的 API 以及安装流程可能
   {...},
   {...}
 ]
-
 ```
 
 Quilt Meta API 将返回一个 JSON 数组，数组中的每一个元素即是我们需要的 Loader Artifact。
@@ -88,7 +84,6 @@ Quilt Meta API 将返回一个 JSON 数组，数组中的每一个元素即是�
 您可以使用类似下面的代码来将您获取到的服务器响应转换为对应的 ProjBobcat 类型：
 
 ```c#
-
 // 从 Quilt Meta API 请求数据（示例，非实际代码）
 ...
 var responseJson = await res.Content.ReadAsStringAsync();
@@ -101,7 +96,6 @@ var userSelect = vm.SelectedArtifactIndex;
 
 // 获取单个 Loader Artifact // [!code focus]
 var selectedArtifact = artifacts[userSelect]; // [!code focus]
-
 ```
 
 此处，**selectedArtifact** 即是 Fabric 安装器所需要的 `QuiltLoaderModel`。
@@ -111,7 +105,6 @@ var selectedArtifact = artifacts[userSelect]; // [!code focus]
 初始化 Quilt 安装器的方式非常简单。您需要使用到在先前步骤中取得的 `selectedArtifact` 来初始化安装器：
 
 ```c#
-
 var quiltInstaller = new QuiltInstaller
 {
     InheritsFrom = "[MC_VERSION_OR_GAME_ID]",
@@ -119,7 +112,6 @@ var quiltInstaller = new QuiltInstaller
     CustomId = "[CUSTOM_INSTALL_GAME_ID]",
     LoaderArtifact = selectedArtifact
 };
-
 ```
 
 在上述代码块中，请将这些参数按照您的实际情况替换：
@@ -137,17 +129,13 @@ var quiltInstaller = new QuiltInstaller
 在异步上下文中，使用 **InstallTaskAsync** 来完成安装：
 
 ```c#
-
 await quiltInstaller.InstallTaskAsync();
-
 ```
 
 在同步上下文中，使用 **Install** 来完成安装：
 
 ```c#
-
 quiltInstaller.Install();
-
 ```
 
 ## 报告安装进度
@@ -158,11 +146,9 @@ quiltInstaller.Install();
 您只需要简单地在 **开始安装之前** 注册下面的事件：
 
 ```c#
-
 quiltInstaller.StageChangedEventDelegate += (_, args) => {
     ReportProgress(args.Progress, args.CurrentStage);
 };
-
 ```
 
 其中， **args.Progress** 指示了安装器当前的百分比进度。**args.CurrentStage** 则是安装器当前进度的文字描述。

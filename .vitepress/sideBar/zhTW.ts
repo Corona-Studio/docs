@@ -11,14 +11,14 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
     },
     {
         text: "CMFS",
-        collapsed: false,
+        collapsed: true,
         items: [
             {text: "簡介", link: "/zhTW/CMFS/"}
         ]
     },
     {
         text: "LauncherX 啟動器 - 儀表盤",
-        collapsed: false,
+        collapsed: true,
         items: [
             {text: "儀表盤", link: "/zhTW/dashboard/"},
             {text: "聚合搜尋元件", link: "/zhTW/dashboard/search"}
@@ -26,14 +26,14 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
     },
     {
         text: "Minecraft",
-        collapsed: false,
+        collapsed: true,
         items: [
-            {text: "面板規範", link: "/zhTW/skin/"}
+            {text: "皮膚規範", link: "/zhTW/skin/"}
         ]
     },
     {
         text: "ProjBobcat",
-        collapsed: false,
+        collapsed: true,
         items: [
             {text: "簡介", link: "/zhTW/projbobcat/"},
             {text: "開始", link: "/zhTW/projbobcat/beforeWeStart"},
@@ -46,7 +46,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
             },
             {
                 text: "安裝器",
-                collapsed: false,
+                collapsed: true,
                 link: "/zhTW/projbobcat/installers/",
                 items: [
                     {text: "CurseForge 整合包安裝器", link: "/zhTW/projbobcat/installers/curseforge"},
@@ -63,7 +63,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                 items: [
                     {
                         text: "資源解析器",
-                        collapsed: false,
+                        collapsed: true,
                         link: "/zhTW/projbobcat/resourceCompleter/resourceInfoResolver/index",
                         items: [
                             {text: "Assets 解析器", link: "/zhTW/projbobcat/resourceCompleter/resourceInfoResolver/assetInfoResolver"},

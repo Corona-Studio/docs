@@ -20,7 +20,6 @@
 下面我们提供了一个该方法的样例实现：
 
 ```c#
-
 public async Task<(bool, GraphAuthResultModel?)> CacheTokenProviderAsync()
 {
     if (string.IsNullOrEmpty(XBLToken)) return (false, default);
@@ -73,7 +72,6 @@ public async Task<(bool, GraphAuthResultModel?)> CacheTokenProviderAsync()
 
     return (true, model);
 }
-
 ```
 
 ###  配置首次登录设备流验证代码展示方法
@@ -84,13 +82,11 @@ public async Task<(bool, GraphAuthResultModel?)> CacheTokenProviderAsync()
 以下是这个方法的一个实例：
 
 ```c#
-
 private void DeviceTokenNotifier(DeviceIdResponseModel deviceIdResponseModel)
 {
     // 将获取到的回调数据展示到前端
     DeviceCodeResponse = deviceIdResponseModel;
 }
-
 ```
 
 **DeviceIdResponseModel** 中包含了用户完成验证所需要的所有信息：
@@ -124,12 +120,10 @@ private void DeviceTokenNotifier(DeviceIdResponseModel deviceIdResponseModel)
 初始化验证器：
 
 ```c#
-
 var microsoftAuthenticator = new MicrosoftAuthenticator
 {
     LauncherAccountParser = launcherAccountParser
 };
-
 ```
 
 在上述代码块中，请将这些参数按照您的实际情况替换：
@@ -146,14 +140,12 @@ var microsoftAuthenticator = new MicrosoftAuthenticator
 初始化验证器：
 
 ```c#
-
 var microsoftAuthenticator = new MicrosoftAuthenticator
 {
     CacheTokenProvider = CacheTokenProviderAsync,
     Email = "[EMAIL]",
     LauncherAccountParser = launcherAccountParser
 };
-
 ```
 
 在上述代码块中，请将这些参数按照您的实际情况替换：
@@ -176,7 +168,6 @@ var microsoftAuthenticator = new MicrosoftAuthenticator
 下面是一段样例验证代码：
 
 ```c#
-
 // 获取验证结果 // [!code focus]
 // DeviceTokenNotifier 即为前文提到的信息展示方法 // [!code focus]
 var authResult = await msAuth.GetMSAuthResult(DeviceTokenNotifier); // [!code focus]
@@ -204,7 +195,6 @@ var msInfoModel = new MSAccountInfoModel
     ExpiresIn = authResult.ExpiresIn, // [!code focus]
     Email = email // [!code focus]
 };
-
 ```
 
 ## 获取验证结果（非初次验证）
@@ -214,17 +204,13 @@ var msInfoModel = new MSAccountInfoModel
 在异步上下文中，使用 **AuthTaskAsync** 来完成验证：
 
 ```c#
-
 var authResult = await microsoftAuthenticator.AuthTaskAsync(false);
-
 ```
 
 在同步上下文中，使用 **Auth** 来完成验证：
 
 ```c#
-
 var authResult = microsoftAuthenticator.Auth();
-
 ```
 
 ## 解读验证结果

@@ -16,13 +16,11 @@
 在 ProjBobcat 中，我们已经为您实现了相关的判断逻辑。您只需要简单地调用下面的方法：
 
 ```c#
-
 var mcVersion = "[MC_VERSION]";
 var forgeJarPath = "[PATH_TO_YOUR_FORGE_INSTALLER]";
 var forgeVersion = ForgeInstallerFactory.GetForgeArtifactVersion(mcVersion, "[FORGE_VERSION]");
 
 var isLegacy = ForgeInstallerFactory.IsLegacyForgeInstaller(forgeJarPath, forgeVersion);  // [!code focus]
-
 ```
 
 在上述代码块中，请将这些参数按照您的实际情况替换：
@@ -41,7 +39,6 @@ var isLegacy = ForgeInstallerFactory.IsLegacyForgeInstaller(forgeJarPath, forgeV
 要初始化旧版安装器，只需实例化 **LegacyForgeInstaller** 并提供相应的参数：
 
 ```c#
-
 IForgeInstaller forgeInstaller =
     new LegacyForgeInstaller
             {
@@ -51,7 +48,6 @@ IForgeInstaller forgeInstaller =
                 ForgeVersion = "[FORGE_VERSION]",
                 InheritsFrom = "[MC_VERSION_OR_GAME_ID]"
             };
-
 ```
 
 在上述代码块中，请将这些参数按照您的实际情况替换：
@@ -65,7 +61,6 @@ IForgeInstaller forgeInstaller =
 ## 初始化新版安装器
 
 ```c#
-
 IForgeInstaller forgeInstaller =
     new HighVersionForgeInstaller
             {
@@ -79,7 +74,6 @@ IForgeInstaller forgeInstaller =
                 MineCraftVersionId = "[ACTUAL_MC_GAME_ID]",
                 InheritsFrom = "[MC_VERSION_OR_GAME_ID]"
             };
-
 ```
 
 在上述代码块中，请将这些参数按照您的实际情况替换：
@@ -97,7 +91,6 @@ IForgeInstaller forgeInstaller =
 因此，您可以很方便的使用一个三元运算符来选择性的初始化对应的安装器：
 
 ```c#{4-100}
-
 var isLegacy = ForgeInstallerFactory.IsLegacyForgeInstaller(forgeJarPath, forgeVersion);
 
 IForgeInstaller forgeInstaller = isLegacy
@@ -121,7 +114,6 @@ IForgeInstaller forgeInstaller = isLegacy
                 MineCraftVersionId = "[ACTUAL_MC_GAME_ID]",
                 InheritsFrom = "[MC_VERSION_OR_GAME_ID]"
             };
-
 ```
 
 ## 开始安装
@@ -131,17 +123,13 @@ IForgeInstaller forgeInstaller = isLegacy
 在异步上下文中，使用 **InstallForgeTaskAsync** 来完成安装：
 
 ```c#
-
 await forgeInstaller.InstallForgeTaskAsync();
-
 ```
 
 在同步上下文中，使用 **InstallForge** 来完成安装：
 
 ```c#
-
 forgeInstaller.InstallForge();
-
 ```
 
 ## 报告安装进度
@@ -152,12 +140,10 @@ forgeInstaller.InstallForge();
 您只需要简单地在 **开始安装之前** 注册下面的事件：
 
 ```c#
-
 ((InstallerBase)forgeInstaller).StageChangedEventDelegate += (_, args) =>
 {
     ReportProgress(args.Progress * 100, args.CurrentStage);
 };
-
 ```
 
 其中， **args.Progress** 指示了安装器当前的百分比进度。**args.CurrentStage** 则是安装器当前进度的文字描述。

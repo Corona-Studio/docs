@@ -13,7 +13,6 @@ Assets 解析器提供了对游戏资产文件的解析和验证功能，这些�
 您将看到类似下面的返回内容：
 
 ```json
-
 {
   "latest": {
     "release": "1.19.3",
@@ -30,7 +29,6 @@ Assets 解析器提供了对游戏资产文件的解析和验证功能，这些�
     ...
   ]
 }
-
 ```
 
 Mojang 服务器将会返回一个 JSON 对象，**versions** 字段则是我们所需要的 Versions 数组
@@ -41,7 +39,6 @@ Mojang 服务器将会返回一个 JSON 对象，**versions** 字段则是我们
 您可以使用类似下面的代码来将您获取到的服务器响应转换为对应的 ProjBobcat 类型：
 
 ```c#
-
 // 从 Mojang API 请求数据（示例，非实际代码）
 ...
 var responseJson = await res.Content.ReadAsStringAsync();
@@ -51,7 +48,6 @@ var manifest = JsonConvert.DeserializeObject<VersionManifest>(responseJson); // 
 
 // 获取 Versions 列表 // [!code focus]
 var versions = manifest.Versions; // [!code focus]
-
 ```
 
 此处，**versions** 即是 Assets 解析器所需要的 `Versions` 数组。
@@ -62,7 +58,6 @@ var versions = manifest.Versions; // [!code focus]
 你可以通过下面的代码来初始化 Assets 解析器：
 
 ```c#
-
 var resolver = new AssetInfoResolver
 {
     AssetIndexUriRoot = "https://launchermeta.mojang.com/",
@@ -72,7 +67,6 @@ var resolver = new AssetInfoResolver
     CheckLocalFiles = [CHECK_LOCAL_FILES],
     Versions = versions // 在上一步获取到的 Versions 数组
 };
-
 ```
 
 在上述代码块中，请将这些参数按照您的实际情况替换：
