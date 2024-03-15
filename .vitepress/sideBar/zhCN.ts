@@ -1,5 +1,6 @@
 import type { DefaultTheme } from 'vitepress'
 
+// To translators: All original comments should never keeped in your language file.
 export const sidebar: DefaultTheme.SidebarItem[] = [
     {
         text: "指南",
@@ -74,7 +75,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                         items: [
                             {text: "全局游戏设置", link: "/zhCN/lxguide/settings/item/global"},
                             {text: "#“外观”", link: "/zhCN/lxguide/settings/item/customize"},
-                            {text: "#“网络”", link: "/zhCN/lxguide/settings/item/network"},
+                            {text: "网络", link: "/zhCN/lxguide/settings/item/network"},
                             {text: "#“多人游戏”", link: "/zhCN/lxguide/settings/item/multi-game"},
                             {text: "#“高级”", link: "/zhCN/lxguide/settings/item/advanced"},
                             {text: "启动器账户", link: "/zhCN/lxguide/settings/item/lx-account"},
@@ -88,11 +89,11 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                 link: "/zhCN/lxguide/features/",
                 collapsed: true,
                 items: [
-                    {text: "#仪表盘", link: "/zhCN/lxguide/features/dashboard"},
-                    {text: "#整合包支持", link: "/zhCN/lxguide/features/modpack-support"},
+                    {text: "仪表板", link: "/zhCN/lxguide/features/dashboard"},
+                    {text: "整合包支持", link: "/zhCN/lxguide/features/modpack-support"},
                     {text: "#实时日志窗口", link: "/zhCN/lxguide/features/log-window"},
-                    {text: "#P2P联机", link: "/zhCN/lxguide/features/p2p"},
-                    {text: "#服务器管理", link: "/zhCN/lxguide/features/manage-server"},
+                    // {text: "#P2P联机", link: "/zhCN/lxguide/features/p2p"},
+                    {text: "服务器管理", link: "/zhCN/lxguide/features/manage-server"},
                     {text: "#游戏资源管理", link: "/zhCN/lxguide/features/game-assets"},
 
                 ]
