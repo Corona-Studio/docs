@@ -24,11 +24,25 @@
 
 - 包含: 展示路径的选择框、“重新检查Java可用性”按钮; 重新搜索、深度搜索(仅Windows)、手动添加按钮:  使用选择框来选择一个全局使用的JRE以供启动. 每一条项目均为被搜索到的Java, 并且依次显示了「LauncherX对该Java可用性的判断」、「Java版本」、「该Java的完整路径」. 选中的Java将使用主题色高亮显示, 其版本信息将在选择框收起的情况下于下方2或3个按钮的下方可见.
 
-  :::info 对于代表可用性的图标, 有四种可能:<br> **&#xe8fb;** : 代表这个Java是完整可用的, 并且适合您的操作系统;  <br>**&#xe7ba;** : 代表这个Java存在问题, 不建议使用它. 通常可能是因为架构和当前系统不符(arm架构使用x64版本JRE、x64使用x32JRE都会使游戏体验大打折扣); <br> **&#xe8bb;** : 代表这个Java已损坏, 或者LauncherX无法识别这个Java(如果您为了启动1.7.0以前版本的游戏而使用Java7, 则可以忽略LauncherX的判断). 您可以使用下方的**下载Java**按钮来下载一个Mojang官方选择的适用于amd64架构的JRE, 或者自行下载安装一个新的JRE.   详见: [[下载合适的JRE](/zhCN/lxguide/others/download-jre)]; <br> **&#xe895;** : 代表正在或此时无法或暂时没有运行对该Java的检查. 无论如何您都可以通过选择框右侧的按钮来发起检查; <br>无论何时您都可以无视LauncherX的判断, 但是使用LauncherX不认可的JRE有可能严重破坏您的游戏体验.
+  :::info 对于代表可用性的图标, 有四种可能:
 
-  :::warning 对于非Windows用户, 在手动添加Java时, 您可能需要注意赋予LauncherX足够的权限. 不建议直接用管理员命令启动LauncherX. macOS用户若不得不使用SUDO启动LauncherX, 则请使用命令: “ `sudo open  <LauncherX.app的路径, 可以拖入app包文件到终端窗口中来填充路径>`”
+   **&#xe8fb;** : 代表这个Java是完整可用的, 并且适合您的操作系统;  <br>**&#xe7ba;** : 代表这个Java存在问题, 不建议使用它. 通常可能是因为架构和当前系统不符(arm架构使用x64版本JRE、x64使用x32JRE都会使游戏体验大打折扣); <br> **&#xe8bb;** : 代表这个Java已损坏, 或者LauncherX无法识别这个Java(如果您为了启动1.7.0以前版本的游戏而使用Java7, 则可以忽略LauncherX的判断). 您可以使用下方的**下载Java**按钮来下载一个Mojang官方选择的适用于amd64架构的JRE, 或者自行下载安装一个新的JRE.   详见: [[下载合适的JRE](/zhCN/lxguide/others/download-jre)]; <br> **&#xe895;** : 代表正在或此时无法或暂时没有运行对该Java的检查. 无论如何您都可以通过选择框右侧的按钮来发起检查; <br>无论何时您都可以无视LauncherX的判断, 但是使用LauncherX不认可的JRE有可能严重破坏您的游戏体验. 由于我们的Java运行时检测机制是通过 “搜索-执行” 模式工作以确认该运行时是否可用，所以在您启动LauncherX时候，可能会遇到来自Java的错误弹窗。您完全可以直接将它关闭，因为这并不影响LauncherX运行; 且如果您没有选择任何一个被LauncherX判断为有问题的JRE作为游戏启动所使用的Java, 那么您的游戏启动几乎不可能受到受损JRE的影响。由于每次LauncherX启动都会检查搜索到的JRE是否可用, 因此您应该将该受损的运行时**移除**，或者用自动化窗口关闭工具（比如 火绒弹窗拦截）对错误弹窗进行精准打击。<br>如果您需要LauncherX不再显示某个特定的JRE, 请点开选择框, 右键点击包含那个JRE路径的项目, 点击「排除」. 
+
+  :::warning 对于非Windows用户, 在手动添加Java时, 您可能需要注意赋予LauncherX足够的权限. 
+
+  不建议直接用管理员命令启动LauncherX. <br>macOS用户若不得不使用SUDO启动LauncherX, 则请使用命令: “ `sudo open  <LauncherX.app的路径, 可以拖入app包文件到终端窗口中来填充路径>`”
 
 - “下载Java” 按钮、“查看CSKB文章”按钮(仅在ARM架构系统中可见): 前者可以选择下载一个Mojang官方选择的适用于amd64架构的JRE, 或者自行下载安装一个新的JRE.   详见: [[下载合适的JRE](/zhCN/lxguide/others/download-jre)]
+
+在这个设置项下方有一串文字用于显示LauncherX对选中的运行时的判断. 比如: **该Java运行时(17.0.1)匹配您的系统**
+
+:::tip 意外
+
+如果那里显示了类似`picked JAVA_OPTS="xxx"`的文字, 请在环境变量中寻找名为JAVA_OPTS的环境变量并删除, 然后注销或重启系统. 这可能是其他启动器创建的临时项目.
+
+:::
+
+
 
 **内存大小**: `正整数` | 默认: 1024 | 单位: MB
 

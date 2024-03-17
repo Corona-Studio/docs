@@ -31,6 +31,7 @@ div .custom-block{
 }
 p.custom-block-title{
     margin: 7.5px 0 !important;
+    font-size: 15px;
 }
 .custom-block > p:not(.custom-block-title){
     margin-top: 0 !important;

@@ -131,13 +131,13 @@ macOS = "~/Library/Application Support/LauncherX/"
 // (~是您用户文件夹的起始点。一般会在Finder中显示一个小房子的图标；
 // Library可能会显示为其本地化名称“资源库”)
 
-Linux = "~/LauncherX/"       
+Linux = "~/documents/LauncherX/"       
 // 两个项目均存放在这个路径中
 `````
 
 然后，(**方法一**)
 
-​	~您可以把.minecraft文件夹保留在解压后的原地（或者您如果看不见它的话，它就在原地），然后手动将这个文件夹作为新的游戏目录添加到LauncherX（在LauncherX的”游戏列表->[左上角的]更多->基础设置“中，点击添加。如果您看不到.minecraft文件夹，选择它存在的上级目录，LauncherX将会自动选择到存在的.minecraft文件夹。【LXIT issue #46解决后的更新可以满足它】）；
+​	~您可以把.minecraft文件夹保留在解压后的原地（或者您如果看不见它的话，它就在原地），然后手动将这个文件夹作为新的游戏目录添加到LauncherX（在LauncherX的”游戏列表->[左上角的]更多->基础设置“中，点击添加。如果您看不到.minecraft文件夹，选择它存在的上级目录，LauncherX将会自动选择到存在的.minecraft文件夹。【此功能要求LXIT issue #46移除Invalid并真正更新实装】）；
 
 或者，(**方法二**)
 
@@ -149,7 +149,7 @@ macOS: "~/Library/Application Support/"
 // (~是您用户文件夹的起始点。一般会在Finder中显示一个小房子的图标；
 // Library可能会显示为其本地化名称“资源库”)
 
-Linux: "~/"      
+Linux: "~/documents/"      
 // .minecraft/ 存放在这个路径下
 ``````
 

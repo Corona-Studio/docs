@@ -8,7 +8,8 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
         items: [
             {text: "开始", link: "/zhCN/guide/"},
             {text: "我们的团队", link: '/zhCN/guide/team'},
-            {text: "指路官方", link: '/zhCN/guide/contact'}
+            {text: "指路官方", link: '/zhCN/guide/contact'},
+            {text: "CSA账户", link: '/zhCN/guide/account'},
         ]
     },
     {
@@ -91,7 +92,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                 items: [
                     {text: "仪表板", link: "/zhCN/lxguide/features/dashboard"},
                     {text: "整合包支持", link: "/zhCN/lxguide/features/modpack-support"},
-                    {text: "#实时日志窗口", link: "/zhCN/lxguide/features/log-window"},
+                    {text: "#实时日志和错误分析器", link: "/zhCN/lxguide/features/log-window"},
                     // {text: "#P2P联机", link: "/zhCN/lxguide/features/p2p"},
                     {text: "服务器管理", link: "/zhCN/lxguide/features/manage-server"},
                     {text: "#游戏资源管理", link: "/zhCN/lxguide/features/game-assets"},
@@ -104,9 +105,10 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                 collapsed: true,
                 items: [
                     {text: '常见名词一览', link: '/zhCN/lxguide/others/general'},
+                    {text: '测试导引: 善用日志', link: '/zhCN/lxguide/others/report-with-logs'},
                     {text: '优化配置: 下载合适的JRE', link: '/zhCN/lxguide/others/download-jre'},
                     {text: '优化配置: 启动参数', link: '/zhCN/lxguide/others/args'},
-                    {text: '优化配置: 合理分配内存和选择GC、配置JA', link: '/zhCN/lxguide/others/adjust-ram-gc-ja'},
+                    {text: '优化配置: 合理配置内存和GC、JavaAgent', link: '/zhCN/lxguide/others/adjust-ram-gc-ja'},
                 ]
             }
         ],
@@ -115,7 +117,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
         text: "Minecraft",
         collapsed: true,
         items: [ 
-            {text: "皮肤规范", link: "/zhCN/skin/"}
+            {text: "皮肤规范", link: "/zhCN/skin/"} 
         ]
     },
     {
