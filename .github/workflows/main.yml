@@ -40,10 +40,18 @@ jobs:
         run: |
           rm -rf CSKB_Hosting/docs
 
+      - name: cd1
+        run: |
+          cd CSKB_Hosting && ls
+
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4.1.1
         with:
           path: 'CSKB_Hosting/docs'
+
+      - name: cd2
+        run: |
+          cd CSKB_Hosting && cd docs && ls
 
       - name: Install Deps and Build
         run: |
