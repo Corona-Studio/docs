@@ -22,7 +22,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4.0.2
         with:
           node-version: 16
           
@@ -31,7 +31,7 @@ jobs:
           npm install yarn -g
     
       - name: Check out CSKB_Hosting
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4.1.1
         with:
           repository: 'Corona-Studio/CSKB_Hosting'
           
@@ -40,7 +40,7 @@ jobs:
           rm -rf CSKB_Hosting/docs
     
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4.1.1
         with:
           path: 'CSKB_Hosting'
 
