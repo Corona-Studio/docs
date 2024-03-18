@@ -52,4 +52,5 @@ jobs:
 
       - name: Build
         run: |
+          cd CSKB_Hosting
           yarn run docs:build
