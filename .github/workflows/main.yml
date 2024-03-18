@@ -45,8 +45,11 @@ jobs:
         with:
           path: 'CSKB_Hosting/docs'
 
-      - name: Build
+      - name: Install Deps
         run: |
           cd CSKB_Hosting
           yarn install
+
+      - name: Build
+        run: |
           yarn run docs:build
