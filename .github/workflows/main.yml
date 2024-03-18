@@ -38,11 +38,23 @@ jobs:
       - name: Remove cloned docs
         run: |
           rm -rf CSKB_Hosting/docs
+
+      - name: Show cd
+        run: |
+          cd CSKB_Hosting && ls
     
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
         with:
           path: CSKB_Hosting
+
+      - name: Show cd 2
+        run: |
+          cd CSKB_Hosting && ls
+
+      - name: Show cd 3
+        run: |
+          cd CSKB_Hosting && ls && cd docs && ls
 
       - name: Build
         run: |
