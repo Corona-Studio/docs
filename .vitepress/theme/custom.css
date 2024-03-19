@@ -26,6 +26,17 @@ table{
     opacity: 1;
 }
 
+div .custom-block{
+    padding: 8px 16px !important;
+}
+p.custom-block-title{
+    margin: 7.5px 0 !important;
+    font-size: 15px;
+}
+.custom-block > p:not(.custom-block-title){
+    margin-top: 0 !important;
+}
+
 *{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'ms-segoe-fluent' !important;
 }
