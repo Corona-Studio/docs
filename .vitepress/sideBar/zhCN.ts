@@ -13,17 +13,65 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
         ]
     },
     {
-        text: "CMFS",
+        text: "ProjBobcat",
         collapsed: true,
         items: [
-            {text: "简介", link: "/zhCN/CMFS/"},
+            {text: "简介", link: "/zhCN/projbobcat/"},
+            {text: "开始", link: "/zhCN/projbobcat/beforeWeStart"},
             {
-                text: '帮助!',
-                link: '/zhCN/CMFS/help/',
-                collapsed: true,
+                text: "安装与配置",
+                link: "/zhCN/projbobcat/installationAndConfig",
                 items: [
-                    {text: "无效的会话？", link: "/zhCN/CMFS/help/invalid-session"},
-
+                    {text: "配置 Azure 应用", link: "/zhCN/projbobcat/createNewAzureApp"}
+                ]
+            },
+            {
+                text: "验证模型",
+                collapsed: true,
+                link: "/zhCN/projbobcat/authenticators/",
+                items:[
+                    {text: "离线验证模型", link: "/zhCN/projbobcat/authenticators/offline"},
+                    {text: "Yggdrasil 验证模型（旧版）", link: "/zhCN/projbobcat/authenticators/yggdrasil"},
+                    {text: "Microsoft 验证模型（新版）", link: "/zhCN/projbobcat/authenticators/microsoft"}
+                ]
+            },
+            {
+                text: "安装器",
+                collapsed: true,
+                link: "/zhCN/projbobcat/installers/",
+                items: [
+                    {text: "CurseForge 整合包安装器", link: "/zhCN/projbobcat/installers/curseforge"},
+                    {text: "Fabric 安装器", link: "/zhCN/projbobcat/installers/fabric"},
+                    {text: "Forge 安装器", link: "/zhCN/projbobcat/installers/forge"},
+                    {text: "LiteLoader 安装器", link: "/zhCN/projbobcat/installers/liteloader"},
+                    {text: "Optifine 安装器", link: "/zhCN/projbobcat/installers/optifine"},
+                    {text: "Quilt 安装器", link: "/zhCN/projbobcat/installers/quilt"}
+                ]
+            },
+            {
+                text: "资源补全器",
+                link: "/zhCN/projbobcat/resourceCompleter/",
+                items: [
+                    {
+                        text: "资源解析器",
+                        collapsed: true,
+                        link: "/zhCN/projbobcat/resourceCompleter/resourceInfoResolver/index",
+                        items: [
+                            {text: "Assets 解析器", link: "/zhCN/projbobcat/resourceCompleter/resourceInfoResolver/assetInfoResolver"},
+                            {text: "log4j 日志格式化组件解析器", link: "/zhCN/projbobcat/resourceCompleter/resourceInfoResolver/gameLoggingInfoResolver"},
+                            {text: "Libraries 解析器", link: "/zhCN/projbobcat/resourceCompleter/resourceInfoResolver/libraryInfoResolver"},
+                            {text: "版本信息解析器", link: "/zhCN/projbobcat/resourceCompleter/resourceInfoResolver/versionInfoResolver"}
+                        ]
+                    },
+                    {text: "创建和配置补全器", link: "/zhCN/projbobcat/resourceCompleter/createAndConfigCompleter"}
+                ]
+            },
+            {
+                text: "附加解析器",
+                link: "/zhCN/projbobcat/additionalParsers/",
+                items: [
+                    {text: "游戏档案解析器", link: "/zhCN/projbobcat/additionalParsers/gameProfileParser"},
+                    {text: "账户档案解析器", link: "/zhCN/projbobcat/additionalParsers/accountProfileParser"}
                 ]
             }
         ]
@@ -114,76 +162,39 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
         ],
     },
     {
+        text: "CMFS",
+        collapsed: true,
+        items: [
+            {text: "简介", link: "/zhCN/CMFS/"},
+            {
+                text: '帮助!',
+                link: '/zhCN/CMFS/help/',
+                collapsed: true,
+                items: [
+                    {text: "无效的会话？", link: "/zhCN/CMFS/help/invalid-session"},
+
+                ]
+            }
+        ]
+    },
+    {
+        text: 'Skript导引',
+        collapsed: true,
+        items: [
+            {text: "开始", link: "/zhCN/skript/"},
+            {text: "入门", link: "/zhCN/skript/startup"},
+            {text: "注册起始点", link: "/zhCN/skript/register-entry"},
+
+        ]
+    },
+    {
         text: "Minecraft",
         collapsed: true,
         items: [ 
             {text: "皮肤规范", link: "/zhCN/skin/"} 
         ]
     },
-    {
-        text: "ProjBobcat",
-        collapsed: true,
-        items: [
-            {text: "简介", link: "/zhCN/projbobcat/"},
-            {text: "开始", link: "/zhCN/projbobcat/beforeWeStart"},
-            {
-                text: "安装与配置",
-                link: "/zhCN/projbobcat/installationAndConfig",
-                items: [
-                    {text: "配置 Azure 应用", link: "/zhCN/projbobcat/createNewAzureApp"}
-                ]
-            },
-            {
-                text: "验证模型",
-                collapsed: true,
-                link: "/zhCN/projbobcat/authenticators/",
-                items:[
-                    {text: "离线验证模型", link: "/zhCN/projbobcat/authenticators/offline"},
-                    {text: "Yggdrasil 验证模型（旧版）", link: "/zhCN/projbobcat/authenticators/yggdrasil"},
-                    {text: "Microsoft 验证模型（新版）", link: "/zhCN/projbobcat/authenticators/microsoft"}
-                ]
-            },
-            {
-                text: "安装器",
-                collapsed: true,
-                link: "/zhCN/projbobcat/installers/",
-                items: [
-                    {text: "CurseForge 整合包安装器", link: "/zhCN/projbobcat/installers/curseforge"},
-                    {text: "Fabric 安装器", link: "/zhCN/projbobcat/installers/fabric"},
-                    {text: "Forge 安装器", link: "/zhCN/projbobcat/installers/forge"},
-                    {text: "LiteLoader 安装器", link: "/zhCN/projbobcat/installers/liteloader"},
-                    {text: "Optifine 安装器", link: "/zhCN/projbobcat/installers/optifine"},
-                    {text: "Quilt 安装器", link: "/zhCN/projbobcat/installers/quilt"}
-                ]
-            },
-            {
-                text: "资源补全器",
-                link: "/zhCN/projbobcat/resourceCompleter/",
-                items: [
-                    {
-                        text: "资源解析器",
-                        collapsed: true,
-                        link: "/zhCN/projbobcat/resourceCompleter/resourceInfoResolver/index",
-                        items: [
-                            {text: "Assets 解析器", link: "/zhCN/projbobcat/resourceCompleter/resourceInfoResolver/assetInfoResolver"},
-                            {text: "log4j 日志格式化组件解析器", link: "/zhCN/projbobcat/resourceCompleter/resourceInfoResolver/gameLoggingInfoResolver"},
-                            {text: "Libraries 解析器", link: "/zhCN/projbobcat/resourceCompleter/resourceInfoResolver/libraryInfoResolver"},
-                            {text: "版本信息解析器", link: "/zhCN/projbobcat/resourceCompleter/resourceInfoResolver/versionInfoResolver"}
-                        ]
-                    },
-                    {text: "创建和配置补全器", link: "/zhCN/projbobcat/resourceCompleter/createAndConfigCompleter"}
-                ]
-            },
-            {
-                text: "附加解析器",
-                link: "/zhCN/projbobcat/additionalParsers/",
-                items: [
-                    {text: "游戏档案解析器", link: "/zhCN/projbobcat/additionalParsers/gameProfileParser"},
-                    {text: "账户档案解析器", link: "/zhCN/projbobcat/additionalParsers/accountProfileParser"}
-                ]
-            }
-        ]
-    },
+    
     {text: "通用最终用户许可协议", link: "/zhCN/geula"}
 ];
 
