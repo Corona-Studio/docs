@@ -35,13 +35,39 @@ EventVwr, 即Event Viewer 事件查看器. 它存在于System32目录下, 名称
 
 调整下半部分的大小 (鼠标拖拽上下窗口的中间分界线) 确认是否如上图所示: Application: LauncherX.Avalonia.exe<br>并且包含许多「at」开头的错误信息. 如果是, 您可以将这些错误信息复制发给我们 (LXIT/邮箱等, 详见: [向我们反馈](/zhCN/lxguide/report-issue))
 
-
-
 :::tip
 
 请记好LauncherX发生错误时的时间, 这有助于快速寻找对应的事件项目. <br>如若需要刷新事件管理器展示的列表, 请点击左上角菜单栏的「操作-刷新」
 
 :::
+
+## macOS日志
+
+### 不是崩溃弹窗吗?
+
+崩溃弹窗中的内容往往包含的是与系统内核深度相关的信息, 一般对诊断LauncherX没有任何帮助.
+
+### 如何获取LauncherX崩溃瞬间的日志
+
+首先, 请确认这个错误会**稳定复现**.
+
+然后, 打开终端, 并找到您的LauncherX主文件 (一般应该放在**应用程序**文件夹, 文件名称一般是`LauncherX.Avalonia.app`)
+
+右键点击它并点击“显示包内容”
+
+在包内容中, 依次打开目录: Contents/MacOS/ . 这里面应该可以找到一个名为LauncherX.Avalonia的文件. 这是LauncherX的入口.
+
+将这个文件拖入终端并点击Enter, LauncherX就会伴随着终端窗口中的日志滚动而开始运行.
+
+在这个状态下尝试复现导致崩溃的问题. 如果确实崩溃了, 终端窗口中应该会显示如图的内容:
+
+![figure correct item](/img/lxguide/reportWithLogs/lx_macos_logs.png)
+
+请将这一段**Unhandled Exception**复制给我们作为线索.
+
+## Linux日志
+
+使用终端运行LauncherX将会显示完整的日志. 请参考上文关于**macOS日志**的内容向我们提供线索!
 
 ## 游戏日志
 

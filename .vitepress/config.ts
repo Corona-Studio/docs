@@ -4,6 +4,8 @@ import {zhConfig} from "./zhCN";
 import {ruConfig} from "./ruRU";
 import {zhTWConfig} from "./zhTW";
 import {enUSConfig} from "./enUS";
+import { MarkdownOptions } from 'vitepress';
+// import mdOpts from './mdOpts.mts';
 
 export default defineConfig({
 
@@ -13,6 +15,7 @@ export default defineConfig({
     ],
     //...
     ...sharedConfig,
+    // ...mdOpts, 
 
     title: 'CSKB',
 
