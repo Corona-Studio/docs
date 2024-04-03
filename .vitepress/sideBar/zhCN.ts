@@ -3,13 +3,15 @@ import type { DefaultTheme } from 'vitepress'
 // To translators: All original comments should never keeped in your language file.
 export const sidebar: DefaultTheme.SidebarItem[] = [
     {
-        text: "指南",
+        text: "日冕指南",
         collapsed: false,
         items: [
             {text: "开始", link: "/zhCN/guide/"},
             {text: "我们的团队", link: '/zhCN/guide/team'},
             {text: "指路官方", link: '/zhCN/guide/contact'},
             {text: "CSA账户", link: '/zhCN/guide/account'},
+            {text: "加入我们!", link: '/zhCN/guide/joinus'},
+            // {text: "审核规则", link: '/zhCN/guide/code_of_joining_application'}, // 未就绪
         ]
     },
     {
@@ -91,6 +93,18 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                 ]
             },   
             {text: "问题反馈?", link: "/zhCN/lxguide/report-issue"},
+            {
+                text: '使用LauncherX',
+                link: '/zhCN/lxguide/ui-guide/',
+                collapsed: true,
+                items: [
+                    {text: "开始", link: "/zhCN/lxguide/ui-guide/"},
+                    {text: "0: 主界面", link: "/zhCN/lxguide/ui-guide/0_interface"},
+                    {text: "1: 游戏列表", link: "/zhCN/lxguide/ui-guide/1_gamelist"},
+                    {text: "2: 下载", link: "/zhCN/lxguide/ui-guide/2_download"},
+                    {text: "3: 设置和本地账户", link: "/zhCN/lxguide/ui-guide/3_settings_localAccounts"},
+                ]
+            },
             {
                 text: "LauncherX设置",
                 link: "/zhCN/lxguide/settings/",
@@ -181,8 +195,8 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
         text: 'Skript导引',
         collapsed: true,
         items: [
-            {text: "开始", link: "/zhCN/skript/"},
-            {text: "入门", link: "/zhCN/skript/startup"},
+            {text: "入门: 准备工作", link: "/zhCN/skript/"},
+            {text: "入门: 正式开始", link: "/zhCN/skript/startup"},
             {text: "注册起始点", link: "/zhCN/skript/register-entry"},
 
         ]
