@@ -182,10 +182,10 @@ LauncherX同样支持将整合包导出为Curseforge格式. Curseforge格式是�
 **但** 如果您是macOS或Linux用户并且整合包内存在 “LauncherX的配置文件（LauncherX.json）和LauncherX文件夹” ，那么您需要将这两个项目保持同级地复制到指定的目录下：
 
 `````
-macOS = "~/Library/Application Support/LauncherX/"       
+macOS = "~/documents/Library/Application Support/LauncherX/"       
 // 两个项目均存放在这个路径中 
 // (~是您用户文件夹的起始点。一般会在Finder中显示一个小房子的图标；
-// Library可能会显示为其本地化名称“资源库”)
+// Library可能会显示为其本地化名称“资源库”, 而documents可能本地化叫做“文档”)
 
 Linux = "~/documents/LauncherX/"       
 // 两个项目均存放在这个路径中
@@ -200,10 +200,10 @@ Linux = "~/documents/LauncherX/"
 ​	~将它复制或移动到指定的目录下：
 
 ``````
-macOS: "~/Library/Application Support/"      
+macOS: "~/documents/Library/Application Support/"      
 // .minecraft/ 存放在这个路径下 
 // (~是您用户文件夹的起始点。一般会在Finder中显示一个小房子的图标；
-// Library可能会显示为其本地化名称“资源库”)
+// Library可能会显示为其本地化名称“资源库”, 而documents可能本地化叫做“文档”)
 
 Linux: "~/documents/"      
 // .minecraft/ 存放在这个路径下

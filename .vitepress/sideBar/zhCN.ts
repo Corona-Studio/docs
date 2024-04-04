@@ -11,7 +11,17 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
             {text: "指路官方", link: '/zhCN/guide/contact'},
             {text: "CSA账户", link: '/zhCN/guide/account'},
             {text: "加入我们!", link: '/zhCN/guide/joinus'},
-            // {text: "审核规则", link: '/zhCN/guide/code_of_joining_application'}, // 未就绪
+            {text: "审核规则", link: '/zhCN/guide/code_of_joining_application'}, // 未就绪
+            {
+                text: '标准和规则(公开件)',
+                link: '/zhCN/guide/standard/',
+                collapsed: true,
+                items: [
+                    {text: "LauncherX稳定版构建许可测试标准", link: '/zhCN/guide/standard/lx-stable-test-standard'},
+                    {text: "CMFS测试标准", link: '/zhCN/guide/standard/cmfs-stable-test-general-standard'},
+
+                ]
+            },
         ]
     },
     {
