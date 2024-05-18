@@ -37,6 +37,39 @@ p.custom-block-title{
     margin-top: 0 !important;
 }
 
+.tip>.custom-block-title::before{
+    content: '\e8fb';
+    font-weight: bolder;
+    transform: translateY(1.5px) scale(78%);
+    margin-right: 1.5px;
+    padding: .5px;
+    display: inline-block;
+}
+.info>.custom-block-title::before{
+    content: '\e946';
+    font-weight: bolder;
+    transform: translateY(2px);
+    margin-right: 2px;
+    padding: .5px;
+    display: inline-block;
+}
+.warning>.custom-block-title::before{
+    content: '\e7ba';
+    font-weight: bolder;
+    transform: translateY(1.5px);
+    margin-right: 1.5px;
+    padding: .5px;
+    display: inline-block;
+}
+.danger>.custom-block-title::before{
+    content: '\e894';
+    font-weight: bolder;
+    transform: translateY(2px);
+    margin-right: 1.5px;
+    padding: .5px;
+    display: inline-block;
+}
+
 *{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'ms-segoe-fluent' !important;
 }
