@@ -9,9 +9,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
             {text: "开始", link: "/zhCN/guide/"},
             {text: "我们的团队", link: '/zhCN/guide/team'},
             {text: "指路官方", link: '/zhCN/guide/contact'},
-            {text: "CSA账户", link: '/zhCN/guide/account'},
             {text: "加入我们!", link: '/zhCN/guide/joinus'},
-            {text: "审核规则", link: '/zhCN/guide/code_of_joining_application'}, // 未就绪
             {
                 text: '标准和规则(公开件)',
                 link: '/zhCN/guide/standard/',
@@ -19,6 +17,9 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                 items: [
                     {text: "LauncherX稳定版构建许可测试标准", link: '/zhCN/guide/standard/lx-stable-test-standard'},
                     {text: "CMFS测试标准", link: '/zhCN/guide/standard/cmfs-stable-test-general-standard'},
+                    {text: "审核规则", link: '/zhCN/guide/code_of_joining_application'}, // 未就绪
+                    {text: "CSA账户", link: '/zhCN/guide/account'},
+                    {text: "通用隐私政策和最终用户许可协议", link: "/zhCN/geula"},
 
                 ]
             },
@@ -86,6 +87,19 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                     {text: "账户档案解析器", link: "/zhCN/projbobcat/additionalParsers/accountProfileParser"}
                 ]
             }
+        ]
+    },
+    {
+        text: "Minecraft",
+        collapsed: true,
+        items: [ 
+            {text: '启程Minecraft', link: '/zhCN/mc-starter/', collapsed: true, items: [
+                {text: "获取Minecraft", link: "/zhCN/mc-starter/get-minecraft"},
+                {text: "开始玩吧! (Java版)", link: "/zhCN/mc-starter/start-the-game-java"},
+                {text: "获取资源 (材质包、光影、地图...)", link: "/zhCN/mc-starter/assets-and-mods"},
+                {text: "要一起玩吗?", link: "/zhCN/mc-starter/play-together"},
+            ]},
+            {text: "皮肤规范", link: "/zhCN/skin/"}, 
         ]
     },
     {
@@ -185,6 +199,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
             }
         ],
     },
+    
     {
         text: "CMFS",
         collapsed: true,
@@ -211,15 +226,8 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
 
         ]
     },
-    {
-        text: "Minecraft",
-        collapsed: true,
-        items: [ 
-            {text: "皮肤规范", link: "/zhCN/skin/"} 
-        ]
-    },
     
-    {text: "通用最终用户许可协议", link: "/zhCN/geula"}
+    {text: "通用隐私政策和最终用户协议", link: "/zhCN/geula"}
 ];
 
 export default sidebar;

@@ -78,3 +78,22 @@ p.custom-block-title{
     font-family: ms-segoe-fluent;
     src: url("/segoe.ttf");
 }
+
+.bitter{
+    background-color: rgb(251 192 45 / 8.5%) !important;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+    transition-duration: 233ms  !important;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.06), 0 4px 6px -4px rgb(0 0 0 / 0.06);
+    opacity: .9;
+}
+.bitter:hover{
+    background-color: rgb(251 192 45 / 10%) !important;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    opacity: 1;
+}
+.bitter:active{
+    background-color: rgb(251 192 45 / 12%) !important;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.09), 0 4px 6px -4px rgb(0 0 0 / 0.09);
+    opacity: .79;
+}

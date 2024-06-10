@@ -9,7 +9,7 @@ export const nav: DefaultTheme.NavItem[] = [
             { text: '皮肤规范', link: '/zhCN/skin/' }
         ]
     },
-    { text: "我们的团队", link: '/zhCN/team' }
+    { text: "我们的团队", link: '/zhCN/guide/team' }
 ];
 
 export default nav;
