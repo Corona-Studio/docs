@@ -60,9 +60,9 @@ Minecraft Java Edition (Java版), Minecraft Bedrock Edition (基岩版)
 但是, Java版在移动设备上的安装相比于安装基岩版要麻烦不少. 虽然我们 (Corona Studio) 有制作移动端Java游戏启动器的想法, 但是目前还是先看看其他优秀的现有产品吧:
 
 - pojavLauncher: 支持iOS设备、Android设备.
-- FCL: 支持Android设备.
+- FCL: 支持Android设备. 
 
-有关于上述启动器的使用方法, 
+有关于上述启动器的使用方法, 你可以在Bilibili、MineBBS等地搜索到很多教程, 以及软件相关的下载地址. 以下是一些推荐的教程:
 
 ##### 游戏机 (XBox之类的设备)
 
@@ -94,7 +94,7 @@ Minecraft Legends, Minecraft Bedrock Edition (基岩版), Minecraft Dungeons
 
 这个游戏具备一种基于网页投票的多人玩法 (第二部), 很诡异, 并且貌似现在不可用.
 
-##### 
+
 
 #### = 关于购买
 
@@ -128,6 +128,8 @@ Minecraft Legends, Minecraft Bedrock Edition (基岩版), Minecraft Dungeons
 ### Legends / 故事模式 / Dungeons
 
 #### = 这不是传统的Minecraft!
+
+正如之前所说的, 这些游戏有着与一般Minecraft完全不同的玩法. 
 
 #### = 如何购买和游玩?
 
