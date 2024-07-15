@@ -23,6 +23,8 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
 
                 ]
             },
+            {text: "友情链接", link: '/zhCN/guide/links'},
+
         ]
     },
     {
@@ -117,18 +119,18 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                 ]
             },   
             {text: "问题反馈?", link: "/zhCN/lxguide/report-issue"},
-            {
-                text: '使用LauncherX',
-                link: '/zhCN/lxguide/ui-guide/',
-                collapsed: true,
-                items: [
-                    {text: "开始", link: "/zhCN/lxguide/ui-guide/"},
-                    {text: "0: 主界面", link: "/zhCN/lxguide/ui-guide/0_interface"},
-                    {text: "1: 游戏列表", link: "/zhCN/lxguide/ui-guide/1_gamelist"},
-                    {text: "2: 下载", link: "/zhCN/lxguide/ui-guide/2_download"},
-                    {text: "3: 设置和本地账户", link: "/zhCN/lxguide/ui-guide/3_settings_localAccounts"},
-                ]
-            },
+            // {
+            //     text: '使用LauncherX',
+            //     link: '/zhCN/lxguide/ui-guide/',
+            //     collapsed: true,
+            //     items: [
+            //         {text: "开始", link: "/zhCN/lxguide/ui-guide/"},
+            //         {text: "0: 主界面", link: "/zhCN/lxguide/ui-guide/0_interface"},
+            //         {text: "1: 游戏列表", link: "/zhCN/lxguide/ui-guide/1_gamelist"},
+            //         {text: "2: 下载", link: "/zhCN/lxguide/ui-guide/2_download"},
+            //         {text: "3: 设置和本地账户", link: "/zhCN/lxguide/ui-guide/3_settings_localAccounts"},
+            //     ]
+            // },
             {
                 text: "LauncherX设置",
                 link: "/zhCN/lxguide/settings/",
@@ -140,19 +142,12 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                         link: '/zhCN/lxguide/settings/special/',
                         collapsed: true,
                         items: [
+
                             {text: "初次设置：添加账户", link: "/zhCN/lxguide/settings/special/add-game-account"},
                             {text: "#帐户管理", link: "/zhCN/lxguide/settings/special/manage-accounts"},
                             {text: "检测网络", link: "/zhCN/lxguide/settings/special/check-network"},
                             {text: "#个性化", link: "/zhCN/lxguide/settings/special/customize-launcher"},
-                            {text: "版本隔离与独立设置", link: "/zhCN/lxguide/settings/special/independent-config"},
-                            // {
-                            //     text: "仪表盘", 
-                            //     link: "/zhCN/lxguide/settings/special/dashboard/",
-                            //     collapsed: true,
-                            //     items: [
-                            // // 这玩意有必要分成多个吗
-                            //     ]
-                            // },             
+                            {text: "版本隔离与独立设置", link: "/zhCN/lxguide/settings/special/independent-config"},           
                         ]
                     },
                     {
@@ -176,6 +171,17 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                 link: "/zhCN/lxguide/features/",
                 collapsed: true,
                 items: [
+                    {
+                        text: '奇技',
+                        link: '/zhCN/lxguide/features/tricks/',
+                        collapsed: true,
+                        items: [
+                            {text: "调试翻译文档", link: "/zhCN/lxguide/features/tricks/debug-lang-file"},
+                            {text: "关闭动画", link: "/zhCN/lxguide/features/tricks/disable-animation"},
+                            {text: "指定默认Java并生成完整包", link: "/zhCN/lxguide/features/tricks/default-jre-for-pack"},
+
+                        ]
+                    },
                     {text: "仪表板", link: "/zhCN/lxguide/features/dashboard"},
                     {text: "整合包支持", link: "/zhCN/lxguide/features/modpack-support"},
                     {text: "#实时日志和错误分析器", link: "/zhCN/lxguide/features/log-window"},

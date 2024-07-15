@@ -19,6 +19,14 @@ export default {
             if (inBrowser) {
                 document.cookie = `nf_lang=${lang.value}; expires=Mon, 1 Jan 2024 00:00:00 UTC; path=/`
             }
-        })
+        });
+        setTimeout(() => {
+            window.addEventListener('scroll', (e) => {});
+
+            if(!document.getElementById('VPContent').classList.toString().includes('is-home')){
+
+            }
+        }, 1000);
+
     }
 }

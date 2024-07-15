@@ -1,5 +1,4 @@
 ---
-
 layout: home
 
 hero:
@@ -32,22 +31,23 @@ features:
     details: 甚至包含入门Minecraft的导引.
   - icon: 🛠️
     title: 开放、共筑、分享
-    details: 知识库的一切内容在经过我们筛查后均可以展现于众! 访问我们的Github仓库来提交新内容和翻译吧!
+    details: 知识库的一切内容在经过我们筛查后均可展现于众! 访问我们的Github仓库来提交新内容和翻译吧!
   - icon: 🏃🏻‍➡️
     title: 持续更新
     details: 我们一直在更新和完善内容. 请时不时来看看吧!
-
-​---
-
-<br>
-
-### 友情链接
-
-*CSKB的友情链接仅包含同类的知识分享/文档类网站链接. 如需要和CSKB交换友链, 请点击上方的「联系我们」与我们取得联系.*
-
-<div style="display:grid;grid-template-columns: repeat(7, minmax(0, 1fr)); gap:.5rem;">
-  <a style="display:block;border: 1px solid var(--vp-c-bg-soft);border-radius: 12px;height: 100%;background-color: var(--vp-c-bg-soft); padding:.7rem;" class="bitter" target="_blank"
-     href="#" title=""
-     >x</a>
-</div>
+    
 ---
+
+
+<div class="VPFeatures f" style="margin-top: 1.9rem;" >
+  <div  class="container f">
+    <h5>
+      <span style="font-size: x-large; font-weight: bold;">其他Corona Studio链接</span><br/>
+    </h5>
+    <div class="exlinks" style="margin-top: .8rem;">
+      <a class="bitter exlink" target="_blank" href="https://corona.studio/" >Corona Studio官网</a>
+      <a class="bitter exlink" target="_blank" href="https://min.corona.studio/" >Corona Studio MIN</a>
+      <a class="bitter exlink" target="_blank" href="/zhCN/guide/links" >查看友链 <b class="x-icon">&#xe724;</b></a>
+    </div>
+  </div>
+</div>

@@ -3,6 +3,8 @@ import nav from "./navBar/zhCN";
 import sidebar from "./sideBar/zhCN";
 
 export const zhConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
+    lang: 'zhCN',
+    title: '日冕知识库',
     description: 'Corona Studio Knowledge Base',
 
     themeConfig: {
