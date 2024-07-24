@@ -36,7 +36,7 @@ LauncherX提供一个完善的账户管理。
 
 点击弹出窗口中的“Microsoft帐户”按钮, LauncherX将会弹出一个包含验证链接、一次性验证代码和些许按钮的置顶窗口 ( 验证信息窗口 ).
 
-![image-20230222204440416](T:/DevRepos/CSKB_Hosting-master/docs/public/img/lxguide/addGameAccount/image-20230222204440416.png)
+![image-20230222204440416](/img/lxguide/addGameAccount/image-20230222204440416.png)
 
 整个流程大约10秒即可完成 (受网络性能和您的浏览器是否保存了您的微软账户登录信息影响, 这可能会有些许延长)。
 考虑到微软的隐私策略, 我们建议您在 3 分钟内完成这个流程, 以免一次性验证代码失效。若一次性代码失效, 您需要关闭当前的验证信息窗口并重复添加微软账户的操作.
@@ -46,7 +46,7 @@ LauncherX提供一个完善的账户管理。
 - 将您复制的一次性代码按网页提示粘贴到指定的位置。如果微软要求您登录, 请先在网页中登录您的微软账户.
 - 弹出此窗口后, 您需要“同意”以继续添加账户的操作.
 
-![image-20230222204659302](T:/DevRepos/CSKB_Hosting-master/docs/public/img/lxguide/addGameAccount/image-20230222204659302.png)
+![image-20230222204659302](/img/lxguide/addGameAccount/image-20230222204659302.png)
 
 在 LauncherX 验证账户过程中, 您可以继续进行下一步设置。
 
@@ -54,13 +54,13 @@ LauncherX提供一个完善的账户管理。
 
 ###### 意外情况: Edge浏览器弹出需要安全验证设备:
 
-![image-20230222204732083](T:/DevRepos/CSKB_Hosting-master/docs/public/img/lxguide/addGameAccount/image-20230222204732083.png)
+![image-20230222204732083](/img/lxguide/addGameAccount/image-20230222204732083.png)
 
 对于这种情况, 您需要:
 
   - 点击“取消”
-  - 在网页中点击“其他登录方法”,如图：![image-20230222204925338](T:/DevRepos/CSKB_Hosting-master/docs/public/img/lxguide/addGameAccount/image-20230222204925338.png)
-  - 点击“使用我的密码”, 或者选择任意您方便使用的登录方法 ![image-20230222205034775](T:/DevRepos/CSKB_Hosting-master/docs/public/img/lxguide/addGameAccount/image-20230222205034775.png)
+  - 在网页中点击“其他登录方法”,如图：![image-20230222204925338](/img/lxguide/addGameAccount/image-20230222204925338.png)
+  - 点击“使用我的密码”, 或者选择任意您方便使用的登录方法 ![image-20230222205034775](/img/lxguide/addGameAccount/image-20230222205034775.png)
 
 #### =离线模式
 
@@ -90,7 +90,7 @@ LauncherX提供一个完善的账户管理。
 
 点击“外置登录（Mojang）”以开始。
 
-- 弹出如图所示的窗口:   ![image-20230227091559255](T:/DevRepos/CSKB_Hosting-master/docs/public/img/lxguide/addGameAccount/image-20230227091559255.png)
+- 弹出如图所示的窗口:   ![image-20230227091559255](/img/lxguide/addGameAccount/image-20230227091559255.png)
 - 对应输入先前您应该准备好的信息（AuthLib服务器栏支持拖入链接）
 - 保存账户。这些信息将加密后作为凭证, 在您登录支持对应的AuthLib服务的服务器后用于验证。
 
