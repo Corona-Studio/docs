@@ -23,6 +23,14 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
 
                 ]
             },
+            {
+                text: '综合操作指导',
+                link: '/zhCN/guide/general/',
+                collapsed: true,
+                items: [
+                    {text: "提交翻译贡献", link: '/zhCN/guide/general/contribute-to-i18n'},
+                ]
+            },
             {text: "友情链接", link: '/zhCN/guide/links'},
 
         ]
@@ -143,10 +151,10 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                         collapsed: true,
                         items: [
 
-                            {text: "初次设置：添加账户", link: "/zhCN/lxguide/settings/special/add-game-account"},
-                            {text: "#帐户管理", link: "/zhCN/lxguide/settings/special/manage-accounts"},
+                            {text: "Linux去除标题栏", link: "/zhCN/lxguide/settings/special/linux-as-others"},
+                            {text: "帐户管理", link: "/zhCN/lxguide/settings/special/manage-accounts"},
                             {text: "检测网络", link: "/zhCN/lxguide/settings/special/check-network"},
-                            {text: "#个性化", link: "/zhCN/lxguide/settings/special/customize-launcher"},
+                            {text: "个性化Tips", link: "/zhCN/lxguide/settings/special/customize-launcher"},
                             {text: "版本隔离与独立设置", link: "/zhCN/lxguide/settings/special/independent-config"},           
                         ]
                     },
@@ -178,7 +186,9 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                         items: [
                             {text: "调试翻译文档", link: "/zhCN/lxguide/features/tricks/debug-lang-file"},
                             {text: "关闭动画", link: "/zhCN/lxguide/features/tricks/disable-animation"},
+                            {text: "为什么不能同时跑四个游戏", link: "/zhCN/lxguide/features/tricks/set-task-queue"},
                             {text: "指定默认Java并生成完整包", link: "/zhCN/lxguide/features/tricks/default-jre-for-pack"},
+                            {text: "更多图标下载", link: "/zhCN/lxguide/features/tricks/icons"},
 
                         ]
                     },
