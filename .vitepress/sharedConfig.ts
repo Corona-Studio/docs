@@ -26,18 +26,7 @@ export const sharedConfig = defineConfig({
         ],
 
         search: {
-            provider: 'algolia',
-            options: {
-                appId: 'TR09SJHXWC',
-                apiKey: '4df6fda8f27b61a2ad20014fd8fd867c',
-                indexName: 'kb-corona',
-                locales: {
-                    root: zhSearchBarLocale,
-                    ruRU: ruSearchBarLocale,
-                    zhTW: zhTWSearchBarLocale,
-                    enUS: enUSSearchBarLocale
-                }
-            }
+            provider: 'local'
         }
     }
 });
