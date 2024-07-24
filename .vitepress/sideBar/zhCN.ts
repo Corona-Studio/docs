@@ -9,9 +9,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
             {text: "开始", link: "/zhCN/guide/"},
             {text: "我们的团队", link: '/zhCN/guide/team'},
             {text: "指路官方", link: '/zhCN/guide/contact'},
-            {text: "CSA账户", link: '/zhCN/guide/account'},
             {text: "加入我们!", link: '/zhCN/guide/joinus'},
-            {text: "审核规则", link: '/zhCN/guide/code_of_joining_application'}, // 未就绪
             {
                 text: '标准和规则(公开件)',
                 link: '/zhCN/guide/standard/',
@@ -19,9 +17,22 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                 items: [
                     {text: "LauncherX稳定版构建许可测试标准", link: '/zhCN/guide/standard/lx-stable-test-standard'},
                     {text: "CMFS测试标准", link: '/zhCN/guide/standard/cmfs-stable-test-general-standard'},
+                    {text: "审核规则", link: '/zhCN/guide/code_of_joining_application'}, // 未就绪
+                    {text: "CSA账户", link: '/zhCN/guide/account'},
+                    {text: "通用隐私政策和最终用户许可协议", link: "/zhCN/geula"},
 
                 ]
             },
+            {
+                text: '综合操作指导',
+                link: '/zhCN/guide/general/',
+                collapsed: true,
+                items: [
+                    {text: "提交翻译贡献", link: '/zhCN/guide/general/contribute-to-i18n'},
+                ]
+            },
+            {text: "友情链接", link: '/zhCN/guide/links'},
+
         ]
     },
     {
@@ -89,6 +100,19 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
         ]
     },
     {
+        text: "Minecraft",
+        collapsed: true,
+        items: [ 
+            {text: '启程Minecraft', link: '/zhCN/mc-starter/', collapsed: true, items: [
+                {text: "获取Minecraft", link: "/zhCN/mc-starter/get-minecraft"},
+                {text: "开始玩吧! (Java版)", link: "/zhCN/mc-starter/start-the-game-java"},
+                {text: "获取资源 (材质包、光影、地图...)", link: "/zhCN/mc-starter/assets-and-mods"},
+                {text: "要一起玩吗?", link: "/zhCN/mc-starter/play-together"},
+            ]},
+            {text: "皮肤规范", link: "/zhCN/skin/"}, 
+        ]
+    },
+    {
         text: "LauncherX 启动器指南",
         collapsed: true,
         items: [
@@ -103,18 +127,18 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                 ]
             },   
             {text: "问题反馈?", link: "/zhCN/lxguide/report-issue"},
-            {
-                text: '使用LauncherX',
-                link: '/zhCN/lxguide/ui-guide/',
-                collapsed: true,
-                items: [
-                    {text: "开始", link: "/zhCN/lxguide/ui-guide/"},
-                    {text: "0: 主界面", link: "/zhCN/lxguide/ui-guide/0_interface"},
-                    {text: "1: 游戏列表", link: "/zhCN/lxguide/ui-guide/1_gamelist"},
-                    {text: "2: 下载", link: "/zhCN/lxguide/ui-guide/2_download"},
-                    {text: "3: 设置和本地账户", link: "/zhCN/lxguide/ui-guide/3_settings_localAccounts"},
-                ]
-            },
+            // {
+            //     text: '使用LauncherX',
+            //     link: '/zhCN/lxguide/ui-guide/',
+            //     collapsed: true,
+            //     items: [
+            //         {text: "开始", link: "/zhCN/lxguide/ui-guide/"},
+            //         {text: "0: 主界面", link: "/zhCN/lxguide/ui-guide/0_interface"},
+            //         {text: "1: 游戏列表", link: "/zhCN/lxguide/ui-guide/1_gamelist"},
+            //         {text: "2: 下载", link: "/zhCN/lxguide/ui-guide/2_download"},
+            //         {text: "3: 设置和本地账户", link: "/zhCN/lxguide/ui-guide/3_settings_localAccounts"},
+            //     ]
+            // },
             {
                 text: "LauncherX设置",
                 link: "/zhCN/lxguide/settings/",
@@ -126,19 +150,12 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                         link: '/zhCN/lxguide/settings/special/',
                         collapsed: true,
                         items: [
-                            {text: "初次设置：添加账户", link: "/zhCN/lxguide/settings/special/add-game-account"},
-                            {text: "#帐户管理", link: "/zhCN/lxguide/settings/special/manage-accounts"},
+
+                            {text: "Linux去除标题栏", link: "/zhCN/lxguide/settings/special/linux-as-others"},
+                            {text: "帐户管理", link: "/zhCN/lxguide/settings/special/manage-accounts"},
                             {text: "检测网络", link: "/zhCN/lxguide/settings/special/check-network"},
-                            {text: "#个性化", link: "/zhCN/lxguide/settings/special/customize-launcher"},
-                            {text: "版本隔离与独立设置", link: "/zhCN/lxguide/settings/special/independent-config"},
-                            // {
-                            //     text: "仪表盘", 
-                            //     link: "/zhCN/lxguide/settings/special/dashboard/",
-                            //     collapsed: true,
-                            //     items: [
-                            // // 这玩意有必要分成多个吗
-                            //     ]
-                            // },             
+                            {text: "个性化Tips", link: "/zhCN/lxguide/settings/special/customize-launcher"},
+                            {text: "版本隔离与独立设置", link: "/zhCN/lxguide/settings/special/independent-config"},           
                         ]
                     },
                     {
@@ -162,6 +179,19 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                 link: "/zhCN/lxguide/features/",
                 collapsed: true,
                 items: [
+                    {
+                        text: '奇技',
+                        link: '/zhCN/lxguide/features/tricks/',
+                        collapsed: true,
+                        items: [
+                            {text: "调试翻译文档", link: "/zhCN/lxguide/features/tricks/debug-lang-file"},
+                            {text: "关闭动画", link: "/zhCN/lxguide/features/tricks/disable-animation"},
+                            {text: "为什么不能同时跑四个游戏", link: "/zhCN/lxguide/features/tricks/set-task-queue"},
+                            {text: "指定默认Java并生成完整包", link: "/zhCN/lxguide/features/tricks/default-jre-for-pack"},
+                            {text: "更多图标下载", link: "/zhCN/lxguide/features/tricks/icons"},
+
+                        ]
+                    },
                     {text: "仪表板", link: "/zhCN/lxguide/features/dashboard"},
                     {text: "整合包支持", link: "/zhCN/lxguide/features/modpack-support"},
                     {text: "#实时日志和错误分析器", link: "/zhCN/lxguide/features/log-window"},
@@ -185,6 +215,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
             }
         ],
     },
+    
     {
         text: "CMFS",
         collapsed: true,
@@ -211,15 +242,8 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
 
         ]
     },
-    {
-        text: "Minecraft",
-        collapsed: true,
-        items: [ 
-            {text: "皮肤规范", link: "/zhCN/skin/"} 
-        ]
-    },
     
-    {text: "通用最终用户许可协议", link: "/zhCN/geula"}
+    {text: "通用隐私政策和最终用户协议", link: "/zhCN/geula"}
 ];
 
 export default sidebar;

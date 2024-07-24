@@ -69,12 +69,162 @@ p.custom-block-title{
     padding: .5px;
     display: inline-block;
 }
+em{
+    font-style: italic !important;
+    font-family: system-ui !important;
+    font-weight: 100 !important;
+    border-left: #c7a500 3px solid;
+    padding-left: .39rem;
+    border-radius: .25rem;
+    opacity: .7;
+    position: relative;
+}
+em:hover{
+    opacity: 1
+}
 
 *{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'ms-segoe-fluent' !important;
+    transition-property: background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+    transition-property: background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-property: background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+    transition-timing-function: cubic-bezier(0.38, 0, 0.19, 1) ;
+    transition-duration: 100ms  ;
 }
 
 @font-face {
     font-family: ms-segoe-fluent;
     src: url("/segoe.ttf");
+}
+
+.bitter{
+    background-color: rgb(251 192 45 / 10.5%) !important;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+    transition-duration: 233ms  !important;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.06), 0 4px 6px -4px rgb(0 0 0 / 0.06);
+    opacity: .9;
+}
+.bitter:hover{
+    background-color: rgb(251 192 45 / 12%) !important;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    opacity: 1;
+}
+.bitter:active{
+    background-color: rgb(251 192 45 / 15%) !important;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.09), 0 4px 6px -4px rgb(0 0 0 / 0.09);
+    opacity: .79;
+}
+
+
+.VPFeatures.f {
+    position: relative;
+    padding: 0;
+}
+.exlinks{
+    display:grid;grid-template-columns: repeat(1, minmax(0, 1fr)); gap:.5rem; 
+}
+em:hover::before{
+    position: absolute;
+    display: block;
+    opacity: .5;
+    font-size: smaller;
+    line-height: .69rem;
+    white-space: pre;
+    text-align: right;
+
+    content: '注释 | comment';
+    top: -1rem;
+    left: 0;
+    transform: scale(80%) translateY(3.5px) translateX(-1rem);
+}
+@media (min-width: 425px) {
+    .exlinks{
+        display:grid;grid-template-columns: repeat(1, minmax(0, 1fr)); gap:.69rem; 
+    }
+}
+@media (min-width: 640px) {
+
+    .exlinks{
+        display:grid;grid-template-columns: repeat(2, minmax(0, 1fr)); gap:.69rem; 
+    }
+
+}
+@media (min-width: 960px) {
+
+    .exlinks{
+        display:grid;grid-template-columns: repeat(3, minmax(0, 1fr)); gap:.69rem; 
+    }
+    em:hover::before{
+        content: '注释\A comment';
+        top: 0;
+        left: -1.29rem;
+        transform: scale(80%) translateY(-1px) translateX(-3rem);
+    }
+}
+.container.f {
+margin: 0 auto;
+max-width: 1152px;
+}
+
+.exlink{
+    display:block;
+    border: 1px solid var(--vp-c-bg-soft);
+    border-radius: 12px;
+    height: 100%;
+    background-color: var(--vp-c-bg-soft); 
+    padding:.7rem;
+}
+.x-icon{
+    transform: scale(85%) translateY(.156rem) translateX(1.5px);
+    display: inline-block;
+}
+
+a.c-top-link{
+    position: fixed;
+    top: auto;
+    left: auto;
+    bottom: 3rem;
+    right: 1.8rem;
+    padding: 4px 10px !important;
+    border-radius: .5rem;
+    opacity: .86;
+    color: var(--vp-c-text-1);
+    background-color: var(--vp-c-brand);
+    font-weight: bolder !important;
+    font-size: normal !important;
+    display: block !important;
+
+    transition-property: all !important;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+    transition-duration: 233ms  !important;
+
+    border: 1px rgba(128, 128, 128, 0.537) solid;
+    box-shadow: 1px 1px .6rem 1px   rgba(220, 220, 220, 0.227) ;
+
+}
+a.c-top-link:hover{
+    opacity: 1;
+    border: 1px rgba(133, 133, 133, 0.8737) solid;
+    box-shadow: 2px 1px .6rem 1px   rgba(180, 180, 180, 0.297) ;
+}
+a.c-top-link:active{
+    opacity: .7;
+    border: 1px rgba(128, 128, 128, 0.537) solid;
+    box-shadow: 1px 1px .6rem 1px   rgba(220, 220, 220, 0.227) ;
+}
+button.menu{
+    padding-top: 11px !important;
+    padding-bottom: 12px !important;
+}
+.table-of-contents>ul{
+    list-style: none;
+    position: relative;
+}
+.table-of-contents>ul::before{
+    position: absolute;
+    content: '\e768';
+    font-weight: bold;
+    transform: translateY(3px) translateX(-19px) scale(66%);
+    user-select: none;
 }

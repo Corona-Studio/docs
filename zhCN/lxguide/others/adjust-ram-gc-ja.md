@@ -44,6 +44,8 @@ Azul Zulu和Alibaba Dragonwell是面向云计算的JDK构建, 因而在应对高
 
 越靠左越稳定, 越靠右性能优化越好. 当然, 这里列举的JRE都还挺稳定的, 细微差别可能需要您亲自感受.
 
+参考本站指南：[下载合适的Java运行时 | 日冕知识库](/zhCN/lxguide/others/download-jre)
+
 :::
 
 #### =模组和加载器
@@ -128,12 +130,12 @@ JavaAgent本身是使用了用于更高级的Java虚拟机内调试的一套接�
 1. 在此仓库的Release中下载构建 (或使用源码自行构建)
 2. 在LauncherX中: 
    1. 在Java虚拟机高级参数中添加: `-DminecraftThreadPoolSize=2 -DminecraftBootstrapThreadPoolSize=1 -DminecraftMainThreadPoolSize=2`
-   2. 在JavaAgent参数中添加: [第一个输入框] `<您的下载路径目录>/minecraft-thread-pool-agent-1.0.0-shaded.jar` ; [第二个输入框] 空(仅在JavaAgent的提供者/开发者要求您添加额外参数时再在此填入内容)
+   2. 在JavaAgent参数中添加: [第一个输入框] `<您的下载路径目录>/minecraft-thread-pool-agent-1.0.0-shaded.jar` ; [第二个输入框] 空 (仅在JavaAgent的提供者/开发者要求您添加额外参数时再在此填入内容)
    3. 请注意: 上文中的`/`是您的系统路径分隔符, 视您的操作系统而定: 如果是Windows, 且不是日语/韩语的环境/区域, 您应该使用`\`, 否则您应该使用`¥`; 如果是macOS或Linux, 使用`/`. 对于较现代的Windows, 可能接受`/`符号分隔, 但是需要您保证 **整个路径都使用同样的分隔符** .
 3. 确认LauncherX生成的拼接预览无误, 启动游戏测试.
 4. 需要注意的是, 您可以直接按照README中的提示将参数加入到Java虚拟机高级参数中, 但是使用LauncherX拼接可以避免一些难以察觉的输入失误.
 
-:::warning 我们强烈反对使用此功能作弊
+:::warning 我们强烈反对一切作弊行为
 
 :::
 

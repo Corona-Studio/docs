@@ -1,8 +1,10 @@
 # 下载合适的Java运行时
 
-一般而言, 我们建议使用来自 **Azul Zulu** 的JDK构建或来自 **Alibaba Dragonwell** 的JDK构建用于游戏. 在LauncherX的“设置-全局游戏设置-启动设置-资源下载” 中提供了三个版本基于x64平台的JRE下载. 这些下载是由Mojang选择的用于游戏的JRE, 一般都是来自OpenJDK的构建. 但是, 目前(2024-03-17)为止, Mojang尚未为ARM平台选择JDK. 因此, 对于ARM平台用户或想要通过更换JRE来优化游戏的用户, 我们建议使用上述的两种JDK, 因为它们都是面向服务端优化的版本, 应对高频内存I/O、高负载计算时能有更好的性能, 且都有面向ARM平台(aarch)的构建可供下载. 以下是这两种JDK的官方下载链接, 您需要打开后选择需要的版本:
+一般而言, 我们建议使用来自 **Azul Zulu** 的JDK构建（根据部分反馈，不再推荐Alibaba Dragonwell，除非环境一定需要它）用于游戏. 在LauncherX的“设置-全局游戏设置-启动设置-资源下载” 中提供了三个版本基于x64平台的JRE下载. 这些下载是由Mojang选择的用于游戏的JRE, 一般都是来自OpenJDK的构建. 但是, 目前(2024-03-17)为止, Mojang尚未为ARM平台选择JDK. 因此, 对于ARM平台用户或想要通过更换JRE来优化游戏的用户, 我们建议使用Azul Zulu JDK, 因为它是面向服务端优化的版本, 应对高频内存I/O、高负载计算时能有更好的性能, 且都有面向ARM平台(aarch)的构建可供下载. 以下是这几种JDK的官方下载链接, 您需要打开后选择需要的版本:
 
-<br>= [Azul Zulu官方下载(英文)](https://www.azul.com/downloads/#zulu): 提供各种版本的JDK构建, 可选包含JavaFX运行时<br>= [Alibaba Dragonwell(怎么也是英文)](https://dragonwell-jdk.io/#/index): 提供Java8、11、17、21(Standard) 或Java8、11(Extended)
+<br>= [Azul Zulu官方下载(英文)](https://www.azul.com/downloads/#zulu): 提供各种版本的JDK构建, 可选包含JavaFX运行时<br>= [Alibaba Dragonwell(怎么也是英文)](https://dragonwell-jdk.io/#/index): 提供Java8、11、17、21(Standard) 或Java8、11(Extended)<br>= [Oracle Java SE Runtime 下载(英文)](https://www.oracle.com/cn/java/technologies/downloads/archive/): Oracle的Java下载归档站<br>= [OpenJDK](https://openjdk.org/): 就是OpenJDK而已
+
+
 
 接下来, 我们以Azul Zulu为例展示如何下载, 以及下载后应该如何让LauncherX找到.
 
@@ -31,5 +33,7 @@
 一般而言, 建议您选择列表最开头的项目 (只要您严格地完成了系统和架构选择). 在您打算下载的项目右侧的 **Download** 按钮中选择 `.zip` 格式的运行时并点击，等待下载完成后将其解压到任意一处本地文件夹 (最好新创建一个).
 随后在 LauncherX 中选择 **搜索Java**. 如果搜索不到您新解压的JRE, 请点击**手动添加**，并选择刚才解压的文件夹 **bin/** 目录下的 **java** 可执行文件即可  (对于Windows, 如果开启了**显示已知文件扩展名** , 则您要选择的项目名为java.exe)。
 
+### 参考更多相关文章
 
+- 来自NitWikit：[选择、下载和安装 Java | 笨蛋 MC 开服教程 (yizhan.wiki)](https://yizhan.wiki/NitWikit/preparation/choose-and-download-and-install-java)
 

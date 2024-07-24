@@ -29,3 +29,18 @@
 如果在尝试启动 LauncherX 时候出现了来自其他安全类软件的警告，那么您需要允许 LauncherX 运行以使用 LauncherX 。若您对 LauncherX 持有怀疑，可以前往[VirusTotal](https://www.virustotal.com)这种权威的线上沙盒并将您下载的 LauncherX 副本上传检测。
 
 :::
+
+
+
+### 对于Windows7
+
+我们预计将在Windows10被微软结束支持后，原则上不再为新功能在Windows7的可用性作担保；同样的，在此发生的一年后，原则上不再为新功能在Windows8/8.1上的可用性作担保。但是理论上，只要系统框架允许，LauncherX将一直在Windows7及更高版本的Windows中可用，只是可能不能完全按照预期工作，以及可能需要安装额外的支持性软件和运行时。
+
+比如我们在测试过程中发现，LauncherX若需要在Windows7上运行，可能需要自行安装dotNET8 SDK（或Runtime）以及某个或某些**特定的Windows更新包** (KB3118401)。
+
+- Windows7：[Download Update for Windows 7 for x64-based Systems (KB3118401) from Official Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=51161)
+- Windows8/8.1：[Download Update for Windows 8.1 for x64-based Systems (KB3118401) from Official Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=51109)
+
+再次声明：LauncherX仅支持64位操作系统，因而在上方的链接里，所指向的均为适用于64位操作系统的更新安装包。
+
+安装后，如果有必要的话，请尝试重启电脑以让更新内容完全生效。
