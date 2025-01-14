@@ -14,7 +14,7 @@
 
 ### 选哪个?
 
-其实Minecraft有许多不同版本和衍生游戏可供选择. 在当下(2024年5月22日), 一般而言, 我们讨论的范围仅限于定义在「沙盒游戏」这个领域之内的Minecraft版本, 现在仍在维护的仅有两个: **Java版(Java Edition)** 和 **基岩版(Bedrock Edition)**. 除此之外还有一些同IP衍生游戏: Minecraft Legends、Minecraft Story Mode(故事模式) 和 Minecraft Dungeons.
+其实Minecraft有许多不同版本和衍生游戏可供选择. 在当下(2024年5月22日), 一般而言, 我们讨论的范围仅限于定义在「沙盒游戏」这个领域之内的Minecraft版本, 现在仍在维护的仅有两个: **Java版(Java Edition)** 和 **基岩版(Bedrock Edition)**. 除此之外还有一些同IP衍生游戏: Minecraft Legends、Minecraft Story Mode(故事模式) 、Minecraft Earth和 Minecraft Dungeons.
 
 接下来将带你了解不同版本之间的区别, 以及如何选择. 如果你已经拥有一个Minecraft的许可 (即 你已经购买了Minecraft), 请使用本页面 **右侧的** 目录跳转到对应的章节.
 
@@ -51,7 +51,7 @@ Minecraft Java Edition (Java版), Minecraft Bedrock Edition (基岩版), Minecra
 
 ::: info 可用的游戏
 
-Minecraft Java Edition (Java版), Minecraft Bedrock Edition (基岩版)
+Minecraft Java Edition (Java版), Minecraft Bedrock Edition (基岩版，含教育内容), Minecraft Earth
 
 :::
 
@@ -80,19 +80,23 @@ Minecraft Legends, Minecraft Bedrock Edition (基岩版), Minecraft Dungeons
 
 ##### 策略动作类Minecraft: Legends
 
-这个游戏具备多人玩法.
+- 这个游戏具备多人玩法.
 
 ##### 肉鸽类Minecraft: Dungeons
 
-这个游戏具备多人玩法.
+- 这个游戏具备多人玩法.
+
+##### AR（增强现实）Minecraft：Earth
+
+- 这个游戏可以让你在 “自己家里建造”：通过手机摄像头和增强现实计算来在当前摄像头里的 “现实环境” 中 “放置方块”。
 
 ##### 剧情冒险Minecraft: 故事模式
 
-游戏的玩法是玩家可以收集物品，解决谜题，并通过对话树与非玩家角色进行对话，以了解故事并确定下一步要做什么.
+- 游戏的玩法是玩家可以收集物品，解决谜题，并通过对话树与非玩家角色进行对话，以了解故事并确定下一步要做什么.
 
-玩家做出的决定会影响当前章节和后续章节中的事件. 或许可以当作一种视觉小说来看.
+- 玩家做出的决定会影响当前章节和后续章节中的事件. 或许可以当作一种视觉小说来看.
 
-这个游戏具备一种基于网页投票的多人玩法 (第二部), 很诡异, 并且貌似现在不可用.
+- 这个游戏具备一种基于网页投票的多人玩法 (第二部), 很诡异, 并且貌似现在不可用.
 
 
 
@@ -114,12 +118,24 @@ Minecraft Legends, Minecraft Bedrock Edition (基岩版), Minecraft Dungeons
 | Dungeons                    | minecraft.net, 微软商店, steam               | 69 (1, 2)  / 72 (3)   |
 | Legends                     | steam                                        | 59.5                  |
 | 故事模式                    | 已下架                                       | -                     |
+| Earth                       | 已下架                                       | -                     |
 
 
 
 ### Java版
 
 #### = 基本步骤
+
+1. 准备环境
+   - 确认你的游玩设备。本文只介绍在电脑上使用LauncherX游玩的步骤。
+   - 前往[这里](https://corona.studio/lx)下载最新版LauncherX。
+   - 一般而言，网页会根据你的电脑来推荐下载的版本。你需要下载对应你电脑系统和CPU架构的版本，如果网页选择了和你电脑情况不一致的版本，请用下载按钮右侧的**三角按钮**来选择正确对应你电脑的选项。如果你不知道如何确认你的电脑系统版本和CPU架构，参见[这篇文章]()
+     :::tip 截至目前，大多数用户使用的是Windows x64。:::
+   - 下载完毕后，将LauncherX解压并放置到一个合适的地方。
+     :::tip 关于存放位置
+     macOS建议放在【应用程序】(也就是说Applications) 目录下，Linux可以放在任何你常用于存放程序的地方，Windows同样，但是**不要放在桌面或其他难以打理的地方**，最好放在一个空文件夹里，因为Windows版LauncherX会在当前所在位置解压出自己的工作目录和默认的游戏文件夹。
+     :::
+   - 
 
 ### 基岩版
 
@@ -135,9 +151,9 @@ Minecraft Legends, Minecraft Bedrock Edition (基岩版), Minecraft Dungeons
 
 - 依照上文**[关于购买]**的表格, 在对应的游戏平台搜索
 - 购买, 根据平台的提示下载安装
-- 完成!
+- 完成! 现在打开游戏吧！
 
-::: tips Minecraft官方启动器和微软商店可以满足全部需求
+::: tip Minecraft官方启动器和微软商店可以满足全部需求
 
 要游玩这些游戏, 可以直接在微软商店购买, 然后通过微软商店/XBox/Minecraft启动器来游玩. 也可以将游戏固定到开始菜单.
 
@@ -171,4 +187,13 @@ Minecraft Legends, Minecraft Bedrock Edition (基岩版), Minecraft Dungeons
 
 ### 关于网易代理的《中国版我的世界》
 
+如果你只是想在完全受支持的环境下进行多人游戏并且可以负担内购、不打算操心太多扩展游戏玩法后调试相关的问题并且经常有游戏社交的需求，建议选择由网易代理的仅面向中国大陆用户的《我的世界》。
+
 ## 跋
+
+如果你真的很喜欢Minecraft这个IP，那么建议在购买正版Minecraft之余，建议根据玩法喜好也尝试一下衍生的Dungeon、Legends等。但是如果你只打算游玩最经典的玩法，请考虑使用LauncherX游玩Java版。绝大多数情况下，Java版是兼顾兼容性和扩展性的最佳选择。
+
+一般而言，为了区分网易代理版，会将原来的Minecraft称为国际版，而网易版就称呼为网易版或中国版。在某些情况下，要想自由地游玩国际版，对学习能力的要求要更高一些（也没高多少，会理解记忆会提问题就好）对于国际版和中国版，都存在对应的Java版和基岩版的差别：也就是说，国际版有的Java版和基岩版游戏之分，中国版也有。与此同时，根据经验，中国版的版本更新平均比国际版晚一年。
+
+做出你的选择吧！
+

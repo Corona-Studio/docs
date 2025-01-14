@@ -69,7 +69,7 @@ p.custom-block-title{
     padding: .5px;
     display: inline-block;
 }
-em{
+em:not(strong>em){
     font-style: italic !important;
     font-family: system-ui !important;
     font-weight: 100 !important;
@@ -79,7 +79,7 @@ em{
     opacity: .7;
     position: relative;
 }
-em:hover{
+em:not(strong>em):hover{
     opacity: 1
 }
 
@@ -115,7 +115,7 @@ em:hover{
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.09), 0 4px 6px -4px rgb(0 0 0 / 0.09);
     opacity: .79;
 }
-
+ 
 
 .VPFeatures.f {
     position: relative;
@@ -228,3 +228,65 @@ button.menu{
     transform: translateY(3px) translateX(-19px) scale(66%);
     user-select: none;
 }
+
+code>span.line, code>span.line>*, code>span.line>span, span.line>span, code{
+    font-family: monospace !important;
+}
+code{
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+
+
+
+p:not(
+    .custom-block>*, 
+    li>p, 
+    p>strong,
+    .text
+)
+/* p:has(strong)+* */
+{
+    text-indent: 4ch;
+    margin-top: 1em;
+    /* word-break: keep-all; */
+}
+
+
+
+p:has(em),
+li>p,
+p.text
+{
+    text-indent: 0 !important;
+}
+
+
+
+
+
+p>code{
+    word-break: keep-all;
+    /* display: inline-block; */
+}
+
+
+.vp-doc hr {
+    margin-top: 16px;
+    margin-bottom: 20px;
+    border: none;
+    border-top: 1px solid var(--vp-c-divider);
+    border-radius: 100%;
+}
+
+
+/* DARK AND LIGHT COLORS */
+.dark{
+    --vp-c-divider: #66666666 !important;
+}
+
+:root{
+    --vp-c-divider: #d1d1d3;    
+}
+/* END DARK AND LIGHT COLORS END */

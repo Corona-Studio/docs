@@ -19,6 +19,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                     {text: "CMFS测试标准", link: '/zhCN/guide/standard/cmfs-stable-test-general-standard'},
                     {text: "审核规则", link: '/zhCN/guide/code_of_joining_application'}, // 未就绪
                     {text: "CSA账户", link: '/zhCN/guide/account'},
+                    {text: "CSKB单元组件", link: '/zhCN/guide/standard/cskb-formula'},
                     {text: "通用隐私政策和最终用户许可协议", link: "/zhCN/geula"},
 
                 ]
@@ -188,6 +189,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                             {text: "关闭动画", link: "/zhCN/lxguide/features/tricks/disable-animation"},
                             {text: "为什么不能同时跑四个游戏", link: "/zhCN/lxguide/features/tricks/set-task-queue"},
                             {text: "指定默认Java并生成完整包", link: "/zhCN/lxguide/features/tricks/default-jre-for-pack"},
+                            {text: "Linux去除标题栏", link: "/zhCN/lxguide/settings/special/linux-as-others"},
                             {text: "更多图标下载", link: "/zhCN/lxguide/features/tricks/icons"},
 
                         ]
