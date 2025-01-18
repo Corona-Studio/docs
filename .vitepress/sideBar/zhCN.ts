@@ -30,6 +30,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                 collapsed: true,
                 items: [
                     {text: "提交翻译贡献", link: '/zhCN/guide/general/contribute-to-i18n'},
+                    {text: "辨识计算机环境", link: '/zhCN/guide/general/check-system'},
                 ]
             },
             {text: "友情链接", link: '/zhCN/guide/links'},
@@ -104,12 +105,31 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
         text: "Minecraft",
         collapsed: true,
         items: [ 
-            {text: '启程Minecraft', link: '/zhCN/mc-starter/', collapsed: true, items: [
-                {text: "获取Minecraft", link: "/zhCN/mc-starter/get-minecraft"},
-                {text: "开始玩吧! (Java版)", link: "/zhCN/mc-starter/start-the-game-java"},
-                {text: "获取资源 (材质包、光影、地图...)", link: "/zhCN/mc-starter/assets-and-mods"},
-                {text: "要一起玩吗?", link: "/zhCN/mc-starter/play-together"},
-            ]},
+            {
+                text: '启程Minecraft', link: '/zhCN/mc-starter/', collapsed: true, items: [
+                    {text: "获取Minecraft", link: "/zhCN/mc-starter/get-minecraft"},
+                    {text: "开始玩吧! (Java版)", link: "/zhCN/mc-starter/start-the-game-java"},
+                    {text: "获取资源 (材质包、光影、地图...)", link: "/zhCN/mc-starter/assets-and-mods"},
+                    {text: "要一起玩吗?", link: "/zhCN/mc-starter/play-together"},
+
+                    // advanced
+                    {
+                        text: '进阶指引', link: '/zhCN/mc-starter/advanced/', collapsed: true, items: [
+                            {
+                                text: "异常分析", 
+                                link: "/zhCN/mc-starter/advanced/analyze-exception/",
+                                collapsed: true,
+                                items: [
+                                    {text: "1. 游戏前检查", link: "/zhCN/mc-starter/advanced/analyze-exception/1_environment"}, 
+        
+                                ]
+        
+                            },
+        
+                        ]
+                    },
+                ]
+            }, 
             {text: "皮肤规范", link: "/zhCN/skin/"}, 
         ]
     },
