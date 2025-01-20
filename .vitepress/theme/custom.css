@@ -257,7 +257,9 @@ p:not(
 
 p:has(em),
 li>p,
-p.text
+p.text,
+p.tagline,
+p.details
 {
     text-indent: 0 !important;
 }
