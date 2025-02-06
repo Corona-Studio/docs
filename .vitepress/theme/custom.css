@@ -248,7 +248,7 @@ p:not(
 )
 /* p:has(strong)+* */
 {
-    text-indent: 4ch;
+    /* text-indent: 4ch; */
     margin-top: 1em;
     /* word-break: keep-all; */
 }

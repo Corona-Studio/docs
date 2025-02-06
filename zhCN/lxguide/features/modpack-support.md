@@ -1,6 +1,6 @@
 # LauncherX的整合包支持
 
-*LauncherX对curseforge、modrinth格式整合包做出了相应的导入和导出支持. 面对完整包分享者, LauncherX提供了可包含一个稳定版LauncherX、有许多附加导出选项可选的完整包打包功能. 与此同时, LauncherX几乎没有对游戏目录作出魔改, 确保了最高的兼容性*.
+LauncherX 对 CurseForge、Modrinth 格式整合包做出了相应的导入和导出支持. 面对完整包分享者, LauncherX 提供了可包含一个稳定版LauncherX、有许多附加导出选项可选的完整包打包功能。 与此同时, LauncherX 几乎没有对游戏目录作出魔改, 确保了最高的兼容性
 
 [[toc]]
 
