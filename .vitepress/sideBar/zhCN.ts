@@ -165,7 +165,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                 link: "/zhCN/lxguide/settings/",
                 collapsed: false,
                 items: [ 
-                    {text: "文档解释：什么是“专题”，什么是“分类”", link: "/zhCN/lxguide/settings/index"},
+                    {text: "文档解释：什么是“专题”, 什么是“分类”", link: "/zhCN/lxguide/settings/index"},
                     {
                         text: '专题',
                         link: '/zhCN/lxguide/settings/special/',

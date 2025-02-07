@@ -83,7 +83,7 @@ var selectedArtifact = artifacts[userSelect]; // [!code focus]
 
 ```
 
-Here, **selectedArtifact** is what the Fabric installer requires `FabricLoaderArtifactModel`。
+Here, **selectedArtifact** is what the Fabric installer requires `FabricLoaderArtifactModel`. 
 
 ## Initialize the installer
 

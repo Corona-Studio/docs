@@ -164,49 +164,49 @@ LauncherX同样支持将整合包导出为Curseforge格式. Curseforge格式是�
 
 **免责声明**
 
-此整合包由LauncherX生成，且由分享者选择了指定的LauncherX构建。LauncherX仅提供完整整合包打包功能，对打包内容不负侵权等法律责任，亦不对打包内容的安全性作出保证。
+此整合包由LauncherX生成, 且由分享者选择了指定的LauncherX构建. LauncherX仅提供完整整合包打包功能, 对打包内容不负侵权等法律责任, 亦不对打包内容的安全性作出保证. 
 
 **使用说明** 
 
-您需要先为这个整合包准备一个新的文件夹。然后，将此压缩包中全部内容解压到这个新的文件夹中。
+您需要先为这个整合包准备一个新的文件夹. 然后, 将此压缩包中全部内容解压到这个新的文件夹中. 
 
 包内目录结构说明：
 - .minecraft是包内包含的游戏本体的存储目录（macOS用户和Linux用户可能无法直接看到它）；
 - LauncherX文件夹是LauncherX可携带运行文件存储的目录（如果存在）；
-- [LauncherX]_Please_Decompress_This_File.zip 压缩包 是由分享者选择的LauncherX稳定版构建，即启动器程序本体。请打开它并按照您的操作系统和架构选择具体的主程序。
+- [LauncherX]_Please_Decompress_This_File.zip 压缩包 是由分享者选择的LauncherX稳定版构建, 即启动器程序本体. 请打开它并按照您的操作系统和架构选择具体的主程序. 
 - LauncherX.json 是LauncherX被导出时的设置（如果存在）；
 - 一个readme.txt文件, 是本页面内容的精简版, 包含汉英双语版本.
 
-接下来，倘若您是Windows用户，那么打开LauncherX.Avalonia.exe, 即可开始体验这个完整包。（LauncherX可能会要求您进行初次设置，但是具体情况可能视分享者的导出配置而定。）;  
+接下来, 倘若您是Windows用户, 那么打开LauncherX.Avalonia.exe, 即可开始体验这个完整包. （LauncherX可能会要求您进行初次设置, 但是具体情况可能视分享者的导出配置而定. ）;  
 
-**但** 如果您是macOS或Linux用户并且整合包内存在 “LauncherX的配置文件（LauncherX.json）和LauncherX文件夹” ，那么您需要将这两个项目保持同级地复制到指定的目录下：
+**但** 如果您是macOS或Linux用户并且整合包内存在 “LauncherX的配置文件（LauncherX.json）和LauncherX文件夹” , 那么您需要将这两个项目保持同级地复制到指定的目录下：
 
 `````
 macOS = "~/documents/Library/Application Support/LauncherX/"       
 // 两个项目均存放在这个路径中 
-// (~是您用户文件夹的起始点。一般会在Finder中显示一个小房子的图标；
+// (~是您用户文件夹的起始点. 一般会在Finder中显示一个小房子的图标；
 // Library可能会显示为其本地化名称“资源库”, 而documents可能本地化叫做“文档”)
 
 Linux = "~/documents/LauncherX/"       
 // 两个项目均存放在这个路径中
 `````
 
-然后，(**方法一**)
+然后, (**方法一**)
 
-​	~您可以把.minecraft文件夹保留在解压后的原地（或者您如果看不见它的话，它就在原地），然后手动将这个文件夹作为新的游戏目录添加到LauncherX（在LauncherX的”游戏列表->[左上角的]更多->基础设置“中，点击添加。如果您看不到.minecraft文件夹，选择它存在的上级目录，LauncherX将会自动选择到存在的.minecraft文件夹。【此功能要求LXIT issue #46移除Invalid并真正更新实装】）；
+​	~您可以把.minecraft文件夹保留在解压后的原地（或者您如果看不见它的话, 它就在原地）, 然后手动将这个文件夹作为新的游戏目录添加到LauncherX（在LauncherX的”游戏列表->[左上角的]更多->基础设置“中, 点击添加. 如果您看不到.minecraft文件夹, 选择它存在的上级目录, LauncherX将会自动选择到存在的.minecraft文件夹. 【此功能要求LXIT issue #46移除Invalid并真正更新实装】）；
 
-或者，(**方法二**)
+或者, (**方法二**)
 
 ​	~将它复制或移动到指定的目录下：
 
 ``````
 macOS: "~/documents/Library/Application Support/"      
 // .minecraft/ 存放在这个路径下 
-// (~是您用户文件夹的起始点。一般会在Finder中显示一个小房子的图标；
+// (~是您用户文件夹的起始点. 一般会在Finder中显示一个小房子的图标；
 // Library可能会显示为其本地化名称“资源库”, 而documents可能本地化叫做“文档”)
 
 Linux: "~/documents/"      
 // .minecraft/ 存放在这个路径下
 ``````
 
-此目录是LauncherX和官方启动器都会使用的默认的游戏目录。如果您不希望整合包内容扰乱您的既有游戏目录，您应该使用第一个方法。
+此目录是LauncherX和官方启动器都会使用的默认的游戏目录. 如果您不希望整合包内容扰乱您的既有游戏目录, 您应该使用第一个方法. 

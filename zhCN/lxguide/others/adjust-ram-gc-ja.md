@@ -36,7 +36,7 @@
 
 Azul Zulu和Alibaba Dragonwell是面向云计算的JDK构建, 因而在应对高并发任务时可以发挥相对更好的性能.
 
-更详细的测试, 参见: 蒸汽通量 在 知乎 的文章: [几张性能对比，让你明白高版本 Java 更适合 Minecraft](https://zhuanlan.zhihu.com/p/350543981)
+更详细的测试, 参见: 蒸汽通量 在 知乎 的文章: [几张性能对比, 让你明白高版本 Java 更适合 Minecraft](https://zhuanlan.zhihu.com/p/350543981)
 
 当然, 如果您实在搞不明白自己需要选择什么样的JRE, 以下是我们的建议:
 
@@ -117,7 +117,7 @@ Azul Zulu和Alibaba Dragonwell是面向云计算的JDK构建, 因而在应对高
 
 ### 简介
 
-JavaAgent本身是使用了用于更高级的Java虚拟机内调试的一套接口的软件包, 本身是旨在便于在Java程序运行时进行调试, 也可用于注入软件进程以进行篡改、优化、性能分析等一系列操作. 简而言之，Java Agent可以理解为是一种特殊的Java程序，是在Java5以后Instrumentation接口的客户端. 
+JavaAgent本身是使用了用于更高级的Java虚拟机内调试的一套接口的软件包, 本身是旨在便于在Java程序运行时进行调试, 也可用于注入软件进程以进行篡改、优化、性能分析等一系列操作. 简而言之, Java Agent可以理解为是一种特殊的Java程序, 是在Java5以后Instrumentation接口的客户端. 
 
 在 [设置-全局游戏设置-启动设置(下半部分比较偏高级设置的部分)-JavaAgent设置]处, 存在两个并列的输入框: 前者输入JavaAgent软件包的路径, 后者输入JavaAgent的参数.
 

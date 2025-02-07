@@ -33,7 +33,7 @@ P2P联机的常用方式是将不同地区的电脑通过P2P网络连结在同�
 需要注意的是, 由于P2P技术的特殊性, 仍然具备一定的情况会使得用户无法建立有效的连接, 或是出现体验偏差的情况. 这是由诸多网络环境因素导致的, 比如网络运营商设置的**NAT类型**, 可以阅读[P2P学习: NAT的四种类型以及类型探测](https://www.cnblogs.com/ssyfj/p/14791064.html)*by  - 山上有风景 - 博客园*  来进一步了解. **总而言之, NAT一般分别有以下类型**:
 
 1.  全锥型(Full Cone)
-2.  受限锥型(Restricted Cone)， 或者说是IP受限锥型
+2.  受限锥型(Restricted Cone),  或者说是IP受限锥型
 3.  端口受限锥型(Port Restricted Cone), 或者说是IP + PORT受限锥型
 4.  对称型(Symmetric)
 
