@@ -38,7 +38,7 @@ p.custom-block-title{
 }
 
 .tip>.custom-block-title::before{
-    content: '\e8fb';
+    content: '\e82f';
     font-weight: bolder;
     transform: translateY(1.5px) scale(78%);
     margin-right: 1.5px;
