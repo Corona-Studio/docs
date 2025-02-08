@@ -71,3 +71,5 @@ Windows7及更新版本的64位操作系统、Windows 10 或更新版本的 for 
 ## 下一步
 
 假设您的LauncherX现在能正常运行，但是您不知道接下来该做什么？参考：[安装游戏 | 日冕知识库](/zhCN/lxguide/features/installing-games.html)，下载并安装您的游戏。
+
+已经加入了内部测试？参考：[切换更新通道 | 日冕知识库](/zhCN/lxguide/others/switch-channel.html)

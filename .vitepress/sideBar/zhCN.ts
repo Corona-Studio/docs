@@ -236,6 +236,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                 collapsed: true,
                 items: [
                     {text: '常见名词一览', link: '/zhCN/lxguide/others/general'},
+                    {text: '测试导引: 切换更新通道', link: '/zhCN/lxguide/others/switch-channel'},
                     {text: '测试导引: 善用日志', link: '/zhCN/lxguide/others/report-with-logs'},
                     {text: '优化配置: 下载合适的JRE', link: '/zhCN/lxguide/others/download-jre'},
                     {text: '优化配置: 启动参数', link: '/zhCN/lxguide/others/args'},
