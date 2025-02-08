@@ -111,6 +111,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                     {text: "开始玩吧! (Java版)", link: "/zhCN/mc-starter/start-the-game-java"},
                     {text: "获取资源 (材质包、光影、地图...)", link: "/zhCN/mc-starter/assets-and-mods"},
                     {text: "要一起玩吗?", link: "/zhCN/mc-starter/play-together"},
+                    {text: "常用链接", link: "/zhCN/mc-starter/useful-links"},
 
                     // advanced
                     {
@@ -214,6 +215,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
 
                         ]
                     },
+                    {text: "游戏列表", link: "/zhCN/lxguide/features/gamelist"},
                     {text: "仪表板", link: "/zhCN/lxguide/features/dashboard"},
                     {text: "整合包支持", link: "/zhCN/lxguide/features/modpack-support"},
                     {text: "#实时日志和错误分析器", link: "/zhCN/lxguide/features/log-window"},

@@ -12,7 +12,7 @@
 
 ## 选择版本
 
-### 选哪个?
+那么，选哪个Minecraft可以满足自己的游玩需求呢？
 
 其实Minecraft有许多不同版本和衍生游戏可供选择. 在当下(2024年5月22日), 一般而言, 我们讨论的范围仅限于定义在「沙盒游戏」这个领域之内的Minecraft版本, 现在仍在维护的仅有两个: **Java版(Java Edition)** 和 **基岩版(Bedrock Edition)**. 除此之外还有一些同IP衍生游戏: Minecraft Legends、Minecraft Story Mode(故事模式) 、Minecraft Earth和 Minecraft Dungeons.
 
@@ -37,9 +37,11 @@
 
 
 
-#### = 依据游玩设备
+### 1. 依据游玩设备
 
-##### 电脑
+Minecraft可以运行在在很多不同的平台上。
+
+#### a. 电脑
 
 ::: info 可用的游戏
 
@@ -47,7 +49,9 @@ Minecraft Java Edition (Java版), Minecraft Bedrock Edition (基岩版), Minecra
 
 :::
 
-##### 手机
+在电脑上可以游玩的Minecraft有很多种。如果“只是想玩玩”，那么可以自由从Java版和基岩版之中选择。我们强烈建议从微软官方购买游戏以游玩。
+
+#### b. 手机
 
 ::: info 可用的游戏
 
@@ -64,7 +68,7 @@ Minecraft Java Edition (Java版), Minecraft Bedrock Edition (基岩版, 含教�
 
 有关于上述启动器的使用方法, 你可以在Bilibili、MineBBS等地搜索到很多教程, 以及软件相关的下载地址. 以下是一些推荐的教程:
 
-##### 游戏机 (XBox之类的设备)
+#### c. 游戏机 (XBox之类的设备)
 
 ::: info 可用的游戏
 
@@ -72,25 +76,31 @@ Minecraft Legends, Minecraft Bedrock Edition (基岩版), Minecraft Dungeons
 
 :::
 
-#### = 依据想要玩的内容
+### 2. 依据想要玩的内容
 
 一般来说, 慕名前来游玩Minecraft的玩家一般都会选择定义为 **「沙盒游戏」** 的Minecraft, 也就是 **Java版(Java Edition)** 或 **基岩版(Bedrock Edition)** .  如何在这两种版本中做出选择, 已经在上一段中介绍过了. 
 
 但是如果你想尝试不太一样的…
 
-##### 策略动作类Minecraft: Legends
+#### a. 策略动作类Minecraft: Legends
 
 - 这个游戏具备多人玩法.
 
-##### 肉鸽类Minecraft: Dungeons
+---
+
+#### b. 肉鸽类Minecraft: Dungeons
 
 - 这个游戏具备多人玩法.
 
-##### AR（增强现实）Minecraft：Earth
+---
+
+#### c. AR（增强现实）Minecraft：Earth
 
 - 这个游戏可以让你在 “自己家里建造”：通过手机摄像头和增强现实计算来在当前摄像头里的 “现实环境” 中 “放置方块”. 
 
-##### 剧情冒险Minecraft: 故事模式
+----
+
+#### d. 剧情冒险Minecraft: 故事模式
 
 - 游戏的玩法是玩家可以收集物品, 解决谜题, 并通过对话树与非玩家角色进行对话, 以了解故事并确定下一步要做什么.
 
@@ -100,7 +110,7 @@ Minecraft Legends, Minecraft Bedrock Edition (基岩版), Minecraft Dungeons
 
 
 
-#### = 关于购买
+## 购买
 
 购买Minecraft可以在很多平台上完成, 但是部分不同的版本仅在不同的平台可供购买. 一般而言, 目前Mojang作为微软的一员, 所有Minecraft相关游戏均可在微软商店购买(除了部分已下架的游戏). 截止目前(2024年5月22日), 微软商店支持使用支付宝进行免密支付.
 
@@ -124,13 +134,32 @@ Minecraft Legends, Minecraft Bedrock Edition (基岩版), Minecraft Dungeons
 
 ### Java版
 
-#### = 基本步骤
+###### 基本步骤
 
 1. 准备环境
    - 确认你的游玩设备. 本文只介绍在电脑上使用LauncherX游玩的步骤. 
-   - 前往[这里](https://corona.studio/lx)下载最新版LauncherX. 
+   
+   - 前往[这里](https://corona.studio/lx)下载最新版LauncherX. 下载LauncherX的教程在这里：
+   
+   - 完成启动器配置后，前往【下载-游戏本体】，选择一个具体的版本号进行下载。使用LauncherX下载安装游戏的最完整教程在这里：
+   
+   - 完成下载后，有一部分额外的资源需要在启动前确保完整，如果不完整，LauncherX将会自动尝试进行下载。点击【启动游戏】将会自动检查资源完整性。
+       ::: tip 下载问题
+       如果出现下载失败，请尝试让LauncherX自动选择下载源（一般情况下这是默认被选择的），并且尝试在【设置-全局游戏设置-启动器行为-重试次数】中调大重试次数。
+   
+       若下载失败一直出现，请检查自己的网络连接。[检测网络 | 日冕知识库](/zhCN/lxguide/settings/special/check-network.html)
+       :::
+   
+   - 点击启动游戏后，正常来说游戏将会启动。然后就可以开始游戏了！
+       ::: info 游戏启动失败了！
+   
+       如果游戏启动失败，请参考：[游戏崩溃/异常分析专题 | 日冕知识库](http://localhost:5173/zhCN/mc-starter/advanced/analyze-exception/) 和后续内容文章自行进行排查，或将崩溃检测器的支持包导出后交由有能力分析错误日志的人进行诊断。
+       :::
+   
+   - 
+   
    - 一般而言, 网页会根据你的电脑来推荐下载的版本. 你需要下载对应你电脑系统和CPU架构的版本, 如果网页选择了和你电脑情况不一致的版本, 请用下载按钮右侧的**三角按钮**来选择正确对应你电脑的选项. 如果你不知道如何确认你的电脑系统版本和CPU架构, 参见[这篇文章]()
-     :::tip 截至目前, 大多数用户使用的是Windows x64. :::
+     :::tip 截至目前, 大多数用户使用的是Windows x64. 
    - 下载完毕后, 将LauncherX解压并放置到一个合适的地方. 
      :::tip 关于存放位置
      macOS建议放在【应用程序】(也就是说Applications) 目录下, Linux可以放在任何你常用于存放程序的地方, Windows同样, 但是**不要放在桌面或其他难以打理的地方**, 最好放在一个空文件夹里, 因为Windows版LauncherX会在当前所在位置解压出自己的工作目录和默认的游戏文件夹. 
@@ -139,15 +168,19 @@ Minecraft Legends, Minecraft Bedrock Edition (基岩版), Minecraft Dungeons
 
 ### 基岩版
 
-#### = 基本步骤
+###### 基本步骤
 
-### Legends / 故事模式 / Dungeons
+### Legends / 故事模式 / Dungeons/…
 
-#### = 这不是传统的Minecraft!
+::: info 这不是传统的Minecraft！
+
+参考前文以确认这是不是你要玩的Minecraft。
+
+:::
 
 正如之前所说的, 这些游戏有着与一般Minecraft完全不同的玩法. 
 
-#### = 如何购买和游玩?
+###### 如何购买和游玩?
 
 - 依照上文**[关于购买]**的表格, 在对应的游戏平台搜索
 - 购买, 根据平台的提示下载安装
@@ -159,7 +192,7 @@ Minecraft Legends, Minecraft Bedrock Edition (基岩版), Minecraft Dungeons
 
 :::
 
-#### = 设备要求
+###### 设备要求
 
 以下是这三款游戏的最低设备要求：
 
@@ -184,10 +217,15 @@ Minecraft Legends, Minecraft Bedrock Edition (基岩版), Minecraft Dungeons
   - 图形卡：NVIDIA GeForce GTX 780或等效的GPU
   - 存储空间：至少24 GB可用空间
   - DirectX：12
+- **其他更多**
+    - 信息缺失，请根据应用商店提供的信息确认是否满足硬件要求。
+
 
 ### 关于网易代理的《中国版我的世界》
 
-如果你只是想在完全受支持的环境下进行多人游戏并且可以负担内购、不打算操心太多扩展游戏玩法后调试相关的问题并且经常有游戏社交的需求, 建议选择由网易代理的仅面向中国大陆用户的《我的世界》. 
+如果你只是想在完全受支持的环境下进行多人游戏并且可以负担内购、不打算操心太多扩展游戏玩法后调试相关的问题并且经常有游戏社交的需求, 建议选择由网易代理的仅面向中国大陆用户的《我的世界》. 网易公司代理了微软公司和Mojang AB在中国大陆地区包括游戏运营权在内的许多权利。
+
+网易《我的世界》官方网站网址是：[全新视界 探索无限 | 网易《我的世界》](https://mc.163.com/index.html)
 
 ## 跋
 

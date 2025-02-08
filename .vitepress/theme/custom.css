@@ -229,8 +229,8 @@ button.menu{
     user-select: none;
 }
 
-code>span.line, code>span.line>*, code>span.line>span, span.line>span, code{
-    font-family: monospace !important;
+code>span.line, code>span.line>*, code>span.line>span, span.line>span, code, pre{
+    font-family: 'Cascadia code', 'Monaco', 'Cascadia', 'consolas', monospace, sans-serif, system-ui !important;
 }
 code{
     margin-left: 1px;
@@ -240,39 +240,50 @@ code{
 
 
 
-p:not(
+/* p:not(
     .custom-block>*, 
     li>p, 
     p>strong,
-    .text
+    .text,
+    .force-no-intend
 )
 /* p:has(strong)+* */
-{
-    text-indent: 4ch;
-    margin-top: 1em;
+/* { */
+    /* text-indent: 4ch; */
+    /* text-indent: 0ch; */
+    /* margin-top: 1em; */
     /* word-break: keep-all; */
-}
+/* } */
 
 
 
-p:has(em),
+/* p:has(em),
 li>p,
 p.text,
 p.tagline,
-p.details
+p.details, */ 
+
+p.indent
 {
-    text-indent: 0 !important;
+    text-indent: 4ch !important;
 }
 
+.hidden{
+    display: none; 
+}
 
+.red{
+    color: red !important;
+}
 
-
+.bold{
+    font-weight: bolder !important;
+}
 
 p>code{
     word-break: keep-all;
     /* display: inline-block; */
 }
-
 
 .vp-doc hr {
     margin-top: 16px;
