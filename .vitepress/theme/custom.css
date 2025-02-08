@@ -16,6 +16,22 @@
     backdrop-filter: blur(8px);
 }
 
+p>em{
+    opacity: .78 ;
+    font-weight: lighter !important;
+    font-style: italic !important;
+    display: inline-block !important;
+    font-synthesis: style !important;
+
+    transition-property: all !important;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+    transition-duration: 233ms  !important;
+}
+
+p>em:hover{
+    opacity: 1;
+}
+
 .curtain::before{
     background: linear-gradient(color-mix(in srgb, var(--vp-c-bg), transparent 15%), transparent 80%) !important;
 }
@@ -69,17 +85,9 @@ p.custom-block-title{
     padding: .5px;
     display: inline-block;
 }
-em:not(strong>em){
-    font-style: italic !important;
-    font-family: system-ui !important;
-    font-weight: 100 !important;
-    border-left: #c7a500 3px solid;
-    padding-left: .39rem;
-    border-radius: .25rem;
-    opacity: .7;
-    position: relative;
-}
-em:not(strong>em):hover{
+
+
+blockquote:not(strong>blockquote):hover{
     opacity: 1
 }
 
@@ -115,7 +123,21 @@ em:not(strong>em):hover{
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.09), 0 4px 6px -4px rgb(0 0 0 / 0.09);
     opacity: .79;
 }
- 
+
+blockquote{
+    transition-property: all !important;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+    transition-duration: 233ms  !important;
+
+    font-style: italic !important;
+    font-family: system-ui !important;
+    font-weight: 100 !important;
+    border-left: #c7a500 3px solid !important;
+    padding-left: .39rem;
+    border-radius: .25rem;
+    opacity: .7;
+    position: relative;
+}
 
 .VPFeatures.f {
     position: relative;
@@ -124,7 +146,7 @@ em:not(strong>em):hover{
 .exlinks{
     display:grid;grid-template-columns: repeat(1, minmax(0, 1fr)); gap:.5rem; 
 }
-em:hover::before{
+blockquote:hover::before{
     position: absolute;
     display: block;
     opacity: .5;
@@ -133,8 +155,12 @@ em:hover::before{
     white-space: pre;
     text-align: right;
 
+    transition-property: all !important;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+    transition-duration: 233ms  !important;
+
     content: '注释 | comment';
-    top: -1rem;
+    top: -.1rem;
     left: 0;
     transform: scale(80%) translateY(3.5px) translateX(-1rem);
 }
@@ -155,11 +181,14 @@ em:hover::before{
     .exlinks{
         display:grid;grid-template-columns: repeat(3, minmax(0, 1fr)); gap:.69rem; 
     }
-    em:hover::before{
+    blockquote:hover::before{
+        transition-property: all !important;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+        transition-duration: 233ms  !important;
         content: '注释\A comment';
         top: 0;
         left: -1.29rem;
-        transform: scale(80%) translateY(-1px) translateX(-3rem);
+        transform: scale(80%) translateY(1.5px) translateX(-3rem);
     }
 }
 .container.f {
