@@ -162,7 +162,7 @@ blockquote:hover::before{
     content: '注释 | comment';
     top: -.1rem;
     left: 0;
-    transform: scale(80%) translateY(3.5px) translateX(-1rem);
+    transform: scale(80%) translateY(-9.5px) translateX(6.5px);
 }
 @media (min-width: 425px) {
     .exlinks{
