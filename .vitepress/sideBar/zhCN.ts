@@ -139,6 +139,10 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
         collapsed: true,
         items: [
             {
+                text: "开始",
+                link: "/zhCN/lxguide/startup/index",
+            },
+            {
                 text: "初次启动",
                 link: "/zhCN/lxguide/startup/",
                 collapsed: true,
@@ -164,7 +168,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
             {
                 text: "LauncherX设置",
                 link: "/zhCN/lxguide/settings/",
-                collapsed: false,
+                collapsed: true,
                 items: [ 
                     {text: "文档解释：什么是“专题”, 什么是“分类”", link: "/zhCN/lxguide/settings/index"},
                     {
@@ -199,7 +203,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
             {
                 text: "LauncherX功能", 
                 link: "/zhCN/lxguide/features/",
-                collapsed: true,
+                collapsed: false,
                 items: [
                     {
                         text: '奇技',
@@ -215,6 +219,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
 
                         ]
                     },
+                    {text: "安装游戏", link: "/zhCN/lxguide/features/installing-games"},
                     {text: "游戏列表", link: "/zhCN/lxguide/features/gamelist"},
                     {text: "仪表板", link: "/zhCN/lxguide/features/dashboard"},
                     {text: "整合包支持", link: "/zhCN/lxguide/features/modpack-support"},

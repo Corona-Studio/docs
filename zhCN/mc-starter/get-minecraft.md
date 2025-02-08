@@ -139,9 +139,9 @@ Minecraft Legends, Minecraft Bedrock Edition (基岩版), Minecraft Dungeons
 1. 准备环境
    - 确认你的游玩设备. 本文只介绍在电脑上使用LauncherX游玩的步骤. 
    
-   - 前往[这里](https://corona.studio/lx)下载最新版LauncherX. 下载LauncherX的教程在这里：
+   - 前往[这里](https://corona.studio/lx)下载最新版LauncherX. 下载LauncherX的教程在这里：[开始 | 日冕知识库](/zhCN/lxguide/startup/)
    
-   - 完成启动器配置后，前往【下载-游戏本体】，选择一个具体的版本号进行下载。使用LauncherX下载安装游戏的最完整教程在这里：
+   - 完成启动器配置后，前往【下载-游戏本体】，选择一个具体的版本号进行下载。使用LauncherX下载安装游戏的最完整教程在这里：[安装游戏 | 日冕知识库](/zhCN/lxguide/features/installing-games.html)
    
    - 完成下载后，有一部分额外的资源需要在启动前确保完整，如果不完整，LauncherX将会自动尝试进行下载。点击【启动游戏】将会自动检查资源完整性。
        ::: tip 下载问题
@@ -153,18 +153,8 @@ Minecraft Legends, Minecraft Bedrock Edition (基岩版), Minecraft Dungeons
    - 点击启动游戏后，正常来说游戏将会启动。然后就可以开始游戏了！
        ::: info 游戏启动失败了！
    
-       如果游戏启动失败，请参考：[游戏崩溃/异常分析专题 | 日冕知识库](http://localhost:5173/zhCN/mc-starter/advanced/analyze-exception/) 和后续内容文章自行进行排查，或将崩溃检测器的支持包导出后交由有能力分析错误日志的人进行诊断。
+       如果游戏启动失败，请参考：[游戏崩溃/异常分析专题 | 日冕知识库](/zhCN/mc-starter/advanced/analyze-exception/) 和后续内容文章自行进行排查，或将崩溃检测器的支持包导出后交由有能力分析错误日志的人进行诊断。
        :::
-   
-   - 
-   
-   - 一般而言, 网页会根据你的电脑来推荐下载的版本. 你需要下载对应你电脑系统和CPU架构的版本, 如果网页选择了和你电脑情况不一致的版本, 请用下载按钮右侧的**三角按钮**来选择正确对应你电脑的选项. 如果你不知道如何确认你的电脑系统版本和CPU架构, 参见[这篇文章]()
-     :::tip 截至目前, 大多数用户使用的是Windows x64. 
-   - 下载完毕后, 将LauncherX解压并放置到一个合适的地方. 
-     :::tip 关于存放位置
-     macOS建议放在【应用程序】(也就是说Applications) 目录下, Linux可以放在任何你常用于存放程序的地方, Windows同样, 但是**不要放在桌面或其他难以打理的地方**, 最好放在一个空文件夹里, 因为Windows版LauncherX会在当前所在位置解压出自己的工作目录和默认的游戏文件夹. 
-     :::
-   - 
 
 ### 基岩版
 
