@@ -4,6 +4,8 @@
 
 如果你真心想要了解这个游戏并在这个游戏里取得乐趣, 那么请怀揣着一颗主动学习、举一反三的求知之心继续阅读吧!  本文将指引你开启Minecraft之路.
 
+此外，官方也为你的游戏之旅准备了翔实的教程：[Minecraft Game Guides | Minecraft Help](https://help.minecraft.net/hc/en-us/sections/27983418545293)，还有Minecraft Wiki：[中文 Minecraft Wiki](https://zh.minecraft.wiki/) 可供查阅。
+
 :::
 
 ## 前言
