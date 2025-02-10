@@ -103,7 +103,7 @@ MIN.another部署在热铁盒网页托管.
 
 详情: [官网](https://corona.studio/cmf) | [官网.min](https://min.corona.studio/cmf)
 
-CMFS所有游戏服务器均可能会将您的游戏行为脱敏后通过遥测加密传输到Spigot. 与此同时, 您在游玩时必须遵守Mojang的[Minecraft Eula](https://www.minecraft.net/en-us/eula).
+CMFS所有游戏服务器均可能会将您的游戏行为脱敏后通过遥测加密传输到服务端可能内置的bStats. 我们在有需要的情况下会借助Spark进行在线性能分析. 与此同时, 您在游玩时必须遵守Mojang的[Minecraft Eula](https://www.minecraft.net/en-us/eula).
 
 | 收集项目                                      | 介绍                                |
 | --------------------------------------------- | ----------------------------------- |
@@ -170,7 +170,7 @@ CSKB (MIT)
 
 CMFL.MVVM (MIT)
 
-
+…
 
 :::
 
