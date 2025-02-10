@@ -170,10 +170,12 @@ blockquote{
     font-size: x-large !important;
     display: block;
     margin-top: .3rem;
+    text-decoration: none !important;
 }
 .card-like>p{
     margin-top: .69rem !important;
     margin-bottom: .3rem !important;
+    text-decoration: none !important;
 }
 blockquote:hover::before{
     position: absolute;
