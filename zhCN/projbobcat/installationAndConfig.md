@@ -10,14 +10,14 @@
 
 或者，您也可以手动在 “程序包管理器控制台” 中执行下面的命令：
 ```bash
-NuGet\Install-Package ProjBobcat -Version 1.16.0
+NuGet\Install-Package ProjBobcat -Version 1.40.0
 ```
 
 ### .NET CLI
 
 要通过 .NET CLI 来安装 ProjBobcat，您只需要将终端切换到包含 .csproj 文件的项目目录，并在终端中执行：
 ```bash
-dotnet add package ProjBobcat --version 1.16.0
+dotnet add package ProjBobcat --version 1.40.0
 ```
 
 ### PackageReference
@@ -28,11 +28,11 @@ PackageReference 是微软为现代 .NET 项目推出的一种新的软件包管
 
 您只需在项目的 **[项目名].csproj** 文件中添加：
 ```xml
-<PackageReference Include="ProjBobcat" Version="1.16.0" />
+<PackageReference Include="ProjBobcat" Version="1.40.0" />
 ```
 
 ::: tip
-其中，**1.16.0** 为 ProjBobcat 的版本号，您可以将其替换为其他的版本号，
+其中，**1.140.0** 为 ProjBobcat 的版本号，您可以将其替换为其他的版本号，
 所有的发行版本都可以在 [ProjBobcat - Nuget](https://www.nuget.org/packages/ProjBobcat#versions-body-tab) 中查看。
 :::
 
@@ -125,7 +125,6 @@ CurseForgeAPIHelper.SetApiKey("[YOUR API KEY]");
 
 ```c#
 HttpClientHelper.Ua = "[YOUR UA]"; // 可选
-HttpClientHelper.Init();
 ```
 
 ### 配置微软登录验证器

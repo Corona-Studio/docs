@@ -1,6 +1,6 @@
 # 仪表板
 
-:::tip
+:::info TIP
 
 这个功能只在登陆后显示。为此您需要登陆日冕账户。详情参见: [启动器账户](/zhCN/lxguide/settings/item/lx-account)
 

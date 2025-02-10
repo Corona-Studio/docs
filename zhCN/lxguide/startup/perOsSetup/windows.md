@@ -10,7 +10,7 @@
 
 …但是您可能会遇到一些意外，如图所示：
 
-![exception](./../../../../public/img/lxguide/perOsSetup/windows-exception.png)
+![exception](/img/lxguide/perOsSetup/windows-exception.png)
 
 类似于这样的弹窗——会要求您先在Microsoft Store下载安装“供任务执行的程序”，或者由 SmartScreen 弹出的“警示安全风险”的提示弹窗：
 
