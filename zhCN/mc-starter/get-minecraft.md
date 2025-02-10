@@ -4,7 +4,7 @@
 
 如果你真心想要了解这个游戏并在这个游戏里取得乐趣, 那么请怀揣着一颗主动学习、举一反三的求知之心继续阅读吧!  本文将指引你开启Minecraft之路.
 
-此外，官方也为你的游戏之旅准备了翔实的教程：[Minecraft Game Guides | Minecraft Help](https://help.minecraft.net/hc/en-us/sections/27983418545293)，还有Minecraft Wiki：[中文 Minecraft Wiki](https://zh.minecraft.wiki/) 可供查阅。
+此外, 官方也为你的游戏之旅准备了翔实的教程：[Minecraft Game Guides | Minecraft Help](https://help.minecraft.net/hc/en-us/sections/27983418545293), 还有Minecraft Wiki：[中文 Minecraft Wiki](https://zh.minecraft.wiki/) 可供查阅. 
 
 :::
 
@@ -14,7 +14,7 @@
 
 ## 选择版本
 
-那么，选哪个Minecraft可以满足自己的游玩需求呢？
+那么, 选哪个Minecraft可以满足自己的游玩需求呢？
 
 其实Minecraft有许多不同版本和衍生游戏可供选择. 在当下(2024年5月22日), 一般而言, 我们讨论的范围仅限于定义在「沙盒游戏」这个领域之内的Minecraft版本, 现在仍在维护的仅有两个: **Java版(Java Edition)** 和 **基岩版(Bedrock Edition)**. 除此之外还有一些同IP衍生游戏: Minecraft Legends、Minecraft Story Mode(故事模式) 、Minecraft Earth和 Minecraft Dungeons.
 
@@ -41,7 +41,7 @@
 
 ### 1. 依据游玩设备
 
-Minecraft可以运行在在很多不同的平台上。
+Minecraft可以运行在在很多不同的平台上. 
 
 #### a. 电脑
 
@@ -51,7 +51,7 @@ Minecraft Java Edition (Java版), Minecraft Bedrock Edition (基岩版), Minecra
 
 :::
 
-在电脑上可以游玩的Minecraft有很多种。如果“只是想玩玩”，那么可以自由从Java版和基岩版之中选择。我们强烈建议从微软官方购买游戏以游玩。
+在电脑上可以游玩的Minecraft有很多种. 如果“只是想玩玩”, 那么可以自由从Java版和基岩版之中选择. 我们强烈建议从微软官方购买游戏以游玩. 
 
 #### b. 手机
 
@@ -143,19 +143,19 @@ Minecraft Legends, Minecraft Bedrock Edition (基岩版), Minecraft Dungeons
    
    - 前往[这里](https://corona.studio/lx)下载最新版LauncherX. 下载LauncherX的教程在这里：[开始 | 日冕知识库](/zhCN/lxguide/startup/)
    
-   - 完成启动器配置后，前往【下载-游戏本体】，选择一个具体的版本号进行下载。使用LauncherX下载安装游戏的最完整教程在这里：[安装游戏 | 日冕知识库](/zhCN/lxguide/features/installing-games.html)
+   - 完成启动器配置后, 前往【下载-游戏本体】, 选择一个具体的版本号进行下载. 使用LauncherX下载安装游戏的最完整教程在这里：[安装游戏 | 日冕知识库](/zhCN/lxguide/features/installing-games.html)
    
-   - 完成下载后，有一部分额外的资源需要在启动前确保完整，如果不完整，LauncherX将会自动尝试进行下载。点击【启动游戏】将会自动检查资源完整性。
+   - 完成下载后, 有一部分额外的资源需要在启动前确保完整, 如果不完整, LauncherX将会自动尝试进行下载. 点击【启动游戏】将会自动检查资源完整性. 
        ::: tip 下载问题
-       如果出现下载失败，请尝试让LauncherX自动选择下载源（一般情况下这是默认被选择的），并且尝试在【设置-全局游戏设置-启动器行为-重试次数】中调大重试次数。
+       如果出现下载失败, 请尝试让LauncherX自动选择下载源（一般情况下这是默认被选择的）, 并且尝试在【设置-全局游戏设置-启动器行为-重试次数】中调大重试次数. 
    
-       若下载失败一直出现，请检查自己的网络连接。[检测网络 | 日冕知识库](/zhCN/lxguide/settings/special/check-network.html)
+       若下载失败一直出现, 请检查自己的网络连接. [检测网络 | 日冕知识库](/zhCN/lxguide/settings/special/check-network.html)
        :::
    
-   - 点击启动游戏后，正常来说游戏将会启动。然后就可以开始游戏了！
+   - 点击启动游戏后, 正常来说游戏将会启动. 然后就可以开始游戏了！
        ::: info 游戏启动失败了！
    
-       如果游戏启动失败，请参考：[游戏崩溃/异常分析专题 | 日冕知识库](/zhCN/mc-starter/advanced/analyze-exception/) 和后续内容文章自行进行排查，或将崩溃检测器的支持包导出后交由有能力分析错误日志的人进行诊断。
+       如果游戏启动失败, 请参考：[游戏崩溃/异常分析专题 | 日冕知识库](/zhCN/mc-starter/advanced/analyze-exception/) 和后续内容文章自行进行排查, 或将崩溃检测器的支持包导出后交由有能力分析错误日志的人进行诊断. 
        :::
 
 ### 基岩版
@@ -166,7 +166,7 @@ Minecraft Legends, Minecraft Bedrock Edition (基岩版), Minecraft Dungeons
 
 ::: info 这不是传统的Minecraft！
 
-参考前文以确认这是不是你要玩的Minecraft。
+参考前文以确认这是不是你要玩的Minecraft. 
 
 :::
 
@@ -210,12 +210,12 @@ Minecraft Legends, Minecraft Bedrock Edition (基岩版), Minecraft Dungeons
   - 存储空间：至少24 GB可用空间
   - DirectX：12
 - **其他更多**
-    - 信息缺失，请根据应用商店提供的信息确认是否满足硬件要求。
+    - 信息缺失, 请根据应用商店提供的信息确认是否满足硬件要求. 
 
 
 ### 关于网易代理的《中国版我的世界》
 
-如果你只是想在完全受支持的环境下进行多人游戏并且可以负担内购、不打算操心太多扩展游戏玩法后调试相关的问题并且经常有游戏社交的需求, 建议选择由网易代理的仅面向中国大陆用户的《我的世界》. 网易公司代理了微软公司和Mojang AB在中国大陆地区包括游戏运营权在内的许多权利。
+如果你只是想在完全受支持的环境下进行多人游戏并且可以负担内购、不打算操心太多扩展游戏玩法后调试相关的问题并且经常有游戏社交的需求, 建议选择由网易代理的仅面向中国大陆用户的《我的世界》. 网易公司代理了微软公司和Mojang AB在中国大陆地区包括游戏运营权在内的许多权利. 
 
 网易《我的世界》官方网站网址是：[全新视界 探索无限 | 网易《我的世界》](https://mc.163.com/index.html)
 

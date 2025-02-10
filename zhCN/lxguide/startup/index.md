@@ -40,13 +40,13 @@ Windows7及更新版本的64位操作系统、Windows 10 或更新版本的 for 
 
 - 打开[官网](https://corona.studio/launcherx/download)（或[官网.MIN](https://mincorona.studio/lx)）
 
-- 一般而言, 网页会根据你的电脑来推荐下载的版本. 你需要下载对应你电脑系统和CPU架构的版本, 如果网页选择了和你电脑情况不一致的版本, 请用下载按钮右侧的**三角按钮**（如果是MIN站 ，直接在网页上点击对应正确构建的按钮来开始下载）来选择正确对应你电脑的选项. 如果你不知道如何确认你的电脑系统版本和CPU架构, 参见：[辨识计算机环境 | 日冕知识库](/zhCN/guide/general/check-system.html)
+- 一般而言, 网页会根据你的电脑来推荐下载的版本. 你需要下载对应你电脑系统和CPU架构的版本, 如果网页选择了和你电脑情况不一致的版本, 请用下载按钮右侧的**三角按钮**（如果是MIN站 , 直接在网页上点击对应正确构建的按钮来开始下载）来选择正确对应你电脑的选项. 如果你不知道如何确认你的电脑系统版本和CPU架构, 参见：[辨识计算机环境 | 日冕知识库](/zhCN/guide/general/check-system.html)
     :::tip 截至目前, 大多数用户使用的是Windows x64. 
 
 - 下载完毕后, 将LauncherX解压并放置到一个合适的地方. 
     :::tip 关于存放位置
     macOS建议放在【应用程序】(也就是说Applications) 目录下; Linux可以放在任何你常用于存放程序的地方, Windows同样, 但是**不要放在桌面或其他难以打理的地方**, 最好放在一个空文件夹里, 因为Windows版LauncherX会在当前所在位置解压出自己的工作目录和默认的游戏文件夹. 
-    Linux和macOS版本的LauncherX会在一个合适的地方存储LauncherX的配置文件和默认游戏目录，电脑上任意地方的LauncherX将共用该配置文件；Windows版本则会在每个LauncherX所在的位置创建独立的默认游戏目录和配置文件。
+    Linux和macOS版本的LauncherX会在一个合适的地方存储LauncherX的配置文件和默认游戏目录, 电脑上任意地方的LauncherX将共用该配置文件；Windows版本则会在每个LauncherX所在的位置创建独立的默认游戏目录和配置文件. 
 
     :::
 
@@ -60,7 +60,7 @@ Windows7及更新版本的64位操作系统、Windows 10 或更新版本的 for 
 
 由于设备不同, 您在初次启动时可能会遇到些小麻烦, 为此我们感到十分抱歉. 我们正在努力解决这些严重影响体验的问题, 因而本文将会不定期发生变更, 恕不另行通知. 
 
-如果需要提供反馈，请参考：[报告异常&建言新策 | 日冕知识库](/zhCN/lxguide/report-issue.html)
+如果需要提供反馈, 请参考：[报告异常&建言新策 | 日冕知识库](/zhCN/lxguide/report-issue.html)
 
 :::
 
@@ -70,6 +70,6 @@ Windows7及更新版本的64位操作系统、Windows 10 或更新版本的 for 
 
 ## 下一步
 
-假设您的LauncherX现在能正常运行，但是您不知道接下来该做什么？参考：[安装游戏 | 日冕知识库](/zhCN/lxguide/features/installing-games.html)，下载并安装您的游戏。
+假设您的LauncherX现在能正常运行, 但是您不知道接下来该做什么？参考：[安装游戏 | 日冕知识库](/zhCN/lxguide/features/installing-games.html), 下载并安装您的游戏. 
 
 已经加入了内部测试？参考：[切换更新通道 | 日冕知识库](/zhCN/lxguide/others/switch-channel.html)
