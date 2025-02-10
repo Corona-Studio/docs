@@ -1,5 +1,3 @@
-<!-- .vitepress/theme/Layout.vue -->
-
 <script setup lang="ts">
 import { useData } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
@@ -43,9 +41,6 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
 
 <template>
   <DefaultTheme.Layout />
-  <script>
-    console.log('insert')
-  </script>
 </template>
 
 <style>

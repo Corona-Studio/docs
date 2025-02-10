@@ -111,6 +111,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                     {text: "开始玩吧! (Java版)", link: "/zhCN/mc-starter/start-the-game-java"},
                     {text: "获取资源 (材质包、光影、地图...)", link: "/zhCN/mc-starter/assets-and-mods"},
                     {text: "要一起玩吗?", link: "/zhCN/mc-starter/play-together"},
+                    {text: "常用链接", link: "/zhCN/mc-starter/useful-links"},
 
                     // advanced
                     {
@@ -138,6 +139,10 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
         collapsed: true,
         items: [
             {
+                text: "开始",
+                link: "/zhCN/lxguide/startup/index",
+            },
+            {
                 text: "初次启动",
                 link: "/zhCN/lxguide/startup/",
                 collapsed: true,
@@ -163,9 +168,9 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
             {
                 text: "LauncherX设置",
                 link: "/zhCN/lxguide/settings/",
-                collapsed: false,
+                collapsed: true,
                 items: [ 
-                    {text: "文档解释：什么是“专题”，什么是“分类”", link: "/zhCN/lxguide/settings/index"},
+                    {text: "文档解释：什么是“专题”, 什么是“分类”", link: "/zhCN/lxguide/settings/index"},
                     {
                         text: '专题',
                         link: '/zhCN/lxguide/settings/special/',
@@ -198,7 +203,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
             {
                 text: "LauncherX功能", 
                 link: "/zhCN/lxguide/features/",
-                collapsed: true,
+                collapsed: false,
                 items: [
                     {
                         text: '奇技',
@@ -214,6 +219,8 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
 
                         ]
                     },
+                    {text: "安装游戏", link: "/zhCN/lxguide/features/installing-games"},
+                    {text: "游戏列表", link: "/zhCN/lxguide/features/gamelist"},
                     {text: "仪表板", link: "/zhCN/lxguide/features/dashboard"},
                     {text: "整合包支持", link: "/zhCN/lxguide/features/modpack-support"},
                     {text: "#实时日志和错误分析器", link: "/zhCN/lxguide/features/log-window"},
@@ -229,6 +236,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                 collapsed: true,
                 items: [
                     {text: '常见名词一览', link: '/zhCN/lxguide/others/general'},
+                    {text: '测试导引: 切换更新通道', link: '/zhCN/lxguide/others/switch-channel'},
                     {text: '测试导引: 善用日志', link: '/zhCN/lxguide/others/report-with-logs'},
                     {text: '优化配置: 下载合适的JRE', link: '/zhCN/lxguide/others/download-jre'},
                     {text: '优化配置: 启动参数', link: '/zhCN/lxguide/others/args'},

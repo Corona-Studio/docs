@@ -4,7 +4,7 @@
 
 ## 初始化補全器
 
-建立一個資源補全器的方法非常簡單，您只需要使用下面的程式碼即可完成補全器的初始化：
+建立一個資源補全器的方法非常簡單, 您只需要使用下面的程式碼即可完成補全器的初始化：
 
 ```c#
 
@@ -28,7 +28,7 @@ var completer = new DefaultResourceCompleter
 
 :::
 
-在上述程式碼塊中，請將這些引數按照您的實際情況替換：
+在上述程式碼塊中, 請將這些引數按照您的實際情況替換：
 
 |                    專案                    | 資料型別    |              說明              |
 |:----------------------------------------:|:--------|:----------------------------:|
@@ -39,15 +39,15 @@ var completer = new DefaultResourceCompleter
 ::: warning
 
 **[MAX_DEGREE_OF_PARALLELISM]** 和 **[TOTAL_DOWNLOAD_SEGMENTS_FOR_LARGE_FILE]**
-的數值大小請視硬體效能酌情調整，設定過大的數值可能會導致會導致吞吐量的下降。
+的數值大小請視硬體效能酌情調整, 設定過大的數值可能會導致會導致吞吐量的下降. 
 
 :::
 
 ## 補全遊戲資源
 
-在完成資源補全器的初始化操作後，您只需要呼叫補全方法即可開始執行檢查和補全操作：
+在完成資源補全器的初始化操作後, 您只需要呼叫補全方法即可開始執行檢查和補全操作：
 
-在非同步上下文中，使用 **CheckAndDownloadTaskAsync** 來完成安裝：
+在非同步上下文中, 使用 **CheckAndDownloadTaskAsync** 來完成安裝：
 
 ```c#
 
@@ -55,16 +55,16 @@ var result = await completer.CheckAndDownloadTaskAsync(); // [!code focus]
 
 if (result.TaskStatus == TaskResultStatus.Error && (result.Value?.IsLibDownloadFailed ?? false))
 {
-    // 在完成補全後，資源檢查器會返回執行結果。
+    // 在完成補全後, 資源檢查器會返回執行結果. 
     // 您可以檢查 result 中的屬性值來確定補全是否完成
     
     // IsLibDownloadFailed 會反映啟動必須的庫檔案是否已經成功補全
-    // 通常來說，如果庫檔案的補全失敗，很有可能會導致遊戲的啟動失敗
+    // 通常來說, 如果庫檔案的補全失敗, 很有可能會導致遊戲的啟動失敗
 }
 
 ```
 
-在同步上下文中，使用 **CheckAndDownload** 來完成安裝：
+在同步上下文中, 使用 **CheckAndDownload** 來完成安裝：
 
 ```c#
 
@@ -74,8 +74,8 @@ var result = completer.CheckAndDownload(); // [!code focus]
 
 ## 報告進度
 
-在某些情況下，資源補全器可能會需要數分鐘的時間來完成資源的檢查和下載。
-因此，您可能需要實時向用戶彙報補全器目前的進度。
+在某些情況下, 資源補全器可能會需要數分鐘的時間來完成資源的檢查和下載. 
+因此, 您可能需要實時向用戶彙報補全器目前的進度. 
 
 ### 報告資源檢查器的進度
 
@@ -88,7 +88,7 @@ completer.GameResourceInfoResolveStatus += (_, args) =>
 
 ```
 
-其中， **args.Progress** 指示了檢查器當前的百分比進度。**args.Status** 則是檢查器當前進度的文字描述。
+其中,  **args.Progress** 指示了檢查器當前的百分比進度. **args.Status** 則是檢查器當前進度的文字描述. 
 
 ### 報告補全器檔案下載進度
 
@@ -98,8 +98,8 @@ completer.GameResourceInfoResolveStatus += (_, args) =>
 
 completer.DownloadFileCompletedEvent += (sender, args) =>
 {
-    // sender 引數為補全器上一個成功下載的檔案，型別為 DownloadFile
-    // args 返回了該檔案的下載狀態（成功 / 失敗），以及檔案的重試計數，
+    // sender 引數為補全器上一個成功下載的檔案, 型別為 DownloadFile
+    // args 返回了該檔案的下載狀態（成功 / 失敗）, 以及檔案的重試計數, 
     // 型別為 DownloadFileCompletedEventArgs
 };
 

@@ -31,7 +31,7 @@ export const zhConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
         },
 
         footer: {
-            message: '使用 MIT 协议发行，喜欢我们的工作的话就给我们点一个 <a c-orange-5 target="_blank" href="https://github.com/Corona-Studio/docs">star ⭐</a> 吧！',
+            message: '使用 MIT 协议发行, 喜欢我们的工作的话就给我们点一个 <a c-orange-5 target="_blank" href="https://github.com/Corona-Studio/docs">star ⭐</a> 吧！',
             copyright: `版权所有 © ${new Date().getFullYear()} - 日冕工作室`
         }
     }

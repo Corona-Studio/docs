@@ -1,7 +1,7 @@
 # 资源信息解析器
 
-在 ProjBobcat 中，我们使用 **资源信息解析器**（ResourceInfoResolver）
-来帮助资源补全器确定 MineCraft 缺失的文件。
+在 ProjBobcat 中, 我们使用 **资源信息解析器**（ResourceInfoResolver）
+来帮助资源补全器确定 MineCraft 缺失的文件. 
 
 下表展示了目前 ProjBobcat 所支持的资源解析器：
 

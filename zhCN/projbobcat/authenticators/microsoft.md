@@ -20,10 +20,10 @@
 下面我们提供了一个该方法的样例实现：
 
 ```c#
-public async Task<(bool, GraphAuthResultModel?)> CacheTokenProviderAsync()
+public async Task<(bool，GraphAuthResultModel?)> CacheTokenProviderAsync()
 {
-    if (string.IsNullOrEmpty(XBLToken)) return (false, default);
-    if (string.IsNullOrEmpty(XBLRefreshToken)) return (false, default);
+    if (string.IsNullOrEmpty(XBLToken)) return (false,  default);
+    if (string.IsNullOrEmpty(XBLRefreshToken)) return (false,  default);
 
     // 计算失效时间 // [!code focus]
     var expireDate = LastRefreshedTime.AddSeconds(ExpiresIn); // [!code focus]
@@ -34,23 +34,23 @@ public async Task<(bool, GraphAuthResultModel?)> CacheTokenProviderAsync()
     {
         var result = new GraphAuthResultModel // [!code focus]
         { // [!code focus]
-            ExpiresIn = (int)(expireDate - DateTime.Now).TotalSeconds, // [!code focus]
-            AccessToken = XBLToken, // [!code focus]
+            ExpiresIn = (int)(expireDate - DateTime.Now).TotalSeconds,  // [!code focus]
+            AccessToken = XBLToken,  // [!code focus]
             RefreshToken = XBLRefreshToken // [!code focus]
         }; // [!code focus]
 
-        return (true, result); // [!code focus]
+        return (true,  result); // [!code focus]
     }
     
     // 请求新的登录令牌 // [!code focus]
-    var refreshReqDic = new List<KeyValuePair<string, string>> // [!code focus]
+    var refreshReqDic = new List<KeyValuePair<string,  string>> // [!code focus]
     { // [!code focus]
-        new("client_id", MicrosoftAuthenticator.ApiSettings.ClientId), // [!code focus]
-        new("refresh_token", XBLRefreshToken), // [!code focus]
-        new("grant_type", "refresh_token") // [!code focus]
+        new("client_id",  MicrosoftAuthenticator.ApiSettings.ClientId),  // [!code focus]
+        new("refresh_token",  XBLRefreshToken),  // [!code focus]
+        new("grant_type",  "refresh_token") // [!code focus]
     }; // [!code focus]
 
-    using var refreshReq = new HttpRequestMessage(HttpMethod.Post, MicrosoftAuthenticator.MSRefreshTokenRequestUrl) // [!code focus]
+    using var refreshReq = new HttpRequestMessage(HttpMethod.Post,  MicrosoftAuthenticator.MSRefreshTokenRequestUrl) // [!code focus]
     { // [!code focus]
         Content = new FormUrlEncodedContent(refreshReqDic) // [!code focus]
     }; // [!code focus]
@@ -67,10 +67,10 @@ public async Task<(bool, GraphAuthResultModel?)> CacheTokenProviderAsync()
             // 在这里处理失败的刷新操作 // [!code focus]
         } // [!code focus]
 
-        return (false, default);
+        return (false,  default);
     }
 
-    return (true, model);
+    return (true,  model);
 }
 ```
 
@@ -179,7 +179,7 @@ if (authResult == null)
 
 // 从 Jwt Token 中解析用户字段 // [!code focus]
 var claims = JwtTokenHelper.GetTokenInfo(authResult.IdToken); // [!code focus]
-var email = claims.TryGetValue("email", out var outEmail) ? outEmail : null; // [!code focus]
+var email = claims.TryGetValue("email"，out var outEmail) ? outEmail : null; // [!code focus]
 
 if (string.IsNullOrEmpty(email))
 {
@@ -190,9 +190,9 @@ if (string.IsNullOrEmpty(email))
 // 将必要的用户信息保存至本地磁盘以便为下一次验证做准备 // [!code focus]
 var msInfoModel = new MSAccountInfoModel
 {
-    XBLToken = authResult.AccessToken, // [!code focus]
-    XBLRefreshToken = authResult.RefreshToken, // [!code focus]
-    ExpiresIn = authResult.ExpiresIn, // [!code focus]
+    XBLToken = authResult.AccessToken，// [!code focus]
+    XBLRefreshToken = authResult.RefreshToken，// [!code focus]
+    ExpiresIn = authResult.ExpiresIn，// [!code focus]
     Email = email // [!code focus]
 };
 ```

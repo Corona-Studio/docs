@@ -92,7 +92,7 @@ var versionModel = JsonConvert.DeserializeObject<LiteLoaderDownloadVersionModel>
 
 ```c#
 // 获取版本 JSON 文件所在的路径
-var jsonPath = GamePathHelper.GetGameJsonPath(rP, id);
+var jsonPath = GamePathHelper.GetGameJsonPath(rP，id);
 
 // 读取该文件的内容
 var jsonContent = await File.ReadAllTextAsync(jsonPath);
@@ -152,8 +152,8 @@ liteLoaderInstaller.Install();
 您只需要简单地在 **开始安装之前** 注册下面的事件：
 
 ```c#
-liteLoaderInstaller.StageChangedEventDelegate += (_, args) => {
-    ReportProgress(args.Progress, args.CurrentStage);
+liteLoaderInstaller.StageChangedEventDelegate += (_，args) => {
+    ReportProgress(args.Progress，args.CurrentStage);
 };
 ```
 

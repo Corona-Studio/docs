@@ -12,7 +12,7 @@ var completer = new DefaultResourceCompleter
     MaxDegreeOfParallelism = [MAX_DEGREE_OF_PARALLELISM],
     ResourceInfoResolvers = new List<IResourceInfoResolver>
     {
-        ... // 资源信息解析器的初始化
+        ..。// 资源信息解析器的初始化
     },
     TotalRetry = [NUMBER_OF_TOTAL_RETRY],
     CheckFile = [CHECK_FILE_AFTER_DOWNLOADED],
@@ -76,8 +76,8 @@ var result = completer.CheckAndDownload(); // [!code focus]
 您可以通过注册事件 **GameResourceInfoResolveStatus** 来获取实时的检查进度：
 
 ```c#
-completer.GameResourceInfoResolveStatus += (_, args) => 
-    { ReportProgress(args.Progress, args.Status); };
+completer.GameResourceInfoResolveStatus += (_,  args) => 
+    { ReportProgress(args.Progress,  args.Status); };
 ```
 
 其中， **args.Progress** 指示了检查器当前的百分比进度。**args.Status** 则是检查器当前进度的文字描述。
@@ -87,7 +87,7 @@ completer.GameResourceInfoResolveStatus += (_, args) =>
 您可以通过注册事件 **DownloadFileCompletedEvent** 来获取实时的检查进度：
 
 ```c#
-completer.DownloadFileCompletedEvent += (sender, args) =>
+completer.DownloadFileCompletedEvent += (sender,  args) =>
 {
     // sender 参数为补全器上一个成功下载的文件，类型为 DownloadFile
     // args 返回了该文件的下载状态（成功 / 失败），以及文件的重试计数，
@@ -107,7 +107,7 @@ completer.DownloadFileCompletedEvent += (sender, args) =>
 您可以通过注册事件 **DownloadFileChangedEvent** 来获取实时的检查进度：
 
 ```c#
-rC.DownloadFileChangedEvent += (_, args) =>
+rC.DownloadFileChangedEvent += (_,  args) =>
 {
     // args 返回了下载中的文件的具体信息（已接收的字节数、总共的字节数、当前速度、百分比进度）
     // 类型为 DownloadFileChangedEventArgs

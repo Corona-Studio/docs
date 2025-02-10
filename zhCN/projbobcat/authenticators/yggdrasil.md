@@ -19,7 +19,7 @@
 var yggdrasilAuthenticator = new YggdrasilAuthenticator
 {
     AuthServer = "[CUSTOM_AUTH_SERVER]",
-    Email = "[EMAIL],
+    Email = "[EMAIL]",
     LauncherAccountParser = launcherAccountParser,
     Password = "[PASSWORD]"
 };

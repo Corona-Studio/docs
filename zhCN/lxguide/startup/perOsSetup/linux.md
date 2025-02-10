@@ -25,7 +25,7 @@
 在右侧的 **Download** 按钮中选择 `.tar.gz` 格式的 JDK 运行时，下载后将其解压到任意一处本地文件夹。
 随后在 LauncherX 中选择 **手动添加**，并选择 JDK 文件夹 **bin/** 目录下的 **java** 可执行文件即可。
 
-有关于JRE的选择, 参见:   [配置内存和GC、JavaAgent](/zhCN/lxguide/others/adjust-ram-gc-ja)
+有关于JRE的选择，参见:   [配置内存和GC、JavaAgent](/zhCN/lxguide/others/adjust-ram-gc-ja)
 
 ## 如果您无法启动
 

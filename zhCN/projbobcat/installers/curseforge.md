@@ -58,8 +58,8 @@ curseForgeInstaller.Install();
 您只需要简单地在 **开始安装之前** 注册下面的事件：
 
 ```c#
-curseForgeInstaller.StageChangedEventDelegate += (_, args) => {
-    ReportProgress(args.Progress, args.CurrentStage);
+curseForgeInstaller.StageChangedEventDelegate += (_,  args) => {
+    ReportProgress(args.Progress,  args.CurrentStage);
 };
 ```
 

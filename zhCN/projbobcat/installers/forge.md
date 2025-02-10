@@ -18,9 +18,9 @@
 ```c#
 var mcVersion = "[MC_VERSION]";
 var forgeJarPath = "[PATH_TO_YOUR_FORGE_INSTALLER]";
-var forgeVersion = ForgeInstallerFactory.GetForgeArtifactVersion(mcVersion, "[FORGE_VERSION]");
+var forgeVersion = ForgeInstallerFactory.GetForgeArtifactVersion(mcVersion，"[FORGE_VERSION]");
 
-var isLegacy = ForgeInstallerFactory.IsLegacyForgeInstaller(forgeJarPath, forgeVersion);  // [!code focus]
+var isLegacy = ForgeInstallerFactory.IsLegacyForgeInstaller(forgeJarPath，forgeVersion);  // [!code focus]
 ```
 
 在上述代码块中，请将这些参数按照您的实际情况替换：
@@ -68,7 +68,7 @@ IForgeInstaller forgeInstaller =
                 JavaExecutablePath = "[PATH_TO_YOUR_JAVA_RUNTIME]",
                 RootPath = "[GAME_ROOT_PATH]",
                 VersionLocator = [VERSION_LOCATOR_INST],
-                DownloadUrlRoot = “[LIBRARIES_URL_ROOT]”,
+                DownloadUrlRoot = "[LIBRARIES_URL_ROOT]",
                 CustomId = "[CUSTOM_INSTALL_GAME_ID]",
                 MineCraftVersion = "[MC_VERSION]",
                 MineCraftVersionId = "[ACTUAL_MC_GAME_ID]",
@@ -91,7 +91,7 @@ IForgeInstaller forgeInstaller =
 因此，您可以很方便的使用一个三元运算符来选择性的初始化对应的安装器：
 
 ```c#{4-100}
-var isLegacy = ForgeInstallerFactory.IsLegacyForgeInstaller(forgeJarPath, forgeVersion);
+var isLegacy = ForgeInstallerFactory.IsLegacyForgeInstaller(forgeJarPath，forgeVersion);
 
 IForgeInstaller forgeInstaller = isLegacy
             ? new LegacyForgeInstaller
@@ -108,7 +108,7 @@ IForgeInstaller forgeInstaller = isLegacy
                 JavaExecutablePath = "[PATH_TO_YOUR_JAVA_RUNTIME]",
                 RootPath = "[GAME_ROOT_PATH]",
                 VersionLocator = [VERSION_LOCATOR_INST],
-                DownloadUrlRoot = “[LIBRARIES_URL_ROOT]”,
+                DownloadUrlRoot = "[LIBRARIES_URL_ROOT]",
                 CustomId = "[CUSTOM_INSTALL_GAME_ID]",
                 MineCraftVersion = "[MC_VERSION]",
                 MineCraftVersionId = "[ACTUAL_MC_GAME_ID]",
@@ -140,9 +140,9 @@ forgeInstaller.InstallForge();
 您只需要简单地在 **开始安装之前** 注册下面的事件：
 
 ```c#
-((InstallerBase)forgeInstaller).StageChangedEventDelegate += (_, args) =>
+((InstallerBase)forgeInstaller).StageChangedEventDelegate += (_,  args) =>
 {
-    ReportProgress(args.Progress * 100, args.CurrentStage);
+    ReportProgress(args.Progress * 100,  args.CurrentStage);
 };
 ```
 

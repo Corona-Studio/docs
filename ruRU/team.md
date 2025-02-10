@@ -59,7 +59,7 @@ const members = [
       我们的团队
     </template>
     <template #lead>
-        Corona Studio（日冕工作室）是以 Minecraft 游戏第三方服务为业务核心的、由专业人士和爱好者组成的团队，前身是 CMFL 启动器开发组，
+        Corona Studio（日冕工作室）是以 Minecraft 游戏第三方服务为业务核心的、由专业人士和爱好者组成的团队, 前身是 CMFL 启动器开发组, 
     </template>
   </VPTeamPageTitle>
   <VPTeamMembers

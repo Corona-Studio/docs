@@ -32,7 +32,7 @@ PackageReference 是微软为现代 .NET 项目推出的一种新的软件包管
 ```
 
 ::: tip
-其中，**1.40.0** 为 ProjBobcat 的版本号，您可以将其替换为其他的版本号，
+其中，**1.140.0** 为 ProjBobcat 的版本号，您可以将其替换为其他的版本号，
 所有的发行版本都可以在 [ProjBobcat - Nuget](https://www.nuget.org/packages/ProjBobcat#versions-body-tab) 中查看。
 :::
 
@@ -89,6 +89,16 @@ using System.Net;
 ServicePointManager.DefaultConnectionLimit = 512;
 ```
 
+### 注册并初始化基础服务
+
+接下来，您需要在入口点添加这些代码来完成 ProjBobcat 服务的初始化：
+
+#### 初始化服务容器
+
+```c#
+ServiceHelper.Init();
+```
+
 #### 初始化 CurseForge API 服务（可选）
 
 该服务为可选项目，如果您没有使用任何 CurseForge 相关服务，您可以忽略这个步骤。
@@ -142,7 +152,7 @@ MicrosoftAuthenticator.Configure(new MicrosoftAuthenticatorAPISettings
 {
     ClientId = "[YOUR CLIENT ID]",
     TenentId = "consumers",
-    Scopes = new[] { "XboxLive.signin", "offline_access", "openid", "profile", "email" }
+    Scopes = new[] { "XboxLive.signin",  "offline_access",  "openid",  "profile",  "email" }
 });
 ```
 

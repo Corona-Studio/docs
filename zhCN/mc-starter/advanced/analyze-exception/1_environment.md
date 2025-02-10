@@ -103,7 +103,7 @@ jdk是开发工具，jre则是运行环境，而开发工具自然包含了运�
 上述为游戏前检查Java环境，而如果Java环境存在问题导致崩溃，在崩溃日志中（游戏所在文件夹的logs里，或使用LauncherX右键点击游戏然后选择【打开-日志】，选择latest.log）你或许会发现以下内容：
 
 ```
-The requested compatibility level **JAVA_21 could not be set**. Level is not supported by the active JRE or ASM version (**Java 17.0**, ASM 9.6 (ASM10_EXPERIMENTAL))
+The requested compatibility level **JAVA_21 could not be set**。Level is not supported by the active JRE or ASM version (**Java 17.0**，ASM 9.6 (ASM10_EXPERIMENTAL))
 ```
 
 【 这是直接告诉你该用Java21而你用的是Java17 】
@@ -111,7 +111,7 @@ The requested compatibility level **JAVA_21 could not be set**. Level is not sup
 
 
 ``` 
-Error loading class: XXXXX (java.lang.IllegalArgumentException: **Class file major version 65** is not supported by active ASM (version 9.0 **supports class version 61**), reading XXXXX)
+Error loading class: XXXXX (java.lang.IllegalArgumentException: **Class file major version 65** is not supported by active ASM (version 9.0 **supports class version 61**)，reading XXXXX)
 ```
 
 【 这是由于ASM无法读取高版本Java导致的问题，需要切换到低版本Java 】
@@ -168,13 +168,13 @@ LauncherX等现代的（反正，就是这几年内更新过的（包括Minecraf
 
 **//References  -  参考文献**
 
-(1)  社区团队  ，Minecraft wiki  ,  https://zh.minecraft.wiki/w/Java%E7%89%88
+(1)  社区团队  ，Minecraft wiki  ， https://zh.minecraft.wiki/w/Java%E7%89%88
 
-(2)  lzhfdxhxm  ,  CSDN  ,  JDK version和class file version(Class编译版本号)对应关系-CSDN博客
+(2)  lzhfdxhxm  ， CSDN  ， JDK version和class file version(Class编译版本号)对应关系-CSDN博客
 
-(3)  @杉狐,  频道帖子   ， https://pd.qq.com/s/cqw2bzlul?shareSource=5
+(3)  @杉狐， 频道帖子   ， https://pd.qq.com/s/cqw2bzlul?shareSource=5
 
-(4)   @SGfannr  ,  频道帖子  ，https://pd.qq.com/s/47d19raiu?shareSource=5
+(4)   @SGfannr  ， 频道帖子  ，https://pd.qq.com/s/47d19raiu?shareSource=5
 
 (5) Iris Shaders 、Sodium开发团队  ，  MC百科  ， github  Iris Shaders - MC百科|最大的Minecraft中文MOD百科 (mcmod.cn)
 

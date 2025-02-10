@@ -8,7 +8,7 @@
 
 ```c#
 var launcherAccountParser
-    = new DefaultLauncherAccountParser(rootPath, clientToken)
+    = new DefaultLauncherAccountParser(rootPath，clientToken)
 ```
 
 其中，**rootPath** 为核心所在的根目录（即 .minecraft 文件夹所在的目录）。

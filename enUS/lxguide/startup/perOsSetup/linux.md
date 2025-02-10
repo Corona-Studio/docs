@@ -13,7 +13,7 @@ Therefore, you need to manually download and install the JRE runtime before usin
 
 ### Download and install the JRE runtime
 
-Here we're gonna use [Azul JDK](https://www.azul.com/downloads/#zulu) to demonstrate JRE installation process。
+Here we're gonna use [Azul JDK](https://www.azul.com/downloads/#zulu) to demonstrate JRE installation process. 
 
 At [Azul JDK Website](https://www.azul.com/downloads/#zulu) , scroll down a little to see the JDK version filter box:
 
