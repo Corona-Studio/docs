@@ -9,6 +9,22 @@
     --vp-button-brand-border: #c7a500;
     --vp-button-brand-hover-border: #c7a500;
     --vp-button-brand-active-border: #c7a500;
+
+    --vp-code-font-size: .99rem
+}
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'ms-segoe-fluent' !important;
+    transition-property: background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+    transition-property: background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-property: background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+    transition-timing-function: cubic-bezier(0.38, 0, 0.19, 1) ;
+    transition-duration: 100ms  ;
+}
+
+@font-face {
+    font-family: ms-segoe-fluent;
+    src: url("/segoe.ttf");
 }
 
 .content-body{
@@ -91,19 +107,7 @@ blockquote:not(strong>blockquote):hover{
     opacity: 1
 }
 
-*{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'ms-segoe-fluent' !important;
-    transition-property: background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-    transition-property: background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-    transition-property: background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-    transition-timing-function: cubic-bezier(0.38, 0, 0.19, 1) ;
-    transition-duration: 100ms  ;
-}
 
-@font-face {
-    font-family: ms-segoe-fluent;
-    src: url("/segoe.ttf");
-}
 
 .bitter{
     background-color: rgb(251 192 45 / 10.5%) !important;

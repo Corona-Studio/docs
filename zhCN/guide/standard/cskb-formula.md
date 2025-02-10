@@ -4,6 +4,8 @@
 
 请尽可能跟随统一的全站风格！ 
 
+相关阅读：[Markdown Extensions | VitePress](https://vitepress.dev/guide/markdown)
+
 [[toc]]
 
 ## 版权声明

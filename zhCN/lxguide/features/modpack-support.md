@@ -116,7 +116,7 @@ LauncherX目前对较为主流的整合包格式做出了导出适配.
 
 :::tip
 
-Modrinth格式的整合包导出后后缀名为 `.mrpack`
+Modrinth格式的整合包导出后后缀名为 `.mrpack`。
 
 :::
 
@@ -138,7 +138,7 @@ LauncherX支持将具体的游戏打包为Modrinth格式. 这是由mod发布平�
 
 :::tip
 
-Curseforge格式的整合包导出后后缀名为 `.zip`
+Curseforge格式的整合包导出后后缀名为 `.zip`。
 
 :::
 
@@ -153,6 +153,89 @@ LauncherX同样支持将整合包导出为Curseforge格式. Curseforge格式是�
 - 选择需要保留的项目. 您可以仅将mod打包, 或者包含您的材质包等.
 - 选择保存路径
 - 在点击确认后, 打包导出任务将在后台进行. 导出完成后您应该会收到通知, 如果导出成功, 您将可在您之前选择的保存路径中找到对应导出的整合包文件.
+
+### 目录规则
+
+目录规则是LauncherX自有的一套规则，旨在将游戏目录中需要的文件夹包括进整合包，或阻止绝对不需要的文件夹被打包进整合包。
+
+目录规则的文件名是`FOLDER_RULES`，你可以右键点击游戏列表中的任意游戏条目然后点击 “生成导出配置” 来生成新的模板配置文件或覆盖已有的配置文件，或点击 “编辑导出配置” 来让操作系统打开现有的配置文件（如果有）。
+
+规则配置文件的格式如下：
+
+`````yaml{5-7}
+# FOLDER_RULES
+# 这个文件是用于控制 LauncherX 导出整合包时，哪些文件夹会被包含在内的。
+# 如果想包含某个文件夹，则将其前面加上 + 号。
+# 如果不想包含某个文件夹，则将其前面加上 - 号。
+# '#' 开头的行会被视为注释。 
+# 任何不是以 '+' 或 '-' 开头的条目都不会被视为有效的规则 
+# 请在 '+'/'-' 后紧跟文件夹的名字，不要使用空格分割 
+# 示例：
+
++tacz # 将包含tacz // [!code ++]
+-schematics # 排除掉默认规则会包含的schematics // [!code --]
+
+`````
+
+::: details 默认规则
+
+下面的规则是默认规则，除非你覆盖了它们，否则它们会被应用。
+
+-   packmenu
+
+-   craftpresence
+
+-   patchouli_books
+
+-   armourers_workshop
+
+-   structures
+
+-   tacz
+
+-   modernfix
+
+-   scripts
+
+-   potionblender
+
+-   menu
+
+-   fancymenu_setups
+
+-   fancymenu_data
+
+-   global_packs
+
+-   oresources
+
+-   configureddefaults
+
+-   fontfiles
+
+- worldshape
+
+- resources
+
+- kubejs
+
+-   tlm_custom_pack
+
+-   openloader
+
+- CustomSkinLoader
+
+-   journeymap
+
+-   minemenu
+
+-   paintings
+
+-   schematics
+
+:::
+
+导出为任意包均可通过选中【使用FOLDER_RULES规则】来启用自定义的规则，除非文件夹本身是空的或不存在，否则导出的整合包将包含需要包含的文件夹。
 
 ## 完整包使用方法
 
@@ -181,7 +264,7 @@ LauncherX同样支持将整合包导出为Curseforge格式. Curseforge格式是�
 
 **但** 如果您是macOS或Linux用户并且整合包内存在 “LauncherX的配置文件（LauncherX.json）和LauncherX文件夹” , 那么您需要将这两个项目保持同级地复制到指定的目录下：
 
-`````
+`````js
 macOS = "~/documents/Library/Application Support/LauncherX/"       
 // 两个项目均存放在这个路径中 
 // (~是您用户文件夹的起始点. 一般会在Finder中显示一个小房子的图标；
@@ -199,7 +282,7 @@ Linux = "~/documents/LauncherX/"
 
 ​	~将它复制或移动到指定的目录下：
 
-``````
+``````js
 macOS: "~/documents/Library/Application Support/"      
 // .minecraft/ 存放在这个路径下 
 // (~是您用户文件夹的起始点. 一般会在Finder中显示一个小房子的图标；
