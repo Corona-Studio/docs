@@ -43,6 +43,8 @@ LauncherX是一个以社区驱动为主的启动器，在启动核心、文档�
 
 目前只有老腊肉有修改权限状态的能力。他可能与在中国大陆的各位存在时差。
 
+:::
+
 ::: danger 谨防诈骗！
 
 <b class="red bold">&#xe7ba;</b> 我们主动联系您开通权限时不会向您索取任何转账或验证码等信息！谨防诈骗！目前仅有**老腊肉**和**法棍**可能会主动联系用户开通权限，如果遇到信不过的人以给予权限为由和您联系，截屏并前往 <a href="javascript:window.navigator.clipboard.writeText('589798569');alert('LauncherX交流群1的群号 589798569 已复制');">LauncherX交流群</a> 询问一下总是没错的。谨防诈骗！（相关阅读：[通用隐私政策和最终用户许可协议#免责声明 | 日冕知识库](/zhCN/geula.html#_3-免责声明) # [指路官方 | 日冕知识库](/zhCN/guide/contact.html) # [加入我们吧! | 日冕知识库](/zhCN/guide/joinus.html) # [我们的团队 | 日冕知识库](/zhCN/guide/team.html)）
