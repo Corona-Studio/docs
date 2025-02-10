@@ -148,7 +148,32 @@ blockquote{
     padding: 0;
 }
 .exlinks{
-    display:grid;grid-template-columns: repeat(1, minmax(0, 1fr)); gap:.5rem; 
+    display:grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr)); 
+    gap:.5rem; 
+}
+
+.exlinks.two-one{
+    display:grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr)); 
+    gap:.5rem; 
+}
+.card-like{
+    padding: 3px;
+}
+.smaller{
+    font-size: 1em;
+    line-height: normal !important;
+}
+.card-like>b{
+    font-weight: bold;
+    font-size: x-large !important;
+    display: block;
+    margin-top: .3rem;
+}
+.card-like>p{
+    margin-top: .69rem !important;
+    margin-bottom: .3rem !important;
 }
 blockquote:hover::before{
     position: absolute;
@@ -172,11 +197,21 @@ blockquote:hover::before{
     .exlinks{
         display:grid;grid-template-columns: repeat(1, minmax(0, 1fr)); gap:.69rem; 
     }
+    .exlinks.two-one{
+        display:grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr)); 
+        gap:.5rem; 
+    }
 }
 @media (min-width: 640px) {
 
     .exlinks{
         display:grid;grid-template-columns: repeat(2, minmax(0, 1fr)); gap:.69rem; 
+    }
+    .exlinks.two-one{
+        display:grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr)); 
+        gap:.5rem; 
     }
 
 }
@@ -184,6 +219,11 @@ blockquote:hover::before{
 
     .exlinks{
         display:grid;grid-template-columns: repeat(3, minmax(0, 1fr)); gap:.69rem; 
+    }
+    .exlinks.two-one{
+        display:grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr)); 
+        gap:.5rem; 
     }
     blockquote:hover::before{
         transition-property: all !important;
