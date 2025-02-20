@@ -170,10 +170,12 @@ blockquote{
     font-size: x-large !important;
     display: block;
     margin-top: .3rem;
+    text-decoration: none !important;
 }
 .card-like>p{
     margin-top: .69rem !important;
     margin-bottom: .3rem !important;
+    text-decoration: none !important;
 }
 blockquote:hover::before{
     position: absolute;
@@ -236,8 +238,8 @@ blockquote:hover::before{
     }
 }
 .container.f {
-margin: 0 auto;
-max-width: 1152px;
+    margin: 0 auto;
+    max-width: 1152px;
 }
 
 .exlink{
@@ -319,6 +321,11 @@ p.details, */
 p.indent
 {
     text-indent: 4ch !important;
+    word-break: break-all !important;
+}
+
+p.indent>*{
+    text-indent: 0% !important;
 }
 
 .hidden{

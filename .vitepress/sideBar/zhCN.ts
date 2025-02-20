@@ -29,6 +29,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                 link: '/zhCN/guide/general/',
                 collapsed: true,
                 items: [
+                    {text: "给我们打赏赞助吧!", link: '/zhCN/guide/general/donate'},
                     {text: "提交翻译贡献", link: '/zhCN/guide/general/contribute-to-i18n'},
                     {text: "辨识计算机环境", link: '/zhCN/guide/general/check-system'},
                 ]

@@ -37,10 +37,10 @@
 
 ![azul-website](/img/lxguide/perOsSetup/azul-website.png)
 
-1。在 **Operating System** 处选择 Windows/macOS/Linux(请自行选择子版本/发行版)，
-2。在 **Architecture** 处选择 **x86 64-bit或ARM 64-bit** (前者是一般的amd64/x86-64架构，后者是ARM架构。) 
-3。在**Java Package**选择「JRE」或「JDK」(如果有需要的话，可以选择带有FX字样的体积更大的选项。它附带JavaFX支持)
-4。在**Java Version**选择您需要的版本(Java17/Java8)。如果右侧的**Include Older Versions**开关没有开启，这里则不会显示用于1.17的Java16，或其他非LTS版本.
+1. 在 **Operating System** 处选择 Windows/macOS/Linux(请自行选择子版本/发行版)，
+2. 在 **Architecture** 处选择 **x86 64-bit或ARM 64-bit** (前者是一般的amd64/x86-64架构，后者是ARM架构。) 
+3. 在**Java Package**选择「JRE」或「JDK」(如果有需要的话，可以选择带有FX字样的体积更大的选项。它附带JavaFX支持)
+4. 在**Java Version**选择您需要的版本(Java17/Java8)。如果右侧的**Include Older Versions**开关没有开启，这里则不会显示用于1.17的Java16，或其他非LTS版本.
 
 :::tip
 
@@ -65,9 +65,9 @@
 
 :::
 
-1。在LauncherX的【设置-全局游戏设置-Java虚拟机设定】中找到【资源下载-下载Java】按钮，点击它。
-2。在弹出窗口中选择你要下载的Java，选中后，弹窗会提示你这个Java适合哪些版本的游戏。
-3。点击【添加】，稍等片刻直到下载完成。
+1. 在LauncherX的【设置-全局游戏设置-Java虚拟机设定】中找到【资源下载-下载Java】按钮，点击它。
+2. 在弹出窗口中选择你要下载的Java，选中后，弹窗会提示你这个Java适合哪些版本的游戏。
+3. 点击【添加】，稍等片刻直到下载完成。
 
 - 正常情况下，下载完成后的Java会被自动发现并添加到LauncherX的Java列表中并可供选择。如果不知道需要哪个版本的Java，可以试着启动游戏，如果确实缺失对应版本的Java，LauncherX会发出警告，在警告弹窗中可以看见需要的Java版本。
 
