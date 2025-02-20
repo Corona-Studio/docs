@@ -238,8 +238,8 @@ blockquote:hover::before{
     }
 }
 .container.f {
-margin: 0 auto;
-max-width: 1152px;
+    margin: 0 auto;
+    max-width: 1152px;
 }
 
 .exlink{
@@ -321,6 +321,11 @@ p.details, */
 p.indent
 {
     text-indent: 4ch !important;
+    word-break: break-all !important;
+}
+
+p.indent>*{
+    text-indent: 0% !important;
 }
 
 .hidden{

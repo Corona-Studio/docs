@@ -19,11 +19,11 @@
 
 接下来以Manjaro KDE Plasma Wayland为基础示范如何让Linux上的LauncherX看起来和其他平台（Windows，macOS）一样。
 
-1。启动LauncherX，前往`设置 -> 外观 -> 基础设定`，找到`主界面按钮组可见性` 或 `窗口按钮组可见性` 设置项；
-2。【自动】将根据系统环境来判断是否应该显示按钮组。这个功能较为实验性，您可以考虑将其设置为“可见”：<br>![这项设置的截图](/img/lxguide/killTitleBarLinux/an-optional-manual-operation.png)
-3。如果此时LauncherX存在系统给与的标题栏，请**右键**点击它，然后点击“配置特殊应用程序设置”：<br>![这项设置的截图](/img/lxguide/killTitleBarLinux/be-sure-to-config.png)不要点击“无标题栏和边框”，因为这个设置在重启后就不会再生效了。
-4。按照下图进行配置：<br>![这项设置的截图](/img/lxguide/killTitleBarLinux/config-forever.png)“外观和修正” 下方的 “无标题栏和边框” 需要先点击下方的 “添加属性” 来添加，然后如图配置。
-5。点击底部的 “应用” 和 “确定”，如果需要的话，请重启LauncherX。
+1. 启动LauncherX，前往`设置 -> 外观 -> 基础设定`，找到`主界面按钮组可见性` 或 `窗口按钮组可见性` 设置项；
+2. 【自动】将根据系统环境来判断是否应该显示按钮组。这个功能较为实验性，您可以考虑将其设置为“可见”：<br>![这项设置的截图](/img/lxguide/killTitleBarLinux/an-optional-manual-operation.png)
+3. 如果此时LauncherX存在系统给与的标题栏，请**右键**点击它，然后点击“配置特殊应用程序设置”：<br>![这项设置的截图](/img/lxguide/killTitleBarLinux/be-sure-to-config.png)不要点击“无标题栏和边框”，因为这个设置在重启后就不会再生效了。
+4. 按照下图进行配置：<br>![这项设置的截图](/img/lxguide/killTitleBarLinux/config-forever.png)“外观和修正” 下方的 “无标题栏和边框” 需要先点击下方的 “添加属性” 来添加，然后如图配置。
+5. 点击底部的 “应用” 和 “确定”，如果需要的话，请重启LauncherX。
 
 
 

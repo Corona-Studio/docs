@@ -53,7 +53,7 @@ echo $XDG_SESSION_TYPE
 
 如果您不知道如何切换，可以按照这个格式：
 
-```text
+```txt
 <发行版名称> <系统版本号> 安装wayland
 <发行版名称> <系统版本号> 启用wayland
 ```

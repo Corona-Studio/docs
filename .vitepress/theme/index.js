@@ -36,8 +36,9 @@ export default {
 
         let install = function(){
             deployObserver(document.getElementById("app"), () => {
-                let usingFixer = document.querySelector("code");
-                if(usingFixer == null || (usingFixer.innerHTML.trim() != "@useFixer" && usingFixer.innerHTML.trim() != "@useEx" && usingFixer.innerHTML.trim() != "@useExtension") ) return;
+                let usingFixer = document.querySelector("code"),
+                    _trimmed = usingFixer?.innerHTML.trim() || null;
+                if(usingFixer == null || (_trimmed != "@useFixer" && _trimmed != "@useEx" && _trimmed != "@useExtension") ) return;
                 
                 (usingFixer.parentElement.tagName.toLowerCase() == 'p' ? usingFixer.parentElement.classList.add("hidden") : usingFixer.classList.add("hidden"));
                 let analyse = document.querySelectorAll("p>code");

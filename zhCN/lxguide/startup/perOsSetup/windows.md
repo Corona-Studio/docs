@@ -16,11 +16,11 @@
 
 请将其关闭，并且执行以下步骤（或者允许，跳过后续步骤并再次尝试启动 LauncherX）：
 
-1。右键单击您的 LauncherX 可执行文件
-2。点击`“属性”`
-3。找到如图中标记出的勾选框并将其勾选: （图片中借用`Everything`刚从网上下载时的“属性”窗口为示范。）![checkbox.png](./../../../../public/img/lxguide/perOsSetup/checkbox.png)
-4。点击`“应用”`，然后关闭`“属性”`窗口。
-5。尝试启动 LauncherX 。如果仍然无法工作，请[与我们取得联系](/zhCN/guide/contact)
+1. 右键单击您的 LauncherX 可执行文件
+2. 点击`“属性”`
+3. 找到如图中标记出的勾选框并将其勾选: （图片中借用`Everything`刚从网上下载时的“属性”窗口为示范。）![checkbox.png](./../../../../public/img/lxguide/perOsSetup/checkbox.png)
+4. 点击`“应用”`，然后关闭`“属性”`窗口。
+5. 尝试启动 LauncherX 。如果仍然无法工作，请[与我们取得联系](/zhCN/guide/contact)
 
 
 

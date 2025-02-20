@@ -39,11 +39,11 @@
 
 
 
-### 1。依据游玩设备
+### 1) 依据游玩设备
 
 Minecraft可以运行在在很多不同的平台上。
 
-#### a。电脑
+#### a) 电脑
 
 ::: info 可用的游戏
 
@@ -53,7 +53,7 @@ Minecraft Java Edition (Java版)，Minecraft Bedrock Edition (基岩版)，Minec
 
 在电脑上可以游玩的Minecraft有很多种。如果“只是想玩玩”，那么可以自由从Java版和基岩版之中选择。我们强烈建议从微软官方购买游戏以游玩。
 
-#### b。手机
+#### b) 手机
 
 ::: info 可用的游戏
 
@@ -70,7 +70,7 @@ Minecraft Java Edition (Java版)，Minecraft Bedrock Edition (基岩版，含教
 
 有关于上述启动器的使用方法，你可以在Bilibili、MineBBS等地搜索到很多教程，以及软件相关的下载地址。以下是一些推荐的教程:
 
-#### c。游戏机 (XBox之类的设备)
+#### c) 游戏机 (XBox之类的设备)
 
 ::: info 可用的游戏
 
@@ -78,31 +78,31 @@ Minecraft Legends，Minecraft Bedrock Edition (基岩版)，Minecraft Dungeons
 
 :::
 
-### 2。依据想要玩的内容
+### 2) 依据想要玩的内容
 
 一般来说，慕名前来游玩Minecraft的玩家一般都会选择定义为 **「沙盒游戏」** 的Minecraft，也就是 **Java版(Java Edition)** 或 **基岩版(Bedrock Edition)** 。 如何在这两种版本中做出选择，已经在上一段中介绍过了。
 
 但是如果你想尝试不太一样的…
 
-#### a。策略动作类Minecraft: Legends
+#### a) 策略动作类Minecraft: Legends
 
 - 这个游戏具备多人玩法.
 
 ---
 
-#### b。肉鸽类Minecraft: Dungeons
+#### b) 肉鸽类Minecraft: Dungeons
 
 - 这个游戏具备多人玩法.
 
 ---
 
-#### c。AR（增强现实）Minecraft：Earth
+#### c) AR（增强现实）Minecraft：Earth
 
 - 这个游戏可以让你在 “自己家里建造”：通过手机摄像头和增强现实计算来在当前摄像头里的 “现实环境” 中 “放置方块”。
 
 ----
 
-#### d。剧情冒险Minecraft: 故事模式
+#### d) 剧情冒险Minecraft: 故事模式
 
 - 游戏的玩法是玩家可以收集物品，解决谜题，并通过对话树与非玩家角色进行对话，以了解故事并确定下一步要做什么.
 
@@ -138,7 +138,8 @@ Minecraft Legends，Minecraft Bedrock Edition (基岩版)，Minecraft Dungeons
 
 ###### 基本步骤
 
-1。准备环境
+准备环境
+
    - 确认你的游玩设备。本文只介绍在电脑上使用LauncherX游玩的步骤。
    
    - 前往[这里](https://corona.studio/lx)下载最新版LauncherX。下载LauncherX的教程在这里：[开始 | 日冕知识库](/zhCN/lxguide/startup/)

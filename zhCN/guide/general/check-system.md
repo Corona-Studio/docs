@@ -43,12 +43,12 @@
 
 ### 其次，依据大致的系统版本确认详细信息
 
-1。较老的Windows （Vista/7/8/8.1/早期10）
+1) 较老的Windows （Vista/7/8/8.1/早期10）
    - 在桌面的空白区域右键点击鼠标，选择【属性】
    - 将会弹出一个来自控制面板的窗口。在这个窗口里可以查看系统的关键信息。
    - 找寻关键词，然后参考文末的[一般词对照表](#一般词对照表)来确认你的电脑使用的系统具体版本和CPU架构。
    
-2。较新的Windows（红石10/11）
+2) 较新的Windows（红石10/11）
    - 打开**系统设置**（或使用组合键`WIN` + `I`）
    - 搜索或找到：
      [系统 -> **系统信息**] 或 [系统 -> **关于**]
@@ -68,17 +68,17 @@ Linux用户一般都知道自己的操作系统版本和类型以及处理器架
 
 当然，如果你喜欢使用终端，除了使用下文**通用的方法**，还可以：
 
-1。**打开终端**
+1) **打开终端**
 
    - 按下 **Command + 空格键**，输入 **“终端”**，然后按回车键打开终端。
 
-2。**输入以下命令**
+2) **输入以下命令**
 
    ```bash
    sw_vers
    ```
 
-3。**查看输出结果**
+3) **查看输出结果**
 
    - 终端会显示类似以下的信息：
 
@@ -90,7 +90,7 @@ Linux用户一般都知道自己的操作系统版本和类型以及处理器架
 
    - 其中，`ProductVersion` 表示 macOS 的版本号。
 
-4。如果想要查看**CPU架构**：
+4) 如果想要查看**CPU架构**：
 
    - 在终端中输入以下命令：
 
@@ -117,12 +117,12 @@ Linux用户一般都知道自己的操作系统版本和类型以及处理器架
 在 Windows 系统上，可以通过在Powershell中可运行的包管理器 `scoop` 或者 `choco` 来安装 `neofetch`。
 
 ##### 使用 Scoop：
-1。确保已安装 Scoop（未安装请参考 [Scoop 的安装指引](https://scoop.sh/) Quickstart片段）。
-2。打开 PowerShell 或命令提示符，运行：
+1. 确保已安装 Scoop（未安装请参考 [Scoop 的安装指引](https://scoop.sh/) Quickstart片段）。
+2. 打开 PowerShell 或命令提示符，运行：
    ```powershell
    scoop install neofetch
    ```
-3。安装完成后，运行 `neofetch`。
+3. 安装完成后，运行 `neofetch`。
 
 ##### 使用 Chocolatey：
 
@@ -132,12 +132,12 @@ Linux用户一般都知道自己的操作系统版本和类型以及处理器架
 
 :::
 
-1。确保已安装 Chocolatey（未安装请参考 [Chocolatey 的安装指引](https://chocolatey.org/install#install-step2) ，运行第二步中可以复制并在Powershell中执行的命令）。
-2。打开 PowerShell 或命令提示符（以管理员身份运行），执行：
+1. 确保已安装 Chocolatey（未安装请参考 [Chocolatey 的安装指引](https://chocolatey.org/install#install-step2) ，运行第二步中可以复制并在Powershell中执行的命令）。
+2. 打开 PowerShell 或命令提示符（以管理员身份运行），执行：
    ```powershell
    choco install winfetch
    ```
-3。安装完成后，运行 `winfetch`。
+3. 安装完成后，运行 `winfetch`。
 
 ---
 
@@ -145,12 +145,12 @@ Linux用户一般都知道自己的操作系统版本和类型以及处理器架
 在 macOS 上，可以通过 Homebrew 包管理器安装 `neofetch`。
 
 ##### 使用 Homebrew：
-1。确保已安装 Homebrew（未安装请参考 [Homebrew安装指引](https://docs.brew.sh/Installation)）。
-2。打开终端，执行以下命令安装 `neofetch`：
+1. 确保已安装 Homebrew（未安装请参考 [Homebrew安装指引](https://docs.brew.sh/Installation)）。
+2. 打开终端，执行以下命令安装 `neofetch`：
    ```bash
    brew install neofetch
    ```
-3。安装完成后，运行 `neofetch`。
+3. 安装完成后，运行 `neofetch`。
 
 ---
 
@@ -158,26 +158,26 @@ Linux用户一般都知道自己的操作系统版本和类型以及处理器架
 在 Linux 系统上，`neofetch` 通常可以通过系统的包管理器直接安装。以下是基于不同包管理器的安装步骤：
 
 ##### **使用 pacman（Arch Linux 及其衍生发行版，如 Manjaro）：**
-1。打开终端，运行以下命令：
+1. 打开终端，运行以下命令：
    ```bash
    sudo pacman -S neofetch
    ```
-2。安装完成后，运行 `neofetch`。
+2. 安装完成后，运行 `neofetch`。
 
 ##### **使用 apt（Debian、Ubuntu 及其衍生发行版，如 Linux Mint）：**
-1。打开终端，运行以下命令：
+1. 打开终端，运行以下命令：
    ```bash
    sudo apt update
    sudo apt install neofetch
    ```
-2。安装完成后，运行 `neofetch`。
+2. 安装完成后，运行 `neofetch`。
 
 ##### **使用 dnf（Fedora 及其衍生发行版，如 RHEL 和 CentOS Stream）：**
-1。打开终端，运行以下命令：
+1. 打开终端，运行以下命令：
    ```bash
    sudo dnf install neofetch
    ```
-2。安装完成后，运行 `neofetch`。
+2. 安装完成后，运行 `neofetch`。
 
 
 
