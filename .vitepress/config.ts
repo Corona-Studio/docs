@@ -8,6 +8,7 @@ import { MarkdownOptions } from 'vitepress';
 // import mdOpts from './mdOpts.mts';
 
 export default defineConfig({
+    lastUpdated: true,
 
     //define FavIcon
     head:[

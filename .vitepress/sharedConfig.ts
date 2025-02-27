@@ -10,7 +10,7 @@ export const sharedConfig = defineConfig({
     markdown: {
         // options for @mdit-vue/plugin-toc
         // https://github.com/mdit-vue/mdit-vue/tree/main/packages/plugin-toc#options
-        toc: { level: [1, 2, 3] },
+        toc: { level: [1, 2, 3, 4] },
         lineNumbers: true,
     },
 
@@ -24,6 +24,13 @@ export const sharedConfig = defineConfig({
         socialLinks: [
             { icon: 'github', link: 'https://github.com/Corona-Studio' }
         ],
+
+        outline: {
+            level: [2, 3], // 控制显示的标题级别范围，例如 h2 到 h3
+            label: 'On This Page' // 可选，修改“On This Page”的标题
+        },
+
+        // aside:
 
         search: {
             provider: 'local'

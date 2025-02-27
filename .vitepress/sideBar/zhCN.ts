@@ -253,6 +253,22 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
         items: [
             {text: "简介", link: "/zhCN/CMFS/"},
             {
+                text: '附属服务器',
+                link: '/zhCN/CMFS/servers/',
+                collapsed: true,
+                items: [
+                    {
+                        text: 'SparkPixel',
+                        link: '/zhCN/CMFS/servers/SparkPixel/',
+                        collapsed: true,
+                        items: [
+                            {text: "服务器介绍", link: "/zhCN/CMFS/servers/SparkPixel/index"},
+                            {text: "Sparkpixel (CMFS-Sparkle) 系列服务用户协议", link: "/zhCN/CMFS/servers/SparkPixel/eula"},
+                        ]
+                    }
+                ]
+            },
+            {
                 text: '帮助!',
                 link: '/zhCN/CMFS/help/',
                 collapsed: true,
