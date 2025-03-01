@@ -23,4 +23,6 @@
 
 要素：`#城建` `#创造` `#MOD` `#交通`&nbsp;
 
+运营团队：[SparkPixel Crew](/zhCN/CMFS/servers/SparkPixel/team)
+
 :::

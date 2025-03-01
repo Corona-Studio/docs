@@ -264,6 +264,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                         items: [
                             {text: "服务器介绍", link: "/zhCN/CMFS/servers/SparkPixel/index"},
                             {text: "Sparkpixel (CMFS-Sparkle) 系列服务用户协议", link: "/zhCN/CMFS/servers/SparkPixel/eula"},
+                            {text: "Sparkpixel 管理团队", link: "/zhCN/CMFS/servers/SparkPixel/team"},
                         ]
                     }
                 ]

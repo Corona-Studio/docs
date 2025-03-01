@@ -32,7 +32,7 @@
 
 ### [CMFS-Sparkle | SparkPixel](/zhCN/CMFS/servers/SparkPixel/)
 
-负责人：清晖岸<br>`#城建` `#创造` `#MOD` `#交通`
+负责人：[SparkPixel 管理团队](/zhCN/CMFS/servers/SparkPixel/team)<br>`#城建` `#创造` `#MOD` `#交通`
 
 半规划任务导向的创造模式现代城市建设服务器
 
