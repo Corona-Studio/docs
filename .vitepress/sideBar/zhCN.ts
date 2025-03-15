@@ -193,7 +193,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                             {text: "全局游戏设置", link: "/zhCN/lxguide/settings/item/global"},
                             {text: "#“外观”", link: "/zhCN/lxguide/settings/item/customize"},
                             {text: "网络", link: "/zhCN/lxguide/settings/item/network"},
-                            {text: "#“多人游戏”", link: "/zhCN/lxguide/settings/item/multi-game"},
+                            {text: "多人游戏", link: "/zhCN/lxguide/settings/item/multi-game"},
                             {text: "#“高级”", link: "/zhCN/lxguide/settings/item/advanced"},
                             {text: "启动器账户", link: "/zhCN/lxguide/settings/item/lx-account"},
                             {text: "其他", link: "/zhCN/lxguide/settings/item/others"},
@@ -225,7 +225,8 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                     {text: "仪表板", link: "/zhCN/lxguide/features/dashboard"},
                     {text: "整合包支持", link: "/zhCN/lxguide/features/modpack-support"},
                     {text: "#实时日志和错误分析器", link: "/zhCN/lxguide/features/log-window"},
-                    // {text: "#P2P联机", link: "/zhCN/lxguide/features/p2p"},
+                    {text: "P2P联机", link: "/zhCN/lxguide/features/p2p"},
+                    {text: "游戏图标", link: "/zhCN/lxguide/features/icon"},
                     {text: "服务器管理", link: "/zhCN/lxguide/features/manage-server"},
                     {text: "#游戏资源管理", link: "/zhCN/lxguide/features/game-assets"},
 
@@ -253,7 +254,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
         items: [
             {text: "简介", link: "/zhCN/CMFS/"},
             {
-                text: '附属服务器',
+                text: '服务器',
                 link: '/zhCN/CMFS/servers/',
                 collapsed: true,
                 items: [
