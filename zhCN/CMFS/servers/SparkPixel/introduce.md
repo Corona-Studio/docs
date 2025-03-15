@@ -60,7 +60,7 @@ date: 2025/02/12
 再注意到注册链接服务器把 https://mcskin.bu7.top/auth/register 改成 http://s.bu7.top:20000/auth/register
 
 如图所示:
-![这是备用链接](/img/备用链接.png )
+![/img]((https://github.com/cdpyx/docs/blob/main/img/CMFS/sparkle/备用链接.png )
 :::
 ## 4.使用正版账号登陆
 :::tip
