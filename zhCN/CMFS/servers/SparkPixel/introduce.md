@@ -15,22 +15,18 @@ date: 2025/02/12
 (2).打开群文件
 (3).打开客户端文件文件夹
 (4).下载Sparkpixel-Main-Server.zip文件
-## 2.下载PCL Ⅱ
-(1)打开 [https://download.hexdragon.top](https://download.hexdragon.top)
+## 2.下载LauncherX
+(1)打开(1)打开 [https://download.hexdragon.top]([https://download.hexdragon.top](https://corona.studio/lx/download))
 
 (2)下载最新文件
 
 (3).解压文件
 
-(4).打开PCL Ⅱ主文件
+(4).安装LauncherX主文件
 
-(5).点击版本选择
+(5).完成配置  
 
-(6).点击导入整合包
-
-(7).选择Sparkpixel-Main-Server.zip
-
-(8)点击确定
+(6).拖入整合包
 
 (9).等待文件下载
 ## 3.使用皮肤站登录服务器
@@ -49,36 +45,21 @@ date: 2025/02/12
 
 然后进入你填写的邮箱对于的服务商，找到我们发的邮件，点击链接，再次键入你的电子邮件
 
-回到PCL Ⅱ 在依次键入刚才的邮件，密码
+在LauncherX 安装时选择第三方登录 在依次键入刚才的邮件，密码，在Authlib地址填写 https://mcskin.bu7.top/api/yggdrasil
 
 点击开始游戏
 :::tip
-如果你打不开皮肤中的话，请点击版本设置-设置
+如果你打不开皮肤中的话，就在Authlib地址填写 http://s.bu7.top:20000/api/yggdrasil
 
-注意到认证服务器把 https://mcskin.bu7.top/api/yggdrasil 改成 http://s.bu7.top:20000/api/yggdrasil
-
-再注意到注册链接服务器把 https://mcskin.bu7.top/auth/register 改成 http://s.bu7.top:20000/auth/register
-
-如图所示:
-![/img]((https://github.com/cdpyx/docs/blob/main/img/CMFS/sparkle/备用链接.png )
 :::
 ## 4.使用正版账号登陆
 :::tip
 如过你没有正版账号可以跳转至 [使用皮肤站账号登陆](#_3-使用皮肤站登录服务器),无需看本栏目
 :::
-打开PCL Ⅱ
+安装时选择
 
-点击版本设置-设置
 
-注意到服务器选项卡，登陆方式选择"仅正版登陆"点击返回
-
-点击登陆
-
-PCLⅡ会自动打开一个网页,在下方输入框输入(输入代码)你剪切板的设备代码,再点击允许访问,使用你支持的方式登陆你含有Minecraft Java版账号的Microsoft 账号，点击接受
-
-再启动游戏
-
-## 5.自动更新
+## 5.自动更新（开发中）
 启动游戏后点击可选模组，选择你需要的模组，点击确定然后等待更新完成
 :::tip
 如果你在启动时出现报错点击忽略
