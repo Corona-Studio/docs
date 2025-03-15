@@ -25,6 +25,13 @@ export const sharedConfig = defineConfig({
             { icon: 'github', link: 'https://github.com/Corona-Studio' }
         ],
 
+        outline: {
+            level: [2, 4], // 控制显示的标题级别范围，例如 h2 到 h3
+            label: 'On This Page' // 可选，修改“On This Page”的标题
+        },
+
+        // aside:
+
         search: {
             provider: 'local'
         }

@@ -21,8 +21,8 @@
 这里列举大力赞助我们的好心人，他们有自己的生意。
 
 <div class="exlinks two-one" style="margin-top: .8rem;">
-    <a class="bitter exlink card-like" target="_blank" href="https://www.mcmc.run/" title="云联小白">
-        <b>云联小白/MCRun</b>
+    <a class="bitter exlink card-like" target="_blank" href="https://idc.mcmc.run/" title="云联小白">
+        <b>云联小白/集云社</b>
         <p class="smaller">专注游戏服务器租赁的服务商【云联小白】，其长期为CMFS提供免费服务器。联系QQ：395426</p>
     </a>
 </div>
