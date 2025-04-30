@@ -22,7 +22,7 @@
 
 **软件要求**
 
-Windows7及更新版本的64位操作系统、Windows 10 或更新版本的 for ARM 64位操作系统<br> *或*    macOS 10.14 及更新版本 (基于Intel芯片或Apple芯片)<br> *或*    带有Xfce/GNOME之类桌面环境的Linux 64位操作系统 (建议内核版本高于5).
+Windows7及更新版本的64位操作系统、Windows 10 或更新版本的 for ARM 64位操作系统<br> *或*    macOS 12 及更新版本 (基于Intel芯片或Apple芯片)<br> *或*    带有Xfce/GNOME之类桌面环境的Linux 64位操作系统 (建议内核版本高于5).
 
 **硬件要求**
 
