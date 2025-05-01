@@ -222,6 +222,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                             { text: "为什么不能同时跑四个游戏", link: "/zhCN/lxguide/features/tricks/set-task-queue" },
                             { text: "指定默认Java并生成完整包", link: "/zhCN/lxguide/features/tricks/default-jre-for-pack" },
                             { text: "Linux去除标题栏", link: "/zhCN/lxguide/settings/special/linux-as-others" },
+                            { text: "环境变量", link: "/zhCN/lxguide/features/tricks/env-vars" },
                             { text: "更多图标下载", link: "/zhCN/lxguide/features/tricks/icons" },
 
                         ]
@@ -234,7 +235,8 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                     { text: "P2P联机", link: "/zhCN/lxguide/features/p2p" },
                     { text: "游戏图标", link: "/zhCN/lxguide/features/icon" },
                     { text: "服务器管理", link: "/zhCN/lxguide/features/manage-server" },
-                    { text: "#游戏资源管理", link: "/zhCN/lxguide/features/game-assets" },
+                    { text: "测试启动", link: "/zhCN/lxguide/features/launch-test" },
+                    // { text: "#游戏资源管理", link: "/zhCN/lxguide/features/game-assets" },
 
                 ]
             },
@@ -270,8 +272,12 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                         collapsed: true,
                         items: [
                             { text: "服务器介绍", link: "/zhCN/CMFS/servers/SparkPixel/index" },
+                            { text: "客户端安装教程", link: "/zhCN/CMFS/servers/SparkPixel/guidance" },
                             { text: "Sparkpixel (CMFS-Sparkle) 系列服务用户协议", link: "/zhCN/CMFS/servers/SparkPixel/eula" },
+                            { text: "Sparkpixel 建筑与审核规范", link: "/zhCN/CMFS/servers/SparkPixel/rules" },
                             { text: "Sparkpixel 管理团队", link: "/zhCN/CMFS/servers/SparkPixel/team" },
+                            { text: "Sparkpixel 违规处理办法", link: "/zhCN/CMFS/servers/SparkPixel/punishments" },
+                            { text: "Sparkpixel 违规处理公告", link: "/zhCN/CMFS/servers/SparkPixel/banlist" },
                         ]
                     }
                 ]
