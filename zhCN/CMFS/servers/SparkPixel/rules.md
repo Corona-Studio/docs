@@ -95,7 +95,7 @@
 
 #### 1\.地铁标准（数据均为以上）
 
-![img](/img/CMFS/sparkle/9.jpg)
+![img](/img/CMFS/sparkle/9.png)
 
 #### 2\.350km以下（含）200km/h以上（含）高速铁路
 

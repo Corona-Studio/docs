@@ -71,4 +71,6 @@ EventVwr，即Event Viewer 事件查看器。它存在于System32目录下，名
 
 ## 游戏日志
 
-敬请期待。与此相关的阅读: [了解更多关于日志窗口的信息](/zhCN/lxguide/features/log-window)
+游戏未按照预期运行？甚至使用官方启动器之类的都一切正常、唯独LauncherX在同样配置下出问题？游戏窗口一闪而过？“没有找到主类或路径编码不正确”？使用测试启动功能获取更多错误信息，或拿着这些信息来向我们反馈！参见：[LauncherX 测试启动](/zhCN/lxguide/features/launch-test.md)
+
+与此相关的阅读: [了解更多关于日志窗口的信息](/zhCN/lxguide/features/log-window)

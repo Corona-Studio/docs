@@ -222,6 +222,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                             { text: "为什么不能同时跑四个游戏", link: "/zhCN/lxguide/features/tricks/set-task-queue" },
                             { text: "指定默认Java并生成完整包", link: "/zhCN/lxguide/features/tricks/default-jre-for-pack" },
                             { text: "Linux去除标题栏", link: "/zhCN/lxguide/settings/special/linux-as-others" },
+                            { text: "环境变量", link: "/zhCN/lxguide/features/tricks/env-vars" },
                             { text: "更多图标下载", link: "/zhCN/lxguide/features/tricks/icons" },
 
                         ]
@@ -234,7 +235,8 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                     { text: "P2P联机", link: "/zhCN/lxguide/features/p2p" },
                     { text: "游戏图标", link: "/zhCN/lxguide/features/icon" },
                     { text: "服务器管理", link: "/zhCN/lxguide/features/manage-server" },
-                    { text: "#游戏资源管理", link: "/zhCN/lxguide/features/game-assets" },
+                    { text: "测试启动", link: "/zhCN/lxguide/features/launch-test" },
+                    // { text: "#游戏资源管理", link: "/zhCN/lxguide/features/game-assets" },
 
                 ]
             },
