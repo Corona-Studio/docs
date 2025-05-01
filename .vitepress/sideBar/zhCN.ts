@@ -270,8 +270,12 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                         collapsed: true,
                         items: [
                             { text: "服务器介绍", link: "/zhCN/CMFS/servers/SparkPixel/index" },
+                            { text: "客户端安装教程", link: "/zhCN/CMFS/servers/SparkPixel/guidance" },
                             { text: "Sparkpixel (CMFS-Sparkle) 系列服务用户协议", link: "/zhCN/CMFS/servers/SparkPixel/eula" },
+                            { text: "Sparkpixel 建筑与审核规范", link: "/zhCN/CMFS/servers/SparkPixel/rules" },
                             { text: "Sparkpixel 管理团队", link: "/zhCN/CMFS/servers/SparkPixel/team" },
+                            { text: "Sparkpixel 违规处理办法", link: "/zhCN/CMFS/servers/SparkPixel/punishments" },
+                            { text: "Sparkpixel 违规处理公告", link: "/zhCN/CMFS/servers/SparkPixel/banlist" },
                         ]
                     }
                 ]
