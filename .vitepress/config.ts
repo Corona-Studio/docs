@@ -10,6 +10,10 @@ import { MarkdownOptions } from 'vitepress';
 export default defineConfig({
     lastUpdated: true,
 
+    sitemap: {
+        hostname: 'https://kb.corona.studio'
+    },
+
     //define FavIcon
     head:[
         ['link', { rel: 'icon', href: '/img/favicon/favicon_dark.png' }]
