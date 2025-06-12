@@ -43,23 +43,6 @@
 
 ## 其他建议
 
-Wayland是全新的、富有生命力的显示服务器（协议）。在`终端`中执行以下命令以查看是否运作着Wayland：
-
-```bash
-echo $XDG_SESSION_TYPE
-```
-
-如果没有以“Wayland”为返回的结果，我们建议您更换到Wayland，以获得更具有未来的体验。
-
-如果您不知道如何切换，可以按照这个格式：
-
-```txt
-<发行版名称> <系统版本号> 安装wayland
-<发行版名称> <系统版本号> 启用wayland
-```
-
-在搜索引擎中进行搜索，以寻找确切的教程和帮助。
-
-在未来专项针对Linux的部分美化窗口的设置中，我们将以**启用了Wayland的Manjaro**为例截图示范。
+若您需要其他更加详细的配置，或者纯小白用户，建议阅读：[Linux配置指南](/zhCN/lxguide/startup/others/Linux-Guide)
 
 - 专项：Linux需要其他平台一样的UI外观！如何移除掉丑陋的标题栏并保持窗口按钮：[Linux：干掉标题栏，还我一致感 | 日冕知识库](/zhCN/lxguide/settings/special/linux-as-others)

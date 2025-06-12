@@ -154,6 +154,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                     {
                         text: "其他", link: "/zhCN/lxguide/startup/others/", collapsed: true, items: [
                             { text: "Windows 7", link: "/zhCN/lxguide/startup/others/win7" },
+                            { text: "Linux配置教程", link: "/zhCN/lxguide/startup/others/Linux-Guide"}
 
                         ]
                     }
