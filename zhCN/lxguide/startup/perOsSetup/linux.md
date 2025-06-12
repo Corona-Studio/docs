@@ -27,6 +27,14 @@
 
 有关于JRE的选择，参见:   [配置内存和GC、JavaAgent](/zhCN/lxguide/others/adjust-ram-gc-ja)
 
+## 输入法设置
+
+当前稳定版本由于在X11下运行需要在环境变量添加`export XMODIFIERS=@im=fcitx/ibus`来使得输入法可以使用。
+
+未来版本会迁移到Wayland下，需要在.desktop文件中添加参数`--enable-features=UseOzonePlatform --ozone-platform=wayland --enable-wayland-ime `。
+
+具体请参考Archwiki或者对应的Distro的wiki。
+
 ## 如果您无法启动
 
 您需要尝试做出以下操作：
