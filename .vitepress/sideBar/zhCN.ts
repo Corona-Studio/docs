@@ -219,6 +219,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                         items: [
                             { text: "调试翻译文档", link: "/zhCN/lxguide/features/tricks/debug-lang-file" },
                             { text: "关闭动画", link: "/zhCN/lxguide/features/tricks/disable-animation" },
+                            { text: "客户端限制", link: "/zhCN/lxguide/features/tricks/restricted-client" },
                             { text: "为什么不能同时跑四个游戏", link: "/zhCN/lxguide/features/tricks/set-task-queue" },
                             { text: "指定默认Java并生成完整包", link: "/zhCN/lxguide/features/tricks/default-jre-for-pack" },
                             { text: "Linux去除标题栏", link: "/zhCN/lxguide/settings/special/linux-as-others" },
