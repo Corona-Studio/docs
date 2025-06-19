@@ -5,6 +5,7 @@ import {ruConfig} from "./ruRU";
 import {zhTWConfig} from "./zhTW";
 import {enUSConfig} from "./enUS";
 import { MarkdownOptions } from 'vitepress';
+
 // import mdOpts from './mdOpts.mts';
 
 export default defineConfig({

@@ -3,6 +3,7 @@ import {zhSearchBarLocale} from "./searchBar/zhCN";
 import {ruSearchBarLocale} from "./searchBar/ruRU";
 import {zhTWSearchBarLocale} from "./searchBar/zhTW";
 import {enUSSearchBarLocale} from "./searchBar/enUS";
+import llmstxt from 'vitepress-plugin-llms';
 
 
 export const sharedConfig = defineConfig({
@@ -35,5 +36,10 @@ export const sharedConfig = defineConfig({
         search: {
             provider: 'local'
         }
+    },
+    vite:{
+        plugins:[
+            llmstxt()
+        ]
     }
 });
