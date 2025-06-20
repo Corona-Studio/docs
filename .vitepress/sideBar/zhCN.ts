@@ -16,6 +16,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                 collapsed: true,
                 items: [
                     { text: "LauncherX稳定版构建许可测试标准", link: '/zhCN/guide/standard/lx-stable-test-standard' },
+                    { text: "Corona Studio公开交流群管理规定和条款(全文)", link: '/zhCN/guide/standard/code-of-open-groups' },
                     { text: "CMFS测试标准", link: '/zhCN/guide/standard/cmfs-stable-test-general-standard' },
                     { text: "审核规则", link: '/zhCN/guide/code_of_joining_application' }, // 未就绪
                     { text: "CSA账户", link: '/zhCN/guide/account' },
