@@ -1,6 +1,6 @@
 `@useFixer`
 
-# SparkPixel 创意建筑服务器
+# CMFS-Sparkle 创意建筑服务器
 
 <p style="text-align: right; font-size: large; font-weight: bold">半规划任务导向的创造模式现代城市建设服务器</p>
 
@@ -17,19 +17,19 @@
 -   群聊：[QQ](https://qm.qq.com/q/1oTik7kHYs)
 -   频道：[Discord](https://discord.gg/V4dcvsAHeb)
 
-客户端：[点击此处下载-维护中]()，请使用 **LauncherX** 以确保拥有最好的体验，安装教程详情请见[加入服务器](/zhCN/CMFS/servers/SparkPixel/guidance)
+客户端：[点击此处下载-维护中]()，请使用 **LauncherX** 以确保拥有最好的体验，安装教程详情请见[加入服务器](/zhCN/CMFS/servers/CMFS-Sparkle/guidance)
 
-地址：sparkle.craftmine.fun（创造服需要通过审核才能有建筑权限，详情请见[审核规范](/zhCN/CMFS/servers/SparkPixel/rules)，生存服无此限制）
+地址：sparkle.craftmine.fun（创造服需要通过审核才能有建筑权限，详情请见[审核规范](/zhCN/CMFS/servers/CMFS-Sparkle/rules)，生存服无此限制）
 
 要素：`#城建` `#创造` `#MOD` `#交通`&nbsp;
 
-运营团队：[SparkPixel Crew](/zhCN/CMFS/servers/SparkPixel/team)
+运营团队：[CMFS-Sparkle Crew](/zhCN/CMFS/servers/CMFS-Sparkle/team)
 
 :::
 
 
 
-Sparkpixel 是一款专注于城建创造的 Minecraft 服务器，内装有机械动力、MTR 地铁模组、方块小镇等大型模组，为玩家提供丰富多样的建造体验。服务器基础设施稳定且公平，确保每位玩家都能享受流畅的游戏过程。在这里，你可以尽情发挥创造力，打造梦想中的城市景观，与全球玩家共同探索建造的无限乐趣！
+CMFS-Sparkle 是一款专注于城建创造的 Minecraft 服务器，内装有机械动力、MTR 地铁模组、方块小镇等大型模组，为玩家提供丰富多样的建造体验。服务器基础设施稳定且公平，确保每位玩家都能享受流畅的游戏过程。在这里，你可以尽情发挥创造力，打造梦想中的城市景观，与全球玩家共同探索建造的无限乐趣！
 
 ![img](/img/CMFS/sparkle/0.webp)
 
