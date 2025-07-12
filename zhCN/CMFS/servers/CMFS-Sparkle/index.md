@@ -1,8 +1,8 @@
 `@useFixer`
 
-# CMFS-Sparkle 创意建筑服务器
+# CMFS-Sparkle 多元小群组服务器
 
-<p style="text-align: right; font-size: large; font-weight: bold">半规划任务导向的创造模式现代城市建设服务器</p>
+<p style="text-align: right; font-size: large; font-weight: bold">一个创造与生存并行的充满热情与爱意的温馨小家</p>
 
 ::: info 基本信息
 
@@ -21,18 +21,22 @@
 
 地址：sparkle.craftmine.fun（创造服需要通过审核才能有建筑权限，详情请见[审核规范](/zhCN/CMFS/servers/CMFS-Sparkle/rules)，生存服无此限制）
 
-要素：`#城建` `#创造` `#MOD` `#交通`&nbsp;
+要素：`#生存` `#城建` `#创造` `#MOD` `#交通`&nbsp;
 
 运营团队：[CMFS-Sparkle Crew](/zhCN/CMFS/servers/CMFS-Sparkle/team)
 
 :::
 
-
-
 CMFS-Sparkle 是一款专注于城建创造的 Minecraft 服务器，内装有机械动力、MTR 地铁模组、方块小镇等大型模组，为玩家提供丰富多样的建造体验。服务器基础设施稳定且公平，确保每位玩家都能享受流畅的游戏过程。在这里，你可以尽情发挥创造力，打造梦想中的城市景观，与全球玩家共同探索建造的无限乐趣！
 
 ![img](/img/CMFS/sparkle/0.webp)
 
+
+### 智慧 - 大量可供学习的红石机器!
+
+新开启的生存生电服务器采用 Leaf 强大核心，驱动红石最佳体验；同时，服务器内配了 Allmusic 模组并使用了 VIP 来确保达到最好的听歌体验，让你在枯燥的生存同时，也不失生活的小确幸；我们还准备了 TNT 小游戏，在穿梭的战车中，你又能否躲避对方的火箭，成功破掉他的地狱门呢？
+
+![img](/img/CMFS/sparkle/10.png)
 
 
 ### 开放 - 入服门槛低，可任务导向可自由建设!
@@ -64,4 +68,3 @@ CMFS-Sparkle 是一款专注于城建创造的 Minecraft 服务器，内装有�
 参观其他玩家的建造，丰富建筑群！这里不仅仅是一个建造的世界，更是一个充满灵感和交流的社区。玩家们可以随时参观其他人的作品，欣赏独特的建筑风格和创意，激发自己的灵感。同时，通过与其他玩家的互动和学习，你的建筑技能也会不断提升。让我们一起丰富服务器的建筑群，打造一个充满可能性的城市世界！
 
 ![img](/img/CMFS/sparkle/4.webp)
-

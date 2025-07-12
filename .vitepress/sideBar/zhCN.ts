@@ -271,7 +271,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                 items: [
                     {
                         text: 'CMFS-Sparkle',
-                        link: '/zhCN/CMFS/servers/SparkPixel/',
+                        link: '/zhCN/CMFS/servers/CMFS-Sparkle/',
                         collapsed: true,
                         items: [
                             { text: "服务器介绍", link: "/zhCN/CMFS/servers/SparkPixel/index" },
