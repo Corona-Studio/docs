@@ -1,18 +1,28 @@
-# 进入服务器
+# 开始
+[[toc]]
+
 
 ## 序言
+
 **欢迎您来到 CMFS-Sparkle！CMFS-Sparkle（微光像素）分为Sparkle Creation（创造服）和Sparkle Survival（生存服）；请选择您将要加入的服务器，并参考其教程，且按照该文档进行操作；因不按照本文档操作而导致的任何问题，我们不负责解决。**
-## 选择您想要加入的服务器
+
+##  更具服务器下载整合包
 
 *（Sparkle(微光像素)分为Sparkle Creation(创造服)和Sparkle Survival(生存服)，请选择您将要加入的服务器，并参考其教程）*
 
-*（[sparkle Creation(创造服)教程](#Creation)）*
+1.[Sparkle Creation(创造服)教程](#安装适用于-Sparkle-Creation-的客户端)
 
-*（[sparkle Survival(生存服)教程](#Survival)）*
+2.[Sparkle Survival(生存服)教程](#安装适用于-Sparkle-Survival-的客户端)
 
-### <span id="Creation">1.Sparkle Creation下载整合包</span>
+### 安装适用于 Sparkle Creation 的客户端
 
-1.进入 QQ 群 **(694688016)**；
+:::warning
+
+目前 Sparkle Creation 服务器任然处于服务*不可用*状态请您关注QQ 群 **[(694688016)](https://qm.qq.com/q/VISLBWplmu)**的后续消息
+
+:::
+
+1.进入 QQ 群 **[(694688016)](https://qm.qq.com/q/VISLBWplmu)**；
 
 2.打开 **群文件**；
 
@@ -22,33 +32,44 @@
 
 5.下载后将 **此文件拖入启动器窗口安装**。
 
+:::tip
+
 *（请确保你的文件资源管理器窗口并非最大化，否则你可能无法将文件拖入到启动器窗口）*
 
-*（[继续阅读](#acc)）*
+:::
 
-### <span id="Survival">1.Sparkle Survival安装版本</span>
 
-1.下载 **Minecraft JE**。
 
-*（Sparkle Survival服务器的版本为1.21.5JE，当然全版本都可加入）*
+------
 
-*（推荐你下载Fabric 1.21.5版本，这样可以加入各种辅助生存的趣味模组，当然选择权在于你）*
+
+
+### 安装适用于 Sparkle Survival 的客户端
+
+1.下载 **Minecraft Java**。
+
+*（ Sparkle Survival 服务器的核心版本为 [[toc]]1.21.5 JAVA 版，当然所有的 Minecraft 版本都可加入）*
+
+*（推荐你下载 Fabric 1.21.5 版本，这样可以加入各种辅助生存的趣味模组，当然选择权在于你）*
 
 *（更推荐你下载群文件内“生存服-推荐客户端”内的客户端，将其下载后拖入启动器窗口即可安装，当然选择权在于你）*
 
-*（没有电脑？[点我解决](#xxx)）*
 
 
 
-*（[继续阅读](#acc)）*
+------
 
 
-## <span id="acc">选择您想要使用的账号</span>
 
-### 1.<span id="external">使用皮肤站账号登录</span>
 
-*（如果您拥有 Minecraft Microsoft 账号（即俗称的正版账号），您可以跳转至 [使用正版账号登陆](#official)，本部分教程对您不适用。）*
 
+## 选择您的登录方式
+
+### 1.使用皮肤站账号登录
+
+:::tip
+*（如果您 Microsoft 账号拥有 Minecraft JAVA版（即俗称的正版账号），您可以参阅 [这里]( #2.使用正版账号登陆)。本部分教程对您不适用。）*
+:::
 
 1.点击打开[皮肤站](http://s.bu7.top:20000)；
 
@@ -66,9 +87,9 @@
 
 7.点击对应的**版本**，进入游戏。
 
-### 2.<span id="official">使用正版账号登陆</span>
+### 2.使用正版账号登陆
 
-*（如果您没有 Minecraft Microsoft 账号（即俗称的正版账号），您可以跳转至 [使用皮肤站账号登陆](#external)本部分教程对您不适用。）*
+*（如果您 Microsoft 账号没有拥有 没有 Minecraft JAVA版（即俗称的正版账号），您可以参阅. [这里](#1.使用皮肤站账号登录)。本部分教程对您不适用。）*
 
 1.请打开 **启动器**，选择 **“Microsoft 登录”** （或称之为 **“正版”，“正版登录”**）
 
@@ -81,14 +102,7 @@
 
 
 
-## 5.进入服务器
+## 5.加入入服务器
 
-*（请选择您将要加入的服务器，并参考其教程）*
+在待进入游戏主界面后，您可以选择 *多人游戏* 点击 *添加服务器*  *服务器地址* 填写：*sparkle.craftmine.fun*，*服务器名字* 任意，后点击*完成*，选择你添加的服务器，在点击*加入服务器* 。后进入服务器大厅。若您需要进入 *生存服务器*  `/server survival`，*创造服务器*  `/server sparkle`。
 
-**1.Sparkle Creation（创造服）**
-
-请耐心等待游戏加载资源，启动完成；启动后，您可**点击“多人游戏”**，选择**延迟最低**的服务器加入游戏。
-
-**2.Sparkle Survival（生存服）**
-
-请耐心等待游戏加载资源，启动完成；启动后，您可**点击“多人游戏”**，点击**添加服务器**按钮后，服务器名称可随意填写，服务器地址为sparkle.craftmine.fun，后点击**完成**，并最终**加入服务器**。
