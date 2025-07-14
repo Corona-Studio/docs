@@ -1,10 +1,9 @@
-好的，这是一份根据您提供的文档内容进行的语言微调建议。修改后的文本旨在让语言更准确、流畅，并保持原有的信息完整。
----
 # 开始
 
 [[toc]]
 ## 序言
 **欢迎您来到 CMFS-Sparkle！** CMFS-Sparkle（微光像素）分为 Sparkle Creation（创造服）和 Sparkle Survival（生存服）。请选择您将要加入的服务器，并参考其教程，按照该文档进行操作。*因不按照本文档操作而导致的任何问题，我们不负责解决。*
+
 ## 下载适用于服务器的整合包
 *（Sparkle(微光像素)分为 Sparkle Creation(创造服)和 Sparkle Survival(生存服)，请选择您将要加入的服务器，并参考其教程。）*
 
@@ -69,5 +68,5 @@
 | 2    | Zzh      | 3574177807 | 修改部分过时内容 |
 | 3    | Goldfish | 2707835027 | 重写文档         |
 | 4    | Cdpyx    | 2079390238 | 微调语言         |
-<p style="text-align: right"><br>Updated @ 2025年7月14日
+<p style="text-align: right"><br>Updated @ 2025年7月14日<\p>
 

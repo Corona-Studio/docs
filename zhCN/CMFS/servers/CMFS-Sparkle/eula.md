@@ -350,4 +350,8 @@
 
 
 
-<p style="text-align: right"><br>此用户协议已由日冕工作室审阅和修订<br>Feiron Iguista<br>Updated @ 2025年7月10日
+<p style="text-align: right">
+    <br>此用户协议已由日冕工作室审阅和修订<br>
+    Feiron Iguista<br>
+    Updated @ 2025年7月10日
+</p>
