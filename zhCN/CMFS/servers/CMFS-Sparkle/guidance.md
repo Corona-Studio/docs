@@ -68,5 +68,8 @@
 | 2    | Zzh      | 3574177807 | 修改部分过时内容 |
 | 3    | Goldfish | 2707835027 | 重写文档         |
 | 4    | Cdpyx    | 2079390238 | 微调语言         |
-<p style="text-align: right"><br>Updated @ 2025年7月14日<\p>
+<p style="text-align: right">
+ <br>Updated @ 2025年7月14日
+</p>
+
 
