@@ -10,7 +10,7 @@
     <a class="bitter exlink" target="_blank" href="https://learn.microsoft.com/" title="微软官方文档">Microsoft Learn*</a>
     <a class="bitter exlink" target="_blank" href="https://skripthub.net/" title="第三方Skript文档">Skript Hub*</a>
     <a class="bitter exlink" target="_blank" href="https://nitwikit.8aka.org" title="笨蛋 MC 开服教程">NitWikit</a>
-    <a class="bitter exlink" target="_blank" href="https://snowcutieowo.github.io/" title="SnowCutie 插件文档翻译合集 《Continue》">【续】维基档案馆</a>
+    <a class="bitter exlink" target="_blank" href="https://continue-project.netlify.app/" title="SnowCutie的插件文档汉化合集Continue Project">【续】维基档案馆</a>
 </div>
 
 
