@@ -38,7 +38,7 @@ Windows7及更新版本的64位操作系统、Windows 10 或更新版本的 for 
 
 下载LauncherX的一般流程如下：
 
-- 打开[官网](https://corona.studio/launcherx/download)（或[官网.MIN](https://mincorona.studio/lx)）
+- 打开[官网](https://corona.studio/launcherx/download)
 
 - 一般而言，网页会根据你的电脑来推荐下载的版本。你需要下载对应你电脑系统和CPU架构的版本，如果网页选择了和你电脑情况不一致的版本，请用下载按钮右侧的**三角按钮**（如果是MIN站 ，直接在网页上点击对应正确构建的按钮来开始下载）来选择正确对应你电脑的选项。如果你不知道如何确认你的电脑系统版本和CPU架构，参见：[辨识计算机环境 | 日冕知识库](/zhCN/guide/general/check-system.html)
     :::tip 截至目前，大多数用户使用的是Windows x64。
@@ -71,5 +71,7 @@ Windows7及更新版本的64位操作系统、Windows 10 或更新版本的 for 
 ## 下一步
 
 假设您的LauncherX现在能正常运行，但是您不知道接下来该做什么？参考：[安装游戏 | 日冕知识库](/zhCN/lxguide/features/installing-games.html)，下载并安装您的游戏。
+
+在提问前应该**先在本站查阅**，对于一些常见问题，我们时常会更新这篇文章：[常见问题 | 日冕知识库](/zhCN/lxguide/faq.html)
 
 已经加入了内部测试？参考：[切换更新通道 | 日冕知识库](/zhCN/lxguide/others/switch-channel.html)
