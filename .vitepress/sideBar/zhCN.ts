@@ -161,6 +161,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                     }
                 ]
             },
+            { text: "常见问题", link: "/zhCN/lxguide/faq" },
             { text: "问题反馈?", link: "/zhCN/lxguide/report-issue" },
             // {
             //     text: '使用LauncherX',

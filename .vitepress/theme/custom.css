@@ -137,7 +137,7 @@ blockquote{
 
     font-style: italic !important;
     font-family: system-ui !important;
-    font-weight: 100 !important;
+    font-weight: 300 !important;
     border-left: #c7a500 3px solid !important;
     padding-left: .39rem;
     border-radius: .25rem;
@@ -187,6 +187,7 @@ blockquote:hover::before{
     display: block;
     opacity: .5;
     font-size: smaller;
+    font-weight: 500 !important;
     line-height: .69rem;
     white-space: pre;
     text-align: right;
