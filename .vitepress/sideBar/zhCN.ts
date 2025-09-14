@@ -270,7 +270,21 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                 link: '/zhCN/CMFS/servers/',
                 collapsed: true,
                 items: [
+                    {
+                        text: "CMFS-Pure", link: "/zhCN/CMFS/servers/pure/", items: [
+                            { text: "生存【Pure】", link: "/zhCN/CMFS/servers/pure/survival" },
+                            { text: "小游戏【Radost】", link: "/zhCN/CMFS/servers/pure/radost" },
+                            { text: "日冕重工审核", link: "/zhCN/CMFS/servers/pure/exam" },
 
+                        ]
+                    },
+                    {
+                        text: "CMFS Project Lappland", link: "/zhCN/CMFS/servers/project-lappland/", items: [
+                            { text: "背景", link: "/zhCN/CMFS/servers/project-lappland/story" },
+                            { text: "玩法", link: "/zhCN/CMFS/servers/project-lappland/gameplay" },
+                            { text: "规则", link: "/zhCN/CMFS/servers/project-lappland/rules" },
+                        ]
+                    },
                 ]
             },
             {
