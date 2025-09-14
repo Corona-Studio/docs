@@ -83,7 +83,6 @@ locales: {
 
 + [法棍面包](https://github.com/fr1g)
   - 俄罗斯语（ru-RU）
-  - 西班牙语（es-US）
 + [KormiMeiko](https://github.com/KormiMeiko)
   - 繁体中文（zh-TW）
 + [Japerz](https://github.com/japerz12138)
