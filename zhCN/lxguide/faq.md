@@ -23,6 +23,8 @@
 
 LauncherX作为一个绿色软件，必须手动将程序本体解压到一个预先准备好的文件夹内才能运行。如果弹出Windows Defender的警告，请点击【显示更多/高级选项】，然后点击【仍要运行】。相关阅读：[开始 (LauncherX) | 日冕知识库](/zhCN/lxguide/startup/)
 
+关于Windows7相关的问题，参见：[Windows 7 用户指南 | 日冕知识库](/zhCN/lxguide/startup/others/win7.html)
+
 :::
 
 #### A. 部分特定的Windows系统环境下启动器没有主窗口和前台进程
@@ -180,7 +182,7 @@ LauncherX作为一个绿色软件，必须手动将程序本体解压到一个�
 
 ::: info 文章信息
 
-上次更新：2025年8月10日
+上次更新：2025年9月15日
 
 本文维护者：@fr1g, ...
 
