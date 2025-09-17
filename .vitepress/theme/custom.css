@@ -16,7 +16,7 @@ img{
     border-radius: .39rem;
 }
 *{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'ms-segoe-fluent' !important;
+    font-family: 'ms-segoe-fluent', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
     transition-property: background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
     transition-property: background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
     transition-property: background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;

@@ -155,7 +155,7 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                     {
                         text: "其他", link: "/zhCN/lxguide/startup/others/", collapsed: true, items: [
                             { text: "Windows 7", link: "/zhCN/lxguide/startup/others/win7" },
-                            { text: "Linux配置教程", link: "/zhCN/lxguide/startup/others/Linux-Guide"}
+                            { text: "Linux配置教程", link: "/zhCN/lxguide/startup/others/Linux-Guide" }
 
                         ]
                     }
@@ -271,19 +271,20 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                 collapsed: true,
                 items: [
                     {
-                        text: 'SparkPixel',
-                        link: '/zhCN/CMFS/servers/SparkPixel/',
-                        collapsed: true,
-                        items: [
-                            { text: "服务器介绍", link: "/zhCN/CMFS/servers/SparkPixel/index" },
-                            { text: "客户端安装教程", link: "/zhCN/CMFS/servers/SparkPixel/guidance" },
-                            { text: "Sparkpixel (CMFS-Sparkle) 系列服务用户协议", link: "/zhCN/CMFS/servers/SparkPixel/eula" },
-                            { text: "Sparkpixel 建筑与审核规范", link: "/zhCN/CMFS/servers/SparkPixel/rules" },
-                            { text: "Sparkpixel 管理团队", link: "/zhCN/CMFS/servers/SparkPixel/team" },
-                            { text: "Sparkpixel 违规处理办法", link: "/zhCN/CMFS/servers/SparkPixel/punishments" },
-                            { text: "Sparkpixel 违规处理公告", link: "/zhCN/CMFS/servers/SparkPixel/banlist" },
+                        text: "CMFS-Pure", link: "/zhCN/CMFS/servers/pure/", items: [
+                            { text: "生存【Pure】", link: "/zhCN/CMFS/servers/pure/survival" },
+                            { text: "小游戏【Radost】", link: "/zhCN/CMFS/servers/pure/radost" },
+                            { text: "日冕重工审核", link: "/zhCN/CMFS/servers/pure/exam" },
+
                         ]
-                    }
+                    },
+                    {
+                        text: "CMFS Project Lappland", link: "/zhCN/CMFS/servers/project-lappland/", items: [
+                            { text: "背景", link: "/zhCN/CMFS/servers/project-lappland/story" },
+                            { text: "玩法", link: "/zhCN/CMFS/servers/project-lappland/gameplay" },
+                            { text: "规则", link: "/zhCN/CMFS/servers/project-lappland/rules" },
+                        ]
+                    },
                 ]
             },
             {
