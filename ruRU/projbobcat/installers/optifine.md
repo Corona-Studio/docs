@@ -1,42 +1,41 @@
-# Optifine 安装器
+# Установщик Optifine
 
 [[toc]]
 
 ::: tip
 
-请注意, ProjBobcat 仅实现了 Optifine 自动化安装流程, 您仍然需要自己实现 Optifine 安装包的搜索、下载、保存流程. 
+Обратите внимание, что ProjBobcat реализует только автоматизированный процесс установки Optifine. Вам все равно нужно самостоятельно реализовать процессы поиска, загрузки и сохранения установочных пакетов Optifine.
 
 :::
 
-## 实用资源
+## Полезные ресурсы
 
-- [BMCLAPI 开发文档](https://bmclapidoc.bangbang93.com/)
+- [Документация разработчика BMCLAPI](https://bmclapidoc.bangbang93.com/)
 
-## 获取 Optifine Download Version Model
+## Получение модели версии загрузки Optifine
 
-由于 ProjBobcat 的 LiteLoader 安装器要求您在初始化安装器时提供来自 LiteLoader 的下载信息. 
-因此, 我们将在这里简要描述如何根据指定的 MineCraft 版本来获取该信息. 
+Поскольку установщик LiteLoader в ProjBobcat требует, чтобы вы предоставили информацию о загрузке от LiteLoader при инициализации установщика.
+Поэтому здесь мы кратко опишем, как получить эту информацию в соответствии с указанной версией Minecraft.
 
 ::: info
 
-在该示例中, 我们将使用 MineCraft 1.19.2 来向您展示如何获取. 
+В этом примере мы будем использовать Minecraft 1.19.2, чтобы показать вам, как его получить.
 
 :::
 
 ::: warning
 
-由于 Optifine 官方没有提供公开的 API 文档. 因此, 在本流程中, 我们需要使用第三方的镜像源来完成数据的获取. 
-在这里, 我们使用 [BMCLAPI](https://bmclapidoc.bangbang93.com/) 来获取相关的版本信息. 
+Поскольку официальный Optifine не предоставляет общедоступной документации по API, в этом процессе нам необходимо использовать сторонние зеркальные источники для получения данных.
+Здесь мы используем [BMCLAPI](https://bmclapidoc.bangbang93.com/) для получения соответствующей информации о версии.
 
 :::
 
-首先, 您需要向 [https://bmclapi2.bangbang93.com/optifine/[MC_VERSION]](https://bmclapi2.bangbang93.com/optifine/1.19.2) 发送一个 **HTTP GET** 请求. 
-将 `[MC_VERSION]` 替换为您想要安装的 MineCraft 版本. 在这里, 我们将使用 1.19.2. 
+Сначала вам нужно отправить запрос **HTTP GET** на [https://bmclapi2.bangbang93.com/optifine/[MC_VERSION]](https://bmclapi2.bangbang93.com/optifine/1.19.2).
+Замените `[MC_VERSION]` на версию Minecraft, которую вы хотите установить. Здесь мы будем использовать 1.19.2.
 
-您将看到类似下面的返回内容：
+Вы увидите ответ, подобный следующему:
 
 ```json
-
 [
   {
     "_id": "6307b8a38a3998ab475d139d",
@@ -50,43 +49,39 @@
   {...},
   {...}
 ]
-
 ```
 
-BMCLAPI 将返回一个 JSON 数组, 数组中的每一个元素即是我们需要的 Download Version Model. 
+BMCLAPI вернет массив JSON, и каждый элемент в массиве — это модель версии загрузки, которая нам нужна.
 
-#### 将 JSON 返回转换为 ProjBobcat 类型
+#### Преобразование ответа JSON в тип ProjBobcat
 
-如果您在您的项目中使用 [JSON.NET](https://www.newtonsoft.com/json)（Newtonsoft.JSON）. 
-您可以使用类似下面的代码来将您获取到的服务器响应转换为对应的 ProjBobcat 类型：
+Если вы используете [JSON.NET](https://www.newtonsoft.com/json) (Newtonsoft.JSON) в своем проекте.
+Вы можете использовать код, подобный приведенному ниже, для преобразования ответа сервера, который вы получили, в соответствующий тип ProjBobcat:
 
 ```c#
-
-// 从 BMCLAPI 请求数据（示例, 非实际代码）
+// Запрос данных из BMCLAPI (пример, не реальный код)
 ...
 var responseJson = await res.Content.ReadAsStringAsync();
 
-// 将 JSON 响应转换为 ProjBobcat 类型 // [!code focus]
+// Преобразование ответа JSON в тип ProjBobcat // [!code focus]
 var versions = JsonConvert.DeserializeObject<List<OptifineDownloadVersionModel>>(responseJson); // [!code focus]
 
-// 获取用户想要安装的版本（示例, 非实际代码）
+// Получение версии, которую хочет установить пользователь (пример, не реальный код)
 var userSelect = vm.SelectedIndex;
 
-// 获取单个 Download Version Model // [!code focus]
+// Получение одной модели версии загрузки // [!code focus]
 var selectedVersion = versions[userSelect]; // [!code focus]
-
 ```
 
-此处, **selectedVersion** 即是 Optifine 安装器所需要的 `OptifineDownloadVersionModel`. 
+Здесь **selectedVersion** — это `OptifineDownloadVersionModel`, необходимый установщику Optifine.
 
-## 初始化安装器
+## Инициализация установщика
 
-初始化 Optifine 安装器的方式非常简单. 
-您首先需要准备好的 Optifine 安装包 .jar 文件. 以及一个可用的 Java 运行时. 
-您需要使用到在先前步骤中取得的 `selectedVersion` 来初始化安装器：
+Инициализировать установщик Optifine очень просто.
+Сначала вам нужно подготовить файл .jar установщика Optifine и доступную среду выполнения Java.
+Вам нужно использовать `selectedVersion`, полученный на предыдущем шаге, для инициализации установщика:
 
 ```c#
-
 var optifineInstaller = new OptifineInstaller
 {
     JavaExecutablePath = "[PATH_TO_YOUR_JAVA_RUNTIME]",
@@ -96,54 +91,46 @@ var optifineInstaller = new OptifineInstaller
     CustomId = "[CUSTOM_INSTALL_GAME_ID]",
     InheritsFrom = "[MC_VERSION_OR_GAME_ID]"
 };
-
 ```
 
-在上述代码块中, 请将这些参数按照您的实际情况替换：
+В приведенном выше блоке кода замените эти параметры в соответствии с вашей реальной ситуацией:
 
-|                  项目                   |                      说明                       |
+|                  Элемент                   |                      Описание                       |
 |:-------------------------------------:|:---------------------------------------------:|
-|           [GAME_ROOT_PATH]            |          游戏根目录, 通常为 .minecraft 文件夹的路径          |
-|       [CUSTOM_INSTALL_GAME_ID]        |              可选项, 自定义即将要安装的游戏的名称               |
-|        [MC_VERSION_OR_GAME_ID]        | Forge 继承的 MineCraft 原版游戏版本, 通常为游戏版本. 例如：1.19.2  |
-|        [VERSION_LOCATOR_INST]         |  游戏版本定位器实例, 即初始化游戏核心时的 **VersionLocator** 属性   |
-|      [PATH_TO_YOUR_OPTIFINE_JAR]      |               Optifine 安装包所在的路径               |
-|      [PATH_TO_YOUR_JAVA_RUNTIME]      |           Java （javaw.exe） 运行时所在的路径           |
+|           [GAME_ROOT_PATH]            |          Корневой каталог игры, обычно путь к папке .minecraft          |
+|       [CUSTOM_INSTALL_GAME_ID]        |              Необязательно, пользовательское имя игры, которую вы собираетесь установить               |
+|        [MC_VERSION_OR_GAME_ID]        | Версия оригинальной игры Minecraft, от которой наследуется Forge, обычно версия игры. Например: 1.19.2  |
+|        [VERSION_LOCATOR_INST]         |  Экземпляр локатора версий игры, то есть свойство **VersionLocator** при инициализации ядра игры   |
+|      [PATH_TO_YOUR_OPTIFINE_JAR]      |               Путь к вашему установочному пакету Optifine               |
+|      [PATH_TO_YOUR_JAVA_RUNTIME]      |           Путь к среде выполнения Java (javaw.exe)           |
 
-## 开始安装
+## Начало установки
 
-在您完成安装器的初始化后, 您只需要调用 Optifine 安装器的安装方法来完成安装. 
+После завершения инициализации установщика вам нужно только вызвать метод установки установщика Optifine для завершения установки.
 
-在异步上下文中, 使用 **InstallTaskAsync** 来完成安装：
+В асинхронном контексте используйте **InstallTaskAsync** для завершения установки:
 
 ```c#
-
 await optifineInstaller.InstallTaskAsync();
-
 ```
 
-在同步上下文中, 使用 **Install** 来完成安装：
+В синхронном контексте используйте **Install** для завершения установки:
 
 ```c#
-
 optifineInstaller.Install();
-
 ```
 
-## 报告安装进度
+## Отчет о ходе установки
 
-在某些情况下, Optifine 安装器可能会需要数分钟的时间来完成安装. 
-因此, 您可能需要实时向用户汇报安装器目前的进度. 
-为此, Optifine 安装器提供了 **StageChangedEventDelegate** 事件来帮助您实现任务汇报. 
-您只需要简单地在 **开始安装之前** 注册下面的事件：
+В некоторых случаях установка с помощью установщика Optifine может занять несколько минут.
+Поэтому вам может потребоваться сообщать пользователю о текущем ходе установки в режиме реального времени.
+Для этого установщик Optifine предоставляет событие **StageChangedEventDelegate**, чтобы помочь вам реализовать отчет о задачах.
+Вам просто нужно зарегистрировать следующее событие **перед началом установки**:
 
 ```c#
-
-optifineInstaller.StageChangedEventDelegate += (_, args) => {
-    ReportProgress(args.Progress, args.CurrentStage);
+optifineInstaller.StageChangedEventDelegate += (_,  args) => {
+    ReportProgress(args.Progress,  args.CurrentStage);
 };
-
 ```
 
-其中,  **args.Progress** 指示了安装器当前的百分比进度. **args.CurrentStage** 则是安装器当前进度的文字描述. 
-
+Где **args.Progress** указывает текущий процент выполнения установщика. **args.CurrentStage** — это текстовое описание текущего этапа установщика.

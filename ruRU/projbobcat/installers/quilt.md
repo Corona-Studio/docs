@@ -1,36 +1,35 @@
-# Quilt 安装器
+# Установщик Quilt
 
 [[toc]]
 
 ::: tip
 
-请注意, ProjBobcat 仅实现了 Quilt 自动化安装流程, 您仍然需要自己实现 Quilt 安装包的搜索、下载、保存流程. 
+Обратите внимание, что ProjBobcat реализует только автоматизированный процесс установки Quilt. Вам все равно нужно самостоятельно реализовать процессы поиска, загрузки и сохранения установочных пакетов Quilt.
 
 :::
 
 ::: warning
 
-Quilt 安装器目前处于试验阶段, 相关的 API 以及安装流程可能会出现较大幅度的变更. 
+Установщик Quilt в настоящее время находится на экспериментальной стадии, и связанные с ним API и процесс установки могут претерпеть значительные изменения.
 
 :::
 
-## 实用资源
+## Полезные ресурсы
 
-- [Quilt 官方网站](https://quiltmc.org/en/)
-- [Quilt 安装指南](https://quiltmc.org/en/install/)
+- [Официальный сайт Quilt](https://quiltmc.org/en/)
+- [Руководство по установке Quilt](https://quiltmc.org/en/install/)
 - [Quilt Meta API](https://meta.quiltmc.org/)
 
 
-## 兼容性检查
+## Проверка совместимости
 
-在开始安装 Quilt 之前, 您需要通过 Quilt Meta API 来查询您将要修改的 MineCraft 版本是否受支持. 
+Перед началом установки Quilt вам необходимо проверить через Quilt Meta API, поддерживается ли версия Minecraft, которую вы собираетесь изменить.
 
-首先, 您需要向 [https://meta.quiltmc.org/v3/versions/game](https://meta.quiltmc.org/v3/versions/game) 发送一个 **HTTP GET** 请求. 
+Сначала вам нужно отправить запрос **HTTP GET** на [https://meta.quiltmc.org/v3/versions/game](https://meta.quiltmc.org/v3/versions/game).
 
-您将看到类似下面的返回内容：
+Вы увидите ответ, подобный следующему:
 
 ```json
-
 [
   {
     "version": "1.19.3",
@@ -43,30 +42,28 @@ Quilt 安装器目前处于试验阶段, 相关的 API 以及安装流程可能�
   {...},
   {...}
 ]
-
 ```
 
-在这里, 您需要检查您即将要安装的游戏版本是否出现在 Quilt 官方的支持列表当中. 
-您需要将游戏版本与 JSON 对象中的 `version` 字段作比较. 
-**如果您的游戏没有出现在支持列表当中, 安装将无法继续. **
+Здесь вам нужно проверить, есть ли версия игры, которую вы собираетесь установить, в официальном списке поддержки Quilt.
+Вам нужно сравнить версию игры с полем `version` в объекте JSON.
+**Если вашей игры нет в списке поддержки, установка не может быть продолжена.**
 
-## 获取 Quilt Loader Model
+## Получение модели загрузчика Quilt
 
-由于 ProjBobcat 的 Quilt 安装器要求您在初始化安装器时提供来自 Quilt 的下载信息. 
-因此, 我们将在这里简要描述如何根据指定的 MineCraft 版本来获取该信息. 
+Поскольку установщик Quilt в ProjBobcat требует, чтобы вы предоставили информацию о загрузке от Quilt при инициализации установщика.
+Поэтому здесь мы кратко опишем, как получить эту информацию в соответствии с указанной версией Minecraft.
 
 ::: info
 
-在该示例中, 我们将使用 MineCraft 1.19.2 来向您展示如何获取. 
+В этом примере мы будем использовать Minecraft 1.19.2, чтобы показать вам, как его получить.
 
 :::
 
-首先, 您需要向 [https://meta.quiltmc.org/v3/versions/loader](https://meta.quiltmc.org/v3/versions/loader) 发送一个 **HTTP GET** 请求. 
+Сначала вам нужно отправить запрос **HTTP GET** на [https://meta.quiltmc.org/v3/versions/loader](https://meta.quiltmc.org/v3/versions/loader).
 
-您将看到类似下面的返回内容：
+Вы увидите ответ, подобный следующему:
 
 ```json
-
 [
   {
     "separator": ".",
@@ -77,41 +74,37 @@ Quilt 安装器目前处于试验阶段, 相关的 API 以及安装流程可能�
   {...},
   {...}
 ]
-
 ```
 
-Quilt Meta API 将返回一个 JSON 数组, 数组中的每一个元素即是我们需要的 Loader Artifact. 
+Quilt Meta API вернет массив JSON, и каждый элемент в массиве — это артефакт загрузчика, который нам нужен.
 
-#### 将 JSON 返回转换为 ProjBobcat 类型
+#### Преобразование ответа JSON в тип ProjBobcat
 
-如果您在您的项目中使用 [JSON.NET](https://www.newtonsoft.com/json)（Newtonsoft.JSON）. 
-您可以使用类似下面的代码来将您获取到的服务器响应转换为对应的 ProjBobcat 类型：
+Если вы используете [JSON.NET](https://www.newtonsoft.com/json) (Newtonsoft.JSON) в своем проекте.
+Вы можете использовать код, подобный приведенному ниже, для преобразования ответа сервера, который вы получили, в соответствующий тип ProjBobcat:
 
 ```c#
-
-// 从 Quilt Meta API 请求数据（示例, 非实际代码）
+// Запрос данных из Quilt Meta API (пример, не реальный код)
 ...
 var responseJson = await res.Content.ReadAsStringAsync();
 
-// 将 JSON 响应转换为 ProjBobcat 类型 // [!code focus]
+// Преобразование ответа JSON в тип ProjBobcat // [!code focus]
 var artifacts = JsonConvert.DeserializeObject<List<QuiltLoaderModel>>(responseJson); // [!code focus]
 
-// 获取用户想要安装的版本（示例, 非实际代码）
+// Получение версии, которую хочет установить пользователь (пример, не реальный код)
 var userSelect = vm.SelectedArtifactIndex;
 
-// 获取单个 Loader Artifact // [!code focus]
+// Получение одного артефакта загрузчика // [!code focus]
 var selectedArtifact = artifacts[userSelect]; // [!code focus]
-
 ```
 
-此处, **selectedArtifact** 即是 Fabric 安装器所需要的 `QuiltLoaderModel`. 
+Здесь **selectedArtifact** — это `QuiltLoaderModel`, необходимый установщику Fabric.
 
-## 初始化安装器
+## Инициализация установщика
 
-初始化 Quilt 安装器的方式非常简单. 您需要使用到在先前步骤中取得的 `selectedArtifact` 来初始化安装器：
+Инициализировать установщик Quilt очень просто. Вам нужно использовать `selectedArtifact`, полученный на предыдущем шаге, для инициализации установщика:
 
 ```c#
-
 var quiltInstaller = new QuiltInstaller
 {
     InheritsFrom = "[MC_VERSION_OR_GAME_ID]",
@@ -119,50 +112,43 @@ var quiltInstaller = new QuiltInstaller
     CustomId = "[CUSTOM_INSTALL_GAME_ID]",
     LoaderArtifact = selectedArtifact
 };
-
 ```
 
-在上述代码块中, 请将这些参数按照您的实际情况替换：
+В приведенном выше блоке кода замените эти параметры в соответствии с вашей реальной ситуацией:
 
-|                 项目                  |                      说明                       |
+|                 Элемент                  |                      Описание                       |
 |:-----------------------------------:|:---------------------------------------------:|
-|          [GAME_ROOT_PATH]           |          游戏根目录, 通常为 .minecraft 文件夹的路径          |
-|      [CUSTOM_INSTALL_GAME_ID]       |              可选项, 自定义即将要安装的游戏的名称               |
-|       [MC_VERSION_OR_GAME_ID]       | Forge 继承的 MineCraft 原版游戏版本, 通常为游戏版本. 例如：1.19.2  |
+|          [GAME_ROOT_PATH]           |          Корневой каталог игры, обычно путь к папке .minecraft          |
+|      [CUSTOM_INSTALL_GAME_ID]       |              Необязательно, пользовательское имя игры, которую вы собираетесь установить               |
+|       [MC_VERSION_OR_GAME_ID]       | Версия оригинальной игры Minecraft, от которой наследуется Forge, обычно версия игры. Например: 1.19.2  |
 
-## 开始安装
+## Начало установки
 
-在您完成安装器的初始化后, 您只需要调用 Fabric 安装器的安装方法来完成安装. 
+После завершения инициализации установщика вам нужно только вызвать метод установки установщика Fabric для завершения установки.
 
-在异步上下文中, 使用 **InstallTaskAsync** 来完成安装：
+В асинхронном контексте используйте **InstallTaskAsync** для завершения установки:
 
 ```c#
-
 await quiltInstaller.InstallTaskAsync();
-
 ```
 
-在同步上下文中, 使用 **Install** 来完成安装：
+В синхронном контексте используйте **Install** для завершения установки:
 
 ```c#
-
 quiltInstaller.Install();
-
 ```
 
-## 报告安装进度
+## Отчет о ходе установки
 
-在某些情况下, Quilt 安装器可能会需要数分钟的时间来完成安装. 
-因此, 您可能需要实时向用户汇报安装器目前的进度. 
-为此, Quilt 安装器提供了 **StageChangedEventDelegate** 事件来帮助您实现任务汇报. 
-您只需要简单地在 **开始安装之前** 注册下面的事件：
+В некоторых случаях установка с помощью установщика Quilt может занять несколько минут.
+Поэтому вам может потребоваться сообщать пользователю о текущем ходе установки в режиме реального времени.
+Для этого установщик Quilt предоставляет событие **StageChangedEventDelegate**, чтобы помочь вам реализовать отчет о задачах.
+Вам просто нужно зарегистрировать следующее событие **перед началом установки**:
 
 ```c#
-
-quiltInstaller.StageChangedEventDelegate += (_, args) => {
-    ReportProgress(args.Progress, args.CurrentStage);
+quiltInstaller.StageChangedEventDelegate += (_,  args) => {
+    ReportProgress(args.Progress,  args.CurrentStage);
 };
-
 ```
 
-其中,  **args.Progress** 指示了安装器当前的百分比进度. **args.CurrentStage** 则是安装器当前进度的文字描述. 
+Где **args.Progress** указывает текущий процент выполнения установщика. **args.CurrentStage** — это текстовое описание текущего этапа установщика.
