@@ -1,133 +1,121 @@
-# 创建和配置补全器
+# Создание и настройка комплитера
 
 [[toc]]
 
-## 初始化补全器
+## Инициализация комплитера
 
-创建一个资源补全器的方法非常简单, 您只需要使用下面的代码即可完成补全器的初始化：
+Создать комплитер ресурсов очень просто, вам просто нужно использовать следующий код для завершения инициализации комплитера:
 
 ```c#
-
 var completer = new DefaultResourceCompleter
 {
     MaxDegreeOfParallelism = [MAX_DEGREE_OF_PARALLELISM],
     ResourceInfoResolvers = new List<IResourceInfoResolver>
     {
-        ... // 资源信息解析器的初始化
+        ...// Инициализация распознавателей информации о ресурсах
     },
     TotalRetry = [NUMBER_OF_TOTAL_RETRY],
     CheckFile = [CHECK_FILE_AFTER_DOWNLOADED],
     DownloadParts = [TOTAL_DOWNLOAD_SEGMENTS_FOR_LARGE_FILE]
 };
-
 ```
 
 ::: tip
 
-资源信息解析器的初始化相关教程请参见 [资源信息解析器](/ruRU/projbobcat/resourceCompleter/resourceInfoResolver/index) 章节
+Руководства по инициализации распознавателей информации о ресурсах см. в разделе [Распознаватели информации о ресурсах](/ruRU/projbobcat/resourceCompleter/resourceInfoResolver/index).
 
 :::
 
-在上述代码块中, 请将这些参数按照您的实际情况替换：
+В приведенном выше блоке кода замените эти параметры в соответствии с вашей реальной ситуацией:
 
-|                    项目                    | 数据类型    |              说明              |
+|                    Элемент                    | Тип данных    |              Описание              |
 |:----------------------------------------:|:--------|:----------------------------:|
-|       [MAX_DEGREE_OF_PARALLELISM]        | INT     |    资源检查并行程度（同时检查游戏资源的数量）     |
-|      [CHECK_FILE_AFTER_DOWNLOADED]       | BOOLEAN |  在文件下载完成后检查文件完整性（如果存在资源校检码）  |
-| [TOTAL_DOWNLOAD_SEGMENTS_FOR_LARGE_FILE] | INT     |         大文件下载时的分片数量          |
+|       [MAX_DEGREE_OF_PARALLELISM]        | INT     |    Степень параллелизма проверки ресурсов (количество одновременно проверяемых игровых ресурсов)     |
+|      [CHECK_FILE_AFTER_DOWNLOADED]       | BOOLEAN |  Проверка целостности файла после его загрузки (если существует контрольная сумма ресурса)  |
+| [TOTAL_DOWNLOAD_SEGMENTS_FOR_LARGE_FILE] | INT     |         Количество сегментов для загрузки больших файлов          |
 
 ::: warning
 
-**[MAX_DEGREE_OF_PARALLELISM]** 和 **[TOTAL_DOWNLOAD_SEGMENTS_FOR_LARGE_FILE]**
-的数值大小请视硬件性能酌情调整, 设置过大的数值可能会导致会导致吞吐量的下降. 
+Значения **[MAX_DEGREE_OF_PARALLELISM]** и **[TOTAL_DOWNLOAD_SEGMENTS_FOR_LARGE_FILE]**
+следует настраивать в зависимости от производительности оборудования. Установка слишком больших значений может привести к снижению пропускной способности.
 
 :::
 
-## 补全游戏资源
+## Завершение игровых ресурсов
 
-在完成资源补全器的初始化操作后, 您只需要调用补全方法即可开始执行检查和补全操作：
+После завершения инициализации комплитера ресурсов вам нужно только вызвать метод завершения, чтобы начать операции проверки и завершения:
 
-在异步上下文中, 使用 **CheckAndDownloadTaskAsync** 来完成安装：
+В асинхронном контексте используйте **CheckAndDownloadTaskAsync** для завершения установки:
 
 ```c#
-
 var result = await completer.CheckAndDownloadTaskAsync(); // [!code focus]
 
 if (result.TaskStatus == TaskResultStatus.Error && (result.Value?.IsLibDownloadFailed ?? false))
 {
-    // 在完成补全后, 资源检查器会返回执行结果. 
-    // 您可以检查 result 中的属性值来确定补全是否完成
+    // После завершения комплитер ресурсов вернет результат выполнения.
+    // Вы можете проверить значения свойств в result, чтобы определить, завершено ли завершение.
     
-    // IsLibDownloadFailed 会反映启动必须的库文件是否已经成功补全
-    // 通常来说, 如果库文件的补全失败, 很有可能会导致游戏的启动失败
+    // IsLibDownloadFailed отражает, были ли успешно завершены необходимые для запуска библиотеки.
+    // В общем, если завершение файлов библиотек не удалось, это, скорее всего, приведет к сбою запуска игры.
 }
-
 ```
 
-在同步上下文中, 使用 **CheckAndDownload** 来完成安装：
+В синхронном контексте используйте **CheckAndDownload** для завершения установки:
 
 ```c#
-
 var result = completer.CheckAndDownload(); // [!code focus]
-
 ```
 
-## 报告进度
+## Отчет о ходе выполнения
 
-在某些情况下, 资源补全器可能会需要数分钟的时间来完成资源的检查和下载. 
-因此, 您可能需要实时向用户汇报补全器目前的进度. 
+В некоторых случаях комплитеру ресурсов может потребоваться несколько минут для завершения проверки и загрузки ресурсов.
+Поэтому вам может потребоваться сообщать пользователю о текущем ходе выполнения комплитера в режиме реального времени.
 
-### 报告资源检查器的进度
+### Отчет о ходе выполнения проверки ресурсов
 
-您可以通过注册事件 **GameResourceInfoResolveStatus** 来获取实时的检查进度：
+Вы можете получать ход проверки в режиме реального времени, зарегистрировав событие **GameResourceInfoResolveStatus**:
 
 ```c#
-
-completer.GameResourceInfoResolveStatus += (_, args) => 
-    { ReportProgress(args.Progress, args.Status); };
-
+completer.GameResourceInfoResolveStatus += (_,  args) => 
+    { ReportProgress(args.Progress,  args.Status); };
 ```
 
-其中,  **args.Progress** 指示了检查器当前的百分比进度. **args.Status** 则是检查器当前进度的文字描述. 
+Где **args.Progress** указывает текущий процент выполнения проверки. **args.Status** — это текстовое описание текущего этапа проверки.
 
-### 报告补全器文件下载进度
+### Отчет о ходе загрузки файлов комплитером
 
-您可以通过注册事件 **DownloadFileCompletedEvent** 来获取实时的检查进度：
+Вы можете получать ход проверки в режиме реального времени, зарегистрировав событие **DownloadFileCompletedEvent**:
 
 ```c#
-
-completer.DownloadFileCompletedEvent += (sender, args) =>
+completer.DownloadFileCompletedEvent += (sender,  args) =>
 {
-    // sender 参数为补全器上一个成功下载的文件, 类型为 DownloadFile
-    // args 返回了该文件的下载状态（成功 / 失败）, 以及文件的重试计数, 
-    // 类型为 DownloadFileCompletedEventArgs
+    // Параметр sender — это последний успешно загруженный файл комплитером, тип — DownloadFile.
+    // args возвращает статус загрузки этого файла (успешно/неудачно), а также счетчик повторных попыток файла,
+    // тип — DownloadFileCompletedEventArgs.
 };
-
 ```
 
 ::: tip
 
-+ [DownloadFile 类结构](https://github.com/Corona-Studio/ProjBobcat/blob/master/ProjBobcat/ProjBobcat/Class/Model/DownloadFile.cs)
-+ [DownloadFileCompletedEventArgs 事件结构](https://github.com/Corona-Studio/ProjBobcat/blob/master/ProjBobcat/ProjBobcat/Event/DownloadFileCompletedEventArgs.cs)
++ [Структура класса DownloadFile](https://github.com/Corona-Studio/ProjBobcat/blob/master/ProjBobcat/ProjBobcat/Class/Model/DownloadFile.cs)
++ [Структура события DownloadFileCompletedEventArgs](https://github.com/Corona-Studio/ProjBobcat/blob/master/ProjBobcat/ProjBobcat/Event/DownloadFileCompletedEventArgs.cs)
 
 :::
 
-### 报告下载中的文件的进度信息
+### Отчет об информации о ходе загружаемых файлов
 
-您可以通过注册事件 **DownloadFileChangedEvent** 来获取实时的检查进度：
+Вы можете получать ход проверки в режиме реального времени, зарегистрировав событие **DownloadFileChangedEvent**:
 
 ```c#
-
-rC.DownloadFileChangedEvent += (_, args) =>
+rC.DownloadFileChangedEvent += (_,  args) =>
 {
-    // args 返回了下载中的文件的具体信息（已接收的字节数、总共的字节数、当前速度、百分比进度）
-    // 类型为 DownloadFileChangedEventArgs
+    // args возвращает подробную информацию о загружаемом файле (полученные байты, общее количество байтов, текущая скорость, процент выполнения).
+    // тип — DownloadFileChangedEventArgs.
 };
-
 ```
 
 ::: tip
 
-+ [DownloadFileChangedEventArgs 事件结构](https://github.com/Corona-Studio/ProjBobcat/blob/master/ProjBobcat/ProjBobcat/Event/DownloadFileChangedEventArgs.cs)
++ [Структура события DownloadFileChangedEventArgs](https://github.com/Corona-Studio/ProjBobcat/blob/master/ProjBobcat/ProjBobcat/Event/DownloadFileChangedEventArgs.cs)
 
 :::

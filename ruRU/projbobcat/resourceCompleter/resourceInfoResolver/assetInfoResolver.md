@@ -1,19 +1,16 @@
-# Assets 解析器
+# Распознаватель ассетов
 
 [[toc]]
 
-Assets 解析器提供了对游戏资产文件的解析和验证功能, 这些文件一般存放在
-`.minecraft/assets` 目录下
+Распознаватель ассетов предоставляет функции для разбора и проверки файлов ассетов игры, которые обычно хранятся в каталоге `.minecraft/assets`.
 
-## 获取 Version Manifest Versions 列表
+## Получение списка версий манифеста версий
 
-首先, 您需要向 [https://launchermeta.mojang.com/mc/game/version_manifest.json](https://launchermeta.mojang.com/mc/game/version_manifest.json)
-发送一个 **HTTP GET** 请求. 
+Сначала вам нужно отправить запрос **HTTP GET** на [https://launchermeta.mojang.com/mc/game/version_manifest.json](https://launchermeta.mojang.com/mc/game/version_manifest.json).
 
-您将看到类似下面的返回内容：
+Вы увидите ответ, подобный следующему:
 
 ```json
-
 {
   "latest": {
     "release": "1.19.3",
@@ -30,39 +27,35 @@ Assets 解析器提供了对游戏资产文件的解析和验证功能, 这些�
     ...
   ]
 }
-
 ```
 
-Mojang 服务器将会返回一个 JSON 对象, **versions** 字段则是我们所需要的 Versions 数组
+Сервер Mojang вернет объект JSON, и поле **versions** — это массив версий, который нам нужен.
 
-### 将 JSON 返回转换为 ProjBobcat 类型
+### Преобразование ответа JSON в тип ProjBobcat
 
-如果您在您的项目中使用 [JSON.NET](https://www.newtonsoft.com/json)（Newtonsoft.JSON）. 
-您可以使用类似下面的代码来将您获取到的服务器响应转换为对应的 ProjBobcat 类型：
+Если вы используете [JSON.NET](https://www.newtonsoft.com/json) (Newtonsoft.JSON) в своем проекте.
+Вы можете использовать код, подобный приведенному ниже, для преобразования ответа сервера, который вы получили, в соответствующий тип ProjBobcat:
 
 ```c#
-
-// 从 Mojang API 请求数据（示例, 非实际代码）
+// Запрос данных из Mojang API (пример, не реальный код)
 ...
 var responseJson = await res.Content.ReadAsStringAsync();
 
-// 将 JSON 响应转换为 ProjBobcat 类型 // [!code focus]
+// Преобразование ответа JSON в тип ProjBobcat // [!code focus]
 var manifest = JsonConvert.DeserializeObject<VersionManifest>(responseJson); // [!code focus]
 
-// 获取 Versions 列表 // [!code focus]
+// Получение списка версий // [!code focus]
 var versions = manifest.Versions; // [!code focus]
-
 ```
 
-此处, **versions** 即是 Assets 解析器所需要的 `Versions` 数组. 
+Здесь **versions** — это массив `Versions`, необходимый распознавателю ассетов.
 
 
-## 初始化解析器
+## Инициализация распознавателя
 
-你可以通过下面的代码来初始化 Assets 解析器：
+Вы можете инициализировать распознаватель ассетов с помощью следующего кода:
 
 ```c#
-
 var resolver = new AssetInfoResolver
 {
     AssetIndexUriRoot = "https://launchermeta.mojang.com/",
@@ -70,17 +63,14 @@ var resolver = new AssetInfoResolver
     BasePath = "[GAME_ROOT_PATH]",
     VersionInfo = [SEARCHED_VERSION_INFO],
     CheckLocalFiles = [CHECK_LOCAL_FILES],
-    Versions = versions // 在上一步获取到的 Versions 数组
+    Versions = versions // Массив версий, полученный на предыдущем шаге
 };
-
 ```
 
-在上述代码块中, 请将这些参数按照您的实际情况替换：
+В приведенном выше блоке кода замените эти параметры в соответствии с вашей реальной ситуацией:
 
-|           项目            |               说明                |
+|           Элемент            |               Описание                |
 |:-----------------------:|:-------------------------------:|
-|    [GAME_ROOT_PATH]     |   游戏根目录, 通常为 .minecraft 文件夹的路径   |
-| [SEARCHED_VERSION_INFO] | 要检查的版本的 VersionInfo （通过游戏定位器获得） |
-|   [CHECK_LOCAL_FILES]   |    检查本地文件（如果为 false, 则跳过所有检查）    |
-
-
+|    [GAME_ROOT_PATH]     |   Корневой каталог игры, обычно путь к папке .minecraft   |
+| [SEARCHED_VERSION_INFO] | VersionInfo версии для проверки (получается через локатор игр) |
+|   [CHECK_LOCAL_FILES]   |    Проверка локальных файлов (если false, все проверки пропускаются)    |

@@ -1,38 +1,37 @@
-# Fabric 安装器
+# Установщик Fabric
 
 [[toc]]
 
 ::: tip
 
-请注意, ProjBobcat 仅实现了 Fabric 自动化安装流程, 您仍然需要自己实现 Fabric 安装包的搜索、下载、保存流程. 
+Обратите внимание, что ProjBobcat реализует только автоматизированный процесс установки Fabric. Вам все равно нужно самостоятельно реализовать процессы поиска, загрузки и сохранения установочных пакетов Fabric.
 
 :::
 
-## 实用资源
+## Полезные ресурсы
 
-- [Fabric 官方网站](https://fabricmc.net/)
+- [Официальный сайт Fabric](https://fabricmc.net/)
 - [Fabric Meta API](https://meta.fabricmc.net/)
 
-## 获取 Fabric Loader Artifact
+## Получение артефакта загрузчика Fabric
 
-由于 ProjBobcat 的 Fabric 安装器要求您在初始化安装器时提供来自 Fabric 官方的 Loader Artifact 信息. 
-因此, 我们将在这里简要描述如何根据指定的 MineCraft 版本来获取该信息. 
+Поскольку установщик Fabric в ProjBobcat требует, чтобы вы предоставили информацию об артефакте загрузчика от официального Fabric при инициализации установщика.
+Поэтому здесь мы кратко опишем, как получить эту информацию в соответствии с указанной версией Minecraft.
 
 ::: info
 
-在该示例中, 我们将使用 MineCraft 1.19.2 来向您展示如何获取. 
+В этом примере мы будем использовать Minecraft 1.19.2, чтобы показать вам, как его получить.
 
 :::
 
-### 向 Fabric Meta API 发送请求
+### Отправка запроса в Fabric Meta API
 
-首先, 您需要向 [https://meta.fabricmc.net/v2/versions/loader/[MC_VERSION]](https://meta.fabricmc.net/v2/versions/loader/1.19.2) 发送一个 **HTTP GET** 请求. 
-将 `[MC_VERSION]` 替换为您想要安装的 MineCraft 版本. 在这里, 我们将使用 1.19.2. 
+Сначала вам нужно отправить запрос **HTTP GET** на [https://meta.fabricmc.net/v2/versions/loader/[MC_VERSION]](https://meta.fabricmc.net/v2/versions/loader/1.19.2).
+Замените `[MC_VERSION]` на версию Minecraft, которую вы хотите установить. Здесь мы будем использовать 1.19.2.
 
-您将看到类似下面的返回内容：
+Вы увидите ответ, подобный следующему:
 
 ```json
-
 [
   {
     "loader": {
@@ -56,41 +55,37 @@
   {...},
   {...}
 ]
-
 ```
 
-Fabric Meta API 将返回一个 JSON 数组, 数组中的每一个元素即是我们需要的 Loader Artifact. 
+Fabric Meta API вернет массив JSON, и каждый элемент в массиве — это артефакт загрузчика, который нам нужен.
 
-#### 将 JSON 返回转换为 ProjBobcat 类型
+#### Преобразование ответа JSON в тип ProjBobcat
 
-如果您在您的项目中使用 [JSON.NET](https://www.newtonsoft.com/json)（Newtonsoft.JSON）. 
-您可以使用类似下面的代码来将您获取到的服务器响应转换为对应的 ProjBobcat 类型：
+Если вы используете [JSON.NET](https://www.newtonsoft.com/json) (Newtonsoft.JSON) в своем проекте.
+Вы можете использовать код, подобный приведенному ниже, для преобразования ответа сервера, который вы получили, в соответствующий тип ProjBobcat:
 
 ```c#
-
-// 从 Fabric Meta API 请求数据（示例, 非实际代码）
+// Запрос данных из Fabric Meta API (пример, не реальный код)
 ...
 var responseJson = await res.Content.ReadAsStringAsync();
 
-// 将 JSON 响应转换为 ProjBobcat 类型 // [!code focus]
+// Преобразование ответа JSON в тип ProjBobcat // [!code focus]
 var artifacts = JsonConvert.DeserializeObject<List<FabricLoaderArtifactModel>>(responseJson); // [!code focus]
 
-// 获取用户想要安装的版本（示例, 非实际代码）
+// Получение версии, которую хочет установить пользователь (пример, не реальный код)
 var userSelect = vm.SelectedArtifactIndex;
 
-// 获取单个 Loader Artifact // [!code focus]
+// Получение одного артефакта загрузчика // [!code focus]
 var selectedArtifact = artifacts[userSelect]; // [!code focus]
-
 ```
 
-此处, **selectedArtifact** 即是 Fabric 安装器所需要的 `FabricLoaderArtifactModel`. 
+Здесь **selectedArtifact** — это `FabricLoaderArtifactModel`, необходимый установщику Fabric.
 
-## 初始化安装器
+## Инициализация установщика
 
-初始化 Fabric 安装器的方式非常简单. 您需要使用到在先前步骤中取得的 `selectedArtifact` 来初始化安装器：
+Инициализировать установщик Fabric очень просто. Вам нужно использовать `selectedArtifact`, полученный на предыдущем шаге, для инициализации установщика:
 
 ```c#
-
 var fabricInstaller = new FabricInstaller
 {
     LoaderArtifact = selectedArtifact,
@@ -99,51 +94,43 @@ var fabricInstaller = new FabricInstaller
     CustomId = "[CUSTOM_INSTALL_GAME_ID]",
     InheritsFrom = "[MC_VERSION_OR_GAME_ID]"
 };
-
 ```
 
-在上述代码块中, 请将这些参数按照您的实际情况替换：
+В приведенном выше блоке кода замените эти параметры в соответствии с вашей реальной ситуацией:
 
-|                 项目                  |                      说明                       |
+|                 Элемент                  |                      Описание                       |
 |:-----------------------------------:|:---------------------------------------------:|
-|          [GAME_ROOT_PATH]           |          游戏根目录, 通常为 .minecraft 文件夹的路径          |
-|      [CUSTOM_INSTALL_GAME_ID]       |              可选项, 自定义即将要安装的游戏的名称               |
-|       [MC_VERSION_OR_GAME_ID]       | Forge 继承的 MineCraft 原版游戏版本, 通常为游戏版本. 例如：1.19.2  |
-|       [VERSION_LOCATOR_INST]        |  游戏版本定位器实例, 即初始化游戏核心时的 **VersionLocator** 属性   |
+|          [GAME_ROOT_PATH]           |          Корневой каталог игры, обычно путь к папке .minecraft          |
+|      [CUSTOM_INSTALL_GAME_ID]       |              Необязательно, пользовательское имя игры, которую вы собираетесь установить               |
+|       [MC_VERSION_OR_GAME_ID]       | Версия оригинальной игры Minecraft, от которой наследуется Forge, обычно версия игры. Например: 1.19.2  |
+|       [VERSION_LOCATOR_INST]        |  Экземпляр локатора версий игры, то есть свойство **VersionLocator** при инициализации ядра игры   |
 
-## 开始安装
+## Начало установки
 
-在您完成安装器的初始化后, 您只需要调用 Fabric 安装器的安装方法来完成安装. 
+После завершения инициализации установщика вам нужно только вызвать метод установки установщика Fabric для завершения установки.
 
-在异步上下文中, 使用 **InstallTaskAsync** 来完成安装：
+В асинхронном контексте используйте **InstallTaskAsync** для завершения установки:
 
 ```c#
-
 await fabricInstaller.InstallTaskAsync();
-
 ```
 
-在同步上下文中, 使用 **Install** 来完成安装：
+В синхронном контексте используйте **Install** для завершения установки:
 
 ```c#
+fabricInstaller.Install();```
 
-fabricInstaller.Install();
+## Отчет о ходе установки
 
-```
-
-## 报告安装进度
-
-在某些情况下, Fabric 安装器可能会需要数分钟的时间来完成安装. 
-因此, 您可能需要实时向用户汇报安装器目前的进度. 
-为此, Fabric 安装器提供了 **StageChangedEventDelegate** 事件来帮助您实现任务汇报. 
-您只需要简单地在 **开始安装之前** 注册下面的事件：
+В некоторых случаях установка с помощью установщика Fabric может занять несколько минут.
+Поэтому вам может потребоваться сообщать пользователю о текущем ходе установки в режиме реального времени.
+Для этого установщик Fabric предоставляет событие **StageChangedEventDelegate**, чтобы помочь вам реализовать отчет о задачах.
+Вам просто нужно зарегистрировать следующее событие **перед началом установки**:
 
 ```c#
-
-fabricInstaller.StageChangedEventDelegate += (_, args) => {
-    ReportProgress(args.Progress, args.CurrentStage);
+fabricInstaller.StageChangedEventDelegate += (_,  args) => {
+    ReportProgress(args.Progress,  args.CurrentStage);
 };
-
 ```
 
-其中,  **args.Progress** 指示了安装器当前的百分比进度. **args.CurrentStage** 则是安装器当前进度的文字描述. 
+Где **args.Progress** указывает текущий процент выполнения установщика. **args.CurrentStage** — это текстовое описание текущего этапа установщика.
