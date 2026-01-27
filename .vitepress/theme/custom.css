@@ -40,12 +40,15 @@ p>em {
     opacity: .78;
     font-weight: lighter !important;
     font-style: italic !important;
-    display: inline-block !important;
     font-synthesis: style !important;
 
     transition-property: all !important;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
     transition-duration: 233ms !important;
+}
+
+p:not(.indent)>em{
+    display: inline-block !important;
 }
 
 p>em:hover {

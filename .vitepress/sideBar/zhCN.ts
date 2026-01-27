@@ -279,10 +279,8 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                         ]
                     },
                     {
-                        text: "CMFS Project Lappland", link: "/zhCN/CMFS/servers/project-lappland/", items: [
-                            { text: "背景", link: "/zhCN/CMFS/servers/project-lappland/story" },
-                            { text: "玩法", link: "/zhCN/CMFS/servers/project-lappland/gameplay" },
-                            { text: "规则", link: "/zhCN/CMFS/servers/project-lappland/rules" },
+                        text: "CMFS-Mood", link: "/zhCN/CMFS/servers/mood/", items: [
+                            { text: "LappLand", link: "/zhCN/CMFS/servers/mood/lappland" },
                         ]
                     },
                 ]
@@ -293,7 +291,25 @@ export const sidebar: DefaultTheme.SidebarItem[] = [
                 collapsed: true,
                 items: [
                     { text: "无效的会话？", link: "/zhCN/CMFS/help/invalid-session" },
-
+                    {
+                        text: 'Pure服务器指南',
+                        link: '/zhCN/CMFS/help/guide-pure/',
+                        collapsed: true,
+                        items: [
+                            { text: "首页", link: "/zhCN/CMFS/help/guide-pure" },
+                            { text: "生存：规则", link: "/zhCN/CMFS/help/guide-pure/survival-rules" },
+                            { text: "生存：命令", link: "/zhCN/CMFS/help/guide-pure/survival-commands" },
+                            { text: "生存：特别玩法", link: "/zhCN/CMFS/help/guide-pure/survival-gameplay" },
+                        ]
+                    },
+                    {
+                        text: 'Radost 小游戏指南',
+                        link: '/zhCN/CMFS/help/guide-radost/',
+                        collapsed: true,
+                        items: [
+                            { text: "首页/共建说明", link: "/zhCN/CMFS/help/guide-radost" },
+                        ]
+                    }
                 ]
             }
         ]
