@@ -36,7 +36,7 @@
 
 加入群`805935004`了解更多！
 
-[需要帮助？](/zhCN/CMFS/help/guide-pure)
+[需要帮助？](/zhCN/CMFS/help/guide-pure/)
 
 ---
 
@@ -61,6 +61,6 @@
 
 通过Pure群组服加入小游戏！
 
-有玩法、有想法？欢迎与我们共同建设Radost！[了解更多](/zhCN/CMFS/help/guide-radost)
+有玩法、有想法？欢迎与我们共同建设Radost！[了解更多](/zhCN/CMFS/help/guide-radost/)
 
 ---
