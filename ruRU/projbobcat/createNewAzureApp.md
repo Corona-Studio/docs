@@ -1,60 +1,60 @@
-# 配置 Azure 应用
+# Настройка приложения Azure
 
 [[toc]]
 
-## 开始配置
+## Начало настройки
 
-在开始之前, 您首先需要一个微软账号. 注册 Azure Active Directory 应用无需任何费用. 
+Прежде чем начать, вам понадобится учетная запись Microsoft. Регистрация приложения в Azure Active Directory бесплатна.
 
-使用您的微软账户登录 [Azure 门户](https://portal.azure.com/#home)
-在完成登录后, 您看到的页面应该是这样的：
+Войдите на [портал Azure](https://portal.azure.com/#home) с помощью своей учетной записи Microsoft.
+После входа вы должны увидеть страницу, подобную этой:
 
-![Azure Portal](/img/projbobcat/installationAndConfig/configMSAuth/step_1.png)
+![Портал Azure](/img/projbobcat/installationAndConfig/configMSAuth/step_1.png)
 
-点击 **Azure 服务** 下的 **Azure Active Directory**
+Нажмите **Azure Active Directory** в разделе **Службы Azure**.
 
 ![Azure AD](/img/projbobcat/installationAndConfig/configMSAuth/azure_ad.png)
 
-您将会看到类似于下面的页面
+Вы увидите страницу, похожую на следующую:
 
-![Azure Portal](/img/projbobcat/installationAndConfig/configMSAuth/step_2.png)
+![Портал Azure](/img/projbobcat/installationAndConfig/configMSAuth/step_2.png)
 
-接着点击左侧功能栏的 **应用注册**：
+Затем нажмите **Регистрация приложений** в левой панели функций:
 
-![Azure Portal](/img/projbobcat/installationAndConfig/configMSAuth/reg_app.png)
+![Портал Azure](/img/projbobcat/installationAndConfig/configMSAuth/reg_app.png)
 
-点击顶部工具栏的 **新注册**, 填写应用的名称. 并且在 **受支持的账户类型** 中选择 **仅 Microsoft 个人账户**. 
-由于我们不使用基于 URI 回调的认证方式. 因此, 您不需要填写表单下方的 **重定向 URI**. 
+Нажмите **Новая регистрация** на верхней панели инструментов, введите имя приложения. И выберите **Только личные учетные записи Microsoft** в разделе **Поддерживаемые типы учетных записей**.
+Поскольку мы не используем аутентификацию на основе обратного вызова URI, вам не нужно заполнять **URI перенаправления** в нижней части формы.
 
 ::: warning
-请仔细核对表单中的信息, 否则可能会导致后续的步骤出现意料之外的问题. 
+Пожалуйста, внимательно проверьте информацию в форме, иначе на последующих шагах могут возникнуть непредвиденные проблемы.
 :::
 
-![Azure Portal](/img/projbobcat/installationAndConfig/configMSAuth/step_3.png)
+![Портал Azure](/img/projbobcat/installationAndConfig/configMSAuth/step_3.png)
 
-点击创建后, 等待 Azure AD 完成应用的创建. 在创建完成后, 网页会将您重定向至该应用的详细页面：
+Нажмите "Создать" и дождитесь, пока Azure AD завершит создание приложения. После завершения создания веб-страница перенаправит вас на страницу сведений о приложении:
 
-![Azure Portal](/img/projbobcat/installationAndConfig/configMSAuth/step_4.png)
+![Портал Azure](/img/projbobcat/installationAndConfig/configMSAuth/step_4.png)
 
-接着点击左侧栏的 **身份验证**：
+Затем нажмите **Аутентификация** на левой боковой панели:
 
-![Azure Portal](/img/projbobcat/installationAndConfig/configMSAuth/identity_verification.png)
+![Портал Azure](/img/projbobcat/installationAndConfig/configMSAuth/identity_verification.png)
 
-接着在右侧找到 **高级设置** 板块, 确保板块中的 **高级 SDK 支持** 和 **允许公共客户端流** 为开启状态. 
-如果他们没有开启, 请手动将他们打开. 
+Затем найдите раздел **Дополнительные параметры** справа и убедитесь, что **Поддержка расширенного SDK** и **Разрешить общедоступные клиентские потоки** в этом разделе включены.
+Если они не включены, включите их вручную.
 
-![Azure Portal](/img/projbobcat/installationAndConfig/configMSAuth/id_advanced_settings.png)
+![Портал Azure](/img/projbobcat/installationAndConfig/configMSAuth/id_advanced_settings.png)
 
-接着点击下方的保存按钮, 等待保存完成. 
+Затем нажмите кнопку "Сохранить" ниже и дождитесь завершения сохранения.
 
-## 查看 Client ID
+## Просмотр Client ID
 
-恭喜！您已经完成了 Azure 的应用注册, 接下来您只需要前往 **概述** 页面查看应用的 Client ID. 
-点击左侧栏的 **概述** 按钮, 即可查看应用的基础信息：
+Поздравляем! Вы завершили регистрацию приложения Azure, теперь вам просто нужно перейти на страницу **Обзор**, чтобы просмотреть Client ID приложения.
+Нажмите кнопку **Обзор** на левой боковой панели, чтобы просмотреть основную информацию о приложении:
 
-![Azure Portal](/img/projbobcat/installationAndConfig/configMSAuth/about.png)
+![Портал Azure](/img/projbobcat/installationAndConfig/configMSAuth/about.png)
 
-在右侧您会看到应用的详细信息, 在 **概要** 中找到 **应用程序(客户端) ID**, 
-该 ID 将是您需要在 [微软验证器配置](/ruRU/projbobcat/installationAndConfig) 阶段需要使用到的 Client ID. 
+Справа вы увидите подробную информацию о приложении, найдите **ID приложения (клиента)** в **Сводке**.
+Этот ID будет Client ID, который вам нужно будет использовать на этапе [настройки аутентификатора Microsoft](/ruRU/projbobcat/installationAndConfig).
 
-![Azure Portal](/img/projbobcat/installationAndConfig/configMSAuth/about_block.png)
+![Портал Azure](/img/projbobcat/installationAndConfig/configMSAuth/about_block.png)
