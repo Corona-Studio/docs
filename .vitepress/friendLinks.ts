@@ -16,7 +16,8 @@ export const FriendLinks: RelatedLinkObject[] = [
     new RelatedLinkObject('【续】维基档案馆', 'https://continue-project.netlify.app/', 'SnowCutie的插件文档汉化合集Continue Project'),
     new RelatedLinkObject('LeafMC Docs', 'https://www.leafmc.one/zh/docs/getting-started', '高性能优化服务端Leaf的官方文档'),
     new RelatedLinkObject('Natsurainko\'s blog', 'https://natsurainko.github.io/', '开发者Natsurainko的博客，积累了一些相关教程。'),
-    new RelatedLinkObject('NitWikit^?', 'https://nitwikit.8aka.org', '十分详尽的第三方 MC 开服教程'),
+    new RelatedLinkObject('Cubic Wiki 开服教程', 'https://nitwikit.8aka.org', '十分详尽的第三方 MC 开服教程(原笨蛋Wiki)'),
+    new RelatedLinkObject('MCNav.cn 服主之家', 'https://mcnav.cn', '一步直达官方资源和文档站的导航站点'),
 ];
 
 export const Sponsors: RelatedLinkObject[] = [
