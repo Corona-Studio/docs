@@ -21,5 +21,5 @@ export const FriendLinks: RelatedLinkObject[] = [
 ];
 
 export const Sponsors: RelatedLinkObject[] = [
-    new RelatedLinkObject('云联小白/集云社', 'https://idc.mcmc.run/', '专注游戏服务器租赁的服务商【云联小白】，其长期为CMFS提供免费服务器。联系QQ：395426'),
+    new RelatedLinkObject('云联小白/集云社', 'https://yun.jizi.cn/', '专注游戏服务器租赁的服务商，其长期为CMFS提供免费服务器。联系QQ：395426'),
 ]
