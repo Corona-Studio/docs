@@ -16,9 +16,10 @@ export const FriendLinks: RelatedLinkObject[] = [
     new RelatedLinkObject('【续】维基档案馆', 'https://continue-project.netlify.app/', 'SnowCutie的插件文档汉化合集Continue Project'),
     new RelatedLinkObject('LeafMC Docs', 'https://www.leafmc.one/zh/docs/getting-started', '高性能优化服务端Leaf的官方文档'),
     new RelatedLinkObject('Natsurainko\'s blog', 'https://natsurainko.github.io/', '开发者Natsurainko的博客，积累了一些相关教程。'),
-    new RelatedLinkObject('NitWikit^?', 'https://nitwikit.8aka.org', '十分详尽的第三方 MC 开服教程'),
+    new RelatedLinkObject('Cubic Wiki 开服教程', 'https://nitwikit.8aka.org', '十分详尽的第三方 MC 开服教程(原笨蛋Wiki)'),
+    new RelatedLinkObject('MCNav.cn 服主之家', 'https://mcnav.cn', '一步直达官方资源和文档站的导航站点'),
 ];
 
 export const Sponsors: RelatedLinkObject[] = [
-    new RelatedLinkObject('云联小白/集云社', 'https://idc.mcmc.run/', '专注游戏服务器租赁的服务商【云联小白】，其长期为CMFS提供免费服务器。联系QQ：395426'),
+    new RelatedLinkObject('云联小白/集云社', 'https://yun.jizi.cn/', '专注游戏服务器租赁的服务商，其长期为CMFS提供免费服务器。联系QQ：395426'),
 ]
