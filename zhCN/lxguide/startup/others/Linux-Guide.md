@@ -57,7 +57,7 @@ Categories=Minecraft;Application;
 
 保存，然后在文件管理器中右键选择打开命令行，或者打开命令行并cd到desktop文件的所在目录，然后输入：  
 ```bash
-mkdir -p /.local/share/applications/
+mkdir -p ~/.local/share/applications/
 mv LauncherX.desktop ~/.local/share/applications/
 ```
 
