@@ -64,6 +64,33 @@ sudo mv LauncherX.desktop ~/.local/share/applications/
 
 ## 环境变量
 
+环境变量可以控制程序对系统调度的行为，他们可以被添加在你将要启动 LauncherX 的命令行会话中，或启动 LauncherX 的 Desktop 文件中。
+
+在命令行中添加环境变量，输入下列格式的命令：
+
+```bash
+export MY_ENV=value
+```
+
+在 Desktop 文件添加环境变量，使用以下格式：
+
+```Desktop
+[Desktop Entry]
+Name=A Program
+Exec=export MY_ENV=value && <command>
+...
+```
+
+或
+
+```Desktop
+[Desktop Entry]
+Name=A Program
+MY_ENV=value
+Exec=<command>
+...
+```
+
 ### 输入法
 
 若无法正常输入中文，请在启动前添加环境变量：
