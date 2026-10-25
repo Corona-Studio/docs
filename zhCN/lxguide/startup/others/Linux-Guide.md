@@ -46,7 +46,7 @@ LauncherX启动器图标在[这里](/img/lxguide/perOsSetup/launcherx.png)，请
 
 ```Desktop
 [Desktop Entry]
-Name=LaucherX
+Name=LauncherX
 Version=1.0
 Exec=<path_to_LauncherX>
 Icon=<path_to_Icon>
