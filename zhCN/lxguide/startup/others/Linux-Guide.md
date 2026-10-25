@@ -4,7 +4,7 @@ LauncherX 是一款新生的 MC 启动器。
 
 当它正式发布时，就成为了 Linux 上为数不多能愉快使用的MC启动器。
 
-不过别慌，本文章就是为了讲解如何配置LauncherX而生。
+不过别慌，本文章就是为了讲解如何配置 LauncherX 而生。
 
 接下来，让我们开始配置吧！
 
@@ -48,8 +48,8 @@ LauncherX启动器图标在[这里](/img/lxguide/perOsSetup/launcherx.png)，请
 [Desktop Entry]
 Name=LaucherX
 Version=1.0
-Exec=/LauncherX所在路径/LauncherX.Avalonia
-Icon=/LauncherX的启动器图标所在路径/启动器图标文件
+Exec=<path_to_LauncherX>
+Icon=<path_to_Icon>
 Type=Application
 Terminal=false
 Categories=Minecraft;Application;
@@ -57,7 +57,8 @@ Categories=Minecraft;Application;
 
 保存，然后在文件管理器中右键选择打开命令行，或者打开命令行并cd到desktop文件的所在目录，然后输入：  
 ```bash
-sudo mv LauncherX.desktop ~/.local/share/applications/
+mkdir -p /.local/share/applications/
+mv LauncherX.desktop ~/.local/share/applications/
 ```
 
 这样，你就可以通过应用程序菜单进行打开 LauncherX 的操作了。
@@ -91,13 +92,14 @@ Exec=<command>
 ...
 ```
 
-### 输入法
+### Fcitx5 输入法
 
-若无法正常输入中文，请在启动前添加环境变量：
+若无法正常输入中文，请在启动前按 [Fcitx5](https://fcitx-im.org/wiki/Setup_Fcitx_5/zh-cn) 文档添加环境变量：
 
 ```bash
-XMODIFIERS=@im=fcitx # fcitx用户
-XMODIFIERS=@im=ibus # ibus用户
+XMODIFIERS=@im=fcitx
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
 ```
 
 ### 双显卡
