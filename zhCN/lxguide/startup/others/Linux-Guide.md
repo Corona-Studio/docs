@@ -38,7 +38,7 @@ LauncherX 是一款开箱即用的启动器，在第一次启动你可能需要�
 
 ## 桌面化
 
-桌面环境会从 `/usr/share/applications`、`/usr/share/applications`、`~/.local/share/applications/` 目录下读取 `desktop` 文件来识别应用程序，如需从应用程序菜单快捷启动，需要创建该文件类型的文件：
+桌面环境会从 `/usr/share/applications`、`/usr/local/share/applications`、`~/.local/share/applications/` 目录下读取 `desktop` 文件来识别应用程序，如需从应用程序菜单快捷启动，需要创建该文件类型的文件：
 
 创建 LauncherX.desktop 文件，使用 Kate 或 Vim 等文本编辑软件编辑该文件，并把下面对应的部分粘贴进文件。
 
