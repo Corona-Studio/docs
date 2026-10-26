@@ -65,7 +65,7 @@ mv LauncherX.desktop ~/.local/share/applications/
 
 ## 环境变量
 
-环境变量可以控制程序对系统调度的行为，他们可以被添加在你将要启动 LauncherX 的命令行会话中，或启动 LauncherX 的 Desktop 文件中。
+环境变量可以控制程序对系统调度的行为，他们可以被添加在你将要启动 LauncherX 的命令行会话中，启动 LauncherX 的 Desktop 文件中，或可被 [启动器识别的特殊环境变量文件](/zhCN/lxguide/features/tricks/env-vars) 中。
 
 在命令行中添加环境变量，输入下列格式的命令：
 
@@ -78,7 +78,7 @@ export MY_ENV=value
 ```Desktop
 [Desktop Entry]
 Name=A Program
-Exec=export MY_ENV=value && <command>
+Exec=export MY_ENV_1=value && export MY_ENV_2=value && <command>
 ...
 ```
 
@@ -91,6 +91,8 @@ MY_ENV=value
 Exec=<command>
 ...
 ```
+
+在启动器识别的特殊环境变量文件中添加环境变量参考 [环境变量](/zhCN/lxguide/features/tricks/env-vars)。
 
 ### Fcitx5 输入法
 
@@ -112,7 +114,7 @@ QT_IM_MODULE=fcitx
 
 默认 GPU 是 Wayland/Xorg 使用的 GPU 或连接到显示器的 GPU。这个变量允许选择不同的 GPU。它适用于 OpenGL 和 Vulkan（在这种情况下，“选择”意味着该 GPU 会排在报告的物理设备列表的首位）。支持的语法有：
 
-```bash
+```text
 DRI_PRIME=N：选择第 N 个非默认 GPU（N > 0）。
 DRI_PRIME=pci-0000_02_00_0：选择连接到这个 PCIe 总线的 GPU。
 DRI_PRIME=vendor_id:device_id：选择第一个匹配这些 ID 的 GPU。
@@ -129,7 +131,15 @@ DRI_PRIME=vendor_id:device_id：选择第一个匹配这些 ID 的 GPU。
 
 示例：
 
-```bash
+```text
 __NV_PRIME_RENDER_OFFLOAD=1
 __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia
 ```
+
+### GNOME 分辨率配置
+
+GNOME 的分数缩放机制较为特殊，使用 GNOME 桌面环境启动 minecraft 会导致显示分辨率过高从而引发性能和画质问题，在一些着色器模组下， Linux 不支持调整全屏分辨率，解决方法如下：
+
+首先关闭所有着色器模组（包括图像优化模组）使用原版启动游戏，在视频设置中设置好分辨率后，退出游戏再启用模组即可。
+
+> 如 Sodium 模组关闭了 Linux 前端调整分辨率的按钮，上述方法可绕过该机制。
