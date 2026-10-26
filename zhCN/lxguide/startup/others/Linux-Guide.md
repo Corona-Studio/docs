@@ -1,136 +1,149 @@
-# Linux中LauncherX的配置指南  
+# Linux 中 LauncherX 的配置指南  
 
-LauncherX是一款新生的MC启动器  
-当它正式发布时，就成为了Linux上为数不多能愉快使用的MC启动器  
-不过别慌，本文章就是为了讲解如何配置LauncherX而生    
-接下来，让我们开始配置吧！  
+LauncherX 是一款新生的 MC 启动器。
 
-## 如何下载？  
-先更新系统
-然后前往[Corona Studios](https://corona.studio/lx)官方网址下载  
-下载完的文件应该叫"net9.0-linux.linux-x64.zip"  
-解压，你会获得一个名为“LauncherX.Avalonia"的文件  
+当它正式发布时，就成为了 Linux 上为数不多能愉快使用的MC启动器。
 
-## 如何打开？  
-将LauncherX.Avalonia文件移动到你想要放置的地方  
-这里我建议放在/home下的一个不经常修改文件的文件夹，以便后面的工作易于进行，至于是什么嘛，猜去吧    
-然后在文件管理器中右键选择打开命令行，或者打开命令行并cd到lx的文件所在目录  
-输入：  
+不过别慌，本文章就是为了讲解如何配置 LauncherX 而生。
+
+接下来，让我们开始配置吧！
+
+## 开始
+
+前往 [Corona Studios](https://corona.studio/lx) 官方网址下载包。
+
+解压，你会获得一个名为 `LauncherX` 的文件。
+
+将 `LauncherX` 文件移动到你想要放置的地方。
+
+在终端中运行此二进制文件：
 
 ```bash
-./LauncherX.Avalonia
+./LauncherX
 ```
->认为每次都要这么启动很麻烦？那快点往下看吧
 
 当你看到如下页面时，说明你成功运行了LauncherX  
 ![欢迎界面](/img/lxguide/perOsSetup/start-page.png)
 
-## 如何配置？  
-接下来，配置你需要的外观，登录你需要登录的账户，未登录不可进入  
->:red_circle:**请注意: 目前Linux稳定版有一个右键点击账户就会闪退的Bug，内测版已经修复，但截止于2025.06.09前稳定版暂未修复**  
+## 配置
 
-接下来就是要玩MC最重要的部分了：  
-配置JVM运行环境  
+LauncherX 是一款开箱即用的启动器，在第一次启动你可能需要配置 java 路径。
+
 在你登录好账户后，LauncherX会显示一个配置界面：
 ![配置文件](/img/lxguide/perOsSetup/choose-java-page.png)
 
-这里有两种下载Java并配置的方法
-
 **如果安装了Java，且LauncherX检测到了你的Java，那么可以跳过**
 
-### 一.使用包管理器安装
-```bash
-sudo pacman -Sy jdk-openjdk //Arch系，Pacman会为你配置好一切
-sudo dnf install java-latest-openjdk.x86_64 //RPM系，需要配置环境变量
-sudo apt install openjdk-21-jdk //Deb系，需要较新系统，较老的请使用第二种方法
-```
->这里我建议用较新版Java，如果想要游玩老版本MC，或想要稳定，请选择其他Jdk包
->如若无法使用上面的命令下载，请使用第二种方法
+通常你可以使用包管理器安装 Java，这需要参考自己发行版的官方文档。
 
-RPM系和DEB系下载完后请看这里：  
-**配置Java环境变量：**  
-将下面的环境变量加入.bashrc或.zshrc等shell配置文件  
-```bashrc
-export JAVA_HOME=/usr/lib/jvm/java-21-openjdk
-export PATH=$JAVA_HOME/bin:$PATH
-export JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF-8"
-```
->其中java-21-openjdk可修改为自己安装的JDK版本
+## 桌面化
 
-然后重启电脑或在终端中运行：
-```bash
-source ~/.bashrc //bash用户运行这个
-source ~/.zshrc //zsh用户运行这个
-```
+桌面环境会从 `/usr/share/applications`、`/usr/local/share/applications`、`~/.local/share/applications/` 目录下读取 `desktop` 文件来识别应用程序，如需从应用程序菜单快捷启动，需要创建该文件类型的文件：
 
-### 二.使用LauncherX下载
-在全局游戏设置界面，点击下载Java，选择你需要的版本，点击下载  
-LauncherX会用最快的速度为你下载并配置好Java  
-当你配置完JVM运行环境时，选择是否遥测之后，如果显示出如下界面，那你就就把基本准备工作做完了  
-![主页](/img/lxguide/perOsSetup/launcherx-main-page.png)
+创建 LauncherX.desktop 文件，使用 Kate 或 Vim 等文本编辑软件编辑该文件，并把下面对应的部分粘贴进文件。
 
->Tips点不掉吗？重启启动器就消失了
-
-## 现在就可以下载游戏啦
->若在下载阶段出现问题，任务中心报错
-那么点击设置，选择网络，将多重源补全关闭，将mojang官方服务器更换为TapXapi
-
-**刚才说的工作马上就来**
-
-## 创建.desktop文件（按需）
-创建LauncherX.desktop文件，使用Kate或Vim等文本编辑软件编辑该文件，并把下面对应的部分粘贴进文件  
-（文件中的路径需要填写自己的LauncherX所在路径和图片文件所在路径）  
 LauncherX启动器图标在[这里](/img/lxguide/perOsSetup/launcherx.png)，请自行下载（如不需要请将下面的Desktop中的Icon留空）  
-**悠闲的Intel显卡和AMD显卡用户：**
 
 ```Desktop
 [Desktop Entry]
-Name=LaucherX
+Name=LauncherX
 Version=1.0
-Exec=/LauncherX所在路径/LauncherX.Avalonia
-Icon=/LauncherX的启动器图标所在路径/启动器图标文件
+Exec=<path_to_LauncherX>
+Icon=<path_to_Icon>
 Type=Application
 Terminal=false
 Categories=Minecraft;Application;
 ```
-**被万恶的NVIDIA显卡毒害的用户（NVIDIA Fuck YOU！！）：**
-```Desktop
-[Desktop Entry]
-Name=LaucherX
-Version=1.0
-__NV_PRIME_RENDER_OFFLOAD=1
-__GLX_VENDOR_LIBRARY_NAME=nvidia
-Exec=/LauncherX所在路径/LauncherX.Avalonia
-Icon=/LauncherX的启动器图标所在路径/启动器图标文件
-Type=Application
-Terminal=false
-Categories=Minecraft;Application;
-```
+
 保存，然后在文件管理器中右键选择打开命令行，或者打开命令行并cd到desktop文件的所在目录，然后输入：  
 ```bash
-sudo mv LauncherX.desktop /usr/share/applications
+mkdir -p ~/.local/share/applications/
+mv LauncherX.desktop ~/.local/share/applications/
 ```
->**温馨提醒：LauncherX在Linux系统下是手动覆盖更新的，请每次更新都放在同一个文件夹，不然会导致Desktop文件失效**
 
-这样，你就可以通过应用程序菜单进行打开LauncherX的操作了
-**到这里，你的LauncherX启动器已经可以正常使用了**
+这样，你就可以通过应用程序菜单进行打开 LauncherX 的操作了。
 
-## 在wayland中使用LauncherX，并需要使用输入法？
-如果配置了全局环境变量，请略过  
-创建完**LauncherX.desktop**文件后，在其中的Exec行加入  
+## 环境变量
+
+环境变量可以控制程序对系统调度的行为，他们可以被添加在你将要启动 LauncherX 的命令行会话中，启动 LauncherX 的 Desktop 文件中，或可被 [启动器识别的特殊环境变量文件](/zhCN/lxguide/features/tricks/env-vars) 中。
+
+在命令行中添加环境变量，输入下列格式的命令：
+
+```bash
+export MY_ENV=value
+```
+
+在 Desktop 文件添加环境变量，使用以下格式：
 
 ```Desktop
-env XMODIFIERS=@im=fcitx //fcitx用户
-env XMODIFIERS=@im=ibus //ibus用户
+[Desktop Entry]
+Name=A Program
+Exec=export MY_ENV_1=value && export MY_ENV_2=value && <command>
+...
 ```
->请务必加空格后再复制
 
-## 使用AUR安装LauncherX（Arch Linux用户可选）
-除了手动安装，你也可以选择AUR仓库进行安装
-```bash
-paru -Sy launcherx-bin
+或
+
+```Desktop
+[Desktop Entry]
+Name=A Program
+MY_ENV=value
+Exec=<command>
+...
 ```
-（不过我本人并不建议使用AUR包，更新比官方更新稍慢，不易修复已知Bug）
-## 结语
-我个人觉得在Linux发行版中使用LauncherX十分容易  
-所以，愉快的去游戏吧！  
+
+在启动器识别的特殊环境变量文件中添加环境变量参考 [环境变量](/zhCN/lxguide/features/tricks/env-vars)。
+
+### Fcitx5 输入法
+
+若无法正常输入中文，请在启动前按 [Fcitx5](https://fcitx-im.org/wiki/Setup_Fcitx_5/zh-cn) 文档添加环境变量：
+
+```bash
+XMODIFIERS=@im=fcitx
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+```
+
+### 双显卡
+
+双显卡用户切换显卡渲染的行为依赖于用户态驱动的环境变量。
+
+**对于 AMD 用户**
+
+以下是 [Mesa 3D](https://docs.mesa3d.org/envvars.html#envvar-DRI_PRIME) 文档原文：
+
+默认 GPU 是 Wayland/Xorg 使用的 GPU 或连接到显示器的 GPU。这个变量允许选择不同的 GPU。它适用于 OpenGL 和 Vulkan（在这种情况下，“选择”意味着该 GPU 会排在报告的物理设备列表的首位）。支持的语法有：
+
+```text
+DRI_PRIME=N：选择第 N 个非默认 GPU（N > 0）。
+DRI_PRIME=pci-0000_02_00_0：选择连接到这个 PCIe 总线的 GPU。
+DRI_PRIME=vendor_id:device_id：选择第一个匹配这些 ID 的 GPU。
+```
+
+对于 Vulkan，可以在后面加上 !，这时只会将所选 GPU 暴露给应用（例如：DRI_PRIME=1!）。
+
+**对于 NVIDIA 用户**
+
+以下是 [NVIDIA](https://download.nvidia.com/XFree86/) 文档原文：
+
+配置图形应用程序使用 GPU 屏幕进行渲染
+要将图形应用程序配置为使用 NVIDIA GPU 屏幕进行渲染，请将环境变量 __NV_PRIME_RENDER_OFFLOAD 设置为 1。如果图形应用程序使用 Vulkan 或 EGL，这就足够了。如果图形应用程序使用 GLX，还需要将环境变量 __GLX_VENDOR_LIBRARY_NAME 设置为 nvidia，这样 GLVND 就会加载 NVIDIA 的 GLX 驱动程序。
+
+示例：
+
+```text
+__NV_PRIME_RENDER_OFFLOAD=1
+__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia
+```
+
+### GNOME 分辨率配置
+
+GNOME 的分数缩放机制较为特殊，使用 GNOME 桌面环境启动 minecraft 会导致显示分辨率过高从而引发性能和画质问题，在一些着色器模组下， Linux 不支持调整全屏分辨率，解决方法如下：
+
+首先关闭所有着色器模组（包括图像优化模组）使用原版启动游戏，在视频设置中设置好分辨率后，退出游戏再启用模组即可。
+
+> 如 Sodium 模组关闭了 Linux 前端调整分辨率的按钮，上述方法可绕过该机制。
+
+---
+
+> 本文由 [Xysgh](https://github.com/xysgh) | [Fovlin](https://github.com/fovlin) 更新于2026年10月26日

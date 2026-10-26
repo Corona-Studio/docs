@@ -43,6 +43,6 @@
 
 ## 其他建议
 
-若您需要其他更加详细的配置，或者纯小白用户，建议阅读：[Linux配置指南](/zhCN/lxguide/startup/others/Linux-Guide)
+若您需要其他更加详细的配置，例如独立显卡切换，或者纯小白用户，建议阅读：[Linux 配置指南](/zhCN/lxguide/startup/others/Linux-Guide)
 
 - 专项：Linux需要其他平台一样的UI外观！如何移除掉丑陋的标题栏并保持窗口按钮：[Linux：干掉标题栏，还我一致感 | 日冕知识库](/zhCN/lxguide/settings/special/linux-as-others)

@@ -69,6 +69,10 @@
 2. 在弹出窗口中选择你要下载的Java，选中后，弹窗会提示你这个Java适合哪些版本的游戏。
 3. 点击【添加】，稍等片刻直到下载完成。
 
+- LauncherX 在 Windows 自动下载的 Java 会被保存在工作目录中，对于旧版用户则是 `%APPDATA\.minecraft\runtime`。
+
+- LauncherX 在 Linux 自动下载的 Java 会被保存在 `~/Documents/LauncherX/LauncherX/DownloadedJRE` 中。
+
 - 正常情况下，下载完成后的Java会被自动发现并添加到LauncherX的Java列表中并可供选择。如果不知道需要哪个版本的Java，可以试着启动游戏，如果确实缺失对应版本的Java，LauncherX会发出警告，在警告弹窗中可以看见需要的Java版本。
 
 ---
@@ -76,4 +80,3 @@
 ###### 参考更多相关文章
 
 - 来自NitWikit：[选择、下载和安装 Java | 笨蛋 MC 开服教程 (yizhan.wiki)](https://yizhan.wiki/NitWikit/preparation/choose-and-download-and-install-java)
-
