@@ -53,3 +53,4 @@ LauncherX **仅支持64位操作系统**, 因此你的Windows7 必须是**64**�
 - 卡在「正在自动登陆」: 这是未正确启用VxKex导致的, 实际错误是无法使用Windows7还不支持的Win32 API来初始化联网操作.
 - 下载Java闪退: 暂时不明确哪部分不工作, 建议自行下载Azul Zulu以避开此问题. 参阅: [如何下载JRE](/zhCN/lxguide/others/download-jre.md)
 - 无法获取游戏列表: 请尝试切换到其他下载源并关闭混合源补全.
+
