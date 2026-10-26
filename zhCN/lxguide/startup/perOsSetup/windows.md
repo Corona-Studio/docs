@@ -2,9 +2,10 @@
 
 ::: warning
 
-请注意， LauncherX  **不支持** Windows7以下版本的操作系统，以及任意一个版本的Windows S。
+请注意， LauncherX在Windows平台 **仅支持** Windows10及以上版本的操作系统，以及任意一个版本的Windows S。
 
-对Windows7的支持可能**随时终止**. 如果您使用Windows7, 请尽早升级, 或阅读[Windows7 安装指南](/zhCN/lxguide/startup/others/win7)...
+LauncherX不再支持Windows7，请尽早升级。或许可以通过其他第三方工具来使得Windows7可以支持一些新的软件特性，但是我们不再官方支持这个系统。
+如果非得使用Windows7，可以考虑前往我们的群聊`589798569`加群寻求帮助, 或阅读[Windows7 安装指南](/zhCN/lxguide/startup/others/win7)。但是说真的，Windows7已经很老了。
 
 :::
 
@@ -24,15 +25,11 @@
 4. 点击`“应用”`，然后关闭`“属性”`窗口。
 5. 尝试启动 LauncherX 。如果仍然无法工作，请[与我们取得联系](/zhCN/guide/contact)
 
-
-
 ::: warning
 
 如果在尝试启动 LauncherX 时候出现了来自其他安全类软件的警告，那么您需要允许 LauncherX 运行以使用 LauncherX 。若您对 LauncherX 持有怀疑，可以前往[VirusTotal](https://www.virustotal.com)这种权威的线上沙盒并将您下载的 LauncherX 副本上传检测。
 
 :::
-
-
 
 ### 对于Windows7
 

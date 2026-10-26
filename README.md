@@ -81,12 +81,26 @@ locales: {
 </a>
 <br><br>
 
-+ [法棍面包](https://github.com/fr1g)
-  - 俄罗斯语（ru-RU）
-+ [KormiMeiko](https://github.com/KormiMeiko)
-  - 繁体中文（zh-TW）
-+ [Japerz](https://github.com/japerz12138)
-  - 英语(美国) (en-US)
++ 中文
+  - [老腊肉llr](https://github.com/laolarou726)
+  - [法棍面包](https://github.com/fr1g)
+  - [KormiMeiko](https://github.com/KormiMeiko) (繁体中文-台湾)
++ 英语
+  - [Japerz](https://github.com/japerz12138) (en-US)
++ 俄语
+  - [法棍面包](https://github.com/fr1g)
+  - [Axillux](https://github.com/Axillux)
+
+期待更多对我们的工作感兴趣的热心市民加入到翻译之中!
+
+### 内容维护者
+
+- [老腊肉llr](https://github.com/laolarou726)
+- [法棍面包](https://github.com/fr1g)
+- [Japerz](https://github.com/japerz12138)
+- [zzh](https://github.com/Cherter821)
+- [Xysgh](https://github.com/xysgh)
+- [Fovlin](https://github.com/fovlin)
 
 <br><br>
 
