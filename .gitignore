@@ -2,3 +2,5 @@
 .vitepress/cache/
 .DS_Store
 Untitled.md
+node_modules/
+package*.json

@@ -143,3 +143,7 @@ GNOME 的分数缩放机制较为特殊，使用 GNOME 桌面环境启动 minecr
 首先关闭所有着色器模组（包括图像优化模组）使用原版启动游戏，在视频设置中设置好分辨率后，退出游戏再启用模组即可。
 
 > 如 Sodium 模组关闭了 Linux 前端调整分辨率的按钮，上述方法可绕过该机制。
+
+---
+
+> 由 [Xysgh](https://github.com/xysgh) | [Fovlin](https://github.com/fovlin) 撰写
