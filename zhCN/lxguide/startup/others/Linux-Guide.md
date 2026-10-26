@@ -146,4 +146,4 @@ GNOME 的分数缩放机制较为特殊，使用 GNOME 桌面环境启动 minecr
 
 ---
 
-> 由 [Xysgh](https://github.com/xysgh) | [Fovlin](https://github.com/fovlin) 撰写
+> 本文由 [Xysgh](https://github.com/xysgh) | [Fovlin](https://github.com/fovlin) 更新于2026年10月26日
