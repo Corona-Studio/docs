@@ -1,5 +1,4 @@
 ---
-
 layout: home
 
 hero:
@@ -26,7 +25,7 @@ features:
     details: 正在使用来自 Corona Studio 的开源项目？在这里你可以查看对应的技术文档。
   - icon: 🧩
     title: 标准和规范
-    details: 在知识库中，您可以查阅到 MineCraft 游戏的部分技术规范（例如皮肤或材质）。  
+    details: 在知识库中，您可以查阅到 MineCraft 游戏的部分技术规范（例如皮肤或材质）。
   - icon: 🍰
     title: 各种指引
     details: 甚至包含入门Minecraft的导引.
@@ -36,9 +35,7 @@ features:
   - icon: 🏃🏻‍➡️
     title: 持续更新
     details: 我们一直在更新和完善内容。请时不时来看看吧!
-    
 ---
-
 
 <div class="VPFeatures f" style="margin-top: 1.9rem;" >
   <div  class="container f">
@@ -47,7 +44,10 @@ features:
     </h5>
     <div class="exlinks" style="margin-top: .8rem;">
       <a class="bitter exlink" target="_blank" href="https://corona.studio/" >Corona Studio官网</a>
-      <a class="bitter exlink" target="_blank" href="https://min.corona.studio/" >Corona Studio MIN</a>
+      <a class="bitter exlink" target="_blank" href="https://craftmine.fun/" >CraftMineFun</a>
+      <a class="bitter exlink" target="_blank" href="https://csss.vot.moe/" >服务状态一览</a>
+      <a class="bitter exlink" target="_blank" title="这个链接和右上角的链接都是团队主页，本页的仓库链接按钮才是CSKB文档仓库" href="https://github.com/Corona-Studio" >GitHub(团队)</a>
+      <a class="bitter exlink" target="_blank" title="看起来这个链接还会变的" href="https://afdian.com/a/launcherx/" >AFDian(老腊肉)</a>
       <a class="bitter exlink" target="_blank" href="/zhCN/guide/links" >查看友链 <b class="x-icon">&#xe724;</b></a>
     </div>
   </div>

@@ -1,4 +1,5 @@
 `@useFixer`
+
 # 一起玩吗? 联机游戏指南
 
 :::tip
@@ -23,9 +24,9 @@
 
 要保持大家都能玩，请保证：
 
--   不要退出世界，更不要退出游戏
--   不要断开网络连接
--   只有这个世界还在运转，大家才能在一起游玩。
+- 不要退出世界，更不要退出游戏
+- 不要断开网络连接
+- 只有这个世界还在运转，大家才能在一起游玩。
 
 :::
 
@@ -39,9 +40,9 @@
 
 要保持大家都能玩，请保证：
 
--   不要退出世界，更不要退出游戏
--   不要断开网络连接
--   只有这个世界还在运转，大家才能在一起游玩。
+- 不要退出世界，更不要退出游戏
+- 不要断开网络连接
+- 只有这个世界还在运转，大家才能在一起游玩。
 
 :::
 
@@ -55,7 +56,7 @@ LauncherX内置的联机方式基于P2P技术，通过软件管理一个虚拟�
 
 :::
 
-需要注意的是，由于P2P技术的特殊性，仍然具备一定的情况会使得用户无法建立有效的连接，或是出现体验偏差的情况。这是由诸多网络环境因素导致的，比如网络运营商设置的**NAT类型**，可以阅读[P2P学习: NAT的四种类型以及类型探测](https://www.cnblogs.com/ssyfj/p/14791064.html)*by  - 山上有风景 - 博客园*  来进一步了解。**总而言之，NAT一般分别有以下类型**:`i`
+需要注意的是，由于P2P技术的特殊性，仍然具备一定的情况会使得用户无法建立有效的连接，或是出现体验偏差的情况。这是由诸多网络环境因素导致的，比如网络运营商设置的**NAT类型**，可以阅读[P2P学习: NAT的四种类型以及类型探测](https://www.cnblogs.com/ssyfj/p/14791064.html)_by - 山上有风景 - 博客园_ 来进一步了解。**总而言之，NAT一般分别有以下类型**:`i`
 
 1. 全锥型(Full Cone)
 2. 受限锥型(Restricted Cone)，<br>或者说是IP受限锥型
@@ -98,63 +99,63 @@ LauncherX内置的联机方式基于P2P技术，通过软件管理一个虚拟�
 
 要保持大家都能玩，请保证：
 
--   不要退出世界，更不要退出游戏
--   不要断开网络连接
--   只有这个世界还在运转，大家才能在一起游玩。
+- 不要退出世界，更不要退出游戏
+- 不要断开网络连接
+- 只有这个世界还在运转，大家才能在一起游玩。
 
 :::
 
 这个方案相当于将自己电脑上的Minecraft的内部服务器暴露给其他人，只需要将内网的服务转到外网即可。具体操作步骤如下：`i`
 
--   启动游戏，进入要一起游玩的世界
+- 启动游戏，进入要一起游玩的世界
 
--   暂停游戏，点击【对局域网开放】
+- 暂停游戏，点击【对局域网开放】
 
--   在不同版本游戏中，这一步的操作不一样。
+- 在不同版本游戏中，这一步的操作不一样。
+  - 对于较老版本的游戏，Minecraft会寻找一个未被占用的端口，然后在那个端口上暴露游戏。具体使用的端口将会在聊天区显示出来类似如下文字：
 
-    -   对于较老版本的游戏，Minecraft会寻找一个未被占用的端口，然后在那个端口上暴露游戏。具体使用的端口将会在聊天区显示出来类似如下文字：
-        ````pascal
-        本地游戏已在端口[11451]上开启
-        ````
+    ```pascal
+    本地游戏已在端口[11451]上开启
+    ```
 
-    -   对于较新版本的游戏，在点击【对局域网开放】后会有另外一个界面，在这里可以自定义端口号，留空以允许Minecraft选择找到的一个随机的未被占用的端口，点击【创建局域网世界】以确认配置。端口号显示同上。
+  - 对于较新版本的游戏，在点击【对局域网开放】后会有另外一个界面，在这里可以自定义端口号，留空以允许Minecraft选择找到的一个随机的未被占用的端口，点击【创建局域网世界】以确认配置。端口号显示同上。
 
--   现在你已经准备好世界了，记下这个端口号，然后在你选择的 **FRP服务商控制台** 中挑选合适的节点以创建FRP隧道或修改现有隧道（具体操作方法参考服务商提供的文档和教程）
+- 现在你已经准备好世界了，记下这个端口号，然后在你选择的 **FRP服务商控制台** 中挑选合适的节点以创建FRP隧道或修改现有隧道（具体操作方法参考服务商提供的文档和教程）
 
--   将端口号输入到本地端口那一栏，保存，回到自己的电脑上启动FRP启动器
+- 将端口号输入到本地端口那一栏，保存，回到自己的电脑上启动FRP启动器
 
--   确保你的隧道已创建，然后开启它
+- 确保你的隧道已创建，然后开启它
 
--   开启成功后，将该隧道的链接连同对应的端口（可能并非游戏给你的端口，而是你在FRP控制台选择或被分配的端口）发送给一起玩的玩家。一起玩的玩家只需要使用同样的游戏客户端，在【多人游戏-添加服务器/直接连接】的【服务器地址】一栏填入你提供的地址即可连接。
+- 开启成功后，将该隧道的链接连同对应的端口（可能并非游戏给你的端口，而是你在FRP控制台选择或被分配的端口）发送给一起玩的玩家。一起玩的玩家只需要使用同样的游戏客户端，在【多人游戏-添加服务器/直接连接】的【服务器地址】一栏填入你提供的地址即可连接。
 
--   每次启动世界所使用的端口号可能不相同，为此你需要每次都更改隧道中记录的本地端口号。
+- 每次启动世界所使用的端口号可能不相同，为此你需要每次都更改隧道中记录的本地端口号。
 
--   如果需要修改这种世界的联机服务器设置，你可能需要借助Mod来修改，比如：[自定义局域网联机 (Lan Server Properties) - MC百科](https://www.mcmod.cn/class/2754.html)
+- 如果需要修改这种世界的联机服务器设置，你可能需要借助Mod来修改，比如：[自定义局域网联机 (Lan Server Properties) - MC百科](https://www.mcmod.cn/class/2754.html)
 
-相关阅读：[基本教程 | OpenFrp Docs](https://doc.openfrp.net/use/) | [Windows 桌面启动器 | OpenFrp Docs](https://doc.openfrp.net/use/desktop-launcher.html) | [我的世界（Minecraft）服务端配置 | OpenFrp Docs](https://doc.openfrp.net/use/configuration/minecraft.html) | [搭建内网穿透(Frp) | 笨蛋 MC 开服教程](https://nitwikit.8aka.org/advance/Linux/frp/) | [基础知识 | 笨蛋 MC 开服教程](https://nitwikit.8aka.org/Java/basic)
+相关阅读：[基本教程 | OpenFrp Docs](https://doc.openfrp.net/use/) | [Windows 桌面启动器 | OpenFrp Docs](https://doc.openfrp.net/use/desktop-launcher.html) | [我的世界（Minecraft）服务端配置 | OpenFrp Docs](https://doc.openfrp.net/use/configuration/minecraft.html) | [搭建内网穿透(Frp) | Cubic Wiki 开服教程](https://nitwikit.8aka.org/general/process/deploy/frp/) | [基础知识 | Cubic Wiki 开服教程](https://nitwikit.8aka.org/java/start/basic/intro/)
 
 #### 2、使用家庭电脑作为服务器
 
 你可以下载服务端到自己的电脑上来运行，这样，在你的电脑上就相当于有一个Minecraft游戏服务器了。我们称这个行为为 **开服**。`i`
 
->   开服，就是相当于，你在这个游戏里面，创建了一个24h永久不断开的联机房间。不管是作为创建服务器的你，还是说加入到你这个服务器的玩家，你们的进入与退出都不会影响到服务器的开放使用。（引用自：[服务器大体框架知识（搭建必看）](https://www.yuque.com/dongyue-ygyej/ny8uqi/de0g6uvzy31eebmg?singleDoc#)）
+> 开服，就是相当于，你在这个游戏里面，创建了一个24h永久不断开的联机房间。不管是作为创建服务器的你，还是说加入到你这个服务器的玩家，你们的进入与退出都不会影响到服务器的开放使用。（引用自：[服务器大体框架知识（搭建必看）](https://www.yuque.com/dongyue-ygyej/ny8uqi/de0g6uvzy31eebmg?singleDoc#)）
 
 已经有相当数量的教程介绍了如何开服。在这里，笔者仅将大体步骤抽象出来：
 
--   准备环境（可以认为是：新建文件夹存放服务端，准备Java环境，下载服务端到新建文件夹）
--   准备运行脚本
--   首次运行脚本，然后阅读创建的EULA并决定是否同意。只有同意了EULA才能继续开服。（EULA：最终用户许可协议，是一种具备法律效力的文本。在这里主要是对Minecraft知识产权的保护。至少，首先，开服不要想着赚钱。Minecraft官方的EULA原文也可以在[这里看到](https://www.minecraft.net/zh-hans/eula)，或者查看[Usage Guidelines | Minecraft](https://www.minecraft.net/zh-hans/usage-guidelines) 来确认哪些可以做，哪些不可以做。）
--   等待服务器就绪，然后加入服务器的世界吧！
+- 准备环境（可以认为是：新建文件夹存放服务端，准备Java环境，下载服务端到新建文件夹）
+- 准备运行脚本
+- 首次运行脚本，然后阅读创建的EULA并决定是否同意。只有同意了EULA才能继续开服。（EULA：最终用户许可协议，是一种具备法律效力的文本。在这里主要是对Minecraft知识产权的保护。至少，首先，开服不要想着赚钱。Minecraft官方的EULA原文也可以在[这里看到](https://www.minecraft.net/zh-hans/eula)，或者查看[Usage Guidelines | Minecraft](https://www.minecraft.net/zh-hans/usage-guidelines) 来确认哪些可以做，哪些不可以做。）
+- 等待服务器就绪，然后加入服务器的世界吧！
 
 推荐阅读：
 
--   Minecraft Wiki：[Tutorial: Setting up a server – Minecraft Wiki](https://minecraft.wiki/w/Tutorial:Setting_up_a_server)
--   笨蛋开服教程：[开始 | 笨蛋 MC 开服教程](https://nitwikit.8aka.org/intro)
--   冬月的大体框架知识：[服务器大体框架知识（搭建必看）](https://www.yuque.com/dongyue-ygyej/ny8uqi/de0g6uvzy31eebmg?singleDoc#)
--   官方下载服务端的链接：[Download server for Minecraft | Minecraft](https://www.minecraft.net/zh-hans/download/server)
--   Java版服务端核心文件解释：[服务端核心文件 | Minecraft Wiki](https://zh.minecraft.wiki/w/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%A0%B8%E5%BF%83%E6%96%87%E4%BB%B6)
+- Minecraft Wiki：[Tutorial: Setting up a server – Minecraft Wiki](https://minecraft.wiki/w/Tutorial:Setting_up_a_server)
+- 笨蛋开服教程：[开始 | Cubic Wiki 开服教程](https://nitwikit.8aka.org/java/intro/)
+- 冬月的大体框架知识：[服务器大体框架知识（搭建必看）](https://www.yuque.com/dongyue-ygyej/ny8uqi/de0g6uvzy31eebmg?singleDoc#)
+- 官方下载服务端的链接：[Download server for Minecraft | Minecraft](https://www.minecraft.net/zh-hans/download/server)
+- Java版服务端核心文件解释：[服务端核心文件 | Minecraft Wiki](https://zh.minecraft.wiki/w/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%A0%B8%E5%BF%83%E6%96%87%E4%BB%B6)
 
-*这些内容对于接下来的内容同样有用。*
+_这些内容对于接下来的内容同样有用。_
 
 ### 使用云服务器
 
@@ -164,7 +165,7 @@ LauncherX内置的联机方式基于P2P技术，通过软件管理一个虚拟�
 
 此外，可以尝试通过多种渠道了解和分析商家的信用水平，以避免出现纠纷或是遇到商家跑路的问题。`i`
 
-我们建议先了解的一些基础知识：[基础知识 | 笨蛋 MC 开服教程](https://nitwikit.8aka.org/Java/basic)`i`
+我们建议先了解的一些基础知识：[基础知识 | Cubic Wiki 开服教程](https://nitwikit.8aka.org/java/start/intro/)（你当然可以继续按照Cubic Wiki的介绍完成后续步骤，但是不同的作者可能总结出不同的要点。）`i`
 
 :::
 
@@ -178,16 +179,17 @@ LauncherX内置的联机方式基于P2P技术，通过软件管理一个虚拟�
 使用云服务器来组织多人游戏是有一定技术门槛和经济能力要求的。对于新手而言，只要愿意付出精力和时间，总是能够积累起技术来运营和维护属于自己的Minecraft多人游戏服务器。在真正租用服务器之前，首先要试着做：`i`
 
 1.  在自己的电脑上练习开服，同时学习一些计算机和网络的基础概念；
-2.  学习一些JVM优化方面的概念（参考阅读：[合理分配游戏内存、选择GC、配置JavaAgent | 日冕知识库](/zhCN/lxguide/others/adjust-ram-gc-ja.html)，[下载合适的Java运行时 | 日冕知识库](/zhCN/lxguide/others/download-jre.html)，[Java 相关 | 笨蛋 MC 开服教程](https://nitwikit.8aka.org/lava/overview)）至少要知道如何调整服务器分配的内存、如何指定垃圾回收器（甚至 **垃圾回收器** 是干什么的也需要了解一下）
+2.  学习一些JVM优化方面的概念（参考阅读：[合理分配游戏内存、选择GC、配置JavaAgent | 日冕知识库](/zhCN/lxguide/others/adjust-ram-gc-ja.html)，[下载合适的Java运行时 | 日冕知识库](/zhCN/lxguide/others/download-jre.html)，[Java 安装 | Cubic Wiki 开服教程](https://nitwikit.8aka.org/general/java/intro/)）至少要知道如何调整服务器分配的内存、如何指定垃圾回收器（甚至 **垃圾回收器** 是干什么的也需要了解一下）
 3.  了解并遵守有关的 **涉及版权的具备法律效力的协议** （比如 著名的 Minecraft EULA），确保你开服并不会侵犯他人权益来赚钱
-4.  了解你将要开的服务器的类型（使用 什么样的服务端？性能需求有多大？又如何使用类似Spark这样的工具来分析服务器性能和占用？参考阅读：[什么是服务端？ | 笨蛋 MC 开服教程](https://nitwikit.8aka.org/start/basic/what-is-server)，[Spark Wiki：前言 | Continue Project](https://snowcutieowo.github.io/spark/)）
-5.  其间，如果遇到问题可以到相关社区请教有经验的人。不要忘了 **你并不比别人差** ，并且无论如何 **勤能补拙** ，如果能做到 **虚心请教** 并且 **独立人格、不讨人厌** ，那么你将能获得不少人的帮助。（参考阅读：[如何向大佬求助 | 笨蛋 MC 开服教程](https://nitwikit.8aka.org/start/ask-for-help)，[Minecraft新手上路! #自食其力、自给自足| 日冕知识库](https://kb.corona.studio/zhCN/mc-starter/#自食其力、自给自足)）
+4.  了解你将要开的服务器的类型（使用 什么样的服务端？性能需求有多大？又如何使用类似Spark这样的工具来分析服务器性能和占用？参考阅读：[什么是服务端？ | Cubic Wiki 开服教程](https://nitwikit.8aka.org/java/start/basic/what-is-server/#_top)，[Spark Wiki：前言 | Continue Project](https://continue-project.netlify.app/wiki/spark/)）
+5.  其间，如果遇到问题可以到相关社区请教有经验的人。不要忘了 **你并不比别人差** ，并且无论如何 **勤能补拙** ，如果能做到 **虚心请教** 并且 **独立人格、不讨人厌** ，那么你将能获得不少人的帮助。（参考阅读：[如何向大佬求助 | Cubic Wiki 开服教程](https://nitwikit.8aka.org/general/more/ask-for-help/#_top)，[Minecraft新手上路! #自食其力、自给自足| 日冕知识库](https://kb.corona.studio/zhCN/mc-starter/#自食其力、自给自足)）
+6.  考虑好———— 你真的需要一台云服务器吗？[部署到生产环境 | Cubic Wiki 开服教程](https://nitwikit.8aka.org/general/process/deploy/intro/)
 
 然后，你才真正准备好开服了。
 
 #### 1、云服务器分类
 
-*可以租用的云服务器有许多种。此处不讨论《我的世界》租赁服务器。*
+_可以租用的云服务器有许多种。此处不讨论《我的世界》租赁服务器。_
 
 ##### a) Minecraft Realms
 
@@ -195,19 +197,19 @@ LauncherX内置的联机方式基于P2P技术，通过软件管理一个虚拟�
 
 ###### 优点：
 
--   十分稳定，随着游戏主版本更新而更新
+- 十分稳定，随着游戏主版本更新而更新
 
 ###### 缺点：
 
--   大多部署在中国大陆境外，连接可能存在一些延迟
--   相比而言不那么便宜
+- 大多部署在中国大陆境外，连接可能存在一些延迟
+- 相比而言不那么便宜
 
 ###### 特性：
 
--   玩家必须拥有正版Minecraft，无法通过离线模式游玩
--   一般有严格的游玩人数限制，适合朋友一起玩
--   扩展性局限于原版游戏
--   基岩版和Java版Realms都有，但是分离
+- 玩家必须拥有正版Minecraft，无法通过离线模式游玩
+- 一般有严格的游玩人数限制，适合朋友一起玩
+- 扩展性局限于原版游戏
+- 基岩版和Java版Realms都有，但是分离
 
 ###### 如何购买：
 
@@ -221,26 +223,26 @@ LauncherX内置的联机方式基于P2P技术，通过软件管理一个虚拟�
 
 VPS可能包含NAT类和独立IP类，对于Minecraft游戏而言，两者的区别在技术上并不会引起很大影响。如果是独立IP，那么开放默认的25565端口后，服务器地址可以不用在末尾追加端口<br>（比如：`thatsmine.kami.su:25565`中，末尾的`:25565`是没必要的，可以省略）；`i`
 
-而如果是NAT类VPS，那么端口在暴露到公网时会被转发，也就是说原本的25565端口在暴露到公网时候会变成别的端口（具体变成什么端口请询问服务商）这时候如果想要抹掉地址末尾的端口号，需要用你的域名创建一个SRV解析指向你的服务器。相关阅读：[域名申请与解析 | 笨蛋 MC 开服教程](https://nitwikit.8aka.org/advance/domain-application-and-dns-resolution/#srv-记录)。 `i`
+而如果是NAT类VPS，那么端口在暴露到公网时会被转发，也就是说原本的25565端口在暴露到公网时候会变成别的端口（具体变成什么端口请询问服务商）这时候如果想要抹掉地址末尾的端口号，需要用你的域名创建一个SRV解析指向你的服务器。相关阅读：[域名申请与解析 | Cubic Wiki 开服教程](https://nitwikit.8aka.org/general/advance/domain-and-dns/#srv-%E8%AE%B0%E5%BD%95)。 `i`
 
 相对而言，使用VPS开服将会有最高的自由度。 `i`
 
 ###### 优点：
 
--   自由度超高，完全自选服务端核心
--   扩展性超高，可以选用Forge、Fabric、Arclight、Mohist等服务端
--   可以在VPS中运行群组服，满足更多需求
+- 自由度超高，完全自选服务端核心
+- 扩展性超高，可以选用Forge、Fabric、Arclight、Mohist等服务端
+- 可以在VPS中运行群组服，满足更多需求
 
 ###### 缺点：
 
--   运维技术门槛更高
--   要求对硬件需求有明确认知
--   开服的经济成本相对较高
+- 运维技术门槛更高
+- 要求对硬件需求有明确认知
+- 开服的经济成本相对较高
 
 ###### 特性：
 
--   允许非正版玩家加入游戏
--   由于有最高的自由度，不仅可以在VPS上运行Java版服务器，还可以运行基岩版服务器；在VPS上开启的Java版服务器甚至可以做到让Java版和基岩版玩家一起游玩（参考：[Geyser概览 | 笨蛋 MC 开服教程](https://nitwikit.8aka.org/Java/process/mobile-player/Geyser/introduction/overview)）也可以做到让正版玩家、外置登录玩家和离线玩家一起游玩（参考：[MultiLogin Wiki](https://github.com/CaaMoe/MultiLogin/wiki)）
+- 允许非正版玩家加入游戏
+- 由于有最高的自由度，不仅可以在VPS上运行Java版服务器，还可以运行基岩版服务器；在VPS上开启的Java版服务器甚至可以做到让Java版和基岩版玩家一起游玩（参考：[手机玩家支持 | Cubic Wiki 开服教程](https://nitwikit.8aka.org/java/process/mobile-player/intro/)）也可以做到让正版玩家、外置登录玩家和离线玩家一起游玩（参考：[MultiLogin Wiki](https://github.com/CaaMoe/MultiLogin/wiki)）
 
 ##### 如何购买：
 
@@ -248,7 +250,7 @@ VPS可能包含NAT类和独立IP类，对于Minecraft游戏而言，两者的区
 
 在购买租赁VPS之前，请尽可能地打听商家的名誉，再三确认算力需求，然后再下单。 `i`
 
-----
+---
 
 ##### c) 面板服
 
@@ -264,22 +266,21 @@ VPS可能包含NAT类和独立IP类，对于Minecraft游戏而言，两者的区
 
 ###### 优点：
 
--   便于随时访问和管理
--   可能可以很方便地进行服务端部署
+- 便于随时访问和管理
+- 可能可以很方便地进行服务端部署
 
 ###### 缺点：
 
--   自由度受限
--   如果恰好买到配备功能缺失的面板的面板服，功能会进一步受到限制
--   被坑的可能性提升
+- 自由度受限
+- 如果恰好买到配备功能缺失的面板的面板服，功能会进一步受到限制
+- 被坑的可能性提升
 
 ###### 特性：
 
--   整体会比VPS便宜一些，适合轻量化需求的服主
+- 整体会比VPS便宜一些，适合轻量化需求的服主
 
 ###### 如何购买：
 
 预制面板服多见于电商平台和专攻Minecraft等游戏服务器供应的服务商。 `i`
 
 ---
-

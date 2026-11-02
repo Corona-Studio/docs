@@ -4,9 +4,9 @@
 
 [[toc]]
 
->   本文创建日期：2023年7月14日，修改日期：2024年3月6日，作者：Feiron Iguista
+> 本文创建日期：2023年7月14日，修改日期：2024年3月6日，作者：Feiron Iguista
 
--------
+---
 
 ::: warning
 
@@ -22,33 +22,38 @@
 
 **软件要求**
 
-Windows7及更新版本的64位操作系统、Windows 10 或更新版本的 for ARM 64位操作系统<br> *或*    macOS 12 及更新版本 (基于Intel芯片或Apple芯片)<br> *或*    带有Xfce/GNOME之类桌面环境的Linux 64位操作系统 (建议内核版本高于5).
+Windows 10 或更新版本的位操作系统 (x64或arm64)<br> _或_ macOS 12 及更新版本 (基于Intel芯片或Apple芯片)<br> _或_ 带有Xfce/GNOME之类桌面环境的Linux 64位操作系统 (建议内核版本高于5).
+
+::: warning 不再支持Windows7
+
+LauncherX将不再支持Windows7。或许可以通过其他第三方工具来使得Windows7可以支持一些新的软件特性，但是我们不再官方支持这个系统。
+如果非得使用Windows7，可以考虑前往我们的群聊`589798569`加群寻求帮助。但是说真的，Windows7已经很老了。
+
+:::
 
 **硬件要求**
 
-**CPU**: 主频高于2.5GHz的至少4核心64位处理器 (amd64/ARM64/x86-64)<br>**运行内存**: 不少于4GB<br>        **GPU**: 建议性能高于: Intel UHD 770 (集成显卡) / 建议性能高于: Radeon RX560<br>**存储空间**: 预留100MB (Windows: ~30MB，Linux和macOS: ~60MB。预留更多空间以供下载等缓存使用。实际上安装游戏需要为游戏预留一定空间。)
-
-
+**CPU**: 主频高于2.5GHz的至少4核心64位处理器 (amd64/ARM64/x86-64)<br>**运行内存**: 不少于4GB<br> **GPU**: 建议性能高于: Intel UHD 770 (集成显卡) / 建议性能高于: Radeon RX560<br>**存储空间**: 预留100MB (Windows: ~30MB，Linux和macOS: ~60MB。预留更多空间以供下载等缓存使用。实际上安装游戏需要为游戏预留一定空间。)
 
 ## 下载LauncherX
 
 接下来，该**下载LauncherX**了:
 
-我们推荐优先使用**包含运行时的独立版**。请前往[官网下载](https://corona.studio/launcherx/download)稳定版，或赞助我们以取得测试版；<br>或者在我们的**配置助手**发布后，使用配置助手来为您选择合适的LauncherX。这将是最适合普通用户的方案（敬请期待）。
+我们推荐优先使用**包含运行时的独立版**。请前往[官网下载](https://corona.studio/launcherx/download)稳定版，或赞助我们以取得测试版。
 
 下载LauncherX的一般流程如下：
 
 - 打开[官网](https://corona.studio/launcherx/download)
 
 - 一般而言，网页会根据你的电脑来推荐下载的版本。你需要下载对应你电脑系统和CPU架构的版本，如果网页选择了和你电脑情况不一致的版本，请用下载按钮右侧的**三角按钮**（如果是MIN站 ，直接在网页上点击对应正确构建的按钮来开始下载）来选择正确对应你电脑的选项。如果你不知道如何确认你的电脑系统版本和CPU架构，参见：[辨识计算机环境 | 日冕知识库](/zhCN/guide/general/check-system.html)
-    :::tip 截至目前，大多数用户使用的是Windows x64。
+  :::tip 截至目前，大多数用户使用的是Windows x64。
 
 - 下载完毕后，将LauncherX解压并放置到一个合适的地方。
-    :::tip 关于存放位置
-    macOS建议放在【应用程序】(也就是说Applications) 目录下; Linux可以放在任何你常用于存放程序的地方，Windows同样，但是**不要放在桌面或其他难以打理的地方**，最好放在一个空文件夹里，因为Windows版LauncherX会在当前所在位置解压出自己的工作目录和默认的游戏文件夹。
-    Linux和macOS版本的LauncherX会在一个合适的地方存储LauncherX的配置文件和默认游戏目录，电脑上任意地方的LauncherX将共用该配置文件；Windows版本则会在每个LauncherX所在的位置创建独立的默认游戏目录和配置文件。
+  :::tip 关于存放位置
+  macOS建议放在【应用程序】(也就是说Applications) 目录下; Linux可以放在任何你常用于存放程序的地方，Windows同样，但是**不要放在桌面或其他难以打理的地方**，最好放在一个空文件夹里，因为Windows版LauncherX会在当前所在位置解压出自己的工作目录和默认的游戏文件夹。
+  Linux和macOS版本的LauncherX会在一个合适的地方存储LauncherX的配置文件和默认游戏目录，电脑上任意地方的LauncherX将共用该配置文件；Windows版本则会在每个LauncherX所在的位置创建独立的默认游戏目录和配置文件。
 
-    :::
+  :::
 
 ## 开始使用LauncherX
 

@@ -4,4 +4,4 @@
 
 本专题包含数篇转载和原创的文章，以及一系列的相关扩展阅读。只要你有激情，有着学习理解的能力，那么你便具备着克服一切困难的能力。
 
-参见：[什么是日志？ | 笨蛋 MC 开服教程](https://nitwikit.8aka.org/start/basic/what-is-log) | [如何向大佬求助 | 笨蛋 MC 开服教程](https://nitwikit.8aka.org/start/ask-for-help) 
+参见：[什么是日志？ | Cubic Wiki 开服教程](https://nitwikit.8aka.org/general/basics/what-is-log/#_top) | [如何向大佬求助 | Cubic Wiki 开服教程](https://nitwikit.8aka.org/general/more/ask-for-help)
